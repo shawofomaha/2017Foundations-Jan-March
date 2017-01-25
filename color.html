@@ -4,6 +4,9 @@
         <title>Class 2 Homework</title>
         <h1>Color HTML</h1>
         <h2>Using CSS to style h1's & p's</h2>
+        
+        <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+        
         <style>
             * {
                 text-align: center;    
@@ -12,6 +15,7 @@
             body {
                 background-color: grey;
             }
+
             head.h1 {
                 color: aqua;
                 outline-color: black;
@@ -24,6 +28,7 @@
             h1.orange, p.orange {
                 color: orange;
             }
+
             h1.yellow, p.yellow {
                 color: yellow;
             }
@@ -50,7 +55,7 @@
                 background: -webkit-radial-gradient(antiquewhite, antiquewhite, grey); /* Safari 5.1 to 6.0 */
                 background: -o-radial-gradient(antiquewhite, antiquewhite, grey); /* For Opera 11.6 to 12.0 */
                 background: -moz-radial-gradient(antiquewhite, antiquewhite, grey); /* For Firefox 3.6 to 15 */
-                background: radial-gradient(antiquewhite, antiquewhite, grey); /* Standard syntax */
+                background: radial-gradient(antiquewhite, grey, grey); /* Standard syntax */
             }
         
             h1.black, p.black {
@@ -64,7 +69,11 @@
             h1.pink , p.pink  {
                 color: pink ;
             }
-        
+
+            p, h1 {
+                font-family: 'Arimo', sans-serif;
+            }
+            
         </style>
     </head>
     <body>
