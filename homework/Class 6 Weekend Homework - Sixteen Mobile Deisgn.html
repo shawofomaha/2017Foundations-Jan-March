@@ -7,6 +7,10 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i|Source+Sans+Pro:400,700" rel="stylesheet">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../css/stylesheet-class6.css">
 
     <title>Class 6 Weekend Homework Sixteen Mobile Deisgn</title>
 
@@ -40,14 +44,16 @@
 </body>
 
 </html>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../css/stlyesheet-class6.css">
 <style>
+    body {
+        margin: 0vh 0vh 0vh 0vh;
+    }
+    
     header {
         position: relative;
         background-color: rgba(172, 211, 115, 1.0);
         height: 10vh;
+/*        padding: 0vh 0vh 0vh 0vh;*/
     }
     
     logo {
@@ -58,11 +64,8 @@
     logo img {
         position: absolute;
         height: 7vh;
-/*        width: 18%;*/
         top: 1.5vh;
         left: 5vh;
-        padding: 0vh 0vh 0vh 0vh;
-        margin: 0vh 0vh 0vh 0vh;
     }
     
     nav {
@@ -91,39 +94,33 @@
         background-repeat: no-repeat;
         background-position: bottom;
         text-align: center;
-        vertical-align: bottom;
         color: rgba(245, 245, 245, 1.0);
+        /* Override to get header and main with no gaps */
+        -webkit-margin-before: 0.0em;
+        -webkit-margin-after: 0.0em;
     }
     
     .sourceSanspro {
         font-family: 'Source Sans Pro', sans-serif;
-        font-size: 5vh;
-        font-weight: bold;  
-        font-size: 5vmin; 
+        font-size: 5vmin;
         line-height: 5vh;
-/*        top: 25vh;*/
-        vertical-align:  25%;
-/*
-        padding: 30vh 0vh 0vh 5vh;
-        margin: 0vh 0vh 0vh 0vh;
-*/
-/*        vertical-align: bottom;*/
+        margin-top: 0vh;
+        padding: 25vh 0vh 0vh 0vh;
     }
     
     .droidSerif {
+/*        position: relative;*/
         font-family: 'Droid Serif', serif;
         font-style: italic;
+        font-weight: normal;
         font-size: 3.5vmin;
-        line-height: 45vh;
-/*
-        padding: -22vh 0vh 44vh 4vh;
-        margin: -16vh 0vh 0vh 5vh;
-*/
+        line-height: 3.5vh;
     }
     
     .arrow {
+/*        position: relative;*/
         height: 3vh;
-        padding: -109vh 0vh 44vh 0vh;
-        margin: -14vh 0vh 0vh 5vh;
+        margin-top: 5vh;
     }
+    
 </style>
