@@ -2,14 +2,15 @@
 <html>
 
 <head>
-    <title>Marko's Index of Projects page</title>
+    <title>Marko's Interface Web Index page</title>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
 </head>
+<!--    <em><b style="color: blue;">I</b><b style="color: red;">n</b><b style="color: rgb(95, 175, 49);">d</b><b style="color: blue;">e</b><b style="color: rgb(170, 43, 198);">x</b></em>-->
 
 <body id="main">
-    <h1>Marko's Index of Projects page</h1>
+    <h1>Marko's Interface Web <em><b style="color: blue;">I</b><b style="color: red;">n</b><b style="color: rgb(95, 175, 49);">d</b><b style="color: blue;">e</b><b style="color: rgb(170, 43, 198);">x</b></em> page</h1>
 
     <ul>
         <li><a href="homework/css-properties.html">css-properties.html</a></li>
@@ -25,7 +26,7 @@
         <li>
             <a href="class html/week 2-working-day2-part2.html">week 2-working-day2-part2.html</a>
         </li>
-<!--
+        <!--
         <li>
             <a href=""></a>
         </li>
@@ -34,7 +35,7 @@
         </li>
 -->
     </ul>
-    <img src="http://lorempixel.com/1920/1920/" />
+    <img src="http://lorempixel.com/920/920/" />
 </body>
 
 </html>
@@ -42,16 +43,70 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../css/stlyesheet-index.css">
 <style>
-      #main {
-        display: inline-block;
+    /*
+    * {
+        border: 1px dotted red;
+    }
+*/
+    /* The animation code */
+    
+    @keyframes example {
+        from {
+            color: rgba(255, 0, 0, 0.99);
+        }
+        to {
+            color: rgba(244, 241, 66, 0.99);
+        }
+    }
+    
+    h1 {
+    /* The element to apply the animation to */
+        animation-delay: 5s;
+        animation-name: example;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    
+    #main {
+        display: inline;
+        text-align: justify;
         background-color: rgba(114, 211, 224, .17);
-        background-image: url("http://lorempixel.com/1920/1920/");
+        background-image: url("http://lorempixel.com/g/640/640/");
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: bottom;
+        border-radius: 15%;
+    }
+    
+    h1 {
+        color: rgba(255, 255, 0, 0.83);
+        margin-left: 3vw;
+        font-family: sans-serif;
+        text-shadow: 0 0 3px #FF0000;
     }
     
     img {
-        display: inline-block;
+/*        position: fixed;*/
+        display: inline;
+        border-radius: 15vw;
+        border: 7px solid black;
+        height: 47vw;
+        float: right;
+    }
+    
+    ul {
+        list-style: none;
+        font-family: sans-serif;
+        color: rgba(255, 255, 255, 1.0);
+        border-radius: 2vw;
+        /*        background-color: rgba(114, 211, 224, .17);*/
+        margin: 3vw;
+        width: 25vw;
+        background-color: #ffffff;
+        border: 1px solid black;
+        opacity: 0.6;
+        filter: alpha(opacity=60);
+        /* For IE8 and earlier */
     }
 </style>
