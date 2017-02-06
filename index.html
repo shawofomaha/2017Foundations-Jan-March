@@ -6,16 +6,26 @@
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"/>
+    
 </head>
 <!--    <em><b style="color: blue;">I</b><b style="color: red;">n</b><b style="color: rgb(95, 175, 49);">d</b><b style="color: blue;">e</b><b style="color: rgb(170, 43, 198);">x</b></em>-->
+    
+<!--
+   <h1>Marko's Interface Web <em><b style="color: blue;">I</b><b style="color: red;">n</b><b style="color: rgb(95, 175, 49);">d</b><b style="color: blue;">e</b><b style="color: rgb(170, 43, 198);">x</b></em> page</h1>
+    
+-->
 
 <body id="main">
-    <h1>Marko's Interface Web <em><b style="color: blue;">I</b><b style="color: red;">n</b><b style="color: rgb(95, 175, 49);">d</b><b style="color: blue;">e</b><b style="color: rgb(170, 43, 198);">x</b></em> page</h1>
+<!--    <left-column id="left-column">-->
+    
+    <h1>Marko's Interface Web <span id="blue">I</span><span id="red">n</span><span id="green">d</span><span id="blue2">e</span><span id="purple">x</span> page</h1>
 
     <ul>
-        <li><a href="homework/css-properties.html">css-properties.html</a></li>
-        <li><a href="homework/color.html">color.html</a></li>
-        <li><a href="homework/Class_3_Homework_Website_Evaluation.html">Class_3_Homework_Website_Evaluation.html</a></li>
+        <li><a href="homework/css-properties.html">Class CSS Properties</a></li>
+        <li><a href="homework/color.html">Class Color Properties</a></li>
+        <li><a href="homework/Class_3_Homework_Website_Evaluation.html">Class 3 Homework Webite Evaluation </a></li>
         <li><a href="homework/Class 6 Weekend Homework - Sixteen Mobile Deisgn.html">Class 6 Weekend Homework - Sixteen Mobile Deisgn.html</a></li>
         <li>
             <a href="class html/week 2-working.html">week 2-working.html Inputs!!</a>
@@ -35,22 +45,41 @@
         </li>
 -->
     </ul>
+<!--</left-column>-->
+<!--<right-column id="right-column">-->
     <img src="http://lorempixel.com/920/920/" />
+<!--</right-column>-->
 </body>
 
 </html>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../css/stlyesheet-index.css">
+<link rel="stylesheet" href="../css/stylesheet-index.css">
 <style>
-    /*
+/*
+    #left-column { border: 2px dotted white;};
+    #right-column {border: 2px dotted purple;};
+*/
+
+    
+/*
     * {
-        border: 1px dotted red;
+        border: 3px dotted red;
     }
 */
+    
+    body {
+/*        border: 8px dashed green;*/
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+        max-height: 3vw;
+        
+/*        border-radius: 50%;*/
+    }
+
     /* The animation code */
     
-    @keyframes example {
+    @keyframes colorCrossFade {
         from {
             color: rgba(255, 0, 0, 0.99);
         }
@@ -62,16 +91,16 @@
     h1 {
     /* The element to apply the animation to */
         animation-delay: 5s;
-        animation-name: example;
+        animation-name: colorCrossFade;
         animation-duration: 2.5s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
     }
     
     #main {
-        display: inline;
+/*        display: inline;*/
         text-align: justify;
-        background-color: rgba(114, 211, 224, .17);
+/*        background-color: rgba(114, 211, 224, .17);*/
         background-image: url("http://lorempixel.com/g/640/640/");
         background-size: 100%;
         background-repeat: no-repeat;
@@ -80,33 +109,54 @@
     }
     
     h1 {
-        color: rgba(255, 255, 0, 0.83);
+/*        border: 4px dotted blue;*/
+        display: inline;
+/*        color: rgba(255, 255, 0, 0.83);*/
         margin-left: 3vw;
-        font-family: sans-serif;
+/*        margin-top: 5vw;*/
+        padding-top: 5vw;
+        font-family: 'Pacifico', cursive;
+        font-size: 550%;
+        width: 7vw;
+/*        border-radius: 2vw;*/
+/*        font-family: sans-serif;*/
         text-shadow: 0 0 3px #FF0000;
+/*        background-color: rgba(0,0,0,0.0);*/
     }
     
     img {
 /*        position: fixed;*/
-        display: inline;
+/*        display: inline;*/
         border-radius: 15vw;
         border: 7px solid black;
-        height: 47vw;
+        height: 40vw;
+        margin-right: 8vw;
+/*        padding-bottom: 4vw;*/
+        margin-bottom: 1vw;
         float: right;
     }
     
     ul {
+/*        display: inline;*/
         list-style: none;
         font-family: sans-serif;
         color: rgba(255, 255, 255, 1.0);
         border-radius: 2vw;
         /*        background-color: rgba(114, 211, 224, .17);*/
-        margin: 3vw;
-        width: 25vw;
+        margin: 3vw 0vw 0vw 0vw;
+        width: 33vw;
         background-color: #ffffff;
-        border: 1px solid black;
+        border: 3px solid black;
+/*        border: 4px dotted yellow;*/
+        
         opacity: 0.6;
         filter: alpha(opacity=60);
         /* For IE8 and earlier */
     }
+    
+    #blue, #blue2 {color: blue; font-style: italic;}  
+    #red {color: red; font-style: italic;}  
+    #green {color: rgb(95, 175, 49); font-style: italic;}  
+    #purple {color: rgb(170, 43, 198); font-style: italic;}  
+      
 </style>
