@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex box play II</title>
+</head>
+
+<body>
+    <h1>flex box play Part II</h1>
+
+    <div class="wrapper">
+        <header class="header">Header</header>
+        <article class="main">
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. E ut fidelissimae, ipsum ea probant non quis. Eu commodo se probant. Quibusdam 
+                irure quorum ubi cillum. Incurreret varias expetendis deserunt, malis proident 
+                hic proident. Ullamco quo aute, deserunt tamen pariatur. Non tamen aliquip 
+                quibusdam, se qui multos quid amet. Quamquam magna iudicem ita duis mandaremus 
+                hic doctrina. Magna mentitum vidisse. In esse laboris instituendarum, do quae graviterque. De 
+                dolor litteris voluptate, anim offendit o imitarentur. Elit probant graviterque, 
+                amet deserunt sempiternum ea ea tempor ab singulis, ubi possumus ne quamquam, do 
+                ita elit commodo, hic admodum consectetur o ne quem dolor amet consequat e 
+                nostrud varias aute senserit tamen. Cernantur eu irure. Ne iis tamen cillum 
+                veniam. Cupidatat se amet se quid instituendarum nostrud eram laborum, de quem 
+                admodum officia, ita quorum culpa quo tempor. Quid iis excepteur do lorem 
+                eiusmod ita comprehenderit.</p>
+        </article>
+        <aside class="aside aside-1">Aside 1<img alt="" width="440" height="320" src="http://lorempixel.com/440/320/"></aside>
+        <aside class="aside aside-2">Aside 2 <img alt="" width="440" height="320" src="http://lorempixel.com/440/320/"></aside>
+        <footer class="footer">Footer</footer>
+    </div>
+
+    
+</body>
+
+</html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/stylesheet-flex.css">
+
+<style>
+    * {border: 1px dotted red;}
+    
+    
+    
+    .wrapper {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    /* We tell all items to be 100% width */
+    
+    .header,
+    .main,
+    .nav,
+    .aside,
+    .footer {
+        flex: 1 100%;
+    }
+    /* We rely on source order for mobile-first approach
+ * in this case:
+ * 1. header
+ * 2. nav
+ * 3. main
+ * 4. aside
+ * 5. footer
+ */
+    /* Medium screens */
+    
+    @media all and (min-width: 600px) {
+        /* We tell both sidebars to share a row */
+        .aside {
+            flex: 1 auto;
+        }
+    }
+    /* Large screens */
+    
+    @media all and (min-width: 800px) {
+        /* We invert order of first sidebar and main
+   * And tell the main element to take twice as much width as the other two sidebars 
+   */
+        .main {
+            flex: 2 0px;
+        }
+        .aside-1 {
+            order: 1;
+        }
+        .main {
+            order: 2;
+        }
+        .aside-2 {
+            order: 3;
+        }
+        .footer {
+            order: 4;
+        }
+    }
+</style>

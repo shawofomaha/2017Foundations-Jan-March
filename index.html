@@ -6,24 +6,25 @@
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
-    
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"/>
-    
+
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" />
+
+    <link href="http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body id="main">
-<!--    <left-column id="left-column">-->
-    
+
     <h1>Marko's Interface Web <span id="blue">I</span><span id="red">n</span><span id="green">d</span><span id="blue2">e</span><span id="purple">x</span> page</h1>
 
     <h3 id="h3_first">Work done in Class</h3>
     <ul>
         <li><a href="homework/css-properties.html">Class CSS Properties</a></li>
         <li><a href="homework/color.html">Class Color Properties</a></li>
-    </ul>  
-    
+    </ul>
+
     <h3 id="h3_second">Weekend Home Work</h3>
-    <ul>           
+    <ul>
         <li><a href="homework/Class_3_Homework_Website_Evaluation.html">Class 3 Weekend Homework Webite Evaluation </a></li>
         <li><a href="homework/Class 6 Weekend Homework - Sixteen Mobile Deisgn.html">Class 6 Weekend Homework - Sixteen Mobile Design</a></li>
         <li>
@@ -41,18 +42,17 @@
         </li>
 -->
     </ul>
-    
+
     <h3 id="h3_third">Outside Projects</h3>
     <ul>
         <li><a href="#">&nbsp;</a></li>
         <li><a href="#">&nbsp;</a></li>
-    </ul>  
-    
-    
-<!--</left-column>-->
-<!--<right-column id="right-column">-->
+    </ul>
+
     <img src="http://lorempixel.com/920/920/" />
-<!--</right-column>-->
+    
+    <div id="typedtext"></div>
+        
 </body>
 
 </html>
@@ -60,40 +60,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../css/stylesheet-index.css">
 <style>
+    #typedtext {
+        font-family: 'Waiting for the Sunrise', cursive;
+/*        font-size: 2em;*/
+        margin: 3vh 3vh;
+        letter-spacing: normal;
+        font-weight: bold;
+        font-size: 5vmin;
+    }
     
     h3 {
         padding: 0 0 0 11vw;
-        margin: 3vw 0 1vw 3vw;
-        color: azure;
-        
+        margin: 2vw 0 0.5vw 3vw;
+        color: black;
     }
     
     ul {
         padding: 0 0 0 0;
-        margin: 0 0 0 3vw; 
+        margin: 0 0 0 3vw;
         text-align: justify;
-        
     }
     
     li {
-                text-align: center;
+        text-align: center;
+        font-size: 1em;
+        font-size: 2vmin;
     }
-
     /* {
         border: 3px dotted red;
     }
     
 */
+    
     body {
-/*        border: 8px dashed green;*/
+        /*        border: 8px dashed green;*/
         padding: 0 0 0 0;
         margin: 0 0 0 0;
         max-height: 3vw;
-/*        height: 150vh;*/
-        
-/*        border-radius: 50%;*/
+        /*        height: 150vh;*/
+        /*        border-radius: 50%;*/
     }
-
     /* The animation code */
     
     @keyframes colorCrossFade {
@@ -106,7 +112,7 @@
     }
     
     h1 {
-    /* The element to apply the animation to */
+        /* The element to apply the animation to */
         animation-delay: 5s;
         animation-name: colorCrossFade;
         animation-duration: 2.5s;
@@ -115,10 +121,11 @@
     }
     
     #main {
-/*        display: inline;*/
+        /*        display: inline;*/
         text-align: justify;
         height: 120vh;
-        background-image: url("http://lorempixel.com/g/640/640/");
+        background-color: rgba(221, 234, 255, 1.0);
+        /*        background-image: url("http://lorempixel.com/g/640/640/");*/
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: bottom;
@@ -126,7 +133,7 @@
     }
     
     h1 {
-/*        border: 4px dotted blue;*/
+        /*        border: 4px dotted blue;*/
         display: inline;
         margin-left: 3vw;
         padding-top: 5vw;
@@ -137,19 +144,19 @@
     }
     
     img {
-/*        position: fixed;*/
-/*        display: inline;*/
+        /*        position: fixed;*/
+        /*        display: inline;*/
         border-radius: 15vw;
         border: 7px solid black;
         height: 40vw;
-        margin-top: -19vw;
-        margin-right: 8vw;
+        margin-top: -25vw;
+        margin-right: 3vw;
         margin-bottom: 15vw;
         float: right;
     }
     
     ul {
-/*        display: inline;*/
+        /*        display: inline;*/
         list-style: none;
         font-family: sans-serif;
         color: rgba(255, 255, 255, 1.0);
@@ -157,16 +164,72 @@
         width: 33vw;
         background-color: #ffffff;
         border: 3px solid black;
-/*        border: 4px dotted yellow;*/
-        
+        /*        border: 4px dotted yellow;*/
         opacity: 0.6;
         filter: alpha(opacity=60);
         /* For IE8 and earlier */
     }
     
-    #blue, #blue2 {color: blue; font-style: italic;}  
-    #red {color: red; font-style: italic;}  
-    #green {color: rgb(95, 175, 49); font-style: italic;}  
-    #purple {color: rgb(170, 43, 198); font-style: italic;}  
-      
+    #blue,
+    #blue2 {
+        color: blue;
+        font-style: italic;
+    }
+    
+    #red {
+        color: red;
+        font-style: italic;
+    }
+    
+    #green {
+        color: rgb(95, 175, 49);
+        font-style: italic;
+    }
+    
+    #purple {
+        color: rgb(170, 43, 198);
+        font-style: italic;
+    }
 </style>
+
+<script>
+    // set up text to print, each item in array is new line
+    var aText = new Array(
+        "I am the baddest dude on the planet! Watch out Paul",
+        " Newman (and all who know Mark J Shaw) the ", 
+        "ShawofOmaha is going to take over the world!",
+        "harr!, harr!! harr!!!"
+    );
+    var iSpeed = 133; // time delay of print out
+    var iIndex = 0; // start printing array at this posision
+    var iArrLength = aText[0].length; // the length of the text array
+    var iScrollAt = 20; // start scrolling up at this many lines
+
+    var iTextPos = 0; // initialise text position
+    var sContents = ''; // initialise contents variable
+    var iRow; // initialise current row
+
+    function typewriter() {
+        sContents = ' ';
+        iRow = Math.max(0, iIndex - iScrollAt);
+        var destination = document.getElementById("typedtext");
+
+        while (iRow < iIndex) {
+            sContents += aText[iRow++] + '<br />';
+        }
+        destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+        if (iTextPos++ == iArrLength) {
+            iTextPos = 0;
+            iIndex++;
+            if (iIndex != aText.length) {
+                iArrLength = aText[iIndex].length;
+                setTimeout("typewriter()", 569);
+            }
+        } else {
+            setTimeout("typewriter()", iSpeed);
+        }
+    }
+
+
+    typewriter();
+</script>
