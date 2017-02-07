@@ -198,19 +198,19 @@
 <script>
     // set up text to print, each item in array is new line
     var aText = new Array(
-        "I am the baddest dude on the planet! Watch out Paul",
-        " Newman (and all who know Mark J Shaw) the ", 
-        "ShawofOmaha is going to take over the world!",
+        "I am the baddest dude on the planet! Watch out ",
+        "Paul Newman (and all who know Mark J Shaw) the ", 
+        "ShawofOmaha is taking over the world! harr! ,harr!!, ",
         "harr!, harr!! harr!!!"
     );
-    var iSpeed = 133; // time delay of print out
-    var iIndex = 0; // start printing array at this posision
+    var iSpeed = 133;   // time delay of print out
+    var iIndex = 0;     // start printing array at this posision
     var iArrLength = aText[0].length; // the length of the text array
     var iScrollAt = 20; // start scrolling up at this many lines
 
-    var iTextPos = 0; // initialise text position
+    var iTextPos = 0;   // initialise text position
     var sContents = ''; // initialise contents variable
-    var iRow; // initialise current row
+    var iRow;           // initialise current row
 
     function typewriter() {
         sContents = ' ';
