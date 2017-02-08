@@ -21,18 +21,25 @@
     <ul>
         <li><a href="homework/css-properties.html">Class CSS Properties</a></li>
         <li><a href="homework/color.html">Class Color Properties</a></li>
+        <li><a href="class html/week 2-working.html">Class INPUTs in html</a></li>
+        <li><a href="class html/week 2-working-day2.html">More Inputs Video Audio</a></li>
+        <li><a href="class html/flex-box-play.html">flex-box-play-2.html</a>
+        </li>
+        <li><a href="class html/flex-box-play-2.html">flex-box-play-2.html</a></li>
+        <li>
+            <a href="class html/floatlayout.html"></a>floatlayout.html</li>
+        <li><a href="class html/week 3-working.html">week 3-working.html</a></li>
+        <!--
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+-->
     </ul>
 
     <h3 id="h3_second">Weekend Home Work</h3>
     <ul>
         <li><a href="homework/Class_3_Homework_Website_Evaluation.html">Class 3 Weekend Homework Webite Evaluation </a></li>
         <li><a href="homework/Class 6 Weekend Homework - Sixteen Mobile Deisgn.html">Class 6 Weekend Homework - Sixteen Mobile Design</a></li>
-        <li>
-            <a href="class html/week 2-working.html">Class INPUTs in html</a>
-        </li>
-        <li>
-            <a href="class html/week 2-working-day2.html">week 2-working-day2.html More Inputs Video Audio</a>
-        </li>
+
         <!--
         <li>
             <a href=""></a>
@@ -50,9 +57,9 @@
     </ul>
 
     <img src="http://lorempixel.com/920/920/" />
-    
-    <div id="typedtext"></div>
-        
+
+    <div id="typedtext" class="blue"></div>
+
 </body>
 
 </html>
@@ -62,11 +69,12 @@
 <style>
     #typedtext {
         font-family: 'Waiting for the Sunrise', cursive;
-/*        font-size: 2em;*/
+        /*        font-size: 2em;*/
         margin: 3vh 3vh;
         letter-spacing: normal;
         font-weight: bold;
         font-size: 5vmin;
+        color: blue;
     }
     
     h3 {
@@ -74,7 +82,7 @@
         margin: 2vw 0 0.5vw 3vw;
         color: black;
         font-size: 2vmin;
-/*        width: 2vw;*/
+        /*        width: 2vw;*/
     }
     
     ul {
@@ -170,7 +178,6 @@
         opacity: 0.6;
         filter: alpha(opacity=60);
         /* For IE8 and earlier */
-        
     }
     
     #blue,
@@ -195,22 +202,27 @@
     }
 </style>
 
+<!--
+        "I am the baddest dude on the planet! Watch out    ",
+        "Paul Newman (and all who know Mark J Shaw)    ",
+        "the ShawofOmaha is taking over the world! harr!,     ",
+        "harr!!, harr!, harr!! harr!!!"
+
+-->
+
 <script>
     // set up text to print, each item in array is new line
     var aText = new Array(
-        "I am the baddest dude on the planet! Watch out ",
-        "Paul Newman (and all who know Mark J Shaw) the ", 
-        "ShawofOmaha is taking over the world! harr! ,harr!!, ",
-        "harr!, harr!! harr!!!"
+        "I am the baddest dude on the planet! Watch out Paul Newman (and all who know Mark J Shaw) the ShawofOmaha is taking over the world! harr! harr!! harr! harr!! harr!!  "
     );
-    var iSpeed = 133;   // time delay of print out
-    var iIndex = 0;     // start printing array at this posision
+    var iSpeed = 133; // time delay of print out
+    var iIndex = 0; // start printing array at this posision
     var iArrLength = aText[0].length; // the length of the text array
     var iScrollAt = 20; // start scrolling up at this many lines
 
-    var iTextPos = 0;   // initialise text position
+    var iTextPos = 0; // initialise text position
     var sContents = ''; // initialise contents variable
-    var iRow;           // initialise current row
+    var iRow; // initialise current row
 
     function typewriter() {
         sContents = ' ';
