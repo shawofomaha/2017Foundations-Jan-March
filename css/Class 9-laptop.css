@@ -8,8 +8,8 @@ nav.img.mobile   {display: none;}
 nav.mobile       {display: none;}
 img.mobile.arrow {display: none;}
 
-/***************************/
-/* Turn on Laptop elements */
+/************************************/
+/* Adjust & Turn on Laptop elements */
 header {
     height: 12.5vh;
 }
@@ -20,11 +20,8 @@ logo {
 }
 
 logo img {
-    position: absolute;
-/*    position: relative;*/
-/*    height: 3vmin;*/
-    height: 7vmax;
     top: 2.75vh;
+    left: 7.0vw;
 }
 
 ul#over.desktop.nav {
@@ -33,7 +30,7 @@ ul#over.desktop.nav {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 2.5vmin;    
     margin-top: calc(0.22 * 12.5vh);
-    right: 12.5vw;
+    right: 7.0vw;
     padding-left: 0;  
     float: right;
     list-style: none;
@@ -52,28 +49,19 @@ li a {
 
 main {
     position: relative;
-/*    background-color: rgba(154, 189, 103, 1.0);*/
-    background-color: red; 
     height: 87.5vh;
-    background-image: url("../media/4siluetBGDesktop.png");
-/*    background-size: 100%;*/
 }
 
 .sourceSanspro {
-    font-family: 'Source Sans Pro', sans-serif;
     font-size: 6vmin;
-    font-weight: bold;
+    line-height: 6vh;
     padding: 27vh 0vh 0vh 0vh;
 }
 
 .droidSerif {
-    font-family: 'Droid Serif', serif;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 3.5vmin;
-    line-height: 3.5vh;
+    font-size: 3.0vmin;
+    line-height: 3.0vh;
 }
-
 
 img.desktop.arrow {
     display: inline-block;   
@@ -84,5 +72,3 @@ img.desktop.arrow {
     margin-top: 12vh;
     cursor: pointer;
 }
-
-

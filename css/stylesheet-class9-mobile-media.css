@@ -18,9 +18,8 @@ logo {
 logo img {
     position: absolute;
     height: 7vmin;
-    height: 7vmax;
     top: 1.5vh;
-    left: 5vh;
+    left: 5vw;
 }
 
 nav.mobile {
@@ -43,7 +42,6 @@ nav img {
 
 ul.desktop.nav {
    display: none;
-/*    background-color: #333333;*/
 }
 
 img.desktop.arrow  {
