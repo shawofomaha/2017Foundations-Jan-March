@@ -1,28 +1,14 @@
-/*****************/
-/* reset margins */
-body {margin: 0vh;}
-
-/*************************************/
-/* Adjust & Turn on Desktop elements */
-header {height: 12.5vh;}
-
-logo {
-    height: 7vh;
-    margin-left: 12.5vw;
-}
+/**********************************************/
+/* Adjust, Turn on, & Change Desktop elements */
 
 logo img {
     left: 12.5vw;
 }
 
 ul#over.desktop.nav {
-    position: absolute;
-    display: inline-flex; 
     right: 12.5vw;
-    border: 1px solid blue;
 }
 
 main {
-    position: relative;
     background-image: url("../media/4siluetBGDesktop.png");
 }

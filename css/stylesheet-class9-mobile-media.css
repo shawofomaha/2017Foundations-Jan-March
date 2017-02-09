@@ -1,8 +1,11 @@
+/**********************************/
+/* Hide laptop & Desktop elements */
+ul.desktop.nav {display: none;}
+img.desktop.arrow  {display: none;}
+
 /*****************/
 /* reset margins */
-body {
-    margin: 0vh;
-}
+body {margin: 0vh;}
 
 header {
     position: relative;
@@ -12,7 +15,6 @@ header {
 
 logo {
     height: 7vh;
-    margin-left: 5vw;
 }
 
 logo img {
@@ -39,15 +41,6 @@ nav img {
     left: 3vh;
     cursor: crosshair;
 }
-
-ul.desktop.nav {
-   display: none;
-}
-
-img.desktop.arrow  {
-    display: none;   
-}
-
 
 main {
     position: relative;

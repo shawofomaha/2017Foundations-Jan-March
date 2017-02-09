@@ -1,7 +1,3 @@
-/*****************/
-/* reset margins */
-body {margin: 0vh;}
-
 /****************************/
 /* Turn off mobile elements */
 nav.img.mobile   {display: none;}
@@ -14,11 +10,6 @@ header {
     height: 12.5vh;
 }
 
-logo {
-    height: 7vh;
-    margin-left: 7vw;
-}
-
 logo img {
     top: 2.75vh;
     left: 7.0vw;
@@ -26,17 +17,16 @@ logo img {
 
 ul#over.desktop.nav {
     position: absolute;
-    display: inline-flex; 
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 2.5vmin;    
-    margin-top: calc(0.22 * 12.5vh);
     right: 7.0vw;
-    padding-left: 0;  
-    float: right;
+    display: inline-flex; 
     list-style: none;
     list-style-type: none;
-    border: 1px solid red;
     overflow: hidden;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.5vmin; 
+    font-weight: 900;
+    margin-top: calc(0.22 * 12.5vh);
+    padding-left: 0;  
 }
 
 li a {
@@ -44,7 +34,6 @@ li a {
     text-decoration: none;
     border: none;
     color: rgba(245, 245, 245, 1.0);
-    text-align: center;   
 }
 
 main {
@@ -54,6 +43,7 @@ main {
 
 .sourceSanspro {
     font-size: 6vmin;
+    font-weight: 900;
     line-height: 6vh;
     padding: 27vh 0vh 0vh 0vh;
 }
@@ -61,6 +51,7 @@ main {
 .droidSerif {
     font-size: 3.0vmin;
     line-height: 3.0vh;
+    padding: 2vh 0vh 0vh 0vh;
 }
 
 img.desktop.arrow {
