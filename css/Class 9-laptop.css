@@ -1,69 +1,47 @@
-
+/*****************/
 /* reset margins */
-body {
-    margin: 0vh 0vh 0vh 0vh;
-}
+body {margin: 0vh;}
 
-/*
-img.desktop {
-    display: none;
-    
-}
-*/
-
+/****************************/
 /* Turn off mobile elements */
+nav.img.mobile   {display: none;}
+nav.mobile       {display: none;}
+img.mobile.arrow {display: none;}
 
-nav.img.mobile {
-    display: none;
-}
-
-nav.mobile {
-    display: none;
-}
-
-img.mobile.arrow {
-    display: none;
-    
-}
-
+/***************************/
 /* Turn on Laptop elements */
+header {
+    height: 12.5vh;
+}
+
+logo {
+    height: 7vh;
+    margin-left: 7vw;
+}
+
+logo img {
+    position: absolute;
+/*    position: relative;*/
+/*    height: 3vmin;*/
+    height: 7vmax;
+    top: 2.75vh;
+}
 
 ul#over.desktop.nav {
-/*ul {*/
     position: absolute;
     display: inline-flex; 
-/*    vertical-align: middle;*/
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 2.5vmin;    
-/*    margin: 0 0 0 0vw;*/
     margin-top: calc(0.22 * 12.5vh);
     right: 12.5vw;
-/*    padding-left: 40vw;*/
-/*    background: black;*/
-/*    position: relative;*/
-    
+    padding-left: 0;  
     float: right;
     list-style: none;
     list-style-type: none;
-/*    border: 1px solid red;*/
-    
-/*    margin-left: 12.5vw;*/
-/*    padding: 0em;*/
+    border: 1px solid red;
     overflow: hidden;
-
-/*    line-height: 5vh;*/
-/*    margin-top: 27vh;*/
-/*    padding: 0vh 0vh 0vh 0vh;   */
-    /* padding-right: 2vw; */
-    
-/*    background-color: #333333;*/
 }
 
-/*
-ul#over.desktop.nav {
-    text-decoration: none !Important;
-}
-*/
 li a {
     padding-left: 2vw;
     text-decoration: none;
@@ -72,25 +50,19 @@ li a {
     text-align: center;   
 }
 
-logo {
-    height: 7vh;
-    margin-left: 12.5vw;
-}
-
-logo img {
-    position: absolute;
-    height: 7vmin;
-    height: 7vmax;
-    top: 2.75vh;
-/*    left: 5vh;*/
+main {
+    position: relative;
+/*    background-color: rgba(154, 189, 103, 1.0);*/
+    background-color: red; 
+    height: 87.5vh;
+    background-image: url("../media/4siluetBGDesktop.png");
+/*    background-size: 100%;*/
 }
 
 .sourceSanspro {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 6vmin;
     font-weight: bold;
-/*    line-height: 5vh;*/
-/*    margin-top: 27vh;*/
     padding: 27vh 0vh 0vh 0vh;
 }
 
@@ -113,24 +85,4 @@ img.desktop.arrow {
     cursor: pointer;
 }
 
-header {
-/*
-    position: relative;
-    background-color: rgba(172, 211, 115, 1.0);
-*/
-    height: 12.5vh;
-}
 
-main {
-    position: relative;
-/*    background-color: rgba(154, 189, 103, 1.0);*/
-    background-color: red;
-    
-    height: 87.5vh;
-    background-image: url("../media/4siluetBGDesktop.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-/*    background-position: bottom;*/
-/*    text-align: center;*/
-/*    color: rgba(245, 245, 245, 1.0);*/
-}

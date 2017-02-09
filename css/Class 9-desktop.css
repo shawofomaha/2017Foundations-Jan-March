@@ -1,29 +1,27 @@
+/*****************/
 /* reset margins */
-body {
-    margin: 0vh 0vh 0vh 0vh;
-}
+body {margin: 0vh;}
 
-header {
-/*
-    position: relative;
-    background-color: rgba(172, 211, 115, 1.0);
-*/
-    height: 12.5vh;
-}
+/****************************/
+/* Turn on Desktop elements */
+header {height: 12.5vh;}
 
 main {
     position: relative;
-/*    background-color: rgba(154, 189, 103, 1.0);*/
+    /*    background-color: rgba(154, 189, 103, 1.0);*/
     background-color: darkgrey;
     height: 87.5vh;
-/*    background-image: none;*/
-
     background-image: url("../media/4siluetBGDesktop.png");
-/*    
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    text-align: center;
-    color: rgba(245, 245, 245, 1.0);
-*/
+}
+
+logo {
+    height: 7vh;
+    margin-left: 12.5vw;
+}
+
+logo img {
+    position: absolute;
+    height: 7vmin;
+    height: 7vmax;
+    top: 2.75vh;
 }
