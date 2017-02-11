@@ -1,5 +1,5 @@
 * {box-sizing: border-box;}
-* {border: 1px solid red;}
+/** {border: 1px solid red;}*/
 
 /**********************************/
 /* Hide laptop & Desktop elements */
@@ -87,29 +87,36 @@ nav img {
 .page2 {
     height: 100vh;   
 }
-.page3 {height: 100vh; background-color: #e27373;}
-.page4 {height: 100vh;}
+.page3 {
+/*    height: 150vh;*/
+    min-height: 150vh;
+    max-height: 150vh;
+}
+.page4 {height: 100vh; background-color: rgba(172, 210, 116, 1.0)}
 .page5 {height: 100vh; background-color: #e27373;}
 .page6 {height: 100vh;}   
 .page7 {height: 100vh; background-color: #e27373;} 
 .page8 {height: 100vh;}   
 
 div.page2  img.iphone{
-    border: 1px dotted green;
+/*    border: 1px dotted green;*/
     display: block;
     margin: auto;
     width: 21.25%;
+    /* Image in layout was off-center, a little */
+    margin-left: calc((100vw/2) - 8vw);
 }
 
+/* div containing page content */
 div#page2main{
-    border: 1px dotted green;
-    margin-right: 25px;
-    margin-left: 25px;
+/*    border: 1px dotted green;*/
+    margin-right: 45px;
+    margin-left: 45px;
 }
 
 div.page2  img.man{
     position: relative;
-    border: 1px dotted green;
+/*    border: 1px dotted green;*/
     margin: auto;
     height: 9.5vmin;
 /*    background-color: blue;*/
@@ -129,10 +136,10 @@ div.page2 div span {
 /* Text under man image */
 div.page2 div p {
     font-family: "Roboto", sans-serif;
-    border: 1px dotted red;   
+/*    border: 1px dotted red;   */
     font-size: 1.0em;
 }
-
+/*Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" */
 button.greenborder.greentext.italic {
     font-size: 1.1em;
     border: 2px solid rgb(172,210,116);
@@ -146,6 +153,192 @@ button.greenborder.greentext.italic {
     display: inline-block;
 }
 
+div.page3 img.mobile.video{
+/*    width: 100%;*/
+    height: 52vh;
+    width: 100%;
+    clip: rect(0px,60px,0px,60px);
+/*    height: auto;*/
+}
+
+div.page3 h1 span.greentext{
+    color: rgb(172,210,116);
+}
+
+div.page3 h1, div.page3 h1 span.greentext{
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+/*    font-size: 1.25em;*/
+    text-align: center;
+    font-size: 3vh;
+}
+
+div.page3 h1 span.greentext{
+
+    font-size: 1.0em;
+}
+div.page3 p{
+    text-align: center;
+}
+
+div.page3 img.mobile.sep{
+    display: block;
+    margin: auto;
+    width: 19vw;
+}
+
+div.page3 div#services{
+/*    background-color: aliceblue;*/
+    margin: 0 55px;
+}
+
+div.page3 div div#services div img.mobile{
+    height: 12vh;
+    float:left;
+    margin-right: 8vw;
+}
+
+div.page3 div div#services div img.mobile.shrink{
+    width: 12vw;
+    margin-right: 5vw;
+}
+
+div.page3 div div#services div span.sans-serif.greenText{
+    color: rgb(172,210,116);
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 2.4vh;
+/*    font-size: 1.15em;*/
+/*    margin: auto;*/
+/*    margin-bottom: -8vh;*/
+}
+
+div.page3 div div#services div span.sans-serif.greenText span.blackText{
+/*    background-color: chartreuse;*/
+    
+    color: black;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 2.3vh;
+/*    margin: auto;    */
+    margin-top: -4vh;
+    
+}
+
+div.page3 div div#services div, div.page3 div div#services {
+/*    border: 3px dotted black;*/
+    margin: 5px 44px;
+}
+
+div.page3 div button.greenborder.greentext.italic{
+    display: block;
+    font-family: sans-serif;
+    font-size: 1.15em;
+    margin: auto;
+}
+
+/* *******    Page 4    ******** */
+
+div.page4 h1, div.page4 p {
+    display: block;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 1.5em;
+/*    margin-top: 5vh;;*/
+    color: rgba(241, 243, 239, 1.0);
+    text-align: center;
+}
+
+div.page4 div.ceoContainer  div {
+    background-color: aliceblue;
+}
+div.page4 p {
+    font-size: 1.0em;
+}
+
+div.page4 h1 {
+    margin-top: 7vh;
+}
+
+div.page4 p {
+    margin-top: 2.5vh;
+}
+
+
+div.page4 p#nameCeo {
+    font-weight: 100;
+    font-size: 1em;
+    margin-bottom: 1em;
+/*    border: 1px dashed blue;*/
+/*    display: inline-block;*/
+    height: 10vh;
+    width: 10vh;
+}
+div.page4 div p#nameCeo {
+/*    border: dotted 5px white ;*/
+}
+/*
+#nameCeo > span nth:child(2) {
+    border: dotted 5px black;
+}
+*/
+/*
+
+div.page4 p span.italic.serif{
+    position: relative;
+    background-color: rgba(137, 168, 92, 1.0);
+
+    font-weight: 100;
+    font-size: 1em;
+    font-style: italic;
+    font-family: serif;
+}
+*/
+
+div.page4 img.mobile{
+    display: block;
+    margin: auto;
+    width: 15vw;
+}
+
+div.page4 img.mobile.larrow, div.page4 img.mobile.rarrow {
+    display: inline;
+    height: 8vh;
+    cursor: crosshair;
+    width: 7%;
+}
+    
+/*    width: 15vw;*/
+div.page4 img.mobile.larrow {
+    margin-left: 7vw;
+}
+
+div.page4 img.mobile.ceoPic {
+    display: inline;
+/*    height: 8vh;*/
+    
+}
+
+div.page4 img.mobile.rarrow {
+    margin-left: 7vw;
+}
+
+div.page4 span img.mobile {    
+    display: inline-flex;
+}
+
+div.page4 div {
+    border: none;
+    background-color: rgb(156, 188, 104);
+}
+
+div.page4 div, div.page4 div button  {
+    color:rgba(241, 243, 239, 1.0); 
+}
+
+div.page4 div button {
+    background-color: rgba(0,0,0,0.0);
+}
 
 div.page8 {
     width: 50vw;
