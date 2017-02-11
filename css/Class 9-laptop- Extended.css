@@ -1,0 +1,65 @@
+/****************************/
+/* Turn off mobile elements */
+nav.img.mobile   {display: none;}
+nav.mobile       {display: none;}
+img.mobile.arrow {display: none;}
+
+/************************************/
+/* Adjust & Turn on Laptop elements */
+header {
+    height: 12.5vh;
+}
+
+logo img {
+    top: 2.75vh;
+    left: 7.0vw;
+}
+
+ul#over.desktop.nav {
+    position: absolute;
+    right: 7.0vw;
+    display: inline-flex; 
+    list-style: none;
+    list-style-type: none;
+    overflow: hidden;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.5vmin; 
+    font-weight: 900;
+    margin-top: calc(0.22 * 12.5vh);
+    padding-left: 0;  
+}
+
+li a {
+    padding-left: 2vw;
+    text-decoration: none;
+    border: none;
+    color: rgba(245, 245, 245, 1.0);
+}
+
+main {
+    position: relative;
+    height: 87.5vh;
+}
+
+.sourceSanspro {
+    font-size: 6vmin;
+    font-weight: 900;
+    line-height: 6vh;
+    padding: 27vh 0vh 0vh 0vh;
+}
+
+.droidSerif {
+    font-size: 3.0vmin;
+    line-height: 3.0vh;
+    padding: 2vh 0vh 0vh 0vh;
+}
+
+img.desktop.arrow {
+    display: inline-block;   
+}
+
+.arrow {
+    width: 3vw;
+    margin-top: 12vh;
+    cursor: pointer;
+}

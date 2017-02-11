@@ -1,0 +1,14 @@
+/**********************************************/
+/* Adjust, Turn on, & Change Desktop elements */
+
+logo img {
+    left: 12.5vw;
+}
+
+ul#over.desktop.nav {
+    right: 12.5vw;
+}
+
+main {
+    background-image: url("../media/4siluetBGDesktop.png");
+}
