@@ -51,7 +51,7 @@ nav img {
 .landingPage {
     position: relative;
     background-color: rgba(154, 189, 103, 1.0);
-    height: 90vh;
+    height: 100vh;
     background-image: none;
     background-image: url("../media/4siluetBG.png");
     background-size: 100%;
