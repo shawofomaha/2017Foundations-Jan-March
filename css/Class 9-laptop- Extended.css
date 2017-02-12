@@ -6,6 +6,7 @@ img.mobile.arrow {display: none;}
 
 /************************************/
 /* Adjust & Turn on Laptop elements */
+background-color: rgb(255, 0, 125, 0.5);
 header {
     height: 12.5vh;
 }
