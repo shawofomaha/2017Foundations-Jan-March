@@ -11,7 +11,24 @@ img.desktop.arrow  {display: none;}
 /*****************/
 /* reset margins */
 body {margin: 0vh;}
+/*****************/
+/* set page size on all pages, but landing */
+.page2 {
+    height: 100vh;   
+}
+.page3 {
+/*    height: 150vh;*/
+    min-height: 128vh;
+    max-height: 128vh;
+}
+.page4 {height: 100vh; background-color: rgba(172, 210, 116, 1.0)}
+.page5 {height: 100vh; background-color: #e27373;}
+.page6 {height: 100vh;}   
+.page7 {height: 100vh; background-color: #e27373;} 
+.page8 {height: 100vh;}   
 
+
+/* Page 1 Landing page */
 header {
     position: relative;
     background-color: rgba(172, 211, 115, 1.0);
@@ -83,26 +100,16 @@ nav img {
     cursor: crosshair;
 }
 
-.landingPage {}
-.page2 {
-    height: 100vh;   
-}
-.page3 {
-/*    height: 150vh;*/
-    min-height: 150vh;
-    max-height: 150vh;
-}
-.page4 {height: 100vh; background-color: rgba(172, 210, 116, 1.0)}
-.page5 {height: 100vh; background-color: #e27373;}
-.page6 {height: 100vh;}   
-.page7 {height: 100vh; background-color: #e27373;} 
-.page8 {height: 100vh;}   
 
+/* Page 2 Who We Are */
 div.page2  img.iphone{
 /*    border: 1px dotted green;*/
     display: block;
     margin: auto;
-    width: 21.25%;
+/*    width: 21.25%;*/
+    height: 55vmin;
+    max-height: 55vmin;
+    min-height: 35vmin;
     /* Image in layout was off-center, a little */
     margin-left: calc((100vw/2) - 8vw);
 }
@@ -119,7 +126,6 @@ div.page2  img.man{
 /*    border: 1px dotted green;*/
     margin: auto;
     height: 9.5vmin;
-/*    background-color: blue;*/
 }
 
 /* Text to right of man image */
@@ -127,17 +133,17 @@ div.page2 div span {
     position: relative;
     font-family: sans-serif;
     font-size: 1.32em;
-    font-size: 4.5vmin;
-    line-height: 7vh;
+    font-size: 4.55vmin;
+    line-height: 6.5vh;
     top: -19px;
-    padding-left: .6em;
+    padding-left: 2vw;
 }
 
 /* Text under man image */
 div.page2 div p {
     font-family: "Roboto", sans-serif;
 /*    border: 1px dotted red;   */
-    font-size: 1.0em;
+    font-size: 2.25vh;
 }
 /*Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" */
 button.greenborder.greentext.italic {
@@ -153,12 +159,13 @@ button.greenborder.greentext.italic {
     display: inline-block;
 }
 
+
+
+/* Page 3 Our Services */
 div.page3 img.mobile.video{
-/*    width: 100%;*/
     height: 52vh;
     width: 100%;
     clip: rect(0px,60px,0px,60px);
-/*    height: auto;*/
 }
 
 div.page3 h1 span.greentext{
@@ -168,17 +175,19 @@ div.page3 h1 span.greentext{
 div.page3 h1, div.page3 h1 span.greentext{
     font-family: Roboto, sans-serif;
     font-weight: 400;
-/*    font-size: 1.25em;*/
     text-align: center;
     font-size: 3vh;
 }
 
 div.page3 h1 span.greentext{
-
     font-size: 1.0em;
 }
 div.page3 p{
     text-align: center;
+    font-family: serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 2.35vh;
 }
 
 div.page3 img.mobile.sep{
@@ -189,40 +198,40 @@ div.page3 img.mobile.sep{
 
 div.page3 div#services{
 /*    background-color: aliceblue;*/
-    margin: 0 55px;
+    margin: 0 5vw;
 }
 
 div.page3 div div#services div img.mobile{
     height: 12vh;
     float:left;
     margin-right: 8vw;
+/*    margin-bottom: 2vh;*/
 }
 
 div.page3 div div#services div img.mobile.shrink{
-    width: 12vw;
-    margin-right: 5vw;
+    width: 10vw;
+    height: 9vh;
+    margin-right: 7vw;
 }
 
 div.page3 div div#services div span.sans-serif.greenText{
+    position: relative;
+    
     color: rgb(172,210,116);
     font-family: sans-serif;
     font-weight: 600;
     font-size: 2.4vh;
-/*    font-size: 1.15em;*/
-/*    margin: auto;*/
-/*    margin-bottom: -8vh;*/
+    padding-bottom: 5vh;
 }
 
 div.page3 div div#services div span.sans-serif.greenText span.blackText{
 /*    background-color: chartreuse;*/
-    
+    position: relative;
+    top: -1.5vh;
     color: black;
     font-family: sans-serif;
     font-weight: 400;
-    font-size: 2.3vh;
-/*    margin: auto;    */
-    margin-top: -4vh;
-    
+    font-size: 2.2vh;  
 }
 
 div.page3 div div#services div, div.page3 div div#services {
@@ -240,104 +249,176 @@ div.page3 div button.greenborder.greentext.italic{
 /* *******    Page 4    ******** */
 
 div.page4 h1, div.page4 p {
+    position: relative;
     display: block;
     font-family: sans-serif;
     font-weight: 100;
-    font-size: 1.5em;
-/*    margin-top: 5vh;;*/
+    font-size: 3.0vh;
     color: rgba(241, 243, 239, 1.0);
     text-align: center;
 }
 
 div.page4 div.ceoContainer  div {
-    background-color: aliceblue;
+/*    background-color: aliceblue;*/
 }
-div.page4 p {
-    font-size: 1.0em;
+div.page4 p.heading {
+    font-size: 2.4vh;
 }
 
 div.page4 h1 {
-    margin-top: 7vh;
+    padding-top: 9vh;
 }
 
-div.page4 p {
-    margin-top: 2.5vh;
+div.page4 p.heading {
+    margin-top: 2vh;
 }
 
-
-div.page4 p#nameCeo {
-    font-weight: 100;
-    font-size: 1em;
-    margin-bottom: 1em;
-/*    border: 1px dashed blue;*/
-/*    display: inline-block;*/
-    height: 10vh;
-    width: 10vh;
-}
-div.page4 div p#nameCeo {
-/*    border: dotted 5px white ;*/
-}
-/*
-#nameCeo > span nth:child(2) {
-    border: dotted 5px black;
-}
-*/
-/*
-
-div.page4 p span.italic.serif{
+div.page4 img.mobile.sep {
     position: relative;
-    background-color: rgba(137, 168, 92, 1.0);
-
-    font-weight: 100;
-    font-size: 1em;
-    font-style: italic;
-    font-family: serif;
-}
-*/
-
-div.page4 img.mobile{
+    top:  1vh;
+    width: 20vw;
     display: block;
     margin: auto;
-    width: 15vw;
 }
 
 div.page4 img.mobile.larrow, div.page4 img.mobile.rarrow {
     display: inline;
-    height: 8vh;
-    cursor: crosshair;
-    width: 7%;
+    height: 8.5vh;
+    width: 5vw;    
+    cursor: grab;
+    z-index: +110;
 }
-    
-/*    width: 15vw;*/
-div.page4 img.mobile.larrow {
-    margin-left: 7vw;
+
+#ceoBoxTwoTone {
+    position: relative;
+    margin-left: 28.5vw;
+    margin-right: 27.5vw;
+    top: -8vh;
+    min-height: 33vh;
+    min-width: 25%;
+    background-color: rgba(238,246,248, 1.0);
+    border-radius: 1vw;
+    z-index: +100;
+}
+
+#ceoBoxDarkTone {
+    position: relative;
+/*    display:; */
+    margin-left: 28.5vw;
+    margin-right: 27.5vw;
+    top: -13.5vh;
+    height: 12vw;
+    min-height: 1vh;
+    min-width: 3vw;
+    background-color: rgba(217,229,229, 1.0); /* rgba(236,234,236, 1.0);*/
+    border-radius: 0vw 0vw 1vw 1vw;
+    z-index: +101;    
 }
 
 div.page4 img.mobile.ceoPic {
+    position: relative;
     display: inline;
-/*    height: 8vh;*/
+    height: 20vmin;
+    max-height: 20vmax;
+    width: 20vmin;
+    left: calc(50vw - 10vmin); 
+    z-index: +120;  
+}
     
+div.page4 img.mobile.larrow {
+    position: relative;
+    top: -16vh;
+    left: -12vw;
 }
 
 div.page4 img.mobile.rarrow {
-    margin-left: 7vw;
+    position: relative;
+    top: -16vh;
+    left: 42vw;
+}
+
+div.page4 div p#nameCeo {
+/*    border: dotted 5px black ;*/
+    position: relative;
+    top: -23vh;
+    color: rgb(172,210,116);
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 2.5vh;
+    z-index: +150;
+}
+
+div.page4 div.ceoContainer div p#nameCeo span.italic.serif {
+    position: relative;
+    top: -0vh;
+    left: 0vw;
+    font-family: serif;
+    font-weight: 100;
+    font-size: 2.5vh;
+    font-style: italic;
+    color: black;
+    z-index: +160;
+/*    border: dotted 5px white ;*/
 }
 
 div.page4 span img.mobile {    
-    display: inline-flex;
+    display: inline;
+    position: relative;
+    height: 5vmin;
+    max-height: 8vmin;
+    margin-left: 1vw;
+    top: -17vh;
+/*    left: 40.25vw;*/
+    left: calc(0.9vw);
 }
+.ceoContainer {border: 2pc solid black; z-index: +555 }
 
 div.page4 div {
     border: none;
-    background-color: rgb(156, 188, 104);
+/*    background-color: rgb(156, 188, 104);*/
 }
 
 div.page4 div, div.page4 div button  {
     color:rgba(241, 243, 239, 1.0); 
 }
 
+#actionFooter{
+    position: relative;
+    margin: 0;
+    top: -0vh;
+    min-height: 15vh;
+    background-color: rgba(156,188,104, 1.0);
+    z-index: +170;   
+}
+
+div.page4 div span {
+/*    background-color: rgba(0,0,0,0.0);*/
+    position: relative;
+    top: -3vh;
+    left: 10vw;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 2.4vh;
+}
+
 div.page4 div button {
     background-color: rgba(0,0,0,0.0);
+    position: relative;
+    top: 4vh;
+    left: 28vw;    
+    border: 1px solid aliceblue;
+    color: aliceblue;
+    font-family: serif;
+    text-align: center;
+    font-style: italic;
+    font-size: 2vh;
+    padding: .66em 1.22em .66em 1.22em;
+    margin: .0em;
+}
+#actionFooter span {
+    position: relative;
+    top: 4vh;
+    left: 17vw;   
 }
 
 div.page8 {
