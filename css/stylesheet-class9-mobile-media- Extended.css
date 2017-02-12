@@ -18,8 +18,8 @@ body {margin: 0vh;}
 }
 .page3 {
 /*    height: 150vh;*/
-    min-height: 128vh;
-    max-height: 128vh;
+    min-height: 150vh;
+    max-height: 150vh;
 }
 .page4 {height: 100vh; background-color: rgba(172, 210, 116, 1.0)}
 .page5 {height: 100vh; background-color: #e27373;}
@@ -334,7 +334,7 @@ div.page4 img.mobile.larrow {
 div.page4 img.mobile.rarrow {
     position: relative;
     top: -16vh;
-    left: 42vw;
+    left: 43vw;
 }
 
 div.page4 div p#nameCeo {
