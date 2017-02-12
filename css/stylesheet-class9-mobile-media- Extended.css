@@ -22,10 +22,12 @@ body {margin: 0vh;}
     max-height: 150vh;
 }
 .page4 {height: 100vh; background-color: rgba(172, 210, 116, 1.0)}
-.page5 {height: 100vh; background-color: #e27373;}
-.page6 {height: 100vh;}   
-.page7 {height: 100vh; background-color: #e27373;} 
-.page8 {height: 100vh;}   
+.page5 {
+        min-height: 117vh;
+        max-height: 117vh;}
+.page6 {height: 100vh; background-color: #e27373;}   
+.page7 {height: 100vh;} 
+.page8 {height: 100vh; background-color: #e27373;}   
 
 
 /* Page 1 Landing page */
@@ -182,6 +184,7 @@ div.page3 h1, div.page3 h1 span.greentext{
 div.page3 h1 span.greentext{
     font-size: 1.0em;
 }
+
 div.page3 p{
     text-align: center;
     font-family: serif;
@@ -291,8 +294,8 @@ div.page4 img.mobile.larrow, div.page4 img.mobile.rarrow {
 
 #ceoBoxTwoTone {
     position: relative;
-    margin-left: 28.5vw;
-    margin-right: 27.5vw;
+    margin-left: 18.5vw;
+    margin-right: 17.5vw;
     top: -8vh;
     min-height: 33vh;
     min-width: 25%;
@@ -304,10 +307,10 @@ div.page4 img.mobile.larrow, div.page4 img.mobile.rarrow {
 #ceoBoxDarkTone {
     position: relative;
 /*    display:; */
-    margin-left: 28.5vw;
-    margin-right: 27.5vw;
+    margin-left: 18.5vw;
+    margin-right: 17.5vw;
     top: -13.5vh;
-    height: 12vw;
+    height: 15vw;
     min-height: 1vh;
     min-width: 3vw;
     background-color: rgba(217,229,229, 1.0); /* rgba(236,234,236, 1.0);*/
@@ -327,20 +330,20 @@ div.page4 img.mobile.ceoPic {
     
 div.page4 img.mobile.larrow {
     position: relative;
-    top: -16vh;
-    left: -12vw;
+    top: -39vh;
+    left: 5vw;
 }
 
 div.page4 img.mobile.rarrow {
     position: relative;
-    top: -16vh;
-    left: 43vw;
+    top: -39vh;
+    left: 80vw;
 }
 
 div.page4 div p#nameCeo {
 /*    border: dotted 5px black ;*/
     position: relative;
-    top: -23vh;
+    top: -45vh;
     color: rgb(172,210,116);
     font-family: sans-serif;
     font-weight: 600;
@@ -364,12 +367,12 @@ div.page4 div.ceoContainer div p#nameCeo span.italic.serif {
 div.page4 span img.mobile {    
     display: inline;
     position: relative;
-    height: 5vmin;
+    height: 6.5vmin;
     max-height: 8vmin;
     margin-left: 1vw;
-    top: -17vh;
-/*    left: 40.25vw;*/
-    left: calc(0.9vw);
+    top: -40.9vh;
+    left: calc(27vw);
+    z-index: +120;
 }
 .ceoContainer {border: 2pc solid black; z-index: +555 }
 
@@ -385,7 +388,7 @@ div.page4 div, div.page4 div button  {
 #actionFooter{
     position: relative;
     margin: 0;
-    top: -0vh;
+    top: -29vh;
     min-height: 15vh;
     background-color: rgba(156,188,104, 1.0);
     z-index: +170;   
@@ -405,7 +408,7 @@ div.page4 div button {
     background-color: rgba(0,0,0,0.0);
     position: relative;
     top: 4vh;
-    left: 28vw;    
+    left: 22vw;    
     border: 1px solid aliceblue;
     color: aliceblue;
     font-family: serif;
@@ -418,9 +421,131 @@ div.page4 div button {
 #actionFooter span {
     position: relative;
     top: 4vh;
-    left: 17vw;   
+    left: 5vw;   
+}
+
+
+/* Page 5 Our Recent works */
+div.page5 p.heading {
+    position: relative;
+    top: 8.5vh;
+    text-align: center;
+    font-size: 2.75vh;
+    margin-top: 2vh;   
+}
+
+div.page5 h1 {
+    position: relative;
+    top: 10.75vh;   
+}
+
+div.page5 h1 span.greentext{
+    color: rgb(172,210,116);
+}
+
+div.page5 h1, div.page5 h1 span.greentext{
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 3.5vh;
+}
+
+div.page5 h1 span.greentext{
+    font-size: 1.0em;
+}
+
+div.page5 img.mobile.sep {
+    position: relative;
+    top:  10vh;
+    width: 20vw;
+    display: block;
+    margin: auto;
+ }
+
+div.page5 img.mobile.letoy {
+    position: relative;
+    top: 18vh;
+    margin-left: 7.5vw;
+    width: 80vw;
+    height: 32vh;
+/*    padding-left: 5vw;*/
+}
+
+div.page5 div#letoyGreybox {
+    position: relative;
+    top: 14vh;
+    left: 7.5vw;
+    background-color: rgba(238,238,238, 1.0);
+    width: 80vw;
+    height: 15vh;
+    z-index: -1;
+}
+
+div.page5 div#letoyGreybox p.bold.blackText {
+    position: relative;
+    top: 4vh;
+    font-size: 3vh;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+div.page5 div#letoyGreybox p.italics {
+    position: relative;
+    top: 2vh;
+    font-size: 2.8vh;
+    text-align: center; 
+    color: rgba(155,155,155,1.0);
+    font-family: serif;
+    font-weight: 400;
+    font-style: italic;  
+}
+
+div.page5  button.greenborder.greentext.italic {
+    position: relative;
+    top: 23vh;    
+    display: block;
+    font-size: 1.15em;
+    margin: auto;
+}
+
+div.page5 div.mobile.footer {
+    position: relative;
+    margin: 0;
+    top: 32vh;
+    min-height: 15vh;
+    background-color: rgba(238,238,238,1.0);
+    z-index: +1; 
+}
+
+div.page5 div.mobile.footer img.mobile.logoEnvato {
+    position: relative;
+    margin: auto;
+    top: 3vh;
+    left: 3vw;
+    width: 40vw;
+    height: 3.5vh    
+}
+
+div.page5 div.mobile.footer img.mobile.logoThemeforest {
+    position: relative;
+    margin: 0;
+    top: 4vh;
+    left: 11vw;
+    width: 40vw;
+    height: 5.5vh    
+}
+ 
+div.page5{}
+div.page6 {
+    
+}
+
+
+div.page7 {
+    
 }
 
 div.page8 {
-    width: 50vw;
+    width: 100vw;
 }
