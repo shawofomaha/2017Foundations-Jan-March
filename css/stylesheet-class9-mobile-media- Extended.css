@@ -16,15 +16,46 @@ img.desktop.arrow {display: none;}
 /* reset margins */
 body {
     margin: 0vh;
+    height: 100vh
 }
+
+/*****************/
+/* set page size to default 100% on all pages*/
+
+.page2 {height: 100vh;}
+
 .page3 {
-    min-height: 150vh;
-    max-height: 150vh;
+    /*    height: 150vh;*/
+    min-height: 165vh;
+    max-height: 165vh;
 }
+
+.page4 {
+    height: 100vh;
+    background-color: rgba(172, 210, 116, 1.0)
+}
+
 .page5 {
+    min-height: 117vh;
+    max-height: 117vh;
+}
+
+.page6 {
+    height: 112vh;
+}
+
+.page7 {
+    height: 100vh;
+}
+
+.page8 {
+    height: 100vh;
+    background-color: #e27373;
+}
 
 
 /* Page 1 Landing page */
+
 header {
     position: relative;
     background-color: rgba(172, 211, 115, 1.0);
@@ -60,7 +91,9 @@ nav img {
     cursor: crosshair;
 }
 
+
 /*main {*/
+
 .landingPage {
     position: relative;
     background-color: rgba(154, 189, 103, 1.0);
@@ -98,8 +131,12 @@ nav img {
 
 
 /* Page 2 Who We Are */
+
+div.page2 img.iphone {
+    /*    border: 1px dotted green;*/
     display: block;
     margin: auto;
+    /*    width: 21.25%;*/
     height: 55vmin;
     max-height: 55vmin;
     min-height: 35vmin;
@@ -107,17 +144,25 @@ nav img {
     margin-left: calc((100vw/2) - 8vw);
 }
 
+
 /* div containing page content */
+
+div#page2main {
+    /*    border: 1px dotted green;*/
     margin-right: 45px;
     margin-left: 45px;
 }
 
+div.page2 img.man {
     position: relative;
+    /*    border: 1px dotted green;*/
     margin: auto;
     height: 9.5vmin;
 }
 
+
 /* Text to right of man image */
+
 div.page2 div span {
     position: relative;
     font-family: sans-serif;
@@ -128,15 +173,22 @@ div.page2 div span {
     padding-left: 2vw;
 }
 
+
 /* Text under man image */
+
 div.page2 div p {
     font-family: "Roboto", sans-serif;
+    /*    border: 1px dotted red;   */
     font-size: 2.25vh;
 }
 
+
 /*Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" */
+
 button.greenborder.greentext.italic {
     font-size: 1.1em;
+    border: 2px solid rgb(172, 210, 116);
+    color: rgb(172, 210, 116);
     font-family: serif;
     text-align: center;
     font-style: italic;
@@ -148,21 +200,30 @@ button.greenborder.greentext.italic {
 
 
 /* Page 3 Our Services */
+
+div.page3 img.mobile.video {
     height: 52vh;
     width: 100%;
+    clip: rect(0px, 60px, 0px, 60px);
 }
 
+div.page3 h1 span.greentext {
+    color: rgb(172, 210, 116);
 }
 
+div.page3 h1,
+div.page3 h1 span.greentext {
     font-family: Roboto, sans-serif;
     font-weight: 400;
     text-align: center;
     font-size: 3vh;
 }
 
+div.page3 h1 span.greentext {
     font-size: 1.0em;
 }
 
+div.page3 p {
     text-align: center;
     font-family: serif;
     font-weight: 400;
@@ -170,48 +231,67 @@ button.greenborder.greentext.italic {
     font-size: 2.35vh;
 }
 
+div.page3 img.mobile.sep {
     display: block;
     margin: auto;
     width: 19vw;
 }
 
+div.page3 div#services {
+    /*    background-color: aliceblue;*/
     margin: 0 5vw;
 }
 
+div.page3 div div#services div img.mobile {
     height: 12vh;
+    float: left;
     margin-right: 8vw;
+    /*    margin-bottom: 2vh;*/
 }
 
+div.page3 div div#services div img.mobile.shrink {
     width: 10vw;
     height: 9vh;
     margin-right: 7vw;
 }
 
+div.page3 div div#services div span.sans-serif.greenText {
     position: relative;
+    color: rgb(172, 210, 116);
     font-family: sans-serif;
     font-weight: 600;
     font-size: 2.4vh;
     padding-bottom: 5vh;
 }
 
+div.page3 div div#services div span.sans-serif.greenText span.blackText {
+    /*    background-color: chartreuse;*/
     position: relative;
     top: -1.5vh;
     color: black;
     font-family: sans-serif;
     font-weight: 400;
+    font-size: 2.2vh;
 }
 
+div.page3 div div#services div,
+div.page3 div div#services {
+    /*    border: 3px dotted black;*/
     margin: 5px 44px;
 }
 
+div.page3 div button.greenborder.greentext.italic {
     display: block;
     font-family: sans-serif;
     font-size: 1.15em;
     margin: auto;
 }
 
+
 /* *******    Page 4    ******** */
 
+div.page4 h1,
+div.page4 p {
     position: relative;
     display: block;
     font-family: sans-serif;
@@ -221,7 +301,10 @@ button.greenborder.greentext.italic {
     text-align: center;
 }
 
+div.page4 div.ceoContainer div {
+    /*    background-color: aliceblue;*/
 }
+
 div.page4 p.heading {
     font-size: 2.4vh;
 }
@@ -236,13 +319,17 @@ div.page4 p.heading {
 
 div.page4 img.mobile.sep {
     position: relative;
+    top: 1vh;
     width: 20vw;
     display: block;
     margin: auto;
 }
 
+div.page4 img.mobile.larrow,
+div.page4 img.mobile.rarrow {
     display: inline;
     height: 8.5vh;
+    width: 5vw;
     cursor: grab;
     z-index: +110;
 }
@@ -254,19 +341,24 @@ div.page4 img.mobile.sep {
     top: -8vh;
     min-height: 33vh;
     min-width: 25%;
+    background-color: rgba(238, 246, 248, 1.0);
     border-radius: 1vw;
     z-index: +100;
 }
 
 #ceoBoxDarkTone {
     position: relative;
+    /*    display:; */
     margin-left: 18.5vw;
     margin-right: 17.5vw;
     top: -13.5vh;
     height: 15vw;
     min-height: 1vh;
     min-width: 3vw;
+    background-color: rgba(217, 229, 229, 1.0);
+    /* rgba(236,234,236, 1.0);*/
     border-radius: 0vw 0vw 1vw 1vw;
+    z-index: +101;
 }
 
 div.page4 img.mobile.ceoPic {
@@ -275,7 +367,10 @@ div.page4 img.mobile.ceoPic {
     height: 20vmin;
     max-height: 20vmax;
     width: 20vmin;
+    left: calc(50vw - 10vmin);
+    z-index: +120;
 }
+
 div.page4 img.mobile.larrow {
     position: relative;
     top: -39vh;
@@ -289,8 +384,10 @@ div.page4 img.mobile.rarrow {
 }
 
 div.page4 div p#nameCeo {
+    /*    border: dotted 5px black ;*/
     position: relative;
     top: -45vh;
+    color: rgb(172, 210, 116);
     font-family: sans-serif;
     font-weight: 600;
     font-size: 2.5vh;
@@ -307,8 +404,10 @@ div.page4 div.ceoContainer div p#nameCeo span.italic.serif {
     font-style: italic;
     color: black;
     z-index: +160;
+    /*    border: dotted 5px white ;*/
 }
 
+div.page4 span img.mobile {
     display: inline;
     position: relative;
     height: 6.5vmin;
@@ -319,19 +418,32 @@ div.page4 div.ceoContainer div p#nameCeo span.italic.serif {
     z-index: +120;
 }
 
+.ceoContainer {
+    border: 2pc solid black;
+    z-index: +555
+}
+
 div.page4 div {
     border: none;
+    /*    background-color: rgb(156, 188, 104);*/
 }
 
+div.page4 div,
+div.page4 div button {
+    color: rgba(241, 243, 239, 1.0);
 }
 
+#actionFooter {
     position: relative;
     margin: 0;
     top: -29vh;
     min-height: 15vh;
+    background-color: rgba(156, 188, 104, 1.0);
+    z-index: +170;
 }
 
 div.page4 div span {
+    /*    background-color: rgba(0,0,0,0.0);*/
     position: relative;
     top: -3vh;
     left: 10vw;
@@ -341,8 +453,10 @@ div.page4 div span {
 }
 
 div.page4 div button {
+    background-color: rgba(0, 0, 0, 0.0);
     position: relative;
     top: 4vh;
+    left: 22vw;
     border: 1px solid aliceblue;
     color: aliceblue;
     font-family: serif;
@@ -352,40 +466,52 @@ div.page4 div button {
     padding: .66em 1.22em .66em 1.22em;
     margin: .0em;
 }
+
 #actionFooter span {
     position: relative;
     top: 4vh;
+    left: 5vw;
 }
 
 
 /* Page 5 Our Recent works */
+
 div.page5 p.heading {
     position: relative;
     top: 8.5vh;
     text-align: center;
     font-size: 2.75vh;
+    margin-top: 2vh;
 }
 
 div.page5 h1 {
     position: relative;
+    top: 10.75vh;
 }
 
+div.page5 h1 span.greentext {
+    color: rgb(172, 210, 116);
 }
 
+div.page5 h1,
+div.page5 h1 span.greentext {
     font-family: Roboto, sans-serif;
     font-weight: 400;
     text-align: center;
     font-size: 3.5vh;
 }
 
+div.page5 h1 span.greentext {
     font-size: 1.0em;
 }
 
 div.page5 img.mobile.sep {
     position: relative;
+    top: 10vh;
     width: 20vw;
     display: block;
     margin: auto;
+}
 
 div.page5 img.mobile.letoy {
     position: relative;
@@ -393,12 +519,14 @@ div.page5 img.mobile.letoy {
     margin-left: 7.5vw;
     width: 80vw;
     height: 32vh;
+    /*    padding-left: 5vw;*/
 }
 
 div.page5 div#letoyGreybox {
     position: relative;
     top: 14vh;
     left: 7.5vw;
+    background-color: rgba(238, 238, 238, 1.0);
     width: 80vw;
     height: 15vh;
     z-index: -1;
@@ -407,6 +535,7 @@ div.page5 div#letoyGreybox {
 div.page5 div#letoyGreybox p.bold.blackText {
     position: relative;
     top: 4vh;
+    font-size: 2.75vh;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
@@ -415,10 +544,17 @@ div.page5 div#letoyGreybox p.bold.blackText {
 div.page5 div#letoyGreybox p.italics {
     position: relative;
     top: 2vh;
+    font-size: 2.5vh;
+    text-align: center;
+    color: rgba(155, 155, 155, 1.0);
     font-family: serif;
+    font-weight: 00;
+    font-style: italic;
 }
 
+div.page5 button.greenborder.greentext.italic {
     position: relative;
+    top: 23vh;
     display: block;
     font-size: 1.15em;
     margin: auto;
@@ -429,6 +565,8 @@ div.page5 div.mobile.footer {
     margin: 0;
     top: 32vh;
     min-height: 15vh;
+    background-color: rgba(238, 238, 238, 1.0);
+    z-index: +1;
 }
 
 div.page5 div.mobile.footer img.mobile.logoEnvato {
@@ -437,6 +575,7 @@ div.page5 div.mobile.footer img.mobile.logoEnvato {
     top: 3vh;
     left: 3vw;
     width: 40vw;
+    height: 3.5vh
 }
 
 div.page5 div.mobile.footer img.mobile.logoThemeforest {
@@ -445,15 +584,75 @@ div.page5 div.mobile.footer img.mobile.logoThemeforest {
     top: 4vh;
     left: 11vw;
     width: 40vw;
-
+    height: 5.5vh
 }
+
+
+/* Page 6  Testimonials */
+
+.page6 {
+    height: 125vh;
+}
+
+
 div.page6 {
+    background-image: url("../media/MOBILE IMAGES/22testimonialBG.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    color: aliceblue;
+    font-family: 'Roboto', serif;
+    font-weight: 400;
+/*    font-style: italic;*/
+}
 
+div.page6 span img.mobile {
     position: relative;
+    margin: 7.5vw;
+    top: 9.5vh;
+    height: 54.5vmin;
+    max-height: 68vmin;
+}
+
+div.page6 p.text {
+    position: relative;
+    top: -40vh;
+    left: 13vw;    
+    margin-left: -1.5vw;
+    margin-right: 24vw;
+    font-family: serif;
 }
 
 
+div.page6 img.mobile.carousel {
+    position: relative;
+    display: block;
+    margin-left: calc(50vw - 7.5vw );
+    top: -7vh;
+    height: 3vmin;
+    max-height: 3vmin;
 }
+
+div.page6 h1.leftjustified.whiteText {
+    position: relative;
+    margin-left: -0vw;
+    top: -9vh;
+}
+
+div.page6 p.leftjustified.testimonial {
+    position: relative;
+    margin-left: 0vw;
+    top: 0vh;
+}
+
+div.page6 p.leftjustified button.greenborder.italic {
+    position: relative;
+    top: 0vh;
+    left: 0vw;
+}
+
+div.page7 {}
 
 div.page8 {
     width: 100vw;
+}
