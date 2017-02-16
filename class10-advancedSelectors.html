@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+    <style>
+        a{
+            font-size: 10vh;
+            color: lightgrey;
+            
+        }
+        
+        a:hover {
+            color: blue;
+            text-decoration: none;
+        }
+        
+        input {
+            width: 25vw;
+            border-color: red; 
+        }
+        input:focus {
+            border-color: green;
+            background-color: gray;
+            outline: none;
+        }
+        
+        label.error+input {
+            background-color: red;
+        }
+        #selectItems> span {
+            color:black;
+            font-weight: bold;
+        }
+        #selectItems> .break ~ span {
+            color: lightgray;
+            font-weight: normal;
+        }
+        
+        a[target="_blank"] {
+            color: red;
+        }
+        
+        a[href*="oogle"] {
+            color:orange;
+        }
+        
+        #selectItems > span:first-of-type{
+            color: green;
+        }
+        
+        #selectItems > span:last-of-type{
+            color:blue;
+        }
+        
+        tr:nth-of-type {
+            background-color: lightgray;  
+        }
+        tr:nth-of-type(3n) {
+            background-color: blue;
+        }
+            tr:nth-of-type(4) {
+            background-color: orange;
+        }
+    </style>
+
+<body>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>gender</th>
+            <th>Phone</th>
+            
+        </tr>
+        <tr>
+            <td>frank</td>
+            <td>male</td>
+            <td>32323234234</td>
+        </tr>
+                <tr>
+            <td>frank</td>
+            <td>male</td>
+            <td>32323234234</td>
+        </tr>
+                <tr>
+            <td>frank</td>
+            <td>male</td>
+            <td>32323234234</td>
+        </tr>
+                <tr>
+            <td>frank</td>
+            <td>male</td>
+            <td>32323234234</td>
+        </tr>
+                <tr>
+            <td>frank</td>
+            <td>male</td>
+            <td>32323234234</td>
+        </tr>
+        
+    </table>
+    <label></label><input /><br />
+    <label class="error"></label><input /><br />
+    <label></label><input /><br />
+    <label></label><input /><br />
+    <label></label><input /><br />
+    <label></label><input /><br />
+    <label></label><input /><br />
+    <label></label><input /><br />
+    <a href="https://google.com" target="_blank">Google</a>
+    <a href="http://apple.com" target="">Apple</a>
+    <a href="http://yahoo.com/google">Yahoo</a>
+    <br />
+    <br />
+    <input type="text" />
+    <input type="text" />
+    <textarea></textarea>
+    <select>
+    
+        <option value="T">True</option>
+        <option value="F">False</option>
+    </select>
+    <br/>
+    <div id="selectItems">
+        <span>Item 1</span><br/>
+        <span>Item 2</span><br/>
+        <span>Item 3</span><br/>
+        <span>Item 4</span><br/>
+        <div class="break"></div>
+        <span>Item 5</span><br/>
+        <span>Item 6</span><br/>
+        <span>Item 7</span><br/>
+        
+    
+    </div>
+    
+</body>
+</html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><style></style>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i|Source+Sans+Pro:400,700" rel="stylesheet">
+        <style>
+            body{
+                margin: 0;
+            }
+
+            header{
+                position: relative;
+                height: 10vh;
+                background-color: rgb(172, 211, 115);
+            }
+
+            #main{
+                height: 90vh;
+                background-color: rgb(154, 189, 103);
+                background-image: url("SixteenDesignImages/4siluetBG.png");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: bottom;
+            }
+
+            #logo{
+                height: 7vh;
+                margin-left: 5vw;
+                margin-top: 1.5vh;
+            }
+
+            #mobileMenu{
+                height: 10vh;
+                width: 10vh;
+                background-color: rgb(137, 168, 92);
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            #hamburger{
+                height: 4vh;
+                width: 4vh;
+                margin: 3vh;
+                cursor: pointer;
+            }
+
+            .marginfix{
+                height: 1px;
+            }
+
+            #title{
+                margin: 0;
+                padding-top: 25vh;
+                text-align: center;
+                color: rgb(245, 245, 245);
+                font-size: 5vmin;
+                font-family: "Source Sans Pro", sans-serif;
+            }
+
+            #subtitle{
+                text-align: center;
+                color: rgb(245, 245, 245);
+                font-family: "Droid Serif", serif;
+                font-size: 3.5vmin;
+                font-style: italic;
+                margin-top: 2vh;
+            }
+
+            #arrow{
+                margin-top: 5vh;
+                height: 3vh;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 0);
+            } 
+            
+            <!-- Laptop   -->
+            main {
+                    
+            }
+            <!-- desktop   -->
+        </style>
+<!--
+        <link media="all and (min-width: 800px)" href="sixteenlaptop.css" rel="stylesheet" type="text/css" />
+        <link media="all and (min-width: 1200px)" href="sixteendesktop.css" rel="stylesheet" type="text/css" />
+-->
+    </head>
+    <body>
+        <header>
+            <img id="logo" src="SixteenDesignImages/1logo.png" />
+            <nav id="mobileMenu">
+                <img id="hamburger" src="SixteenDesignImages/2icon.png" />
+            </nav>
+            <nav id="desktopNav">
+                
+            </nav>
+        </header>
+        <div id="main">
+            <h1 id="title">WE ARE SIXTEEN CREATIVE AGENCY</h1>
+            <div id="subtitle">Based on Jakarta, Indonesia</div>
+            <img id="arrow" src="SixteenDesignImages/3arrow.png" />
+        </div>
+    </body>
+</html>

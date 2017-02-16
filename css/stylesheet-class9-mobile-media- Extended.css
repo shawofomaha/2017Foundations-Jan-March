@@ -1,4 +1,7 @@
 * {box-sizing: border-box;}
+.noBackground {
+    background-color: rgba(0,0,0,0.0);
+}
 /** {border: 1px solid red;}*/
 
 /**********************************/
@@ -16,40 +19,41 @@ img.desktop.arrow {display: none;}
 /* reset margins */
 body {
     margin: 0vh;
-    height: 100vh
+    min-height: 100vh
 }
 
 /*****************/
 /* set page size to default 100% on all pages*/
 
-.page2 {height: 100vh;}
+.page2 {min-height: 100vh;}
 
 .page3 {
     /*    height: 150vh;*/
-    min-height: 165vh;
-    max-height: 165vh;
+    min-height: 100vh;
+/*    max-height: 165vh;*/
 }
 
 .page4 {
-    height: 100vh;
+    border: 2px dotted red;
+    min-height: 100vh;
     background-color: rgba(172, 210, 116, 1.0)
 }
 
 .page5 {
-    min-height: 117vh;
-    max-height: 117vh;
+    min-height: 100vh;
+/*    max-height: 117vh;*/
 }
 
 .page6 {
-    height: 112vh;
+    min-height: 100vh;
 }
 
 .page7 {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .page8 {
-    height: 100vh;
+    min-height: 100vh;
     background-color: #e27373;
 }
 
@@ -59,7 +63,7 @@ body {
 header {
     position: relative;
     background-color: rgba(172, 211, 115, 1.0);
-    height: 10vh;
+    min-height: 10vh;
 }
 
 logo {
@@ -68,7 +72,7 @@ logo {
 
 logo img {
     position: absolute;
-    height: 7vmin;
+    height: 7vh;
     top: 1.5vh;
     left: 5vw;
 }
@@ -97,7 +101,7 @@ nav img {
 .landingPage {
     position: relative;
     background-color: rgba(154, 189, 103, 1.0);
-    height: 100vh;
+    min-height: 100vh;
     background-image: none;
     background-image: url("../media/4siluetBG.png");
     background-size: 100%;
@@ -109,7 +113,7 @@ nav img {
 
 .sourceSanspro {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 5vmin;
+    font-size: 5vh;
     line-height: 5vh;
     margin-top: 0vh;
     padding: 25vh 0vh 0vh 0vh;
@@ -119,7 +123,7 @@ nav img {
     font-family: 'Droid Serif', serif;
     font-style: italic;
     font-weight: normal;
-    font-size: 3.5vmin;
+    font-size: 3.5vh;
     line-height: 3.5vh;
 }
 
@@ -135,29 +139,32 @@ nav img {
 div.page2 img.iphone {
     /*    border: 1px dotted green;*/
     display: block;
-    margin: auto;
-    /*    width: 21.25%;*/
-    height: 55vmin;
-    max-height: 55vmin;
-    min-height: 35vmin;
+/*    margin: auto;*/
+    min-height: 47.5vh;
     /* Image in layout was off-center, a little */
-    margin-left: calc((100vw/2) - 8vw);
+/*    margin-left: calc(50% - 8%);*/
+/*    position: absolute;*/
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);	
 }
 
 
 /* div containing page content */
 
 div#page2main {
+    position: relative;
     /*    border: 1px dotted green;*/
-    margin-right: 45px;
-    margin-left: 45px;
+    margin-right: 5%;
+    margin-left: 5%;
 }
+
 
 div.page2 img.man {
     position: relative;
     /*    border: 1px dotted green;*/
     margin: auto;
-    height: 9.5vmin;
+    min-height: 7.5vh;
 }
 
 
@@ -166,11 +173,10 @@ div.page2 img.man {
 div.page2 div span {
     position: relative;
     font-family: sans-serif;
-    font-size: 1.32em;
-    font-size: 4.55vmin;
+    font-size: 4vh;
     line-height: 6.5vh;
-    top: -19px;
-    padding-left: 2vw;
+    top: 12%;
+/*    padding-left: 2vw;*/
 }
 
 
@@ -181,9 +187,6 @@ div.page2 div p {
     /*    border: 1px dotted red;   */
     font-size: 2.25vh;
 }
-
-
-/*Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" */
 
 button.greenborder.greentext.italic {
     font-size: 1.1em;
@@ -202,7 +205,7 @@ button.greenborder.greentext.italic {
 /* Page 3 Our Services */
 
 div.page3 img.mobile.video {
-    height: 52vh;
+    min-height: 52vh;
     width: 100%;
     clip: rect(0px, 60px, 0px, 60px);
 }
@@ -234,25 +237,27 @@ div.page3 p {
 div.page3 img.mobile.sep {
     display: block;
     margin: auto;
-    width: 19vw;
+    width: 19%;
 }
 
 div.page3 div#services {
     /*    background-color: aliceblue;*/
-    margin: 0 5vw;
+/*    margin: 0%;*/
+    min-height: 52vh;
 }
 
 div.page3 div div#services div img.mobile {
-    height: 12vh;
+    min-height: 12vh;
     float: left;
-    margin-right: 8vw;
+    margin-right: 8%;
     /*    margin-bottom: 2vh;*/
 }
 
 div.page3 div div#services div img.mobile.shrink {
     width: 10vw;
-    height: 9vh;
-    margin-right: 7vw;
+    min-height: 9vh;
+    max-width: 11%;
+    margin-right: 7%;
 }
 
 div.page3 div div#services div span.sans-serif.greenText {
@@ -261,7 +266,7 @@ div.page3 div div#services div span.sans-serif.greenText {
     font-family: sans-serif;
     font-weight: 600;
     font-size: 2.4vh;
-    padding-bottom: 5vh;
+/*    padding-bottom: 5vh;*/
 }
 
 div.page3 div div#services div span.sans-serif.greenText span.blackText {
@@ -277,166 +282,153 @@ div.page3 div div#services div span.sans-serif.greenText span.blackText {
 div.page3 div div#services div,
 div.page3 div div#services {
     /*    border: 3px dotted black;*/
-    margin: 5px 44px;
+    margin: 0.1% 8%;
 }
 
 div.page3 div button.greenborder.greentext.italic {
     display: block;
-    font-family: sans-serif;
-    font-size: 1.15em;
+    font-family: serif;
+    font-size: 4vh;
     margin: auto;
+    margin-bottom: 10%;
 }
 
 
-/* *******    Page 4    ******** */
+/* *** Page 4  Meet Our Amazing Team  *** */
 
 div.page4 h1,
 div.page4 p {
     position: relative;
     display: block;
     font-family: sans-serif;
-    font-weight: 100;
-    font-size: 3.0vh;
+    font-weight: 400;
+    font-size: 3.5vh;
     color: rgba(241, 243, 239, 1.0);
     text-align: center;
 }
-
+div.page4 h1 {
+    top: 8vh;
+}
 div.page4 div.ceoContainer div {
     /*    background-color: aliceblue;*/
 }
 
 div.page4 p.heading {
     font-size: 2.4vh;
-}
-
-div.page4 h1 {
-    padding-top: 9vh;
-}
-
-div.page4 p.heading {
-    margin-top: 2vh;
+    top: 7vh;
 }
 
 div.page4 img.mobile.sep {
     position: relative;
-    top: 1vh;
-    width: 20vw;
+    top: 7vh;
+    width: 20%;
     display: block;
     margin: auto;
 }
 
-div.page4 img.mobile.larrow,
-div.page4 img.mobile.rarrow {
-    display: inline;
-    height: 8.5vh;
-    width: 5vw;
-    cursor: grab;
-    z-index: +110;
-}
-
-#ceoBoxTwoTone {
-    position: relative;
-    margin-left: 18.5vw;
-    margin-right: 17.5vw;
-    top: -8vh;
-    min-height: 33vh;
-    min-width: 25%;
-    background-color: rgba(238, 246, 248, 1.0);
-    border-radius: 1vw;
-    z-index: +100;
-}
-
-#ceoBoxDarkTone {
-    position: relative;
-    /*    display:; */
-    margin-left: 18.5vw;
-    margin-right: 17.5vw;
-    top: -13.5vh;
-    height: 15vw;
-    min-height: 1vh;
-    min-width: 3vw;
-    background-color: rgba(217, 229, 229, 1.0);
-    /* rgba(236,234,236, 1.0);*/
-    border-radius: 0vw 0vw 1vw 1vw;
-    z-index: +101;
+.ceoContainer {
+/*    border: 2pc solid black;*/
+/*    z-index: +555*/
 }
 
 div.page4 img.mobile.ceoPic {
     position: relative;
     display: inline;
-    height: 20vmin;
-    max-height: 20vmax;
-    width: 20vmin;
-    left: calc(50vw - 10vmin);
+    top: 15vh;
+    min-height: 20vh;
+/*    min-width: 25vw;*/
+/*    width: 22%;*/
+/*    left: calc(50% - 22% / 2 );*/
+    margin-left: calc(50% - 22% / 2 );
+    
     z-index: +120;
 }
 
-div.page4 img.mobile.larrow {
+#ceoBoxTwoTone,
+#ceoBoxDarkTone {
+    margin-left: 21.5%;
+    margin-right: 23.5%;    
+}
+
+#ceoBoxTwoTone {
     position: relative;
-    top: -39vh;
-    left: 5vw;
+    top: 6vh;
+    min-height: 42vh;
+    min-width: 25%;
+    background-color: rgba(238, 246, 248, 1.0);
+    border-radius: 15px;
+    z-index: +100;
+}
+
+#ceoBoxDarkTone {
+    position: relative;
+    top: -1.5vh;
+    min-height: 15vh;
+    min-width: 3%;
+    background-color: rgba(217, 229, 229, 1.0);
+    border-radius: 0vw 0vw 15px 15px;
+    z-index: +101;
+}
+
+div.page4 img.mobile.larrow, 
+div.page4 img.mobile.rarrow {
+    position: relative;
+    height: 10vh;
+    top: -37vh; 
+}
+div.page4 img.mobile.larrow {
+    left: 5%;
 }
 
 div.page4 img.mobile.rarrow {
-    position: relative;
-    top: -39vh;
-    left: 80vw;
+    left: 83%;
 }
 
 div.page4 div p#nameCeo {
     /*    border: dotted 5px black ;*/
     position: relative;
     top: -45vh;
+/*    left: 11%;*/
+    text-align: center;
     color: rgb(172, 210, 116);
     font-family: sans-serif;
     font-weight: 600;
-    font-size: 2.5vh;
+    font-size: 3vh;
     z-index: +150;
 }
 
 div.page4 div.ceoContainer div p#nameCeo span.italic.serif {
     position: relative;
-    top: -0vh;
+    top: -1vh;
     left: 0vw;
+/*    text-align: center;*/
     font-family: serif;
     font-weight: 100;
-    font-size: 2.5vh;
+    font-size: 3vh;
     font-style: italic;
     color: black;
     z-index: +160;
-    /*    border: dotted 5px white ;*/
 }
 
 div.page4 span img.mobile {
     display: inline;
     position: relative;
-    height: 6.5vmin;
-    max-height: 8vmin;
-    margin-left: 1vw;
-    top: -40.9vh;
-    left: calc(27vw);
+    min-height: 6vh;
+    left: calc(50% - 145px);
+    top: -30vh;
     z-index: +120;
-}
-
-.ceoContainer {
-    border: 2pc solid black;
-    z-index: +555
-}
-
-div.page4 div {
-    border: none;
-    /*    background-color: rgb(156, 188, 104);*/
 }
 
 div.page4 div,
 div.page4 div button {
     color: rgba(241, 243, 239, 1.0);
+    
 }
 
 #actionFooter {
     position: relative;
     margin: 0;
-    top: -29vh;
+    top: -0vh;
     min-height: 15vh;
     background-color: rgba(156, 188, 104, 1.0);
     z-index: +170;
@@ -446,23 +438,23 @@ div.page4 div span {
     /*    background-color: rgba(0,0,0,0.0);*/
     position: relative;
     top: -3vh;
-    left: 10vw;
+    left: 10%;
     font-family: sans-serif;
     font-weight: 400;
-    font-size: 2.4vh;
+    font-size: 3vh;
 }
 
 div.page4 div button {
     background-color: rgba(0, 0, 0, 0.0);
     position: relative;
     top: 4vh;
-    left: 22vw;
+    left: 22%;
     border: 1px solid aliceblue;
     color: aliceblue;
     font-family: serif;
     text-align: center;
     font-style: italic;
-    font-size: 2vh;
+    font-size: 3vh;
     padding: .66em 1.22em .66em 1.22em;
     margin: .0em;
 }
@@ -470,7 +462,7 @@ div.page4 div button {
 #actionFooter span {
     position: relative;
     top: 4vh;
-    left: 5vw;
+    left: 5%;
 }
 
 
@@ -508,7 +500,7 @@ div.page5 h1 span.greentext {
 div.page5 img.mobile.sep {
     position: relative;
     top: 10vh;
-    width: 20vw;
+    width: 20%;
     display: block;
     margin: auto;
 }
@@ -516,18 +508,18 @@ div.page5 img.mobile.sep {
 div.page5 img.mobile.letoy {
     position: relative;
     top: 18vh;
-    margin-left: 7.5vw;
-    width: 80vw;
-    height: 32vh;
+    margin-left: 7.5%;
+    width: 80%;
+    min-height: 32vh;
     /*    padding-left: 5vw;*/
 }
 
 div.page5 div#letoyGreybox {
     position: relative;
     top: 14vh;
-    left: 7.5vw;
+    left: 7.5%;
     background-color: rgba(238, 238, 238, 1.0);
-    width: 80vw;
+    width: 80%;
     height: 15vh;
     z-index: -1;
 }
@@ -573,86 +565,94 @@ div.page5 div.mobile.footer img.mobile.logoEnvato {
     position: relative;
     margin: auto;
     top: 3vh;
-    left: 3vw;
-    width: 40vw;
-    height: 3.5vh
+    left: 3%;
+    width: 37%;
+    min-height: 3%;
 }
 
 div.page5 div.mobile.footer img.mobile.logoThemeforest {
     position: relative;
     margin: 0;
     top: 4vh;
-    left: 11vw;
-    width: 40vw;
-    height: 5.5vh
+    left: 11%;
+    width: 40%;
+    min-height: 2.5%;
 }
 
+div.page6 {}
+div.page5 {}
 
 /* Page 6  Testimonials */
 
 .page6 {
-    height: 125vh;
+    min-height: 125vh;
 }
-
 
 div.page6 {
     background-image: url("../media/MOBILE IMAGES/22testimonialBG.png");
     background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
     color: aliceblue;
+color: rgb(220,220,220);
     font-family: 'Roboto', serif;
     font-weight: 400;
 /*    font-style: italic;*/
 }
+div.page6 span img.mobile, div.page6 p.text, div.page6 h1.leftjustified.whiteText, div.page6 p.leftjustified.testimonial, div.page6 p.leftjustified button.greenborder.italic {
+    left: 7.5%;
+    
+}   
 
 div.page6 span img.mobile {
     position: relative;
-    margin: 7.5vw;
-    top: 9.5vh;
-    height: 54.5vmin;
-    max-height: 68vmin;
+    top:12.5vh;
+    min-height: 55vh;
 }
 
 div.page6 p.text {
     position: relative;
-    top: -40vh;
-    left: 13vw;    
-    margin-left: -1.5vw;
-    margin-right: 24vw;
+    top: -30.5vh;
+    left: 10%;
+    font-size: 3.1vh;
+    margin-right: 24%;
     font-family: serif;
+    font-weight: 400;
 }
-
 
 div.page6 img.mobile.carousel {
     position: relative;
     display: block;
-    margin-left: calc(50vw - 7.5vw );
-    top: -7vh;
-    height: 3vmin;
-    max-height: 3vmin;
+    margin-left: calc(50% - 7.5% );
+    top: 3vh;
+    min-height: 3vh;
 }
 
 div.page6 h1.leftjustified.whiteText {
     position: relative;
-    margin-left: -0vw;
-    top: -9vh;
+    top: 12vh;
+    font-size: 4vh;
+    font-weight: 500;
 }
 
 div.page6 p.leftjustified.testimonial {
     position: relative;
-    margin-left: 0vw;
-    top: 0vh;
+    top: 13vh;
+    font-size: 3.25vh;
+    margin-right: 15%;
+    font-weight: 400;
 }
 
-div.page6 p.leftjustified button.greenborder.italic {
+div.page6 p.leftjustified button.greenborder.italic {   display: block;
     position: relative;
-    top: 0vh;
+    background-color: rgba(0,0,0,0.0);
+    top: 4vh;
     left: 0vw;
 }
 
 div.page7 {}
 
 div.page8 {
-    width: 100vw;
+    min-width: 100%;
 }
