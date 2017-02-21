@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <div id="box"></div>
+    
+    <div>
+        <label>Input</label>
+        <input type="text" id="input" />
+        <br/>
+        <button type="button" id="go">Go</button>
+    </div>
+    
+    
+    
+    
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
+</script>
+<script>
+    $('#go').click(function(){
+        var input = $('#input').val();
+          debugger;
+        if (parseFloat(input)) 
+        {
+            $('#box').css ({
+                width: input+"vmin",
+                height: input+"vmin"
+            });
+        } else 
+        {
+            //(input == "red" || input == "blue") {
+            $("#box").css( {
+                backgroundColor: input
+            });
+        }
+    });
+    
+    
+</script>
+    
+
+
+    
+</body>
+</html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="#">
+
+<style>
+    #box {
+        width: 50vmin;
+        height: 50vmin;
+        border: 1px solid black;
+        background-color: white;
+    }
+</style>
+
+<script src="#"></script>
+

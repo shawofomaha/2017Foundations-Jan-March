@@ -13,35 +13,7 @@
 
 </head>
 <style>
-.page {
-    display: flex;
-        flex-direction: column;*/
-    }
-    
-.pageLeft .pageRight {
-        border: 1px dotted blue;
-        width: 50%;
-        box-sizing: border-box;
-        flex-grow: 1;
-        overflow: hidden;
-    }
-    
-.pageRight {
-        border: 1px dotted red;
-        height: 100vw;
-        align-items: flex-end;
-        flex-direction: column-reverse;
-    }
-    
-.pageRight img {
-    bottom: auto;        
-        
-    }
-    
-    .typedtext {
-        margin-right: 45%;
-        
-    }
+
 </style>
 
 <body id="main">
@@ -91,10 +63,9 @@
             </ul>
         </div>
         <div class="pageRight">
-
             <div id="typedtext" class="blue"></div>
-        </div>    
-        <div class="pageRight">            
+        </div>
+        <div class="pageBottom">
             <img src="http://lorempixel.com/920/920/" />
         </div>
     </div>
@@ -105,10 +76,61 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../css/stylesheet-index.css">
 <style>
+    .page {
+        display: inline-flex;
+        justify-content: space-around;
+        /*flex-direction: column;*/
+    }
+    
+    .pageLeft, .pageRight, .pageBottom {
+        border: 1px dotted blue;
+        width: 50%;
+        box-sizing: border-box;
+        flex-grow: 1;
+        overflow: hidden;
+    }
+    
+    .pageRight {
+        border: 1px dotted red;
+        height: 100vw;
+/*        align-items: flex-end;*/
+/*        flex-direction: column-reverse;*/
+/*        flex-direction: row;*/
+        flex-direction: column;
+    }
+    
+    .pageBottom img {
+        width: auto;
+        bottom: auto;
+    }
+    
+    
+    h1 {
+        /* The element to apply the animation to */
+        animation-delay: 5s;
+        animation-name: colorCrossFade;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    } 
+    h1 {
+        display: inline;
+        margin-left: 3vw;
+        padding-top: 5vw;
+        font-family: 'Pacifico', cursive;
+        font-size: 7vmin;
+        width: 7vw;
+        text-shadow: 0 0 3px #FF0000;
+    }    
+    
+    .typedtext {
+/*        margin-right: 45%;*/
+    }
+    
     #typedtext {
         font-family: 'Waiting for the Sunrise', cursive;
         /*        font-size: 2em;*/
-        margin: 3vw 45vw 3vw 3vw;
+/*        margin: 3vw 45vw 3vw 3vw;*/
         letter-spacing: normal;
         font-weight: bold;
         font-size: 5vmin;
@@ -150,15 +172,7 @@
             color: rgba(244, 241, 66, 0.99);
         }
     }
-    
-    h1 {
-        /* The element to apply the animation to */
-        animation-delay: 5s;
-        animation-name: colorCrossFade;
-        animation-duration: 2.5s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-    }
+
     
     #main {
         /*        display: inline;*/
@@ -172,27 +186,14 @@
         border-radius: 15%;
     }
     
-    h1 {
-        display: inline;
-        margin-left: 3vw;
-        padding-top: 5vw;
-        font-family: 'Pacifico', cursive;
-        font-size: 7vmin;
-        width: 7vw;
-        text-shadow: 0 0 3px #FF0000;
-    }
-    
-    img {
-        border-radius: 15vw;
-        border: 7px solid black;
-        height: 40vw;
-/*
-        margin-top: -25vw;
-        margin-right: 3vw;
-        margin-bottom: 0vw;
+
+    /*
+    border-radius: 15vw;
+    border: 7px solid black;
+    height: 40vw;
+    float: right;
+}
 */
-        float: right;
-    }
     
     ul {
         list-style: none;
