@@ -241,7 +241,7 @@
             }
 
             gameRandomNumber = parseInt(Math.random() * topNumberRangeNbr + 1);
-            logAreaString( "Guess a number between 1 and 100 and click the Enter Top Number button to see if you have WON or need to try some more!");            
+            logAreaString( "Guess a number between 1 and "+topNumberRangeNbr+" and click the Enter Top Number button to see if you have WON or need to try some more!");            
             $("#topNumberDisplay").text(topNumberRangeNbr);
             nbrLoop = 0;
             return;
@@ -251,6 +251,7 @@
 
             var closeString = "";  
             playerGuess = $("#guessedNumber").val();
+            nbrLoop++;                
 
             if (playerGuess * 1 > topNumberRangeNbr * 1) {
                 logAreaString("Please pick a number between 1 and " + topNumberRangeNbr + "! You chose poorly and chose " + playerGuess + " which is higher then " + topNumberRangeNbr + " which you originally chose.");
@@ -259,8 +260,6 @@
                 logAreaString("Please pick a number between 1 and " + topNumberRangeNbr + "! You chose poorly and chose " + playerGuess + " which is lower than 1 which is too Low or as Low as You can gO!");
                 $("#guessedNumber").val(1);
             } else {
-
-                nbrLoop++;
 
                 var diffBetweenGuessandAnswer = Math.abs(playerGuess - gameRandomNumber);
 
@@ -277,8 +276,13 @@
                 }
 
                 if (playerGuess == gameRandomNumber) {
-                    logAreaString("You have won, your guess of " + playerGuess + " was correct! You made " + nbrLoop + " guesses.");
-                    wonGame = true;
+                    if (playerGuess == 1) {
+                        logAreaString("You have won, your guess of " + playerGuess + " was correct! You made " + nbrLoop + " guess.");
+                        wonGame = true;                        
+                    } else {
+                        logAreaString("You have won, your guess of " + playerGuess + " was correct! You made " + nbrLoop + " guesses.");
+                        wonGame = true;   
+                    }                        
                 } else {
                     logAreaString("You have not won yet as your guess of " + playerGuess + " was incorrect on guess number " + nbrLoop + ". Please enter another number to play again!" + closeString);
                 }
