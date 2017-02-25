@@ -4,10 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <style>
+        .selected {
+            background-color: red !important;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="box"></div>
+    <div class="box"></div>
+    <button type="button" id="add">Add</button>
     
     <div>
         <label>Input</label>
@@ -39,6 +45,10 @@
         }   
     }
     
+    $("body").on("click", ".box", function(){
+        
+    });
+    
     $('#go').click(changeBox);
         
 //          debugger;
@@ -53,6 +63,14 @@
         
     });
     
+    $("#box").click(function() {
+      
+      $(this).toggleClass("selected");
+    });
+                    
+    $("#add").click(function() {
+        $("#add").append("<div> class='box'></div>");
+    });
     
 </script>
     
@@ -64,7 +82,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="#">
 
 <style>
-    #box {
+    .box {
+        position: relative;
         width: 50vmin;
         height: 50vmin;
         border: 1px solid black;

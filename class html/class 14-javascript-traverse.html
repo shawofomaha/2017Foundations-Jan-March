@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+    <script>
+        var nbrLoop = 0;
+        console.log(" Loop number: " + nbrLoop);
+    </script>
+</head>
+
+<body>
+    <header>header orginal</header>
+    <input id="name" />
+    <input type="checkbox" id="important" />
+    <button type="button" id="add">Add</button>
+    <div id="list"></div>
+    <br/>
+    <br/>
+    <br/>
+    <label>Zip Code: </label>
+    <input type="number" id="zip" />
+    <button type="button" id="getData">Get DaTA</button>
+
+    <div id="container">This will replaced</div>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
+    </script>
+    <script>
+        nbrLoop++;
+        console.log("script-Loop number: " + nbrLoop);
+        var randomColor = function() {
+            var red = parseInt(Math.random()*255);
+            var blue = parseInt(Math.random()*255);
+            var green = parseInt(Math.random()*255);
+            var colr = "rgb("+red+", "+green+", "+blue+")";
+            console.log(colr);
+            return colr;
+            
+        }
+        
+//        setInterval(randomColor, 2000);
+        
+        var intervalId = setInterval(function() {
+            debugger;
+            $("header").css("background-color", randomColor());
+        }, 5000);
+        
+        $("header").load("header.html");
+        $("#container").load("footer.html");
+        $("#getData").click(function () {
+            nbrLoop++;
+            console.log("clk-Loop number: " + nbrLoop);
+            var zip = $("#zip").val();
+            $.ajax({
+                url: "http://api.openweathermap.org/data/2.5/weather",
+                data: {
+                    zip: "68144,us",
+                    APPID: "442a58545b0effda4684a876b7397473",
+                    units: "imperial"
+                }
+
+            }).success(function (data) {
+                $(".msg").remove();
+                $("body").append("<span class='msg'>The current temp is: " + data.main.temp + "F</span>");
+            })
+        });
+        $("#add").click(function () {
+            var name = $("#name").val();
+            var important = $("#important").prop("checked");
+            $("#list").append("<div class='wrapper'><div class='item'>" + name + "</div></div>");
+            if (important) {
+                $("#list").find(".item:last-of-type").css("color:", "red");
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .error{
+                background-color: pink;
+            }
+            
+            .correct{
+                background-color: lightgreen;
+            }
+            
+            #numAnswersLabel{
+                display: none;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        <label>What is 5+5</label>
+        <input class="answer" a="10" />
+        <br/>
+        <label>What is 2*10</label>
+        <input class="answer" a="20" />
+        <br/>
+        <label>What color is the sky?</label>
+        <input class="answer" a="blue,yellow,orange" />
+        <br/>
+        <label>What is 10*10</label>
+        <input class="answer" a="100" />
+        <br/>
+        <button type="button" id="check">Check Answers</button>
+        <br/>
+        <span id="numAnswersLabel">Number of Correct Answers: </span>
+        <span id="numAnswersCorrect"></span>
+        
+        <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+        
+        <script>
+            $("#check").click(function(){
+                var counter = 0;
+                $("input.answer").each(function(){
+                    var answer = $(this).attr("a");
+                    var user = $(this).val();
+                    if(answer.includes(",")){
+                        var answers = answer.split(",");
+                        var correct = false;
+                        for(i in answers){
+                            if(answers[i] == user){
+                                correct = true;
+                            }
+                        }
+                        if(correct){
+                            counter++;
+                            $(this).addClass("correct").removeClass("error");
+                        }else{
+                            $(this).addClass("error").removeClass("correct");
+                        }
+                    }else{
+                        if(answer == user){
+                            counter++;
+                            $(this).addClass("correct").removeClass("error");
+                        }else{
+                            $(this).addClass("error").removeClass("correct");
+                        }
+                    }
+                });
+                $("#numAnswersLabel").show();
+                $("#numAnswersCorrect").text(counter);
+            });
+        </script>
+    </body>
+</html>

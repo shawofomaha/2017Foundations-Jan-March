@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .box{
+                height: 10vmin;
+                width: 10vmin;
+                border: 1px solid black;
+                background-color: white;
+                top: 100px;
+                left: 100px;
+            }
+            
+            .box2{
+                height:20vmin;
+                width: 20vmin;
+                border: 1px solid red;
+                background-color: antiquewhite;
+                top: 100px;
+                left: 100px;
+            }
+            
+            
+            .selected{
+                background-color: red !important;
+            }
+            
+            #container{
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-content: space-around;
+            }
+        </style>
+    </head>
+    <body>
+        <button type="button" id="add">Add</button>
+        <div id="container">
+            <div class="box"><p>Ab fugiat offendit, labore fabulas occaecat, si culpa velit magna expetendis, in 
+                veniam id quid, quamquam duis offendit ex ex lorem iis quorum non ad veniam 
+                lorem esse ullamco, minim deserunt et esse amet. Quorum te ita nisi quibusdam. 
+                Ut non transferrem, eram nescius ita duis dolore, ne labore ingeniis, anim 
+                officia laboris, anim concursionibus excepteur legam officia, quem cernantur si 
+                concursionibus, ex elit aliquip litteris, fore coniunctione pariatur aliqua 
+                excepteur. Eiusmod quid cupidatat proident, si o velit fabulas. Mentitum labore 
+                fugiat qui multos ita quae mentitum ab iudicem. O sint eiusmod arbitrantur, amet 
+                praesentibus voluptate eram laboris.</p>
+
+            </div>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+        <script>
+            var num = 5;
+            function pyth(sideA, sideB){
+                var sideCSquared = sideA * sideA + sideB * sideB;
+                var sideC = Math.sqrt(sideCSquared);
+                return sideC;
+            }
+            
+            $("body").on("click", ".box", function(){
+                $(this).toggleClass("selected");
+            });
+            
+            $("#add").click(function(){
+                $("#container").append("<div class='box'><p>Ubi amet fugiat elit mentitum, irure nescius praetermissum, ingeniis esse admodum sed ubi nisi distinguantur. Do se distinguantur e dolore ex nostrud ad a anim ubi noster, tamen distinguantur mentitum elit quibusdam. Ex ubi efflorescere. Non aute elit aute mandaremus. Qui quae ullamco relinqueret an id si quis quorum quis. Deserunt fore summis est esse ad ad dolor iudicem, ab ingeniis ea cupidatat non magna domesticarum laborum fore ullamco, aliqua quo aliquip, ab malis culpa iis ingeniis, tamen id mentitum, do lorem sunt esse admodum.</p></div>");
+                $("#container").append("<div class='box2'>lorem</div>");
+            });
+        </script>
+    </body>
+</html>

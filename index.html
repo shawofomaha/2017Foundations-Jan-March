@@ -18,12 +18,14 @@
 
 <body id="main">
     <div class="page">
-<!--        <div class="heading">-->
-            <h1>Marko's Interface Web <span id="blue">I</span><span id="red">n</span><span id="green">d</span><span id="blue2">e</span><span id="purple">x</span> page</h1>
-<!--        </div>-->
 
-<!--        <div class="pageLeft">-->
-            <div>
+        <h1>Marko's Interface Web <span id="blue">I</span><span id="red">n</span><span id="green">d</span><span id="blue2">e</span><span id="purple">x</span> page</h1>
+        
+        <div class="container">
+            <div id="typedtext" class="blue"></div>
+        </div>        
+
+        <div class="container">
             <h3 id="h3_first">Work done in Class</h3>
             <ul>
 
@@ -33,15 +35,19 @@
                 <li><a href="class html/flex-box-play-2.html">Playing with Flex boxes Part II</a></li>
                 <li><a href="class html/floatlayout.html">Playing with Float Layouts</a></li>
                 <li><a href="class html/week 3-working.html">Week 3-Class working</a></li>
-
+                <li><a href="Class 11 - Javascript.html">Javascript</a></li>
+                <li><a href="Class10-bootstrap.html">bootstrap</a></li>
+                <li><a href="Class10-bootstrap-2.html">bootstrap-2</a></li>
+                <li><a href="class10-advancedSelectors.html">advancedSelectors</a></li>
+                <li><a href="Class 12 javascript-jquery.html">javascript-jquery</a></li>
+                <li><a href="Class 11 - Javascript.html">Javascript</a></li>
                 <!--        
         <li><a href=""></a></li>
 -->
             </ul>
-<!--
-            </div>
-            <div>
--->
+        </div>
+
+        <div class="container">
             <h3 id="h3_second">Weekend Home Work</h3>
             <ul>
                 <li><a href="homework/css-properties.html">Class CSS Properties</a></li>
@@ -59,23 +65,22 @@
         </li>
 -->
             </ul>
+        </div>
 
+        <div class="container">
             <h3 id="h3_third">Outside Projects</h3>
             <ul>
                 <li><a href="#">&nbsp;</a></li>
                 <li><a href="#">&nbsp;</a></li>
             </ul>
-            </div>
-            <div id="typedtext" class="blue"></div>
-            
-<!--        </div>-->
-<!--        <div class="pageRight">-->
-<!--            <div id="typedtext" class="blue"></div>-->
-<!--        </div>-->
-<!--        <div class="pageBottom">-->
+        </div>
+
+
         
-            <img src="http://lorempixel.com/920/920/" />
-<!--        </div>-->
+        <div class="container">
+            <img src="http://lorempixel.com/320/320/" />
+        </div>
+
     </div>
 </body>
 
@@ -84,75 +89,66 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../css/stylesheet-index.css">
 <style>
-/*
     * {
-       border: 1px dotted blue; 
-    }
-*/
-    .page {
-        display: inline-flex;
-        height: 100vh;
-/*        justify-content: center;*/
-/*        flex-direction: column;*/
-        flex-grow: 1;
-        flex-wrap: wrap;
-/*
+        border: 1px dotted blue;
     }
     
-    .pageLeft, .pageRight, .pageBottom {
-*/
-/*        flex-direction: row;*/
-        border: 1px dotted blue;
-/*        width: 50%;*/
-        box-sizing: border-box;
+    .container {
+        height: auto;
+/*        width: 32vw;*/
+/*        display: inline-flex;*/
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-grow: 1;
         
+    }
+    
+    .page {
+        display: flex;
+        /*        height: 100vh;*/
+/*        width: 100vw;*/
+        width: auto;
+        border: 1px dotted blue;
+        box-sizing: border-box;
         overflow: hidden;
     }
     
     .pageRight {
         border: 1px dotted red;
-/*        height: 100vw;*/
-/*        align-items: flex-end;*/
-/*        flex-direction: column-reverse;*/
-/*        flex-direction: row;*/
-/*        flex-direction: column;*/
+    }
+    
+    img {
+        border-radius: 15vw;
+        width: 15vw;
+        filter: alpha(opacity=60);
     }
     
     .pageBottom img {
-        float: right;                                                                                                                                   
-/*        flex-direction: row;*/
-/*        display: inline-flex;*/
+        float: right;
         width: auto;
-        bottom: auto;
     }
     
-    
     h1 {
-        display: inline-block;
+/*        display: inline-block;*/
+        width: 10vw;
+        position: relative;
         /* The element to apply the animation to */
         animation-delay: 5s;
         animation-name: colorCrossFade;
         animation-duration: 2.5s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
-        display: inline;
-/*        margin-left: 3vw;*/
-/*        padding-top: 5vw;*/
         font-family: 'Pacifico', cursive;
         font-size: 7vmin;
-/*        width: 7vw;*/
         text-shadow: 0 0 3px #FF0000;
-    }    
-    
-    .typedtext {
-/*        margin-right: 75%;*/
+        margin-left: 22vw;
     }
     
+    .typedtext {}
+    
     #typedtext {
-        width: 100vw;
+/*        width: 100vw;*/
         font-family: 'Waiting for the Sunrise', cursive;
-        /*        font-size: 2em;*/
-/*        margin: 3vw 45vw 3vw 3vw;*/
         letter-spacing: normal;
         font-weight: bold;
         font-size: 5vmin;
@@ -160,34 +156,35 @@
     }
     
     h3 {
+/*        display: inline-flex;*/
+        text-align: center;
+        margin: 0;
+        padding: 0;
         height: 2vh;
-        padding: 0 0 0 11vw;
-        margin: 2vw 0 0.5vw 3vw;
         color: black;
         font-size: 2vmin;
     }
     
-    
     ul {
         padding: 0 0 0 0;
-        margin: 0 0 0 3vw;
-        text-align: justify;
+        margin: 0;
+        text-align: center;
     }
     
     li {
+        width: 27vw;
         text-align: center;
         font-size: 1em;
         font-size: 2vmin;
     }
     
     body {
-        /*        border: 8px dashed green;*/
         padding: 0 0 0 0;
         margin: 0 0 0 0;
-        /*        max-height: 3vw;*/
     }
-    /* The animation code */
     
+    
+    /* The animation code */
     @keyframes colorCrossFade {
         from {
             color: rgba(255, 0, 0, 0.99);
@@ -196,46 +193,31 @@
             color: rgba(244, 241, 66, 0.99);
         }
     }
-
     
     #main {
-        /*        display: inline;*/
-        text-align: justify;
-/*        height: 120vh;*/
         background-color: rgba(221, 234, 255, 1.0);
-        background-image: url("http://lorempixel.com/g/640/640/");
-        background-size: 100%;
+        background-image: url("http://lorempixel.com/g/1200/960/");
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: bottom;
-        border-radius: 15%;
+        /*        border-radius: 15%;*/
     }
-    
-
-    /*
-    border-radius: 15vw;
-    border: 7px solid black;
-    height: 40vw;
-    float: right;
-}
-*/
     
     ul {
         list-style: none;
         font-family: sans-serif;
         color: rgba(255, 255, 255, 1.0);
         border-radius: 2vw;
-        width: 33vw;
+        width: 29vw;
         background-color: #ffffff;
-        border: 3px solid black;
-        /*        border: 4px dotted yellow;*/
+        border: 2px solid dodgerblue;
         opacity: 0.6;
         filter: alpha(opacity=60);
-        /* For IE8 and earlier */
     }
     
     #blue,
     #blue2 {
-        color: blue;
+        color: dodgerblue;
         font-style: italic;
     }
     
@@ -258,7 +240,7 @@
 <script>
     // set up text to print, each item in array is new line
     var aText = new Array(
-        "I am the baddest dude on the planet! Watch out Paul Newman (and all who know Mark J Shaw) the ShawofOmaha is taking over the world! harr! harr!! harr! harr!! harr!!  "
+        "I am the baddest dude on the planet! Watch out, the ShawofOmaha is taking over the world! harr! harr!! harr!!!"
     );
     var iSpeed = 133; // time delay of print out
     var iIndex = 0; // start printing array at this posision

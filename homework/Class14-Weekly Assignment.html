@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 Assignment</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <style>
+font: font-style font-variant font-weight font-size/line-height font-family        
+        * {
+            box-sizing: border-box;
+            font: normal normal 400 large "Roboto", sans-serif;
+        }
+     
+        .item {
+            overflow: hidden;
+            flex: 1 100%;
+        }
+        
+        label.item {
+            width 25%;
+        }
+        
+        h1,
+        h3 {
+            font-family: sans-serif;  
+            width: 100vw;
+            text-align: center;
+        }
+        h3 {
+            font-size:    small;
+        }
+        
+        div > .item {
+            font-style:italic;
+            font-weight:300;
+        }
+         
+         #logArea {
+            font-style:normal;
+            font-weight:400;
+        }
+               
+        #logArea {
+            background-color: aliceblue;
+            border-radius: 5%;
+        }
+        
+         .forestgreen {
+            color: forestgreen;
+        }
+        
+        .lightgrey {
+            color: lightgrey;
+            
+        }
+        label.item.reStart {
+           font-size:  0.5vh;   
+        }
+
+    </style>
+</head> 
+
+<body>
+    <h1 class="item">Week 4 Homework Javascript</h1>
+    <h3 class="item"><p>Number Game, play against the Computer!</p></h3>
+
+    <div class="container">
+        
+        <label class="item choose">Choose a number between 1 and ?:</label>
+        <input type="number" id="topNumberRange" class="item" value="100" />
+        <button type="button" id="numberRangeSet" class="item">Enter top number</button>
+        <br />
+        <br />
+        <label class="item guess">Guess a number between 1 and <span id="topNumberDisplay">100</span>:</label>
+        <input type="number" id="guessedNumber" class="item" />
+        <button type="button" id="guessTry" class="item">Enter number</button>
+        <br />
+        <br />
+        <div id="logArea" class="item">Information log area</div>
+        <br />
+        <br />
+        <label class="item reStart">To restart, press the Restart Game button:</label>
+        <button type="button" id="restartGameButton" class="item">Restart Game</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script>
+        //Functions
+        logString = function (logStrng) {
+            console.log(logStrng);
+            return;
+        }
+
+        logAreaString = function (logAreaStrng) {
+            $("#logArea").text(logAreaStrng);
+            return;
+        }
+
+        gameReset = function () {
+            $("#guessedNumber").prop('disabled', true);
+            $("#guessTry").prop('disabled', true);
+            $("#topNumberRange").prop('disabled', false);
+            $("#numberRangeSet").prop('disabled', false);
+            $(".guess").removeClass("forestgreen").addClass("lightgrey");
+            $(".choose").removeClass("lightgrey").addClass("forestgreen");         
+            topNumberRangeNbr = 100;
+            $("#topNumberRange").val(100);
+            logAreaString("topNumberRangeNbr " + topNumberRangeNbr);
+            gameRandomNumber = parseInt(Math.random() * topNumberRangeNbr + 1);
+            logString("gameRandomNumber: " + gameRandomNumber + "<==");
+            playerGuess = $("#guess").val();
+            logAreaString("Welcome to the game! Guess a number between 1 and 100 and click the Enter Number button to see if you have WON or need to try some more!");
+            nbrLoop = 0;
+            playerGuess = "";
+            $("#topNumberDisplay").text(topNumberRangeNbr);
+        }
+
+        resetTopRangeNumber = function () {
+            $("#guessedNumber").prop('disabled', false)
+            $("#guessTry").prop('disabled', false);
+            $("#topNumberRange").prop('disabled', true);
+            $("#numberRangeSet").prop('disabled', true); 
+            $(".choose").removeClass("forestgreen").addClass("lightgrey");
+            $(".guess").removeClass("lightgrey").addClass("forestgreen");           
+            topNumberRangeNbr = $("#topNumberRange").val();
+            if (topNumberRangeNbr < 2) {
+                // Reset to default if out of range!
+                topNumberRangeNbr = 100;
+                $("#topNumberRange").val(100);
+            }            
+            
+            logString("topNumberRangeNbr =" + topNumberRangeNbr);
+            gameRandomNumber = parseInt(Math.random() * topNumberRangeNbr + 1);
+            logString("gameRandomNumber =" + gameRandomNumber + "<==");
+            logString("topNumberRangeNbr == " + topNumberRangeNbr);
+            $("#topNumberDisplay").text(topNumberRangeNbr); 
+            nbrLoop = 0;
+
+        }
+
+        // Set up game variables on entrance, this code is only run on page load:
+        $(".guess").addClass("lightgrey");
+        $(".choose").addClass("forestgreen");        
+        $("#guessedNumber").prop('disabled', true);
+        var topNumberRangeNbr = $("#topNumberRange").val();
+        logAreaString("topNumberRangeNbr " + topNumberRangeNbr);
+        var gameRandomNumber = parseInt(Math.random() * topNumberRangeNbr + 1);
+        logString("gameRandomNumber: " + gameRandomNumber + "<==");
+        var playerGuess = $("#guess").val();
+        logAreaString("Welcome to the game! If you want to change the top number from the default of a 100, please do so before pressing the Enter Top Number button. Next enter your Guess of a number between 1 and " + topNumberRangeNbr + ". Then click the Enter Number button to see if you have WON or not so much! At any time you may restart the game by using the Restart Game button.");
+        var nbrLoop = 0;
+        var playerGuess = "";        
+
+        // ***********  Click Handlers *********** //
+
+        // Restart game if #restartGameButton pressed
+        $("#restartGameButton").click(function () {
+            resetTopRangeNumber();
+            gameReset();
+        });
+
+        // Reset the Top Range Number game if #numberRangeSet pressed
+        $("#numberRangeSet").click(function () {
+            resetTopRangeNumber();
+        });
+
+        // Play the game if the #guessTry button is pressed
+        $("#guessTry").click(function () {
+
+            nbrLoop++;
+            playerGuess = $("#guessedNumber").val();
+            logString("playerGuess: " + playerGuess + " ... Try number " + nbrLoop + ".");
+            
+            var diffBetweenGuessandAnswer = Math.abs(playerGuess - gameRandomNumber);
+            var closeString = "";
+            
+            if (diffBetweenGuessandAnswer == 0 ) {
+                closeString = " You are da MAN, you got it right!";
+            } else if (diffBetweenGuessandAnswer < 5 ) {
+                closeString = " You are very close(hot)!";
+            } else if (diffBetweenGuessandAnswer < 15 ) {
+                closeString = " You are quite close(warm)!";
+            } else if (diffBetweenGuessandAnswer < 25 ) {
+                closeString = " You are very, very close(cool)!";
+            } else {
+                closeString = " You are SO very, very far away(ice-cold)!";
+            }
+            
+            logString("closeString: " + closeString );
+           
+
+            if (playerGuess == gameRandomNumber) {
+                logAreaString("You have won, your guess of " + playerGuess + " was correct! You made " + nbrLoop + " guesses.");
+            } else {
+                logAreaString("You have not won yet as your guess of " + playerGuess + " was incorrect on guess number " + nbrLoop + ". Please enter another number to play again!" + closeString);
+            }
+
+            // re-initalize variables
+            playerGuess = "";
+            $("#guessedNumber").val(0);
+            logString("topNumberRangeNbr == " + topNumberRangeNbr);
+            
+        });
+    </script>
+</body>
+
+</html>

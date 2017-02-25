@@ -3,50 +3,49 @@
 
 <head>
     <style>
-        #box {
+        .box {
             height: 10vmin;
             width: 10vmin;
             border: 1px solid black;
-            position: absolute;
+            position: relative;
             top: 100px;
             left: 100px;
         }
-
+        
+        .selected {
+            background-color: red !important;
+        }
     </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class 12 Javascript</title>
-    <link rel="stylesheet" href="#">
+<!--    <link rel="stylesheet" href="#">-->
 </head>
 
 <body>
-<!--
+    <div class="box"></div>
+    <button type="button" id="add">Add</button>
 
-    <div id=""></div>
-    <div class=""></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div>
-        <label>Input</label>
-        <input type="text" id="input" />
-        <br/>
-        <button type="button" id="go">Go</button>
-    </div>
--->
-        <div id="box"></div>
+    <div id="box"></div>
+    
+    
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
     </script>
 
     <script>
         function pyth(sideA, sideB) {
             var sideCSquared = sideA * sideA + sideB * sideB;
-            var sideC = Math.sqrt()sideCSquared;
-            return sideC;
-        };
+            var sideC = Math.sqrt(sideCSquared);
+            return sideC;add
+        }
+
+        $("#body").on("click", ".box", function() {
+            $(this).toggleClass("selected");
+        });
+       
+        $("#add").on("click", function(){
+            $(this).after('<div> class=".box"></div>');
+        });
     </script>
 
 </body>
