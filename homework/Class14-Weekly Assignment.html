@@ -16,7 +16,7 @@
         #home:hover,
         #numberRangeSet:hover,
         #guessTry:hover,
-        #<>restart</t>GameButton:hover,
+        #restartGameButton:hover,
         #gameHintButton:hover  { 
             background-color: rgba(255, 255, 255, 1.0);
         }
@@ -28,7 +28,6 @@
             background-image: url("http://www.lifeprint.com/asl101/signjpegs/n/number-chart-1-10.jpg");
             background-size: cover;
             background-repeat: no-repeat;
-
         }
         
         #home {
@@ -144,8 +143,7 @@
             display: block;
         }
         
-/*        // centering the 8 elements  */
-                
+/* *** centering the 8 elements ********* */               
         label.item.choose.forestgreen,
         label.item.choose.lightgrey{
             margin-right: 2%;
@@ -154,28 +152,35 @@
         #topNumberRange {
             left: 23%;
         }
+        
         #numberRangeSet {
             left: 23%;
         } 
+        
         .guess {
             left: 23%;
-        }                
+        }
+        
         #guessedNumber {
             left: 25%;
         }
+        
         #guessTry {
             left: 26.5%;
         }     
 
         label.item.reStart {
             margin-left: 5%;
-        }                
+        } 
+        
         #restartGameButton {
             margin-left: 1%;
-        }        
+        } 
+        
         .hint {
             margin-left: -0.5%;
-        }                
+        }  
+        
         #gameHintButton {
             margin-left: 13%;
         }        
@@ -323,8 +328,7 @@
                 return;               
             }
         }
-          
-            
+                     
         wonGameAnimation = function () {
             logAreaHtml = $("#logArea").html();
             logAreaString("You ARE a BIG, BIG, BIG winner!");
@@ -334,15 +338,15 @@
                 div.animate({height: '40vh', opacity: '0.4'}, "slow");
                 div.animate({width:  '65vw', opacity: '0.9'}, "9000");
                 div.animate({height: '20.5vh', opacity: '0.49'}, "slow");
-                div.animate({width: '98vw', opacity: '0.95'}, "slow", function() {
+                div.animate({width: '98vw', opacity: '0.90'}, "slow", function() {
                     setTimeout(function(){ }, 9000); 
                     $("#logArea").html(logAreaHtml);                
                     logAreaHtml = "";        
                     return;                      
-                });            
- 
+                });             
         }
 
+        
         // Set up game variables on entrance, this code is only run on page load:
         var wonGame = false;
         var holdText = "";
@@ -394,8 +398,6 @@
                 playtheGame();
             }
         });
-        
-
     </script>
 </body>
 </html>
