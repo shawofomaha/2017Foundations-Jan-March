@@ -7,6 +7,7 @@
             height: 10vmin;
             width: 10vmin;
             border: 1px solid black;
+            background-color: awhite;
             position: relative;
             top: 100px;
             left: 100px;
@@ -14,6 +15,13 @@
         
         .selected {
             background-color: red !important;
+        }
+        
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
         }
     </style>
     <meta charset="utf-8">
@@ -23,9 +31,13 @@
 </head>
 
 <body>
-    <div class="box"></div>
+   
     <button type="button" id="add">Add</button>
-
+    <div id="container">
+        <div class="box">
+        </div> 
+    </div>
+    
     <div id="box"></div>
     
     
@@ -33,19 +45,28 @@
     </script>
 
     <script>
+        var num = 5;
         function pyth(sideA, sideB) {
             var sideCSquared = sideA * sideA + sideB * sideB;
             var sideC = Math.sqrt(sideCSquared);
-            return sideC;add
+            return sideC;
         }
 
-        $("#body").on("click", ".box", function() {
+        $("#container").on("click", ".box", function(){  
+           $(this).toggleClass("selected"); 
+        });
+        
+        $("#box").click(function() {
             $(this).toggleClass("selected");
         });
        
-        $("#add").on("click", function(){
-            $(this).after('<div> class=".box"></div>');
+        $("#add").click(function(){
+            $("body").append("<div> id='box'></div>");
         });
+        
+         $("#add").click(function() {
+             $("#container").append("<div id='box'></div>");
+         });
     </script>
 
 </body>

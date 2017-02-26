@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
@@ -9,45 +10,57 @@
         .error {
             background-color: pink;
         }
+        
         .correct {
             background-color: lightgreen;
         }
-            
-    
     </style>
 </head>
 
 <body>
-    
+
     <label>what is 5 + 5</label>
     <input class="answer" a="10" />
     <br/>
     <label>what color is sky?</label>
-    <input class="answer" a="blue" />
-    <br/>    
+    <input class="answer" a="blue,grey,orange" />
+    <br/>
     <label>what is due name</label>
     <input class="answer" a="marko" />
-    <br/>    
-     <label>what is youage?</label>
+    <br/>
+    <label>what is your age?</label>
     <input class="answer" a="69" />
     <br/>
     <button type="button" id="check">Check Answers</button>
+    <span id="numAnswersCorrect"></span>
+
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
     </script>
 
-    <script> 
-        $("#check").click(function(){
-            @("input.answer").each(function(){
-            var answer = $(this).attr("a");
-            var user = $(this).val();
-            if (answer == user) {
-              $(this).addClass("correct").removeClass("error");      
-            } else {
-              $(this).addClass("error").removeClass("correct");  
-            }
-        });                
-        
-            
+    <script>
+        $("#check").click(function () {
+            var counter = 0;
+            $("input.answer").each(function () {
+                var answer = $(this).attr("a");
+                var user = $(this).val();
+                var answers = answer.split(",");
+                var correct = false;
+                for (i in answers) {
+                    if (answers[i] == user) {
+                        correct = true;
+                    }
+                }
+
+                if (correct) {
+                    counter++;
+                    $(this).addClass("correct").removeClass("error");
+                } else {
+                    $(this).addClass("error").removeClass("correct");
+                }
+            });
+            $("#numAnswersCorrect").text("Number of correct answers: " + counter);
+        });
     </script>
 </body>
+
 </html>
