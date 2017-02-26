@@ -13,6 +13,14 @@
             border: 0;
         }
         
+        #home:hover,
+        #numberRangeSet:hover,
+        #guessTry:hover,
+        #restartGameButton:hover,
+        #gameHintButton:hover  { 
+            background-color: rgba(255, 2455, 255, 1.0);
+        }
+        
         body {
             font: normal normal 400 large "Roboto", sans-serif;
             height: 120vh;
@@ -324,7 +332,7 @@
         var welcomeText = "Welcome to the game! If you want to change the top number,  please do so BEFORE pressing the ‘Enter Top Number’ button.  Next, enter your Guess of a number between 1 and the Top Number.   Finally, click the ‘Enter Number’ button to see if you have WON.  (or, not so much!)   At any time, you may restart the game by using the ‘Restart Game’ button on the bottom left."; 
        
         var logAreaHtml = ""; 
-        var hintHtml =         '<ul><li>"If you are<span color:red> very close(hot)</span>----> you are within +- 5"</li><li>"If you are quite close(warm)--> you are within +- 15"</li><li>"If you are very, very far(cool for the Computer)-->  you are within +- 2"</li><li>"If you are SO very, very far away(you are ice-cold) then you are more than +-25 "</li></ul>';
+        var hintHtml =         '<ul><li>Very close (hot) ——————> within +- 5   (:</li><li>Close (warm) ———————> within +- 15</li><li>Far away (cool) ——————> within +- 25</li><li>Very far away (ice-cold) —> more than +-25  ): </li></ul>';
         
         var topNumberRangeNbr = $("#topNumberRange").val();
         var gameRandomNumber = parseInt(Math.random() * topNumberRangeNbr + 1);
@@ -365,6 +373,7 @@
                 playtheGame();
             }
         });
+        
 
     </script>
 </body>
