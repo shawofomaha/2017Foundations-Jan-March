@@ -425,9 +425,9 @@
         var welcomeText = "Welcome to the game! If you want to change the top number,  please do so BEFORE pressing the ‘Enter Top Number’ button.  Next, enter your Guess of a number between 1 and the Top Number.   Finally, click the ‘Guess’ button to see if you have WON.  (or, not so much!)   At any time, you may restart the game by using the ‘Restart Game’ button on the bottom left. Also, if you get stuck there is a HINT button to help!";
 
         var logAreaHtml = "";
-        var hintHtml = '<ul style="list-style:none;"><li style="color: rgba(244, 66, 66,1.0);">Very close (hot) —————— within +- 5 (:</li><li style="color: rgba(196, 72, 72, 1.0);">Close (warm) ——————— within +- 15</li><li style="color: rgba(88, 214, 255,1.0);">Far away (cool) —————— within +- 25</li><li style="color: rgba(255, 255, 255,1.0);">Very far away (ice-cold) — more than +-25 ): </li></ul>;'
+        var hintHtml = '<ul style="list-style:none;"><li style="color: rgba(244, 66, 66,1.0);">Very close (hot) —————— within +- 5 (:</li><li style="color: rgba(196, 72, 72, 1.0);">Close (warm) ——————— within +- 15</li><li style="color: rgba(88, 214, 255,1.0);">Far away (cool) —————— within +- 25</li><li style="color: rgba(255, 255, 255,1.0);">Very far away (ice-cold) — more than +-25 ): </li></ul>';
 
-            var topNumberRangeNbr = $("#topNumberRange").val();
+        var topNumberRangeNbr = $("#topNumberRange").val();
         var gameRandomNumber = parseInt(Math.random() * topNumberRangeNbr + 1);
         var playerGuess = $("#guess").val();
         logAreaString(welcomeText);
