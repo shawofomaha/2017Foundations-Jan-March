@@ -183,7 +183,11 @@
         
         #gameHintButton {
             margin-left: 13%;
-        }        
+        }   
+        div {
+           
+            
+        }
                
 </style>
 </head>
@@ -344,12 +348,22 @@
                     $("#logArea").html(logAreaHtml);                
                     logAreaHtml = "";
                     debugger; 
-                    $("#logArea").css("margin-left", "2vw");
-                    $("#logArea").css("vertical-align", "center");
-                    $("#logArea").css("text-align", "center");
-                    $("#logArea").css("color", "red");
-                    $("#logArea").css("width", "95vw");
-                    console.log("dude you mde it!!");
+//                    $("#logArea").css("margin-left", "2vw");
+//                    $("#logArea").css("vertical-align", "middle");
+//                    $("#logArea").css("text-align", "center");
+//                    $("#logArea").css("color", "red");
+//                    $("#logArea").css("width", "95vw");
+                    $("#logArea").css({
+                        "margin-left":  "2.5vw",  
+                        "text-align": "center", 
+                        "top-margin": "15vh",
+                        "color": "red",
+                        "width":"95vw",
+                        "background-color": "rgba(199, 194, 194,1.0)",
+                        "display": "flex",
+                        "justify-content": "center",
+                        "align-items": "center"
+                    })
                     return;                      
                 });             
         };
