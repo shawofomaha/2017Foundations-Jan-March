@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <title>Sixteen Creative Agency</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+    <link href="/css/default.css" rel="stylesheet" type="text/css" />
+    <link media="all and (min-width: 1000px)" href="/css/desktop.css" rel="stylesheet" type="text/css" />
+    <body>
+        <header>
+            <a href="exampleStartingPoint-NICK.html"><img id="logo" src="/media/1logo.png" /></a>
+            <nav>
+                <img id="menu" src="/media/1logo.png" />
+            </nav>
+            <div id="mobileNavCover"></div>
+            <div id="mobileNav">
+                <a href="#headerPlaceholder">HOME</a>
+                <a href="#second">ABOUT</a>
+                <a href="#second">SERVICES</a>
+                <a href="#second">TEAM</a>
+                <a href="#second">WORKS</a>
+                <a href="#second">CLIENT SAY</a>
+                <a href="#second">BLOG</a>
+                <a href="#second">CONTACT</a>
+            </div>
+            <div id="desktopNav">
+                <a href="#headerPlaceholder">HOME</a>
+                <a href="#second">ABOUT</a>
+                <a href="#second">SERVICES</a>
+                <a href="#second">TEAM</a>
+                <a href="#second">WORKS</a>
+                <a href="#second">CLIENT SAY</a>
+                <a href="#second">BLOG</a>
+                <a href="#second">CONTACT</a>
+            </div>
+        </header>
+        <div id="headerPlaceholder"></div>
+        <div id="main">
+            <br/>
+            <div id="title">WE ARE SIXTEEN CREATIVE AGENCY</div>
+            <br/>
+            <div id="subtitle">Based on Jakarta, Indonesia</div>
+            <br/>
+            <img id="arrow" src="/media/3arrow.png"/>
+            <img id="arrowDesktop" src="/media/3arrowDesktop.png"/>
+        </div>
+        <div id="second">
+        
+        </div>
+        <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+        <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+        <script>
+            $(window).scroll(function(eventData){
+                var top = $(window).scrollTop();
+                if(top > 50){
+                    $("header").addClass("scrolled", 500);
+                }else{
+                    $("header").removeClass("scrolled", 500);
+                }
+            });
+            
+            $("nav").click(function(){
+                $("#mobileNavCover").show();
+                $("#mobileNav").animate({
+                    right: "0"
+                }, 100);
+            });
+            
+            $("#mobileNavCover, #mobileNav a").click(function(){
+                $("#mobileNavCover").hide();
+                $("#mobileNav").animate({
+                    right: "-35vw"
+                }, 100);                
+            });
+        </script>
+    </body>
+</html>
+
+
+
+

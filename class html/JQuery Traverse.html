@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script> 
+    <title></title>
+</head>
+
+<body>
+    <input id="name" />
+    <input type="checkbox" id="important" />
+    <button type="button" id="add">Add</button>
+    <div id="list">List</div>
+
+    <script>
+        $("#add").click(function(){
+            var name = $("#name").val();
+            var important = $("#important").prop("checked");
+            $("#list").append("<div class='wrapper'><div class='item'>"+name+"</div></div>");
+            
+            if  (important) {
+                $("#list").find(".item:last-of-type").css("color", "red");
+            }
+        });
+        
+        
+    
+    </script>
+</body>
+</html>

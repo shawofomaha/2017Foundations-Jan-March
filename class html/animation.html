@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>animations</title>
+    
+<style>
+    #logArea {
+        font-size: 15vh;
+        height: 24vh;
+        background-color: aqua;
+        margin: 4vmin;
+        padding: 4vmin;
+    }
+    
+    #home {
+        height: 6vh;
+        width: 11vw;
+ 
+    }
+
+</style>    
+</head>
+
+<body>
+    <button type="button" id="home" >Home</button>
+    <div id="logArea">logarea</div>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
+</script>
+<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous">
+</script>    
+<script>
+        var intervalTimer;
+         
+        $("#home").click(function() {
+//         $("#logArea"):hover;
+            clearInterval(intervalTimer);
+            var div = $("#logArea");
+            
+            div.animate({height: '65vh',  opacity: '0.4'}, "veryslow");
+            div.animate({width:  '95vw',  opacity: '0.8'}, "slow");
+            div.animate({height: '40vh',  opacity: '0.4'}, "slow");
+            div.animate({width:  '65vw',  opacity: '0.9'}, "9000");
+            div.animate({height: '20.5vh',opacity: '0.49'}, "slow");
+            div.animate({width:  '77vw',  opacity: '0.90'}, "slow", function () {
+
+                logAreaHtml = $("#logArea").html();    
+                debugger;
+                $("#logArea").css({
+                      "margin-left": "21.5vw"
+                    , "text-align": "center"
+                    , "top-margin": "15vh"
+                    , "color": "red"
+                    , "width": "25vw"
+                    , "background-color": "rgba(199, 194, 194,1.0)"
+                    , "background-color": "rgba(0, 75, 2,1.0)"
+                    , "display": "flex"
+                    , "justify-content": "center"
+                    , "align-items": "center"
+                }) 
+                        
+        
+            }); 
+            debugger;  
+            intervalTimer = setInterval(winGameAnimation, 4500);
+        });
+    
+    winGameAnimation = function () { 
+            var div = $("#logArea");
+            
+            div.animate({height: '65vh',  opacity: '0.4'}, "veryslow");
+            div.animate({width:  '95vw',  opacity: '0.8'}, "slow");
+            div.animate({height: '40vh',  opacity: '0.4'}, "slow");
+            div.animate({width:  '65vw',  opacity: '0.9'}, "9000");
+            div.animate({height: '20.5vh',opacity: '0.49'}, "slow");
+            div.animate({width:  '77vw',  opacity: '0.90'}, "slow", function () {   
+                debugger;
+                $("#logArea").css({
+                      "margin-left": "21.5vw"
+                    , "text-align": "center"
+                    , "top-margin": "15vh"
+                    , "color": "orange"
+                    , "width": "25vw"
+                    , "background-color": "rgba(199, 194, 194,1.0)"
+                    , "background-color": "rgba(0, 75, 2,1.0)"
+                    , "display": "flex"
+                    , "justify-content": "center"
+                    , "align-items": "center"
+                    , "border-radius": "50%"
+                })  
+        setTimeout(function(){  }, 3000);
+        return;
+    });
+
+}
+</script>
+</body>
+</html>    

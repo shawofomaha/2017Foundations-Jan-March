@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <label>Enter a name: </label>
+        <input id="name" />
+        <button type="button" id="save">Save Name</button>
+        <div id="container"></div>
+        
+        <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+   
+        <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>    
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            var names = [];
+            
+            function showName(name){
+                $("#container").append("<div class='nameEntry'><h1>"+name+"</h1><span class='remove'>Remove</span></div>");
+                names.push(name);
+                localStorage.names = JSON.stringify(names);
+            }
+            
+            $("#save").click(function(){
+                var inputName = $("#name").val();
+                showName(inputName);
+            });
+
+            $("body").on("click", ".remove", function(){
+                var nameToDelete = $(this).prev().text();
+                $(this).parent().remove();
+                for(i in names){
+                    if(nameToDelete == names[i]){
+                        names.splice(i, 1);
+                        break;
+                    }
+                }
+                localStorage.names = JSON.stringify(names);
+            });
+            
+            if(localStorage.names != undefined){
+                var arr = JSON.parse(localStorage.names);
+                for(i in arr){
+                    showName(arr[i]);
+                }
+            }
+        </script>
+    </body>
+</html>

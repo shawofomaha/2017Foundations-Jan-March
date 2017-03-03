@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+}
+header.scrolled {
+   background-color: red;
+    box-sizing: border-box;
+    border-bottom: 1vh solid gray; 
+    height: 7vh;  
+}
+header.scrolled #logo {
+    height: 5vh; 
+    margin-top: 1vh;  
+}
+
+header.scrolled  nav {
+    height: 7vh;
+    width: 7vh;   
+}
+
+header.scrolled  #menu {
+    height: 2.5vh;
+    margin-top: 2.25vh;
+    margin-left: 2.25vh;
+}
+
+header{
+    position: fixed;
+    height: 10vh;
+    background-color: #acd373;
+    width: 100%;
+}
+
+#headerPlaceholder {
+    height: 10vh;
+}
+
+nav{
+    height: 10vh;
+    width: 10vh; /*important to be square in vh instead of vw*/
+    background-color: #89a85c;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#mobileNavCover {
+    display: none;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 2;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#mobileNav {
+    height: 100vh;
+    width: 35vw;
+    position: fixed;
+    top: 0;
+    right: -35vw;
+    background-color: darkgray;
+    z-index: 5;
+}
+
+#mobileNav a:hover {
+    background-color: dimgray;
+}
+
+#mobileNav a {
+    display: block;
+    height: 12vh;
+   line-height: 12vh;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+    text-decoration: none;   
+}
+
+#main{
+    text-align: center;
+}
+
+#logo{
+    height: 7vh;
+    margin-top: 1.5vh;
+    margin-left: 5vw;
+}
+
+nav{
+    cursor: pointer;
+}
+
+#menu{
+    height: 4vh;
+    margin-top: 3vh;
+    margin-left: 3vh;
+}
+
+#main{
+    height: 90vh;
+    background-color: #9abd67;
+    background-image: url(/media/4silhouetteBG.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+#second {
+    height: 100vh;
+    background-color: blue;
+    
+}
+
+#title{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    font-size: 5vmin;
+    color: #f5f5f5;
+    margin-top: 25vh;
+}
+
+#subtitle{
+    font-family: 'Droid Serif', serif;
+    font-size: 3.5vmin;
+    font-style: italic;
+    color: #f5f5f5;
+}
+
+#arrow, #arrowDesktop{
+    width: 5vw;
+    margin-top: 5vh;
+}
+
+#arrowDesktop, #desktopNav{
+    display: none;
+}

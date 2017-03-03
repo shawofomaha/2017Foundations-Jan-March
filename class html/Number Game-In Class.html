@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .error{
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 30vw;
+                height: 20vh;
+                background-color: rgba(255, 255, 255, 0.8);
+                line-height: 20vh;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <input id="guess" />
+        <br/>
+        <button type="button" id="go">Guess</button>
+        <span id="guessCount"></span>
+        <br/><br/>
+        <span id="result"></span>
+        <br/>
+        <br/>
+        <br/>
+        Min: <input id="min" value="1" type="number"/>
+        Max: <input id="max" value="100" type="number"/>
+        <button type="button" id="reset">Reset</button>
+        
+        <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+        <script>
+            function randomNumber(min, max){
+                var minNum = parseInt(min);
+                var maxNum = parseInt(max);
+                var diff = Math.abs(max-min);
+                return parseInt(Math.random() * diff) + min;
+            }
+            
+            var computerNumber = randomNumber(1, 100);
+            var counter = 0;
+            
+            function reset(){
+                var min = parseInt($("#min").val());
+                var max = parseInt($("#max").val());
+                counter = 0;
+                computerNumber = randomNumber(min, max)
+                $("#result").text("");
+                $("#guessCount").text("");
+            }
+            
+            $("input").change(function(){
+                var value = parseInt($(this).val());
+                if(isNaN(value)){
+                    $(this).val(0);
+                    $(".error").remove();
+                    $("body").append("<div class='error'>Only numbers can be entered!</div>");
+                    $(".error").fadeIn(1000, function(){
+                        setTimeout(function(){
+                            $(".error").fadeOut(1000, function(){
+                                $(this).remove();
+                            });
+                        }, 2000);
+                    });
+                }
+            });
+            
+            $("input").keypress(function(e){
+                if(e.which >= 48 && e.which <= 57){
+                    
+                }else{
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                }
+            });
+            
+            $("#reset").click(reset);
+            
+            $("#go").click(function(){
+                counter++;
+                var guess = parseInt($("#guess").val());
+                var diff = Math.abs(computerNumber - guess);
+                if(guess == computerNumber){
+                    $("#result").text("You got it!");
+                    $("#guessCount").text("It took you "+counter+" times to get the number");
+                }else if(diff <= 5){
+                    $("#result").text("You're super close!");
+                    $("#guessCount").text("You've guessed "+counter+" times");
+                }else if(diff <= 15){
+                    $("#result").text("You're getting close!");
+                    $("#guessCount").text("You've guessed "+counter+" times");
+                }else{
+                    $("#result").text("Nope! Keep trying!");
+                    $("#guessCount").text("You've guessed "+counter+" times");
+                }
+            });
+        </script>
+    </body>
+</html>
