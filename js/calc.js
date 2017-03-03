@@ -15,12 +15,17 @@ function calculate(input){
         }else if (decimalPos > 0 ){
             result = result.substr(0, decimalPos) + result.substr(decimalPos, 11-decimalPos);
         }
+        console.log("result= "+result);
     }catch(e){
         console.log(e);
         result = "ERROR";
     }
     return result;
 }
+
+/* .  Variables .  */
+var input = "";
+var holdText = "";
 
 /*
 
@@ -32,5 +37,39 @@ function calculate(input){
 
 */
 
+/* Pressed a Number */
+$(".calculatorNumber").click(function () {
+    input = $(this).text();
+    holdText = $("#calcText").text(); 
+    $("#calcText").text(holdText+input);
+    if (holdText == "0" ) {
+        $("#calcText").text(input);
+    } else {
+        $("#calcText").text(holdText+input);
+    }    
+});
 
+/*  pressed Calculation Operator */
+$(".calculatorOperator").click(function () {
+    input = $(this).text();
+    holdText = $("#calcText").text();    
+    $("#calcText").text(holdText+input);
+    if (holdText == "0") {
+        $("#calcText").text(input);
+    } else {
+        $("#calcText").text(holdText+input);
+    }    
+});
 
+//  pressed Clear button
+$("#clear").click(function () {
+     $("#calcText").text("0"); 
+    input = "";
+    holdText = "";
+});
+
+/*  pressed */
+$("#equals").click(function () {
+    holdText = $("#calcText").text(); 
+    return  $("#calcText").text(calculate(holdText));
+});
