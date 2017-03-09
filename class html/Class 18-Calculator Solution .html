@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mark Shaw Class 17 weekend Assignment: Javascript Calculator</title>
+        <link rel="stylesheet" type="text/css" href="../css/digital7font.css" />
+        <link rel="stylesheet" type="text/css" href="../css/calc.css" />
+    </head>
+    
+<style>
+        
+        #home {
+            position: absolute;
+            color: blue !important;
+            font-size: large;
+            background-color: rgba(240, 248, 255, 0.8);
+            border-radius: 0.5vmin;
+            padding: 0.5vmin;
+            left: 38vmin;
+            top: 2vmin;
+        }
+            #home:hover {
+            background-color: rgba(255, 255, 255, 1.0);
+        }
+    
+    </style>    
+    <body>
+        <a class="button" id="home" href="../index.html">Home</a>
+        <div id="calculatorContainer">
+            <div id="calculatorDisplay"><span id="calcText">0</span></div>
+            <div id="calculatorButtons">
+                <div id="seven" class="calcButton calculatorNumber">7</div>
+                <div id="eight" class="calcButton calculatorNumber">8</div>
+                <div id="nine" class="calcButton calculatorNumber">9</div>
+                <div id="plus" class="calcButton calculatorOperator">+</div>
+                <br/>
+                <div id="four" class="calcButton calculatorNumber">4</div>
+                <div id="five" class="calcButton calculatorNumber">5</div>
+                <div id="six" class="calcButton calculatorNumber">6</div>
+                <div id="subtract" class="calcButton calculatorOperator">-</div>
+                <br/>
+                <div id="one" class="calcButton calculatorNumber">1</div>
+                <div id="two" class="calcButton calculatorNumber">2</div>
+                <div id="three" class="calcButton calculatorNumber">3</div>
+                <div id="multiply" class="calcButton calculatorOperator">*</div>
+                <br/>
+                <div id="zero" class="calcButton calculatorNumber">0</div>
+                <div id="clear" class="calcButton calculatorClear">C</div>
+                <div id="equals" class="calcButton calculatorEquals">=</div>
+                <div id="divide" class="calcButton calculatorOperator">/</div>
+            </div>
+        </div>
+        <script src="../js/jquery-1.8.2.min.js"></script>
+        <script src="../js/calc.js"></script>
+        
+    </body>
+</html>

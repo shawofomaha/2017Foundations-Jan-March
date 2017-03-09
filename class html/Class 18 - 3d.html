@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                margin: 0;
+            }
+            
+            #container{
+                top: 30vmin;
+                left: 33vmin;
+                height: 50vmin;
+                width: 50vmin;
+                position: relative;
+                perspective: 800px;
+            }
+            
+            #card {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                transform-style: preserve-3d;
+                transition: all 1.5s;
+            }
+            
+             #card.flipped {
+                transform: rotateY(180deg);
+/*              transform: rotateX(180deg);*/
+            }
+            
+            #card div {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;   
+            }
+            
+            .front {
+                background-image: url(https://media.giphy.com/media/124rIiBX0Kh5Cw/giphy.gif);
+                background-size: cover;
+                background-position: center;
+                background-color: red;
+            }
+            
+            .back {
+                background-color: blue;
+                transform: rotateY(180deg);
+                
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="card">
+            <div class="front">1</div>
+            <div class="back">2</div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+        <script>
+            
+            $("#card").click(function() {
+                $(this).toggleClass("flipped");
+            });
+    
+        </script>
+    </body>
+</html>

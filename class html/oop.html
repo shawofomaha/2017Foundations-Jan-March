@@ -1,15 +1,147 @@
 <!DOCTYPE html>
-<html lang="">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-</head>
-
-<body>
-
-
-<script></script>
-</body>
+<html>
+    <head>
+        <style>
+            
+            .car{
+                width: 12vw;
+                height: 24vh;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <select id="selectedCar">
+            <option value=""></option>
+        </select>
+        <button type="button" id="start">Start Car</button>
+        <button type="button" id="gas">Step on Gas</button>
+        <button type="button" id="brake">Step on Brake</button>
+        <br/>
+        <br/>
+        <button type="button" id="startRace">Start Race</button>
+        <br/>
+        <br/>
+        <button type="button" id="add">Add Car</button>
+        <br/>
+        <label>Horsepower: </label>
+        <input id="horsepower" />
+        <br/>
+        <label>Color: </label>
+        <input id="color" type="color" />
+        <br/>
+        <br/>
+        <br/>
+        <div id="container">
+            
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+        <script>
+            var cars = new Array();
+            var intervalId;
+            
+            var Car = function(){
+                this.id = null;
+                this.color = null;
+                this.style = null;
+                this.make = null;
+                this.model = null;
+                this.speed = 0;
+                this.isRunning = false;
+                this.horsepower = 100;
+                
+                this.start = function(){
+                    this.isRunning = true;
+                }
+                
+                this.brake = function(){
+                    if(this.speed > 0){
+                        this.speed--;
+                    }else{
+                        this.speed = 0;
+                    }
+                }
+                
+                this.gas = function(){
+                    if(this.isRunning){
+                        this.speed += this.horsepower/100;
+                    }
+                }
+                
+                this.updateInfo = function(){
+                    var $carBox = $("#car"+this.id);
+                    $carBox.empty().css("background-color", this.color);
+                    $carBox.append("<h1>Car "+(this.id+1)+"</h1>");
+                    $carBox.append("Horsepower: "+this.horsepower+"<br/>");
+                    $carBox.append("Speed: "+this.speed+"<br/>");
+                    $carBox.append("Running: "+this.isRunning+"<br/>");
+                }
+                
+                this.advance = function(){
+                    var $carBox = $("#car"+this.id);
+                    $carBox.css("position", "relative");
+                    var left = parseInt($carBox.css("left").split("px")[0]);
+                    $carBox.css("left", left + this.speed);
+                    if(left > 2000){
+                        clearInterval(intervalId);
+                        $("body").append("Car " + (this.id+1)+" is the winner!");
+                    }
+                }
+            }
+            
+            function addCar(){
+                var horsepower = $("#horsepower").val();
+                var color = $("#color").val();
+                var car = new Car();
+                if(horsepower != "" && parseInt(horsepower) > 100){
+                    car.horsepower = parseInt(horsepower);
+                }else{
+                    car.horsepower = 100;
+                }
+                car.color = color;
+                cars.push(car);
+                car.id = cars.length-1;
+                $("#selectedCar").append("<option value='"+(cars.length-1)+"'>Car "+cars.length+"</option>");
+                $("#container").append("<div class='car' id='car"+(cars.length-1)+"'></div>");
+                car.updateInfo();
+            }
+            
+            $("#add").click(addCar);
+            $("#start").click(function(){
+                var selectedCar = $("#selectedCar").val();
+                if(selectedCar != ""){
+                    var car = cars[selectedCar];
+                    car.start();
+                    car.updateInfo();
+                }
+            });
+            
+            $("#gas").click(function(){
+                var selectedCar = $("#selectedCar").val();
+                if(selectedCar != ""){
+                    var car = cars[selectedCar];
+                    car.gas();
+                    car.updateInfo();
+                }
+            });
+            
+            $("#brake").click(function(){
+                var selectedCar = $("#selectedCar").val();
+                if(selectedCar != ""){
+                    var car = cars[selectedCar];
+                    car.brake();
+                    car.updateInfo();
+                }
+            });
+            
+            $("#startRace").click(function(){
+                intervalId = setInterval(function(){
+                    for(var i in cars){
+                        cars[i].advance();
+                    }
+                }, 10);
+            });
+        </script>
+    </body>
 </html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><style></style><script></script>

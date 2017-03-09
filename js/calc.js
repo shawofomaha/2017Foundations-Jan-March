@@ -38,7 +38,7 @@ var holdText = "";
 */
 
 /* Pressed a Number */
-$(".calculatorNumber").click(function () {
+$(".calculatorNumber, .calculatorOperator").click(function () {
     input = $(this).text();
     holdText = $("#calcText").text(); 
     $("#calcText").text(holdText+input);
@@ -50,20 +50,10 @@ $(".calculatorNumber").click(function () {
 });
 
 /*  pressed Calculation Operator */
-$(".calculatorOperator").click(function () {
-    input = $(this).text();
-    holdText = $("#calcText").text();    
-    $("#calcText").text(holdText+input);
-    if (holdText == "0") {
-        $("#calcText").text(input);
-    } else {
-        $("#calcText").text(holdText+input);
-    }    
-});
 
 //  pressed Clear button
 $("#clear").click(function () {
-     $("#calcText").text("0"); 
+    $("#calcText").text("0"); 
     input = "";
     holdText = "";
 });

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                margin: 0;
+            }
+            
+            #container{
+                height: 100vh;
+                background-color: black;
+                border: 1px solid black;
+                position: relative;
+                box-sizing: border-box;
+                overflow: hidden;
+            }
+            
+                
+/*                    background-image: url(https://media.giphy.com/media/124rIiBX0Kh5Cw/giphy.gif);*/
+            #ball{
+                background-image: url(https://68.media.tumblr.com/3791a9c43cb16120853e54548ba393db/tumblr_o2fwttFAGE1uf5j8co1_500.gif);            
+                background-size: contain;
+                background-position: center;
+                background-color: red;
+                width: 15vmin;
+                height: 15vmin;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="ball"></div>
+        </div>
+        <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+        <script>
+            var movX = parseInt(Math.random()*5) + 1;
+            var movY = parseInt(Math.random()*5) + 1;
+            function moveBall(){
+                var width = $("#container").width();
+                var height = $("#container").height();
+                var ballWidth = $("#ball").width();
+                var x = parseInt($("#ball").css("left").split("px")[0]) + movX;
+                var y = parseInt($("#ball").css("top").split("px")[0]) + movY;
+                if(x > width-ballWidth/2){
+                    movX = movX * -1;
+                }
+                if(y > height-ballWidth/2){
+                    movY = movY * -1;
+                }
+                if(x < 0 + ballWidth/2){
+                    movX = movX * -1;
+                }
+                if(y < 0 + ballWidth/2){
+                    movY = movY * -1;
+                }
+                $("#ball").css("left", x);
+                $("#ball").css("top", y);
+            }
+            
+            setInterval(moveBall, 25);
+        </script>
+    </body>
+</html>

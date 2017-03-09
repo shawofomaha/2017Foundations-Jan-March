@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        #container {
+            height: 100vh;
+            background-color: black;
+            border: 1px solid black;
+            position: relative;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        
+        #ball {
+            background-color: red;
+            height: 15vmin;
+            width: 15vmin;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 1.5s ease-in-out;
+        }
+        
+        #ball:hover {
+            background-color: blue !important;
+            height: 20vmin;
+            width: 20vmin;            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="ball"></div>
+    </div>
+
+    <script src="//code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
+    </script>
+    <script>
+        function randomColor() {
+            var r = parseInt(Math.random()*256);
+            var b = parseInt(Math.random()*256);
+            var g = parseInt(Math.random()*256);
+            return "rgb("+r+","+g+","+b+")";
+        }
+        
+        $("#container").click(function(e) { 
+            var y = e.pageY;
+            var x = e.pageX;
+            $("#ball").css("top", y);
+            $("#ball").css("left", x);
+            $("#ball").css("background-color", randomColor());
+        });
+        
+        function moveBall() { 
+            var ballWidth = $("#ball").width();
+            var width = $("#container").width();
+            var height = $("#container").height();      
+            var x = parseInt(Math.random() * (width-ballWidth)) + ballWidth/2;
+            var y = parseInt(Math.random() * (height-ballWidth)) + ballWidth/2;
+            $("#ball").css("top", y);
+            $("#ball").css("left", x);
+            $("#ball").css("background-color", randomColor());            
+        }
+        
+        setInterval(moveBall, 5000);
+    
+    </script>
+</body>
+
+</html>
