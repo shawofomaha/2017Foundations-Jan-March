@@ -91,6 +91,7 @@ nav li a {
 nav li a:hover {
     background-color: #111;
     color: aliceblue;
+    transition: all 1.0s ease-in-out;
 }
 
 .picBox {
@@ -128,10 +129,22 @@ nav li a:hover {
     text-align: center;
 }
 
+button:hover {
+    background-color: white !important;
+    height: 40px;
+    width: 40px;
+    border: 2px solid red;
+    transition: all 1.0s ease-in-out;
+}
+
 button {
     color: rgba(0, 79, 26, 0.9);
     left: 50%;
     margin-left: 13%;
+    width: 80px !important;
+    height: 35px!important;  
+    border-radius: 25%;
+    background-color: rgba(216, 15, 15, 1.0);
     /*            transform: translate(+50%,+50%);*/
 }
 
