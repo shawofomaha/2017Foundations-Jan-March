@@ -36,16 +36,27 @@
         <div id="container">
             <div id="ball"></div>
         </div>
+        
+        
         <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
         <script>
             var movX = parseInt(Math.random()*5) + 1;
             var movY = parseInt(Math.random()*5) + 1;
             function moveBall(){
+//                debugger;
+            var xleft = $("#ball").css("left");
+            var ytop = $("#ball").css("top");                
                 var width = $("#container").width();
                 var height = $("#container").height();
                 var ballWidth = $("#ball").width();
+//            var height = $("#container").height();
+            
+            console.log( "ballWidth: " +  ballWidth + " width: "+width+" height"+height+" movX: "+movX+" movY: "+movY); 
+            console.log( "xleft:" +xleft+ " ytop:"+ytop+" on entrance**");                            
                 var x = parseInt($("#ball").css("left").split("px")[0]) + movX;
                 var y = parseInt($("#ball").css("top").split("px")[0]) + movY;
+            console.log("****x: "+x+" y:"+y);
+            console.log("movX: "+movX+" movY: "+movY);                
                 if(x > width-ballWidth/2){
                     movX = movX * -1;
                 }
@@ -58,8 +69,14 @@
                 if(y < 0 + ballWidth/2){
                     movY = movY * -1;
                 }
+            console.log("movX: "+movX+" movY: "+movY);    
                 $("#ball").css("left", x);
                 $("#ball").css("top", y);
+            xleft = $("#ball").css("left");
+            ytop = $("#ball").css("top");            
+            console.log("x: "+x+ "  y: "+y+" on exit**");
+            console.log( "xleft:" +xleft+ " ytop:"+ytop+" on exit**"); 
+            console.log("========================");               
             }
             
             setInterval(moveBall, 25);
