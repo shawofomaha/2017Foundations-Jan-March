@@ -21,22 +21,8 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a class="active" href="#top">Top</a></li>
-            <li><a href="mission.html">Mission</a></li>
-            <li><a href="sales.html">Sales</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-    </nav>
-    <br />
-    <br />
-    <div class="hdr">
-        <!--        width="150vmin"-->
-        <a href="about.html"><img class="homeLeft" width="100vmin" src="media/Refresh%20Estate%20Sales%20Logo.png"></a>
-        <h1>Refresh Estate Sales</h1>
-        <!--        <a class="homeRight" style="float: right"><img width="75vmin" src="media/Refresh%20Estate%20Sales%20Logo.png"></a>-->
-    </div>
+
+    <header>Head and nav in header.html</header>
     <br />
     <div id="container">
 
@@ -109,6 +95,8 @@
     <script src="//code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
     </script>
     <script>
+
+        
         var movX = parseInt(Math.random() * 5) + 1;
         var movY = parseInt(Math.random() * 5) + 1;
 
@@ -159,6 +147,10 @@
         $(".price").click(function () {
             alert("Coming Soon: full functionality!!"); 
         });
+        
+        $("header").load("header.html");
+        
+        $("#container").load($("#container").html() + "footer.html");          
                 
     </script>
 </body>

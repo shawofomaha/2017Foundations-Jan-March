@@ -8,15 +8,18 @@
         body {
             width: 100%;
         }
-
     </style>
 </head>
 
 <body>
+    <header></header>
     <h1>Sales</h1>
     <script src="//code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
     </script>
-    <script></script>
+    <script>
+        $("header").load("header.html");
+        $("#container").load($("#container").html() + "footer.html");
+    </script>
 </body>
 
 </html>
