@@ -63,7 +63,7 @@ h1.hdr {
     padding: 0;
 }
 
-h2 {
+h2, h3 {
     text-align: center;
     font-family: 'Architects Daughter', cursive;
 }
@@ -131,7 +131,7 @@ nav li a:hover {
     display: inline;
     float: right;
     width: 32vmin;
-    margin: 1.5vmin .5vmin 1.5vmin 0;
+    margin: 0.5vmin .5vmin 1.5vmin 0;
 }
 
 .horizLine {

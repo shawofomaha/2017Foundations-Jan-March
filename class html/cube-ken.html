@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #container{
+                width: 50vmin;
+                height: 50vmin;
+                position: relative;
+                perspective: 100vmin;
+                top: 25vmin;
+                left: 50%;
+                transform: translate(-50%);
+            }
+            
+            #cube{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                transform-style: preserve-3d;
+                transition: transform 1s;
+            }
+            
+            #cube.showFront{
+                transform: rotateY(0deg);
+            }
+            
+            #cube.showBack{
+                transform: rotateY(180deg);
+            }
+            
+            #cube.showRight{
+                transform: rotateY(-90deg);
+            }
+            
+            #cube.showLeft{
+                transform: rotateY(90deg);
+            }
+            
+            #cube.showTop{
+                transform: rotateX(-90deg);
+            }
+            
+            #cube.showBottom{
+                transform: rotateX(90deg);
+            }
+            
+            .side{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                box-sizing: border-box;
+                border: 5px solid black;
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 50vmin;
+                text-align: center;
+                line-height: 50vmin;
+            }
+            
+            #front{
+                transform: rotateY(0deg) translateZ(25vmin);
+                background-color: rgba(255, 0, 0, 0.8);
+            }
+            
+            #back{
+                transform: rotateY(180deg) translateZ(25vmin);
+                background-color: rgba(0, 255, 0, 0.8);
+            }
+            
+            #right{
+                transform: rotateY(90deg) translateZ(25vmin);
+                background-color: rgba(0, 0, 255, 0.8);
+            }
+            
+            #left{
+                transform: rotateY(-90deg) translateZ(25vmin);
+                background-color: rgba(255, 0, 255, 0.8);
+            }
+            
+            #top{
+                transform: rotateX(90deg) translateZ(25vmin);
+                background-color: rgba(0, 255, 255, 0.8);
+            }
+            
+            #bottom{
+                transform: rotateX(-90deg) translateZ(25vmin);
+                background-color: rgba(255, 255, 0, 0.8);
+            }
+        </style>
+    </head>
+    <body>
+        <select>
+            <option value="Front">Front</option>
+            <option value="Back">Back</option>
+            <option value="Right">Right</option>
+            <option value="Left">Left</option>
+            <option value="Top">Top</option>
+            <option value="Bottom">Bottom</option>
+        </select>
+        <button type="button">Spin</button>
+        
+        <div id="container">
+            <div id="cube">
+                <div class="side" id="front">1</div>
+                <div class="side" id="back">2</div>
+                <div class="side" id="right">3</div>
+                <div class="side" id="left">4</div>
+                <div class="side" id="top">5</div>
+                <div class="side" id="bottom">6</div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+        <script>
+            //Front, Back, Right, Left, Top, Bottom
+            function rotateCube(side){
+                $("#cube").attr("class", "");
+                $("#cube").addClass("show"+side);
+            }
+            
+            $("button").click(function(){
+                var side = $("select").val();
+                rotateCube(side);
+            });
+            
+            var lastSide = 0;
+            setInterval(function(){
+                var sides = ["Front", "Back", "Right", "Left", "Top", "Bottom"];
+                var random = parseInt(Math.random()*6);
+                while(random == lastSide){
+                    console.log("same side");
+                    random = parseInt(Math.random()*6);
+                }
+                lastSide = random;
+                console.log(random);
+                rotateCube( sides[random] );
+            }, 1000);
+        </script>
+    </body>
+</html>
