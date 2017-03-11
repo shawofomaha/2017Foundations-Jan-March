@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #container {
+            display: flex;
+            flex-flow: row wrap;
+        }
+        
+        .columns {
+            flex: 1 40%;
+            /*            flex: 1 auto;*/
+            height: 100vh;
+            border: 1px solid black;
+        }
+        
+        #toDoList,
+        #groceryList,
+        #user1List,
+        #user2List {
+            border: 3px solid black;
+            background-color: rgba(211, 211, 211, 1.0);
+            min-width: 40vmin;
+            border-radius: 15%;
+            margin: 1vmin;
+        }
+        
+        .listName {
+            display: block;
+            text-align: center;
+            border: 1px solid blue;
+            font-size: 5vmin;
+            font-weight: 600;
+            position: relative;
+            margin: 4vmin;
+            /*            margin-left: 28vmin;*/
+        }
+        
+        .task {
+            display: inline;
+            /*            float: right;*/
+            width: 40vmin;
+            margin: 0.5vmin .5vmin 1.5vmin 0;
+            font-size: 2.5vmin;
+            font-weight: 400;
+            position: relative;
+            /*            margin: 4vmin;*/
+            margin-left: 22vmin;
+        }
+        
+        .completed {
+            text-decoration: line-through;
+        }
+        
+        .notCompleted {
+            text-decoration: none;
+        }
+        
+        .showCompletedButton {
+            display: inline;
+        }
+        
+        .hideCompletedButton {
+            display: none;
+        }
+        
+        .hideRemoveButton {
+            display: none;
+        }
+        
+        .showRemoveButton {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="inpuText" type="text" value="default" />
+    <select id="listName" name="">
+        <option></option>
+        <option value="user1List">User 1 List</option>
+        <option value="user2List">User 2 List</option>
+        <option value="toDoList">To Do List</option>
+        <option selected="selected" value="groceryList">Grocery List</option>
+    </select>
+    <button type="button" id="addTask">Add Task</button>
+
+    <div id="container">
+
+        <div class="columns" id="toDoList">
+            <span class="listName" value="To Do List">To Do List</span>
+            <br />
+        </div>
+        <div class="columns" id="groceryList">
+            <span class="listName" value="Grocery List">Grocery List</span>
+            <br />
+        </div>
+        <div class="columns" id="user1List">
+            <span class="listName" value="user1">user1</span>
+            <br />
+        </div>
+        <div class="columns" id="user2List">
+            <span class="listName" value="user2">user2</span>
+            <br />
+        </div>
+    </div>
+
+    <script src="//code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
+    </script>
+    <script>
+        var txt = "";
+        var task = "";
+
+        $(document).ready(function () {
+
+            function insertTask() {
+                $("#" + task).append("<div id='dudeIt' class='task'><span class='desc'>" + txt + "</span><button type='button' class='completedButton'>Completed</button></div></span><button type='button' class='removeButton hideRemoveButton'>Remove</button></div><br />");
+            }
+
+            function editInput() {
+                txt = $("#inpuText").val();
+                task = $("#listName").val();
+                console.log("txt: " + txt);
+                $("#inpuText").val();
+                if (txt == "default") {
+                    alert("1 -editInput - Please enter something other than 'default' or don't leave an empty task description!");
+                } else if (txt == " ") {
+                    alert("2 -editInput- Please don't leave an empty task description!");
+                } else if (txt == "") {
+                    alert("3 -editInput- Please don't leave an blank task description!");
+                } else {
+                    insertTask();
+                }
+            }
+
+            $("#addTask").click(function () {
+                editInput();
+            });  
+
+
+//             $(".columns").on("click", "button", "completedButton", function () {
+            $(".columns").on("click", "button", function () {
+                debugger;
+//                var $focused = $(':focus'+);
+                var focused2 = document.activeElement;
+                var $objClicked = $(this);
+                console.log("$objClicked"+$objClicked);
+                console.log("$(this)"+$(this));
+//                if ($(this).classList() === 'button.completedButton') {                 
+//                if ($("button.completedButton") == $(this)) {
+                if (focused2 == 'button.completedButton') {                     
+//                if ($(this) === 'button.completedButton') {                    
+                    $(this).removeClass("showCompletedButton").addClass("hideCompletedButton");
+                    console.log("who is parent: " + who);
+                    $(this).prev().addClass("completed");
+                }  
+                if ($(this) === "button.removeButton") {
+                    $(this).parent().remove();
+                } else {
+
+                }
+                //                $(this).css("hideCompletedButton")   showRemoveButton" 
+                //                $(this).toggleClass(".hideCompletedButton,  .completed");
+            });
+
+//            $(".columns").on("click", "button", "removeButton", function () {
+//                debugger;
+//                $(this).toggleClass("hideRemoveButton showRemoveButton");
+//            });
+
+            //  $(this).removeClass( "myClass noClass" ).addClass( ".hideCompletedButton,  .completed" );         
+
+
+            //Any parent that exists at the time the event is bound is fine. For example
+            //
+            //$('.buttons').on('click', 'button', function(){
+            //    // do something here
+            //});
+            //would apply to
+            //
+            //<div class="buttons">
+            //    <!-- <button>s that are generated dynamically and added here -->
+            //</div>
+
+        });
+    </script>
+</body>
+
+</html>

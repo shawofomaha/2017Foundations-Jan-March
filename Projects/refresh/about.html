@@ -27,9 +27,7 @@
             transform: translate(-50%, -37%);
         }
         
-        h2 {
-                
-        }
+        h2 {}
         
         #cube {
             width: 100%;
@@ -38,7 +36,6 @@
             transform-style: preserve-3d;
             transition: transform 2s;
             border-radius: 25%;
-            
         }
         
         #cube.showFront {
@@ -76,8 +73,7 @@
             text-align: center;
             line-height: 3vmin;
             border-radius: 25%;
-/*            text-align: justify;*/
-
+            /*            text-align: justify;*/
         }
         
         #front,
@@ -91,7 +87,7 @@
             transition: background-color 3sec;
             padding: 2vmin;
             padding-top: 9vmin;
-/*            transition: background-color 3sec;*/
+            /*            transition: background-color 3sec;*/
         }
         
         #front {
@@ -142,36 +138,19 @@
 
         <div id="container">
             <div id="cube">
-                <div class="side" id="front">Cernantur o dolor, ex anim singulis si sunt possumus aliquip est legam arbitror 
-                    iis fore quae, aute consequat si veniam aliqua e qui dolore pariatur adipisicing 
-                    do sed mentitum te ingeniis si duis pariatur domesticarum. Id hic despicationes, 
-                    et ne irure sint tamen, quo veniam laboris offendit e si </div>
-                <div class="side" id="back">admodum quo mandaremus, 
-                    duis fabulas non concursionibus, labore ab voluptate ab tamen, quo amet 
-                    fidelissimae, nostrud sed arbitror. Quibusdam philosophari eu singulis an lorem 
-.</div>
-                <div class="side" id="right">Cernantur o dolor, ex anim singulis si sunt possumus aliquip est legam arbitror 
-                    iis fore quae, aute consequat si veniam aliqua e qui dolore pariatur adipisicing 
-                    do sed mentitum te ingeniis si duis pariatur domesticarum.</div>
-                <div class="side" id="left">admodum quo mandaremus, 
-                    duis fabulas non concursionibus, labore ab voluptate ab 
-                    quibusdam ea fore fugiat. Et proident firmissimum. In magna pariatur consequat, 
-                    hic fugiat consectetur.</div>
-                <div class="side" id="top">Cernantur o dolor, ex anim singulis si sunt possumus aliquip est legam arbitror 
-                    iis fore quae, aute consequat si veniam aliqua e qui dolor 
-                    et ne irure sint tamen, quo veniam laboris offendit e si</div>
-                <div class="side" id="bottom">admodum quo mandaremus, 
-                    duis fabulas non concursionibus, labore ab voluptate ab tamen, quo amet 
-                    fidelissimae, nostrud sed arbitror. Quibusdam philosopha. Lorem 
-                    quibusdam ea fore fugiat. Et proident firmissimum. In magna pariatur consequat, 
-                    hic fugiat consectetur</div>
+                <div class="side" id="front">Cernantur o dolor, ex anim singulis si sunt possumus aliquip est legam arbitror iis fore quae, aute consequat si veniam aliqua e qui dolore pariatur adipisicing do sed mentitum te ingeniis si duis pariatur domesticarum. Id hic despicationes, et ne irure sint tamen, quo veniam laboris offendit e si </div>
+                <div class="side" id="back">admodum quo mandaremus, duis fabulas non concursionibus, labore ab voluptate ab tamen, quo amet fidelissimae, nostrud sed arbitror. Quibusdam philosophari eu singulis an lorem .
+                </div>
+                <div class="side" id="right">Cernantur o dolor, ex anim singulis si sunt possumus aliquip est legam arbitror iis fore quae, aute consequat si veniam aliqua e qui dolore pariatur adipisicing do sed mentitum te ingeniis si duis pariatur domesticarum.</div>
+                <div class="side" id="left">admodum quo mandaremus, duis fabulas non concursionibus, labore ab voluptate ab quibusdam ea fore fugiat. Et proident firmissimum. In magna pariatur consequat, hic fugiat consectetur.</div>
+                <div class="side" id="top">Cernantur o dolor, ex anim singulis si sunt possumus aliquip est legam arbitror iis fore quae, aute consequat si veniam aliqua e qui dolor et ne irure sint tamen, quo veniam laboris offendit e si</div>
+                <div class="side" id="bottom">admodum quo mandaremus, duis fabulas non concursionibus, labore ab voluptate ab tamen, quo amet fidelissimae, nostrud sed arbitror. Quibusdam philosopha. Lorem quibusdam ea fore fugiat. Et proident firmissimum. In magna pariatur consequat, hic fugiat consectetur</div>
             </div>
         </div>
     </div>
     <script src="//code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
     </script>
     <script>
-        
         $("header").load("header.html");
         $("#container").load($("#container").html() + "footer.html");
 
@@ -191,14 +170,11 @@
             var sides = ["Front", "Back", "Right", "Left", "Top", "Bottom"];
             var random = parseInt(Math.random() * 6);
             while (random == lastSide) {
-                console.log("same side");
                 random = parseInt(Math.random() * 6);
             }
             lastSide = random;
-            console.log(random);
             rotateCube(sides[random]);
         }, 9000);
     </script>
 </body>
-
 </html>
