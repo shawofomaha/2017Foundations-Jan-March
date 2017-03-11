@@ -11,6 +11,7 @@
             box-sizing: border-box;
             margin: 0;
             border: 0;
+            
         }
         
         #home:hover,
@@ -39,6 +40,7 @@
             position: relative;
             left: 5.0%;
         }
+
         
         h1,
         h3,
@@ -193,6 +195,7 @@
 <body>
 
     <a class="button" id="home" href="../index.html">Home</a>
+            
     <h1 class="item">Week 4 Homework JQuery</h1>
 
     <h3 class="item">Number Game</h3>
@@ -226,7 +229,7 @@
         //Functions
         logAreaString = function (logAreaStrng) {
             $("#logArea").text(logAreaStrng);
-            return;
+//            return;
         };
 
         startState = function () {
@@ -236,6 +239,7 @@
             $("#guessTry").prop('disabled', true);
             $("#topNumberRange").prop('disabled', false);
             $("#numberRangeSet").prop('disabled', false);
+            clearIntervalReset();
             return;
         };
 
@@ -277,6 +281,7 @@
             playerGuess = "";
             $("#topNumberDisplay").text(topNumberRangeNbr);
             resetlogArea();
+            clearIntervalReset();
             return;
         };
 
@@ -351,29 +356,70 @@
         wonGameAnimation = function () {
             logAreaHtml = $("#logArea").html();
             logAreaString("You ARE a BIG, BIG, BIG winner!");
+            debugger;
+            winGameAnimation();
+//            debugger;
+//            loopCounter = 0;
+//            intervalTimer = setInterval(winGameAnimation, 200);
+            ++loopCounter;
+            if (loopCounter > 7) {
+               clearIntervalReset(); 
+            } else {
+                intervalTimer = setInterval(winGameAnimation, 4500);    
+            }
+            return;
+            };
+
+        winGameAnimation = function () {
+            $("#logArea").css({                   
+                "position": "absolute"
+                , "left": "50%"
+                , "top": "50%"
+                , "transform": "translate(-50%, -50%)"
+                , "text-align": "center"
+                , "text-height": "33vmin"
+                , "color": "red"
+                , "width": "25vw"   
+                , "background-color": "rgba(0, 75, 2,1.0)"
+                , "display": "flex"
+                , "justify-content": "center"
+                , "align-items": "center"
+                , "border-radius": "50%"
+                , "z-index": "+10"            
+            }); 
+
             var div = $("#logArea");
+            
             div.animate({height: '65vh',  opacity: '0.4'}, "veryslow");
             div.animate({width:  '95vw',  opacity: '0.8'}, "slow");
             div.animate({height: '40vh',  opacity: '0.4'}, "slow");
             div.animate({width:  '65vw',  opacity: '0.9'}, "9000");
             div.animate({height: '20.5vh',opacity: '0.49'}, "slow");
             div.animate({width:  '77vw',  opacity: '0.90'}, "slow", function () {
-                $("#logArea").html(logAreaHtml);
-                logAreaHtml = "";
-                $("#logArea").css({
-                      "margin-left": "37.5vw"
-                    , "text-align": "center"
-                    , "top-margin": "15vh"
-                    , "color": "red"
-                    , "width": "25vw"
-                    , "background-color": "rgba(199, 194, 194,1.0)"
-                    , "background-color": "rgba(0, 75, 2,1.0)"
-                    , "display": "flex"
-                    , "justify-content": "center"
-                    , "align-items": "center"
-                })
-                return;
-            });
+
+
+           
+            }); 
+         
+            
+//            return;
+        };
+        
+        clearIntervalReset = function () {
+            clearInterval(intervalTimer);
+            $("#logArea").html(logAreaHtml);
+            $("#logArea").css({
+                  "display": "block"
+                , "border-radius": "5vmin"
+                , "background-color": "rgba(199, 194, 194, 0.8)"
+                , "padding": "2vmin"                
+                , "width": "95%"
+                , "font-size": "x-large"        
+                , "font-style": "normal"
+                , "font-weight": "400"        
+                , "font-style": "normal"
+            })  
+            return;
         };
 
 
@@ -383,7 +429,8 @@
                 "color": "rgba(255,0,0,1.0)"
             })
             $("#logArea").css({
-                  "margin-left": "27.5vw"        
+                  "display": "block"
+                , "margin-left": "27.5vw"        
                 , "top-margin": "15vh"
                 , "width": "45vw"
                 , "background-color": "rgba(0,75,2,1.0)"
@@ -411,12 +458,16 @@
         var gameRandomNumber = parseInt(Math.random() * topNumberRangeNbr + 1);
         var playerGuess = $("#guess").val();
         logAreaString(welcomeText);
+        var intervalTimer = "";
+        var loopCounter = 0;        
+        
 
         // ***********  Click Handlers *********** //
         $("#gameHintButton").click(function () {
+            clearIntervalReset();
             if (logAreaHtml == "") {
                 logAreaHtml = $("#logArea").html();
-                $("#logArea").html(hintHtml);
+                $("#logArea").html(hintHtml);               
                 gameHintcss();
             } else {
                 $("#logArea").html(logAreaHtml);
@@ -427,17 +478,20 @@
 
         // Restart game if #restartGameButton pressed
         $("#restartGameButton").click(function () {
+            clearIntervalReset();
             resetTopRangeNumber();
             gameReset();
         });
 
         // Reset the Top Range Number game if #numberRangeSet pressed
         $("#numberRangeSet").click(function () {
+            clearIntervalReset();
             resetTopRangeNumber();
         });
 
         // Play the game if the #guessTry button is pressed
         $("#guessTry").click(function () {
+            clearIntervalReset();
             playtheGame();
         });
 
@@ -445,6 +499,7 @@
         $('#guessTry').keypress(function (e) {
             var key = e.which;
             if (key == 13) {
+                clearInterval(intervalTimer);
                 playtheGame();
             }
         });
