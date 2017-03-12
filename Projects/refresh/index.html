@@ -16,87 +16,46 @@
     <!-- CSS Stylesheet href's -->
     <link rel="stylesheet" href="css/main.css">
     <style>
-
+        body {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 1.0);
+        }
+        
+        #container {
+            height: 125% !important;
+            background-image: url("media/cherry-wood-panels-background-header.jpg");
+        }
+        
+        .hdr {
+            background-color: rgba(0, 0, 0, 1.0);
+            /*            background-repeat: no-repeat; */
+        }
     </style>
 </head>
 
 <body>
 
     <header>Head and nav in header.html</header>
-    <br />
-    <div id="container">
 
+    <br />
+    <div id="container"> 
+        <audio id="sound1">
+            <source src="media/refresh_paul.mp3" type="audio/mpeg"/>
+        </audio>
+        <audio id="sound2">\
+            <source src="media/Wrong-buzzer.mp3" type="audio/mpeg"/>
+        </audio>
+        
         <div id="ball"></div>
 
-        <div class="picBox">
-            <img class="itemPic" alt="" height="480px" src="media/Resized_20170308_155644.jpeg">
-            <span class="itemTxt"><h3 style="inline-block">Picture 1</h3>Nulla domesticarum proident tamen incurreret. Dolore imitarentur incurreret malis nescius. Iis si nulla iudicem. Ab velit cernantur. Laboris ullamco ad appellat sint appellat mentitum, voluptate an quid eiusmod.</span>
-            <img class="horizLine" src="media/horizontal-line-clipart.gif" />
-            <br />
-            <div  class="price" >
-            <span style="margin-left: 15px !important"> Price </span><span style="color: red"> $199.90</span>
-            <br />
-            </div>    
-            <button type="button" id="button1" class="price">Buy</button>
+        <div id="textBox">
         </div>
 
-        <div class="picBox">
-            <img class="itemPic" alt="" height="420px" src="media/Resized_20170307_133304.jpeg">
-            <span class="itemTxt"><h3 style="inline-block">Picture 2</h3>Officia aliqua se pariatur exercitation. Consequat quo ipsum, singulis duis id 
-                eiusmod despicationes, occaecat culpa fabulas iudicem, ubi quid labore nisi cernantur. Multos ea fabulas quo ab iis illum 
-                noster velit.</span>
-            <img class="horizLine" src="media/horizontal-line-clipart.gif" />
-            <br />
-            <div  class="price" >
-            <span style="margin-left: 15px !important"> Price </span><span style="color: red"> Priceless! </span>
-            <br />
-            </div>            
-            <button style="width: 55px" type="button" id="button2" class="price">Buy</button>
-
-        </div>
-        <div class="picBox">
-            <img class="itemPic" alt="" height="280px" src="media/Resized_20170308_154949.jpeg">
-            <span class="itemTxt"><h3 style="inline-block">Picture 3</h3> Quis proident aut cohaerescant nam consequat labore ubi cupidatat concursionibus ne excepteur elit dolor e quae in ab duis appellat appellat, ad dolore eiusmod philosophari ex nescius nisi.</span>
-            <img class="horizLine" src="media/horizontal-line-clipart.gif" />
-            <br />
-            <div  class="price" >
-            <span style="margin-left: 15px !important"> Price </span><span style="color: red"> $49.90</span>
-            <br />
-            </div>            
-            <button type="button" id="button3" class="price">Buy</button>
-        </div>
-
-        <div class="picBox">
-            <img class="itemPic" alt="" width="660px" src="media/1487296374_p1110662.jpg">
-            <span class="itemTxt"><h3 style="inline-block">Picture 4</h3> Quae appellat vidisse.</span>
-            <img class="horizLine" src="media/horizontal-line-clipart.gif" />
-            <br />
-            <div  class="price" >
-            <span style="margin-left: 15px !important"> Price </span><span style="color: red"> $69.90 or obo</span>
-            <br />
-            </div>            
-            <button type="button" id="button4" class="price">Buy</button>
-        </div>
-
-        <div class="picBox">
-            <img class="itemPic" alt="" height="918px" src="media/living_room_b4_sale.jpeg">
-            <span class="itemTxt"><h3 style="inline-block">Picture 5</h3> Tempor ea quem. Ex amet a esse quo culpa ingeniis offendit. Litteris dolor illum vidisse sint ubi consequat o elit non excepteur an quid quamquam,fugiat possumus quo nulla quem, te summis dolore si quibusdam ne fugiat singulis ab possumus quo nulla quem, graviterque, deserunt est amet nostrud, quis id possumus. Ea minim exercitation, fugiat possumus quo nulla quem, te summis dolore si quibusdam ne fugiat singulis ab possumus quo nulla quem, graviterque, deserunt est amet nostrud, quis id possumus. Ea minim exercitation
-            </span>
-            <img class="horizLine" src="media/horizontal-line-clipart.gif" />
-            <br />
-            <div  class="price" >
-            <span style="margin-left: 15px !important" class="price"> Price </span><span style="color: red"> Make offer</span>
-            <br />
-            </div>            
-            <button type="button" id="button5" class="price">Buy</button>
-        </div>
     </div>
 
     <script src="//code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
     </script>
     <script>
-
-        
         var movX = parseInt(Math.random() * 5) + 1;
         var movY = parseInt(Math.random() * 5) + 1;
 
@@ -141,17 +100,21 @@
         setInterval(moveBall, 25);
 
         $("#ball").click(function () {
-            alert("Coming Soon: full functionality!!"); 
+//            alert("Coming Soon: full functionality!!");
+            $('#sound1').get(0).play();
+            $('#sound2').get(0).play();
+            $('#sound1').get(0).play();
+            alert("Coming Soon: full functionality!!");
         });
-        
+
         $(".price").click(function () {
-            alert("Coming Soon: full functionality!!"); 
+            alert("Coming Soon: full functionality!!");
         });
-        
+
         $("header").load("header.html");
-        
-        $("#container").load($("#container").html() + "footer.html");          
-                
+
+        $("#container").load($("#container").html() + "footer.html");
+
     </script>
 </body>
 

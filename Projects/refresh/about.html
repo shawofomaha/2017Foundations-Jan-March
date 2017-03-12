@@ -5,7 +5,23 @@
     <!-- CSS Stylesheet href's -->
     <link rel="stylesheet" href="css/main.css">
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">    
+
     <style>
+        body {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 1.0);
+        }
+        
+        img.homeLeft {
+            position: absolute;
+            top: 0vmin;
+            left: 85%;
+            width: 40vmin;
+            height: 40vmin;
+        }
+        
         #container:hover {
             background-color: rgba(41, 41, 41, 1.0);
             border-radius: 25%;
@@ -25,6 +41,18 @@
             top: 25vmin;
             left: 50%;
             transform: translate(-50%, -37%);
+        }
+        
+        button {
+            position: fixed;
+            top: 34vmin !important;
+            left: -10.5% !important;
+        }
+        
+        select {
+            position: fixed;
+            top: 41vmin !important;
+            left: 2.75% !important;
         }
         
         h2 {}
@@ -91,32 +119,32 @@
         }
         
         #front {
-            background-image: url("media/pexels-photo-234196.jpeg");
+            background-image: url("media/123_1.jpeg");
             transform: rotateY(0deg) translateZ(40vmin);
         }
         
         #back {
-            background-image: url("media/bench-people-smartphone-sun.jpg");
+            background-image: url("http://lorempixel.com/g/1200/960/");
             transform: rotateY(180deg) translateZ(40vmin);
         }
         
         #right {
-            background-image: url("media/homeless-man-color-poverty.jpg");
+            background-image: url("http://lorempixel.com/g/980/960/");
             transform: rotateY(90deg) translateZ(40vmin);
         }
         
         #left {
-            background-image: url("media/pexels-photo-276866.jpeg");
+            background-image: url("http://lorempixel.com/1200/960/");
             transform: rotateY(-90deg) translateZ(40vmin);
         }
         
         #top {
-            background-image: url("media/pexels-photo-aurora.jpg");
+            background-image: url("");
             transform: rotateX(90deg) translateZ(40vmin);
         }
         
         #bottom {
-            background-image: url("media/IMG_2835.JPG");
+            background-image: url("http://lorempixel.com/1100/760/");
             transform: rotateX(-90deg) translateZ(40vmin);
         }
     </style>
@@ -124,8 +152,10 @@
 
 <body>
     <header></header>
-    <h2>About &lt</h2>
+    <h2>&gt; About &lt;</h2><br /><br />
     <div id="#container">
+        <button type="button">Spin</button>
+        <br />
         <select>
             <option value="Front">Front</option>
             <option value="Back">Back</option>
@@ -134,11 +164,17 @@
             <option value="Top">Top</option>
             <option value="Bottom">Bottom</option>
         </select>
-        <button type="button">Spin</button>
+
 
         <div id="container">
             <div id="cube">
-                <div class="side" id="front">Cernantur o dolor, ex anim singulis si sunt possumus aliquip est legam arbitror iis fore quae, aute consequat si veniam aliqua e qui dolore pariatur adipisicing do sed mentitum te ingeniis si duis pariatur domesticarum. Id hic despicationes, et ne irure sint tamen, quo veniam laboris offendit e si </div>
+                <div class="side" id="front">
+                    <p>We LOVE our customers and are determined to meet the needs of succeeding in the daunting task of your estate sale.</p>
+                    <p>We provide a personalized service to meet the needs identified by you.</p>
+                    <p>We take great pride in the professional manner in which we consistently provide, in a timely manner, the most cost-effective, professional, and seasoned services.</p>
+                    <p>We have the skills and experience necessary to make an overwhelming priority seem manageable again.</p>
+                    <p>So contact us and delegate one of your many responsibility with peace of mind with our satisfaction guarantee.</p>
+                </div>
                 <div class="side" id="back">admodum quo mandaremus, duis fabulas non concursionibus, labore ab voluptate ab tamen, quo amet fidelissimae, nostrud sed arbitror. Quibusdam philosophari eu singulis an lorem .
                 </div>
                 <div class="side" id="right">Cernantur o dolor, ex anim singulis si sunt possumus aliquip est legam arbitror iis fore quae, aute consequat si veniam aliqua e qui dolore pariatur adipisicing do sed mentitum te ingeniis si duis pariatur domesticarum.</div>
@@ -177,4 +213,5 @@
         }, 9000);
     </script>
 </body>
+
 </html>

@@ -4,6 +4,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        body {
+            background-color: dimgray;
+        }
+        
         #container {
             display: flex;
             flex-flow: row wrap;
@@ -12,7 +16,7 @@
         .columns {
             flex: 1 40%;
             /*            flex: 1 auto;*/
-            height: 100vh;
+            min-height: 23vh;
             border: 1px solid black;
         }
         
@@ -23,35 +27,33 @@
             border: 3px solid black;
             background-color: rgba(211, 211, 211, 1.0);
             min-width: 40vmin;
-            border-radius: 15%;
+            border-radius: 15px;
             margin: 1vmin;
         }
         
         .listName {
             display: block;
             text-align: center;
-            border: 1px solid blue;
+            /*            border: 1px solid blue;*/
             font-size: 5vmin;
             font-weight: 600;
             position: relative;
             margin: 4vmin;
-            /*            margin-left: 28vmin;*/
         }
         
         .task {
             display: inline;
-            /*            float: right;*/
             width: 40vmin;
             margin: 0.5vmin .5vmin 1.5vmin 0;
             font-size: 2.5vmin;
             font-weight: 400;
             position: relative;
-            /*            margin: 4vmin;*/
-            margin-left: 22vmin;
+            margin-left: 3.5vmin;
         }
         
         .completed {
             text-decoration: line-through;
+            color: dimgrey;
         }
         
         .notCompleted {
@@ -73,10 +75,26 @@
         .showRemoveButton {
             display: inline;
         }
+        
+        #addTask:hover {
+            height: 7vmin;
+            width: 12vmin;
+            border-radius: 17px;
+            background-color: red;            
+            transition: all 1.5s cubic-bezier(.1,.73,.94,1.0); 
+        }
+        
+        #addTask, button` {
+            height: 5vmin;
+            width: 9vmin;
+            border-radius: 15px;
+            background-color: aqua;
+        }
     </style>
 </head>
 
 <body>
+    <button type="button" id="addTask">Add Task</button>
     <input id="inpuText" type="text" value="default" />
     <select id="listName" name="">
         <option></option>
@@ -85,7 +103,9 @@
         <option value="toDoList">To Do List</option>
         <option selected="selected" value="groceryList">Grocery List</option>
     </select>
-    <button type="button" id="addTask">Add Task</button>
+    
+    <input id="date" type="date"> <span>Due Date</span>
+    <input id="priority" type="checkbox"><span style="color:red;">High Priority</span>
 
     <div id="container">
 
@@ -113,10 +133,30 @@
         var txt = "";
         var task = "";
 
+
         $(document).ready(function () {
+            debugger;
 
             function insertTask() {
-                $("#" + task).append("<div id='dudeIt' class='task'><span class='desc'>" + txt + "</span><button type='button' class='completedButton'>Completed</button></div></span><button type='button' class='removeButton hideRemoveButton'>Remove</button></div><br />");
+                var dateExist = $("#date").val();
+                if (dateExist !== undefined) {
+                    txt = txt + " Due by: "+$("#date").val();
+                } 
+                
+                debugger;
+                var normalTaskHtml = "<div id='dudeIt' class='task'><span class='desc'>" + txt + "</span><button type='button' class='completedButton'>Completed</button></div></span><button type='button' class='removeButton hideRemoveButton'>Remove</button></div><br />";
+
+                var priorityTaskHtml = "<div id='dudeIt' class='task'><span class='desc' style='color: red; font-size: 2em;'>" + txt + "</span><button type='button' class='completedButton'>Completed</button></div></span><button type='button' class='removeButton hideRemoveButton'>Remove</button></div><br />";
+
+                var checked = $("#priority").is(':checked'); 
+                debugger;
+                if (checked == 0) {
+
+                    $("#" + task).append(normalTaskHtml);
+                } else {
+                    $("#priority").val(false);
+                    $("#" + task).append(priorityTaskHtml);  
+                }
             }
 
             function editInput() {
@@ -137,53 +177,23 @@
 
             $("#addTask").click(function () {
                 editInput();
-            });  
+            });
 
-
-//             $(".columns").on("click", "button", "completedButton", function () {
             $(".columns").on("click", "button", function () {
                 debugger;
-//                var $focused = $(':focus'+);
-                var focused2 = document.activeElement;
-                var $objClicked = $(this);
-                console.log("$objClicked"+$objClicked);
-                console.log("$(this)"+$(this));
-//                if ($(this).classList() === 'button.completedButton') {                 
-//                if ($("button.completedButton") == $(this)) {
-                if (focused2 == 'button.completedButton') {                     
-//                if ($(this) === 'button.completedButton') {                    
-                    $(this).removeClass("showCompletedButton").addClass("hideCompletedButton");
-                    console.log("who is parent: " + who);
-                    $(this).prev().addClass("completed");
-                }  
-                if ($(this) === "button.removeButton") {
-                    $(this).parent().remove();
+                if ($(this).hasClass("completedButton")) {
+
+                    $(this).prev().addClass("completed"); //Add text line-out
+                    $(this).parent().next().addClass("showRemoveButton"); //Show the remove button
+                    $(this).removeClass("showCompletedButton").addClass("hideCompletedButton"); // Remove completed button
+                }
+                if ($(this).hasClass("removeButton")) {
+                    $(this).prev("").remove(); // remove the Text
+                    $(this).remove(); // remove the button
                 } else {
 
                 }
-                //                $(this).css("hideCompletedButton")   showRemoveButton" 
-                //                $(this).toggleClass(".hideCompletedButton,  .completed");
             });
-
-//            $(".columns").on("click", "button", "removeButton", function () {
-//                debugger;
-//                $(this).toggleClass("hideRemoveButton showRemoveButton");
-//            });
-
-            //  $(this).removeClass( "myClass noClass" ).addClass( ".hideCompletedButton,  .completed" );         
-
-
-            //Any parent that exists at the time the event is bound is fine. For example
-            //
-            //$('.buttons').on('click', 'button', function(){
-            //    // do something here
-            //});
-            //would apply to
-            //
-            //<div class="buttons">
-            //    <!-- <button>s that are generated dynamically and added here -->
-            //</div>
-
         });
     </script>
 </body>

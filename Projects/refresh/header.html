@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Housekeeping -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">
 
     <!--
     <link media="all and (min-width: 1001px) " rel="stylesheet" href="../css/Class 9-laptop.css">
@@ -14,25 +15,42 @@
 -->
     <!-- CSS Stylesheet href's -->
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        .hdrPaisleyLeft {
+            position: absolute;
+            top: 6.75vmin;
+/*            z-index: +200;            */
+        }
+        .hdrPaisleyRight {
+            position: absolute;
+            top: 6.75vmin;            
+            left: 57%;
+/*            z-index: +12;*/
+        }
+    </style>
 </head>
 
 <body>
-    <nav>
+    <nav class="hdr">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="mission.html">Mission</a></li>
             <li><a href="sales.html">Sales</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
+        <div>
+            <img  class="hdrPaisleyLeft" src="media/black-damask-background-hi.png">
+            <img class="homeLeft" src="media/refresh-expanded.png">
+            <img class="hdrPaisleyRight" src="media/black-damask-background-hi.png">            
+<!--            <h1 id="h1h1">Refresh<span><br /> Estate Sales</span></h1>-->
+        </div>
     </nav>
-    <br />
-    <br />
-    <div class="hdr">
-        <a href="index.html"><img class="homeLeft" width="100vmin" src="media/Refresh%20Estate%20Sales%20Logo.png"></a>
-        <h1 class="hdr">Refresh Estate Sales</h1>
-    </div>
-<script src="//code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
-</script>
-<script></script>
+
+
+
+    <script src="//code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
+    </script>
+    <script></script>
 </body>
+
 </html>
