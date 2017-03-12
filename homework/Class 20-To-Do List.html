@@ -15,7 +15,6 @@
         
         .columns {
             flex: 1 40%;
-            /*            flex: 1 auto;*/
             min-height: 23vh;
             border: 1px solid black;
         }
@@ -90,10 +89,11 @@
             border-radius: 15px;
             background-color: aqua;
         }
+        
     </style>
 </head>
-
 <body>
+    
     <button type="button" id="addTask">Add Task</button>
     <input id="inpuText" type="text" value="default" />
     <select id="listName" name="">
@@ -161,6 +161,7 @@
 
             function editInput() {
                 txt = $("#inpuText").val();
+                $("#inpuText").val("default");
                 task = $("#listName").val();
                 console.log("txt: " + txt);
                 $("#inpuText").val();
