@@ -17,16 +17,72 @@
     <link rel="stylesheet" href="css/main.css">
     <style>
         .hdrPaisleyLeft {
-            position: absolute;
-            top: 6.75vmin;
+/*            position: absolute;*/
+            position: fixed;
+            top: 6.0vmin;
+            top: 6.0vmin;
+            left: -1vmin;
+            perspective: 150px;
 /*            z-index: +200;            */
         }
-        .hdrPaisleyRight {
-            position: absolute;
-            top: 6.75vmin;            
-            left: 57%;
-/*            z-index: +12;*/
+
+                nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(147, 255, 166 0.69);
+            /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(left, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.69));
+            /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(right, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.69));
+            /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(right, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.69));
+            /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to right, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.01));
+            /* Standard syntax */
+            z-index: +10;
         }
+        
+        nav li a {
+            display: block;
+            float: left;
+            left: 0;
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        nav li a:hover {
+            background-color: #111;
+            color: aliceblue;
+            transition: all 1.0s ease-in-out;
+        }
+        
+        .homeLeft {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            border-radius: 50%;
+            z-index: +15;
+            left: 85%;
+            transform: translate(-50%);
+        }
+        
+        img.homeLeft {
+            position: absolute;
+            background-color: color: rgba(242, 232, 218, 1.0);
+            top: 0vmin;
+            width: 40vmin;
+            height: 40vmin;
+            z-index: +91;
+        }
+                
+      
     </style>
 </head>
 
@@ -39,9 +95,9 @@
             <li><a href="about.html">About</a></li>
         </ul>
         <div>
-            <img  class="hdrPaisleyLeft" src="media/black-damask-background-hi.png">
+            <img  class="hdrPaisleyLeft" src="media/borders (1).png">
             <img class="homeLeft" src="media/refresh-expanded.png">
-            <img class="hdrPaisleyRight" src="media/black-damask-background-hi.png">            
+<!--            <img class="hdrPaisleyRight" src="media/black-damask-background-hi.png">            -->
 <!--            <h1 id="h1h1">Refresh<span><br /> Estate Sales</span></h1>-->
         </div>
     </nav>

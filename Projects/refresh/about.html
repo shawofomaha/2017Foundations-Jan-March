@@ -6,41 +6,15 @@
     <link rel="stylesheet" href="css/main.css">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">
 
     <style>
-        body {
-            width: 100%;
-            background-color: rgba(0, 0, 0, 1.0);
-        }
-        
         img.homeLeft {
             position: absolute;
             top: 0vmin;
             left: 85%;
             width: 40vmin;
             height: 40vmin;
-        }
-        
-        #container:hover {
-            background-color: rgba(41, 41, 41, 1.0);
-            border-radius: 25%;
-        }
-        
-        #container {
-            transition: all 0.5s ease;
-            background-color: rgba(141, 141, 141, 0.7);
-            border-radius: 15%;
-        }
-        
-        #container {
-            width: 80vmin;
-            height: 80vmin;
-            position: relative;
-            perspective: 100vmin;
-            top: 25vmin;
-            left: 50%;
-            transform: translate(-50%, -37%);
         }
         
         button {
@@ -55,7 +29,16 @@
             left: 2.75% !important;
         }
         
-        h2 {}
+        h2 {
+            position: relative;
+        }
+/*
+        
+        #containerAbout:hover   {
+            transform: rotate(0);
+            transition: transform 2s;
+        }
+*/
         
         #cube {
             width: 100%;
@@ -97,11 +80,10 @@
             box-sizing: border-box;
             border: 5px solid black;
             color: rgba(255, 255, 255, 0.8);
-            font-size: 3vmin;
+            font-size: 2.3vmin;
             text-align: center;
-            line-height: 3vmin;
+            line-height: 2.3vmin;
             border-radius: 25%;
-            /*            text-align: justify;*/
         }
         
         #front,
@@ -111,48 +93,66 @@
         #top,
         #bottom {
             background-size: cover;
-            height: 80vmin;
-            transition: background-color 3sec;
+            height: 60vmin;
+            transition: background-color 2sec;
             padding: 2vmin;
             padding-top: 9vmin;
-            /*            transition: background-color 3sec;*/
+            transition: background-color 3sec;
         }
         
         #front {
             background-image: url("media/123_1.jpeg");
-            transform: rotateY(0deg) translateZ(40vmin);
+            transform: rotateY(0deg) translateZ(30vmin);
         }
         
         #back {
             background-image: url("http://lorempixel.com/g/1200/960/");
-            transform: rotateY(180deg) translateZ(40vmin);
+            transform: rotateY(180deg) translateZ(30vmin);
         }
         
         #right {
             background-image: url("http://lorempixel.com/g/980/960/");
-            transform: rotateY(90deg) translateZ(40vmin);
+            transform: rotateY(90deg) translateZ(30vmin);
         }
         
         #left {
             background-image: url("http://lorempixel.com/1200/960/");
-            transform: rotateY(-90deg) translateZ(40vmin);
+            transform: rotateY(-90deg) translateZ(30vmin);
         }
         
         #top {
             background-image: url("");
-            transform: rotateX(90deg) translateZ(40vmin);
+            transform: rotateX(90deg) translateZ(30vmin);
         }
         
         #bottom {
             background-image: url("http://lorempixel.com/1100/760/");
-            transform: rotateX(-90deg) translateZ(40vmin);
+            transform: rotateX(-90deg) translateZ(30vmin);
+        }
+        
+        body {
+            height: 150 vmin;
+        }
+        
+        #containerAbout {
+            display: flex;
+            width: 60vmin;
+            height: 60vmin;
+            position: relative;
+            perspective: 300vmin;
+            top: 10vmin;
+            left: 50%;
+/*            z-index: 222;*/
+            transform: translate(-50%, -10%);
         }
     </style>
 </head>
 
 <body>
     <header></header>
-    <h2>&gt; About &lt;</h2><br /><br />
+    <h2>&gt; About &lt;</h2>
+    <br />
+    <br />
     <div id="#container">
         <button type="button">Spin</button>
         <br />
@@ -166,7 +166,7 @@
         </select>
 
 
-        <div id="container">
+        <div id="containerAbout">
             <div id="cube">
                 <div class="side" id="front">
                     <p>We LOVE our customers and are determined to meet the needs of succeeding in the daunting task of your estate sale.</p>
@@ -179,16 +179,21 @@
                 </div>
                 <div class="side" id="right">Cernantur o dolor, ex anim singulis si sunt possumus aliquip est legam arbitror iis fore quae, aute consequat si veniam aliqua e qui dolore pariatur adipisicing do sed mentitum te ingeniis si duis pariatur domesticarum.</div>
                 <div class="side" id="left">admodum quo mandaremus, duis fabulas non concursionibus, labore ab voluptate ab quibusdam ea fore fugiat. Et proident firmissimum. In magna pariatur consequat, hic fugiat consectetur.</div>
-                <div class="side" id="top">Cernantur o dolor, ex anim singulis si sunt possumus aliquip est legam arbitror iis fore quae, aute consequat si veniam aliqua e qui dolor et ne irure sint tamen, quo veniam laboris offendit e si</div>
+                <div class="side" id="top"></div>
                 <div class="side" id="bottom">admodum quo mandaremus, duis fabulas non concursionibus, labore ab voluptate ab tamen, quo amet fidelissimae, nostrud sed arbitror. Quibusdam philosopha. Lorem quibusdam ea fore fugiat. Et proident firmissimum. In magna pariatur consequat, hic fugiat consectetur</div>
             </div>
         </div>
     </div>
+
+    <footer id="footer"></footer>
+    
     <script src="//code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
     </script>
     <script>
         $("header").load("header.html");
-        $("#container").load($("#container").html() + "footer.html");
+         $("#footer").load("footer.html");
+//        #include file="footer.html"
+//        $("#container").load($("#container").html() + "footer.html");
 
         //Front, Back, Right, Left, Top, Bottom
         function rotateCube(side) {
