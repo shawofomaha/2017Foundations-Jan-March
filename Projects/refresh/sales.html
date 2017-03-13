@@ -29,6 +29,10 @@
     <header></header>
     <h2>Sales</h2>
     
+        <audio id="sound1">
+            <source src="media/refresh_paul4.mp3" type="audio/mpeg"/>
+        </audio>
+    
        <div id="container">
 
         <div id="ball"></div>
@@ -147,17 +151,16 @@
         setInterval(moveBall, 25);
 
         $("#ball").click(function () {
-            alert("Coming Soon: full functionality!!"); 
+            $('#sound1').get(0).play();
         });
         
         $(".price").click(function () {
-            alert("Coming Soon: full functionality!!"); 
+            alert("Coming Soon: full functionality!!");
+            $('#sound1').get(0).play();
         });
         
         $("header").load("header.html");
-        
-        $("#container").load($("#container").html() + "footer.html");          
-                
+        $("#container").load($("#container").html() + "footer.html");                
     </script>
 </body>
 

@@ -92,10 +92,15 @@
             background-color: aqua;
         }
         
-        #list {
+        #list,#date1 {
             font-size: 1.25em;
             color: antiquewhite;
         }
+        
+        #date1, #priority {
+            font-size: 1em;
+            color: antiquewhite;
+        }        
         
     </style>
 </head>
@@ -110,8 +115,8 @@
     <input id="inpuText" type="text" value="default" />
 
 
-    <span>Due Date</span>
-    <input id="date" type="date">
+    <span id="date1">Due Date</span>
+    <input id="date2" type="date">
     <input id="priority" type="checkbox"><span style="color:red;"> High Priority </span>
 
     <br />
@@ -154,9 +159,9 @@
             debugger;
 
             function insertTask() {
-                var dateExist = $("#date").val();
+                var dateExist = $("#date2").val();
                 if (dateExist !== undefined) {
-                    txt = txt + " Due by: " + $("#date").val();
+                    txt = txt + " Due by: " + $("#date2").val();
                 }
 
                 debugger;
@@ -214,5 +219,4 @@
         });
     </script>
 </body>
-
 </html>
