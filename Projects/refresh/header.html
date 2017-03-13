@@ -17,16 +17,17 @@
     <link rel="stylesheet" href="css/main.css">
     <style>
         .hdrPaisleyLeft {
-/*            position: absolute;*/
+            /*            position: absolute;*/
             position: fixed;
             top: 6.0vmin;
-            top: 6.0vmin;
+            height: 15vmin;
+            width: 100%;
             left: -1vmin;
             perspective: 150px;
-/*            z-index: +200;            */
+            /*            z-index: +200;            */
         }
-
-                nav ul {
+        
+        nav ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
@@ -76,13 +77,22 @@
         img.homeLeft {
             position: absolute;
             background-color: color: rgba(242, 232, 218, 1.0);
-            top: 0vmin;
-            width: 40vmin;
-            height: 40vmin;
+            top: -2vmin;
+            width: 34vmin;
+            height: 34vmin;
             z-index: +91;
         }
-                
-      
+        
+        #title {
+            font-family: 'Architects Daughter', cursive;
+            /*    text-align: center;*/
+            color: rgba(0, 0, 0, 1.0);
+            color: rgba(255, 210, 147, 1.0);
+            color: rgba(242, 232, 218, 1.0);
+            font-size: 6vmin;
+            line-height: 6vh; 
+            padding-left: 19vmin;
+        }
     </style>
 </head>
 
@@ -93,12 +103,13 @@
             <li><a href="mission.html">Mission</a></li>
             <li><a href="sales.html">Sales</a></li>
             <li><a href="about.html">About</a></li>
+            <span id="title">Refresh Estate Sales</span>
         </ul>
         <div>
-            <img  class="hdrPaisleyLeft" src="media/borders (1).png">
+            <img class="hdrPaisleyLeft" src="media/borders (1).png">
             <img class="homeLeft" src="media/refresh-expanded.png">
-<!--            <img class="hdrPaisleyRight" src="media/black-damask-background-hi.png">            -->
-<!--            <h1 id="h1h1">Refresh<span><br /> Estate Sales</span></h1>-->
+            <!--            <img class="hdrPaisleyRight" src="media/black-damask-background-hi.png">            -->
+            <!--            <h1 id="h1h1">Refresh<span><br /> Estate Sales</span></h1>-->
         </div>
     </nav>
 
