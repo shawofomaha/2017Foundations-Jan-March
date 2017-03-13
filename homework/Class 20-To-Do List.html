@@ -6,6 +6,7 @@
     <style>
         body {
             background-color: dimgray;
+            font-family: sans-serif;
         }
         
         #container {
@@ -79,23 +80,42 @@
             height: 7vmin;
             width: 12vmin;
             border-radius: 17px;
-            background-color: red;            
-            transition: all 1.5s cubic-bezier(.1,.73,.94,1.0); 
+            background-color: red;
+            transition: all 1.5s cubic-bezier(.1, .73, .94, 1.0);
         }
         
-        #addTask, button` {
+        #addTask,
+        button` {
             height: 5vmin;
             width: 9vmin;
             border-radius: 15px;
             background-color: aqua;
         }
         
+        #list {
+            font-size: 1.25em;
+            color: antiquewhite;
+        }
+        
     </style>
 </head>
+
 <body>
-    
+
+    <audio id="sound1">
+        <source src="../media/sound_ex_machina_Buttons%20-%20Metallic%20Rotating%20Button.mp3" type="audio/mpeg" />
+    </audio>
+
     <button type="button" id="addTask">Add Task</button>
     <input id="inpuText" type="text" value="default" />
+
+
+    <span>Due Date</span>
+    <input id="date" type="date">
+    <input id="priority" type="checkbox"><span style="color:red;"> High Priority </span>
+
+    <br />
+    <span id="list">List: </span>
     <select id="listName" name="">
         <option></option>
         <option value="user1List">User 1 List</option>
@@ -103,9 +123,6 @@
         <option value="toDoList">To Do List</option>
         <option selected="selected" value="groceryList">Grocery List</option>
     </select>
-    
-    <input id="date" type="date"> <span>Due Date</span>
-    <input id="priority" type="checkbox"><span style="color:red;">High Priority</span>
 
     <div id="container">
 
@@ -133,37 +150,35 @@
         var txt = "";
         var task = "";
 
-
         $(document).ready(function () {
             debugger;
 
             function insertTask() {
                 var dateExist = $("#date").val();
                 if (dateExist !== undefined) {
-                    txt = txt + " Due by: "+$("#date").val();
-                } 
-                
+                    txt = txt + " Due by: " + $("#date").val();
+                }
+
                 debugger;
                 var normalTaskHtml = "<div id='dudeIt' class='task'><span class='desc'>" + txt + "</span><button type='button' class='completedButton'>Completed</button></div></span><button type='button' class='removeButton hideRemoveButton'>Remove</button></div><br />";
 
-                var priorityTaskHtml = "<div id='dudeIt' class='task'><span class='desc' style='color: red; font-size: 2em;'>" + txt + "</span><button type='button' class='completedButton'>Completed</button></div></span><button type='button' class='removeButton hideRemoveButton'>Remove</button></div><br />";
+                var priorityTaskHtml = "<div id='dudeIt' class='task'><span class='desc' style='color: red; font-size:1.25em;'>" + txt + "</span><button type='button' class='completedButton'>Completed</button></div></span><button type='button' class='removeButton hideRemoveButton'>Remove</button></div><br />";
 
-                var checked = $("#priority").is(':checked'); 
+                var checked = $("#priority").is(':checked');
                 debugger;
                 if (checked == 0) {
 
                     $("#" + task).append(normalTaskHtml);
                 } else {
                     $("#priority").val(false);
-                    $("#" + task).append(priorityTaskHtml);  
+                    $("#" + task).append(priorityTaskHtml);
                 }
             }
 
             function editInput() {
                 txt = $("#inpuText").val();
                 $("#inpuText").val("default");
-                task = $("#listName").val();
-                console.log("txt: " + txt);
+                task = $("#listName").val();;
                 $("#inpuText").val();
                 if (txt == "default") {
                     alert("1 -editInput - Please enter something other than 'default' or don't leave an empty task description!");
@@ -177,11 +192,12 @@
             }
 
             $("#addTask").click(function () {
+                $('#sound1').get(0).play();
                 editInput();
             });
 
             $(".columns").on("click", "button", function () {
-                debugger;
+                $('#sound1').get(0).play();
                 if ($(this).hasClass("completedButton")) {
 
                     $(this).prev().addClass("completed"); //Add text line-out
