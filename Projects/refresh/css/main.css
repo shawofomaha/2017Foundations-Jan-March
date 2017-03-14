@@ -16,10 +16,12 @@
             -webkit-flex-flow: row wrap;
             justify-content: flex-end;
         }
-#footer, footer {
-    margin-top: 7.5vmin;
-}
-
+        
+        #footer,
+        footer {
+            margin-top: 7.5vmin;
+        }
+        
         h1 {
             display: inline-block;
             position: absolute;
@@ -109,46 +111,34 @@
             border-radius: 25%;
             background-color: rgba(216, 15, 15, 1.0);
         }
-        
-/*
+        /*
         #container:hover {
             background-color: rgba(41, 41, 41, 1.0);
             border-radius: 25%;
         }
 */
         
+/*
+        #container {
+            
+        }
+*/
+        
         #container {
             perspective: 400vmin;
-        }
-
-        #container {
-            /*
-    background-color: rgba(111, 111, 111, 0.9);
-    background-color: rgba(19, 56, 10, 1.0);
-*/
             position: relative;
             transition: all 0.5s ease;
             background-image: url("../media/cherry-wood-panels-background-header.jpg");
             border: 1px solid black;
-            position: relative;
             box-sizing: border-box;
             overflow: hidden;
             display: flex;
             flex-wrap: wrap;
-            
-                        
             -webkit-flex-flow: wrap;
-            
             justify-content: space-around;
             align-content: space-around;
-/*            border-radius: 35px;*/
-/*            position: absolute;*/
             top: -19.75vmin;
             width: 100%;
-/*            left: 2.5vmin;*/
-/*            transform: (-20%);*/
-/*            transform: translate(-10%);*/
-/*            z-index: +33;*/
         }
         
         img {

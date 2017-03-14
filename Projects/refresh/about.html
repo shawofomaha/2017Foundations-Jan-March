@@ -127,29 +127,36 @@
         }
         
         #bottom {
-            background-image: url("http://lorempixel.com/1100/760/");
+            background-image: url("http://lorempixel.com/320/320/");
             transform: rotateX(-90deg) translateZ(30vmin);
         }
         
         body {
-            height: 150 vmin;
+/*            height: 150 vmin;*/
         }
         
         #aboutTitle {
-        font-size: 5.5vmin;    
+            position: relative;
+            font-size: 5.5vmin;
+/*            color: rgba(155, 244, 66, 0.9);*/
+            top: -22vmin; 
+            z-index: +1;
+            font-family: 'Architects Daughter', cursive;
+            color: rgba(242, 232, 218, 1.0);    
         }
-        
+              
         #containerAbout {
             display: flex;
             width: 60vmin;
             height: 60vmin;
             position: relative;
             perspective: 300vmin;
-            top: -6vmin;
+            top: -15vmin;
             left: 50%;
 /*            z-index: 222;*/
-            transform: translate(-50%, -10%);
+            transform: translate(-50%, -10%);        
         }
+        
     </style>
 </head>
 
@@ -158,7 +165,7 @@
     <h2 id="aboutTitle">&gt; About &lt;</h2>
     <br />
     <br />
-    <div id="#container">
+    <div>
         <button type="button">Spin</button>
         <br />
         <select>

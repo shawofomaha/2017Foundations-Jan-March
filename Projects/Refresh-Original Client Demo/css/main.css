@@ -1,20 +1,4 @@
-/*
-font-family: 'Indie Flower', cursive;
-font-family: 'Roboto', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Shadows Into Light', cursive;
-font-family: 'Architects Daughter', cursive;
-font-family: 'Reenie Beanie', cursive;
-font-family: 'Syncopate', sans-serif;
-font-family: 'Carme', sans-serif;*/
-
-
-/*
-        body {
-            margin: 0;
-            font-family: 'Architects Daughter', cursive;
-        }
-*/
+/* Revised March 14 2017 */
 
 .hdr {
     width: 100%;
@@ -98,11 +82,12 @@ dude {
 */
 
 nav li a {
+    font-family: 'Indie Flower', cursive !important;
     display: block;
     float: left;
     color: rgba(255, 255, 255, 0.9);
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 26px;
     text-decoration: none;
 }
 
@@ -167,7 +152,21 @@ button {
     /*            transform: translate(+50%,+50%);*/
 }
 
-#container {
+
+#container-main {
+    background-color: rgba(111, 111, 111, 0.9);
+    border: 1px solid black;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    border-radius: 3%;
+}
+
+.container-main {
     background-color: rgba(111, 111, 111, 0.9);
     border: 1px solid black;
     position: relative;

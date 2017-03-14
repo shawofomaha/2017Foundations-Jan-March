@@ -16,20 +16,29 @@
         }
         
         #container {
-            top: -12.5vmin;
+            top: -28.25vmin !important;
         }
         
         .paisleyBorderBottom {
-            top: -27.35vmin;
+            top: -36.15vmin;
             z-index: -1;
-        }        
+        }  
         
+        #salesTitle {
+            position: relative;
+            font-size: 5.5vmin;
+            color: rgba(155, 244, 66, 0.9);
+            top: -22vmin;
+            font-family: 'Architects Daughter', cursive;
+            color: rgba(242, 232, 218, 1.0);          
+        }
+      
     </style>
 </head>
 
 <body>
     <header></header>
-    <h2>Sales</h2>
+    <h2 id="salesTitle">&gt; Sales &lt;</h2>
 
     <audio id="sound1">
         <source src="media/refresh_paul4.mp3" type="audio/mpeg" />
@@ -117,7 +126,7 @@
             var g = parseInt(Math.random() * 256);
             return "rgb(" + r + "," + g + "," + b + ")";
         }
-        //         $("#container").click(function(e) { 
+        //         $(".container-main").click(function(e) { 
         $("#ball" || "#container").click(function (e) {
             //            var y = e.pageY;
             //            var x = e.pageX;

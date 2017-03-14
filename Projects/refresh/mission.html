@@ -7,43 +7,57 @@
     <link rel="stylesheet" type="text/css" href="engine1/style.css" />
     <script type="text/javascript" src="engine1/jquery.js"></script>
     <!-- End WOWSlider.com HEAD section -->
-    
+
     <link rel="stylesheet" href="css/main.css">
-    
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">
-    
-<style>
-/*
+
+    <style>
+        /*
     body {
         width: 100%;
         background-color: rgba(0, 0, 0, 1.0);
     }
 */
-    body {
-        height:  125vmin;
-    }
+        
+/*
+        body {
+            height: 125vmin;
+        }
+*/
+        
         .paisleyBorderBottom {
-/*            top: -26.5vmin;*/
+            top: -6.75vmin;
             z-index: 0;
-        } 
-    
-    #footer {
-/*    bottom: auto;*/
-        position: relative;
-        top: 62vmin;
-}
-    #wowslider-container1 {
-        position: absolute;
-        top: 13vmin !important;
-    }
-</style>
+        }
+        
+        #footer {
+            /*    bottom: auto;*/
+            position: relative;
+            top: 62vmin;
+        }
+        
+        #wowslider-container1 {
+            position: absolute;
+            top: 13.5vmin !important;
+        }
+        
+        #missionTitle {
+            position: relative;
+            font-size: 5.5vmin;
+            color: rgba(155, 244, 66, 0.9);
+            top: -22vmin;
+            font-family: 'Architects Daughter', cursive;
+            color: rgba(242, 232, 218, 1.0);
+        }
+    </style>
 </head>
 
 
 <body>
     <header></header>
-    <h2>Mission</h2>
+    <h2 id="missionTitle">&gt; Mission &lt;</h2>
     <div id="#container">
 
         <!-- Start WOWSlider.com BODY section -->
@@ -76,9 +90,9 @@
             <div class="ws_shadow"></div>
         </div>
     </div>
-    
+
     <footer id="footer"></footer>
-    
+
     <script type="text/javascript" src="engine1/wowslider.js"></script>
     <script type="text/javascript" src="engine1/script.js"></script>
     <!-- End WOWSlider.com BODY section -->

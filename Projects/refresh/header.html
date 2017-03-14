@@ -19,14 +19,13 @@
         .paisleyBorderTop {
             /*            position: absolute;*/
             position: fixed;
-            top: 7.75vmin;
+            top: 8.5vmin;
             height: 5vmin;
             width: 100%;
             left: -0.0vmin;
             perspective: 150px;
             /*            z-index: +200;            */
         }
-
         
         nav ul {
             list-style-type: none;
@@ -50,12 +49,16 @@
         }
         
         nav li a {
+            font-family: sans-serif;
             display: block;
+            height: 4.25vmin;
+/*            padding-top: 5.5vmin;*/
+
             float: left;
             left: 0;
             color: rgba(255, 255, 255, 0.9);
-            text-align: center;
-            padding: 14px 16px;
+/*            text-align: center;*/
+            padding: 14px 12px;
             text-decoration: none;
         }
         
@@ -77,8 +80,8 @@
         
         img.logo {
             position: absolute;
-/*            background-color: color: rgba(242, 232, 218, 1.0);*/
-            top: -2vmin;
+            /*            background-color: color: rgba(242, 232, 218, 1.0);*/
+            top: -9vmin;
             width: 34vmin;
             height: 34vmin;
             z-index: +91;
@@ -91,30 +94,29 @@
             color: rgba(255, 210, 147, 0.9);
             color: rgba(242, 232, 218, 0.9);
             font-size: 7vmin;
-            line-height: 7.75vh; 
+            line-height: 7.75vh;
             padding-left: 19vmin;
         }
+        
     </style>
 </head>
 
 <body>
-    <nav class="hdr">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="mission.html">Mission</a></li>
-            <li><a href="sales.html">Sales</a></li>
-            <li><a href="about.html">About</a></li>
-            <span id="title">Refresh Estate Sales</span>
-        </ul>
-        <div>
-            <img class="paisleyBorderTop" src="media/borders-holly2.png"    >
-            <img class="logo" src="media/refresh-expanded.png">
-            <!--            <img class="hdrPaisleyRight" src="media/black-damask-background-hi.png">            -->
-            <!--            <h1 id="h1h1">Refresh<span><br /> Estate Sales</span></h1>-->
-        </div>
-    </nav>
-
-
+    <header>
+        <nav class="hdr">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mission.html">Mission</a></li>
+                <li><a href="sales.html">Sales</a></li>
+                <li><a href="about.html">About</a></li>
+                <span id="title">Refresh Estate Sales</span>
+            </ul>
+            <div>
+                <a href="index.html"><img class="paisleyBorderTop" src="media/borders-holly2.png">
+                    <img class="logo" src="media/refresh-expanded.png"></a>
+            </div>
+        </nav>
+    </header>
 
     <script src="//code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
     </script>

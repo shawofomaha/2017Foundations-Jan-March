@@ -19,13 +19,23 @@
     
         #container {
 /*            height: 125% !important;*/
-            top:  -12.25vmin !important;
+            top:  -30.75vmin !important;
         }
         
         .paisleyBorderBottom {
-            top: -20vmin;
+            top: -38.25vmin;
             z-index: -1;
         }
+        
+        #homeTitle {
+            position: relative;
+            font-size: 5.5vmin;
+            color: rgba(155, 244, 66, 0.9);
+            top: -22.5vmin; 
+            z-index: +555;
+            font-family: 'Architects Daughter', cursive;
+            color: rgba(242, 232, 218, 1.0);            
+        }        
         
     </style>
 </head>
@@ -33,7 +43,7 @@
 <body>
     
     <header>Head and nav in header.html</header>
-
+    <h2 id="homeTitle">&gt; Home &lt;</h2>
     <br />
     <div id="container"> 
         <audio id="sound1">
@@ -110,7 +120,7 @@
             non quae laboris nostrud. Legam nam commodo hic nisi. Nescius praesentibus ut 
             possumus, appellat aliqua est excepteur tractavissent an sint vidisse si nulla 
             sunt ea quis laboris nam quis fugiat. Expetendis lorem cillum ubi magna ita 
-            <img src="media/IMG_2835.JPG" height="640px"/>
+            <img src="http://lorempixel.com/640/480/" height="640px"/>
             magna sed si noster ingeniis, ingeniis tamen anim a culpa, malis et ex multos 
             litteris, in ab labore sint fore, expetendis duis legam qui varias in ab malis 
             quamquam comprehenderit sed ullamco fugiat amet commodo noster. Varias quibusdam 
@@ -144,7 +154,7 @@
             var g = parseInt(Math.random() * 256);
             return "rgb(" + r + "," + g + "," + b + ")";
         }
-        //         $("#container").click(function(e) { 
+        //         $(".container-main").click(function(e) { 
         $("#ball" || "#container").click(function (e) {
             //            var y = e.pageY;
             //            var x = e.pageX;
