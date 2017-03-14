@@ -14,6 +14,16 @@
             /* Safari 7.0+ */
 /*            align-self: center;*/
         }
+        
+        #container {
+            top: -12.5vmin;
+        }
+        
+        .paisleyBorderBottom {
+            top: -27.35vmin;
+            z-index: -1;
+        }        
+        
     </style>
 </head>
 
@@ -28,7 +38,7 @@
     <div id="container">
 
         <div id="ball"></div>
-        <div style="height:55px, display:block;">&nbsp;d</div>
+<!--        <div style="height:55px, display:block;">&nbsp;d</div>-->
         <div class="picBox" id="first">
             <img class="itemPic" alt="" height="480px" src="media/Resized_20170308_155644.jpeg">
             <span class="itemTxt"><h3 style="inline-block">Picture 1</h3>Nulla domesticarum proident tamen incurreret. Dolore imitarentur incurreret malis nescius. Iis si nulla iudicem. Ab velit cernantur. Laboris ullamco ad appellat sint appellat mentitum, voluptate an quid eiusmod.</span>
@@ -151,7 +161,7 @@
         });
 
         $("header").load("header.html");
-        $("#container").load($("#container").html() + "footer.html");
+        $("#footer").load("footer.html");
     </script>
 </body>
 

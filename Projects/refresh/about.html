@@ -31,6 +31,7 @@
         
         h2 {
             position: relative;
+            top: -8vmin;
         }
 /*
         
@@ -140,7 +141,7 @@
             height: 60vmin;
             position: relative;
             perspective: 300vmin;
-            top: 10vmin;
+            top: -6vmin;
             left: 50%;
 /*            z-index: 222;*/
             transform: translate(-50%, -10%);
@@ -191,9 +192,7 @@
     </script>
     <script>
         $("header").load("header.html");
-         $("#footer").load("footer.html");
-//        #include file="footer.html"
-//        $("#container").load($("#container").html() + "footer.html");
+        $("#footer").load("footer.html");
 
         //Front, Back, Right, Left, Top, Bottom
         function rotateCube(side) {
