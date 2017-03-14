@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Housekeeping -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">
+
+    <!--
+    <link media="all and (min-width: 1001px) " rel="stylesheet" href="../css/Class 9-laptop.css">
+    <link media="all and (min-width: 1201px)" rel="stylesheet" href="../css/Class 9-desktop.css">    
+-->
+    <!-- CSS Stylesheet href's -->
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <header>Head and nav in header.html</header>
+    <br />
+    <div id="container">
+
+        <div id="ball"></div>
+
+        <div class="picBox">
+            <img class="itemPic" alt="" height="360px" src="media/Resized_20170308_155644.jpeg">
+            <span class="itemTxt"><h3 style="inline-block">Picture 1</h3>Nulla domesticarum proident tamen incurreret. Dolore imitarentur incurreret malis nescius. Iis si nulla iudicem. Ab velit cernantur. Laboris ullamco ad appellat sint appellat mentitum, voluptate an quid eiusmod.</span>
+            <img class="horizLine" src="media/horizontal-line-clipart.gif" />
+            <br />
+            <div  class="price" >
+            <span style="margin-left: 15px !important"> Price </span><span style="color: red"> $199.90</span>
+            <br />
+            </div>    
+            <button type="button" id="button1" class="price">Buy</button>
+        </div>
+
+        <div class="picBox">
+            <img class="itemPic" alt="" height="360px" src="media/Resized_20170307_133304.jpeg">
+            <span class="itemTxt"><h3 style="inline-block">Picture 2</h3>Officia aliqua se pariatur exercitation. Consequat quo ipsum, singulis duis id 
+                eiusmod despicationes, occaecat culpa fabulas iudicem, ubi quid labore nisi cernantur. Multos ea fabulas quo ab iis illum 
+                noster velit.</span>
+            <img class="horizLine" src="media/horizontal-line-clipart.gif" />
+            <br />
+            <div  class="price" >
+            <span style="margin-left: 15px !important"> Price </span><span style="color: red"> Priceless! </span>
+            <br />
+            </div>            
+            <button style="width: 55px" type="button" id="button2" class="price">Buy</button>
+
+        </div>
+        <div class="picBox">
+            <img class="itemPic" alt="" height="360px" src="media/Resized_20170308_154949.jpeg">
+            <span class="itemTxt"><h3 style="inline-block">Picture 3</h3> Quis proident aut cohaerescant nam consequat labore ubi cupidatat concursionibus ne excepteur elit dolor e quae in ab duis appellat appellat, ad dolore eiusmod philosophari ex nescius nisi.</span>
+            <img class="horizLine" src="media/horizontal-line-clipart.gif" />
+            <br />
+            <div  class="price" >
+            <span style="margin-left: 15px !important"> Price </span><span style="color: red"> $49.90</span>
+            <br />
+            </div>            
+            <button type="button" id="button3" class="price">Buy</button>
+        </div>
+
+        <div class="picBox">
+            <img class="itemPic" alt="" height="160px" src="media/1487296374_p1110662.jpg">
+            <span class="itemTxt"><h3 style="inline-block">Picture 4</h3> Quae appellat vidisse.</span>
+            <img class="horizLine" src="media/horizontal-line-clipart.gif" />
+            <br />
+            <div  class="price" >
+            <span style="margin-left: 15px !important"> Price </span><span style="color: red"> $69.90 or obo</span>
+            <br />
+            </div>            
+            <button type="button" id="button4" class="price">Buy</button>
+        </div>
+
+        <div class="picBox">
+            <img class="itemPic" alt="" height="800px" src="media/123_1.jpeg">
+            <span class="itemTxt"><h3 style="inline-block">Picture 5</h3> Tempor ea quem. Ex amet a esse quo culpa ingeniis offendit. Litteris dolor illum vidisse sint ubi consequat o elit non excepteur an quid quamquam,fugiat possumus quo nulla quem, te summis dolore si quibusdam ne fugiat singulis ab possumus quo nulla quem, graviterque, deserunt est amet nostrud, quis id possumus. Ea minim exercitation, fugiat possumus quo nulla quem, te summis dolore si quibusdam ne fugiat singulis ab possumus quo nulla quem, graviterque, deserunt est amet nostrud, quis id possumus. Ea minim exercitation
+            </span>
+            <img class="horizLine" src="media/horizontal-line-clipart.gif" />
+            <br />
+            <div  class="price" >
+            <span style="margin-left: 15px !important" class="price"> Price </span><span style="color: red"> Make offer</span>
+            <br />
+            </div>            
+            <button type="button" id="button5" class="price">Buy</button>
+        </div>
+    </div>
+
+    <script src="//code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
+    </script>
+    <script>
+
+        
+        var movX = parseInt(Math.random() * 5) + 1;
+        var movY = parseInt(Math.random() * 5) + 1;
+
+        function randomColor() {
+            var r = parseInt(Math.random() * 256);
+            var b = parseInt(Math.random() * 256);
+            var g = parseInt(Math.random() * 256);
+            return "rgb(" + r + "," + g + "," + b + ")";
+        }
+        //         $("#container").click(function(e) { 
+        $("#ball" || "#container").click(function (e) {
+            //            var y = e.pageY;
+            //            var x = e.pageX;
+            //            $("#ball").css("top", y);
+            //            $("#ball").css("left", x);
+            $("#ball").css("background-color", randomColor());
+        });
+
+        function moveBall() {
+            //            debugger;
+            var ballWidth = $("#ball").width();
+            var width = $("#container").width();
+            var height = $("#container").height();
+            var x = parseInt($("#ball").css("left").split("px")[0]) + movX;
+            var y = parseInt($("#ball").css("top").split("px")[0]) + movY;
+            if (x > width - ballWidth / 2) {
+                movX = movX * -1;
+            }
+            if (y > height - ballWidth / 2) {
+                movY = movY * -1;
+            }
+            if (x < 0 + ballWidth / 2) {
+                movX = movX * -1;
+            }
+            if (y < 0 + ballWidth / 2) {
+                movY = movY * -1;
+            }
+            $("#ball").css("top", y);
+            $("#ball").css("left", x);
+        }
+
+        setInterval(moveBall, 25);
+
+        $("#ball").click(function () {
+            alert("Coming Soon: full functionality!!"); 
+        });
+        
+        $(".price").click(function () {
+            alert("Coming Soon: full functionality!!"); 
+        });
+        
+        $("header").load("header.html");
+        
+        $("#container").load($("#container").html() + "footer.html");          
+                
+    </script>
+</body>
+
+</html>

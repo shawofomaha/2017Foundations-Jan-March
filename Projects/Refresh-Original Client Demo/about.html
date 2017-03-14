@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- CSS Stylesheet href's -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        #container:hover {
+            background-color: rgba(41, 41, 41, 1.0);
+            border-radius: 25%;
+        }
+        
+        #container {
+            transition: all 0.5s ease;
+            background-color: rgba(141, 141, 141, 0.7);
+            border-radius: 15%;
+        }
+        
+        #container {
+            width: 80vmin;
+            height: 80vmin;
+            position: relative;
+            perspective: 100vmin;
+            top: 25vmin;
+            left: 50%;
+            transform: translate(-50%, -37%);
+        }
+        
+        h2 {}
+        
+        #cube {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            transition: transform 2s;
+            border-radius: 25%;
+        }
+        
+        #cube.showFront {
+            transform: rotateY(0deg);
+        }
+        
+        #cube.showBack {
+            transform: rotateY(180deg);
+        }
+        
+        #cube.showRight {
+            transform: rotateY(-90deg);
+        }
+        
+        #cube.showLeft {
+            transform: rotateY(90deg);
+        }
+        
+        #cube.showTop {
+            transform: rotateX(-90deg);
+        }
+        
+        #cube.showBottom {
+            transform: rotateX(90deg);
+        }
+        
+        .side {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            box-sizing: border-box;
+            border: 5px solid black;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 3vmin;
+            text-align: center;
+            line-height: 3vmin;
+            border-radius: 25%;
+            /*            text-align: justify;*/
+        }
+        
+        #front,
+        #back,
+        #right,
+        #left,
+        #top,
+        #bottom {
+            background-size: cover;
+            height: 80vmin;
+            transition: background-color 3sec;
+            padding: 2vmin;
+            padding-top: 9vmin;
+            /*            transition: background-color 3sec;*/
+        }
+        
+        #front {
+            background-image: url("media/pexels-photo-234196.jpeg");
+            transform: rotateY(0deg) translateZ(40vmin);
+        }
+        
+        #back {
+            background-image: url("media/bench-people-smartphone-sun.jpg");
+            transform: rotateY(180deg) translateZ(40vmin);
+        }
+        
+        #right {
+            background-image: url("media/homeless-man-color-poverty.jpg");
+            transform: rotateY(90deg) translateZ(40vmin);
+        }
+        
+        #left {
+            background-image: url("media/pexels-photo-276866.jpeg");
+            transform: rotateY(-90deg) translateZ(40vmin);
+        }
+        
+        #top {
+            background-image: url("media/pexels-photo-aurora.jpg");
+            transform: rotateX(90deg) translateZ(40vmin);
+        }
+        
+        #bottom {
+            background-image: url("media/IMG_2835.JPG");
+            transform: rotateX(-90deg) translateZ(40vmin);
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <h2>About</h2>
+    <div id="#container">
+        <select>
+            <option value="Front">Front</option>
+            <option value="Back">Back</option>
+            <option value="Right">Right</option>
+            <option value="Left">Left</option>
+            <option value="Top">Top</option>
+            <option value="Bottom">Bottom</option>
+        </select>
+        <button type="button">Spin</button>
+
+        <div id="container">
+            <div id="cube">
+                <div class="side" id="front">Cernantur o dolor, ex anim singulis si sunt possumus aliquip est legam arbitror iis fore quae, aute consequat si veniam aliqua e qui dolore pariatur adipisicing do sed mentitum te ingeniis si duis pariatur domesticarum. Id hic despicationes, et ne irure sint tamen, quo veniam laboris offendit e si </div>
+                <div class="side" id="back">admodum quo mandaremus, duis fabulas non concursionibus, labore ab voluptate ab tamen, quo amet fidelissimae, nostrud sed arbitror. Quibusdam philosophari eu singulis an lorem .
+                </div>
+                <div class="side" id="right">Cernantur o dolor, ex anim singulis si sunt possumus aliquip est legam arbitror iis fore quae, aute consequat si veniam aliqua e qui dolore pariatur adipisicing do sed mentitum te ingeniis si duis pariatur domesticarum.</div>
+                <div class="side" id="left">admodum quo mandaremus, duis fabulas non concursionibus, labore ab voluptate ab quibusdam ea fore fugiat. Et proident firmissimum. In magna pariatur consequat, hic fugiat consectetur.</div>
+                <div class="side" id="top">Cernantur o dolor, ex anim singulis si sunt possumus aliquip est legam arbitror iis fore quae, aute consequat si veniam aliqua e qui dolor et ne irure sint tamen, quo veniam laboris offendit e si</div>
+                <div class="side" id="bottom">admodum quo mandaremus, duis fabulas non concursionibus, labore ab voluptate ab tamen, quo amet fidelissimae, nostrud sed arbitror. Quibusdam philosopha. Lorem quibusdam ea fore fugiat. Et proident firmissimum. In magna pariatur consequat, hic fugiat consectetur</div>
+            </div>
+        </div>
+    </div>
+    <script src="//code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
+    </script>
+    <script>
+        $("header").load("header.html");
+        $("#container").load($("#container").html() + "footer.html");
+
+        //Front, Back, Right, Left, Top, Bottom
+        function rotateCube(side) {
+            $("#cube").attr("class", "");
+            $("#cube").addClass("show" + side);
+        }
+
+        $("button").click(function () {
+            var side = $("select").val();
+            rotateCube(side);
+        });
+
+        var lastSide = 0;
+        setInterval(function () {
+            var sides = ["Front", "Back", "Right", "Left", "Top", "Bottom"];
+            var random = parseInt(Math.random() * 6);
+            while (random == lastSide) {
+                random = parseInt(Math.random() * 6);
+            }
+            lastSide = random;
+            rotateCube(sides[random]);
+        }, 9000);
+    </script>
+</body>
+</html>
