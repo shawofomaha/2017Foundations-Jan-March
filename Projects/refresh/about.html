@@ -92,7 +92,8 @@
         #right,
         #left,
         #top,
-        #bottom {
+        #bottom,
+        #bottomBack {
             background-size: cover;
             height: 60vmin;
             transition: background-color 2sec;
@@ -100,6 +101,8 @@
             padding-top: 9vmin;
             transition: background-color 3sec;
         }
+        
+        #bottomBack {}
         
         #front {
             background-image: url("media/Workman%20Estate%20Sale.jpeg");
@@ -127,9 +130,23 @@
         }
         
         #bottom {
-            background-image: url("http://lorempixel.com/320/320/");
+            background-color: black;
+            backface-visibility: hidden;
+            /*            background-image: url("http://lorempixel.com/320/320/");*/
             transform: rotateX(-90deg) translateZ(30vmin);
         }
+        
+        #bottomBack {
+            background-color: black;
+            backface-visibility: hidden;
+            /*            background-image: url("http://lorempixel.com/320/320/");*/
+            transform: rotateX(90deg) translateZ(-30vmin);
+        }
+        /*
+#card.flipped{
+    transform: rotateY(180deg);
+}
+*/
         
         body {
             /*            height: 150 vmin;*/
@@ -139,7 +156,7 @@
             position: relative;
             font-size: 5.5vmin;
             /*            color: rgba(155, 244, 66, 0.9);*/
-            top: -18.5vmin;
+            top: -22vmin;
             z-index: +1;
             font-family: 'Architects Daughter', cursive;
             color: rgba(242, 232, 218, 1.0);
@@ -161,11 +178,17 @@
         .leftPicTxt,
         .rightPicTxt,
         .backPicTxt,
-        .bottomPicTxt {
+        .bottomPicTxt,
+        .bottomBackPicTxt {
             font-family: 'Architects Daughter', cursive;
             font-size: 3.25vmin;
             color: rgba(155, 244, 66, 0.8);
             line-height: 5.0vmin;
+        }
+        
+        .bottomBackPicTxt {
+            font-size: 5.25vmin;
+            line-height: 6.0vmin;
         }
         
         .underline {
@@ -214,7 +237,11 @@
                 <div class="side" id="top"></div>
                 <div class="side" id="bottom">
                     <p class="bottomPicTxt">So<a href="index.html"> contact us </a>and delegate one of your many responsibilies,
-                        <br /> with peace of mind and with our satisfaction guarantee.</p>
+                        <br /> with peace of mind and with <span class="underline">our</span> satisfaction guarantee.</p>
+                </div>
+                <div class="side" id="bottomBack">
+                    <p class="bottomBackPicTxt">So <a href="index.html">contact us</a> and delegate one of your many responsibilies,
+                        <br /> with peace of mind and with <span class="underline">our</span> satisfaction guarantee.</p>
                 </div>
             </div>
         </div>
