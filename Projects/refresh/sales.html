@@ -10,9 +10,9 @@
     <style>
         #first,
         #second {
-/*            -webkit-align-self: center;*/
+            /*            -webkit-align-self: center;*/
             /* Safari 7.0+ */
-/*            align-self: center;*/
+            /*            align-self: center;*/
         }
         
         #container {
@@ -22,7 +22,7 @@
         .paisleyBorderBottom {
             top: -36.15vmin;
             z-index: -1;
-        }  
+        }
         
         #salesTitle {
             position: relative;
@@ -30,9 +30,63 @@
             color: rgba(155, 244, 66, 0.9);
             top: -22vmin;
             font-family: 'Architects Daughter', cursive;
-            color: rgba(242, 232, 218, 1.0);          
+            color: rgba(242, 232, 218, 1.0);
         }
-      
+        
+        .price {
+            left: 43px !important;
+            color: rgb(242, 232, 218);
+            font-size: 1.20em;
+        }
+        
+        #buttonNudge1 {
+            margin-left: 0% !important;
+        }
+        
+        .saleLocationInfoBox {
+            display: flex;
+            border: 3px solid black;
+            /*            background-color: rgba(211, 211, 211, 1.0);*/
+            background-color: rgba(112, 127, 116, 1.0);
+            /*            padding-top:  +15vmin;*/
+            width: 95%;
+            height: 25vmin;
+            /*            left: 10vmin;*/
+            border-radius: 35px;
+            margin: 1vmin;
+        }
+        
+        #map {
+            display: inline-block;   
+            position: relative;
+            
+            margin: 2vmin;
+            border: 2px dotted blue;
+/*            padding: 1.5vmin;*/
+            height: 20vmin;
+            width: 20vmin;
+/*            border-radius: 35px*/
+        }
+        
+        #mapTxt {
+            display: inline-block;   
+            position: relative;
+            
+            margin: 1vmin;
+            height: 20vmin;
+            width: 20vmin;
+/*            border-radius: 35px*/
+        }
+                
+        
+        .saleLocationInfoBox.hdg {}
+        .saleLocationInfoBox.txt {}
+        .saleLocationInfoBox.Pic {}
+        
+        footer2 ul {
+            top:  -36.5vmin !important;
+        }
+        
     </style>
 </head>
 
@@ -47,40 +101,58 @@
     <div id="container">
 
         <div id="ball"></div>
-<!--        <div style="height:55px, display:block;">&nbsp;d</div>-->
+        <!--        <div style="height:55px, display:block;">&nbsp;d</div>-->
+        
+        <div class="saleLocationInfoBox">
+            <div id="map"></div> 
+            <div id="mapTxt"><h3>Location</h3><p>Map TXT paragraph</p></div>
+
+            <div>
+            <h3 class="hdg">Sales Information</h3> <p class="txt">more text  Dolore imitarentur incurreret malis nescius. Iis si nulla iudicem. Ab velit cernantur. Laboris ullamco ad appellat sint appellat mentitum, voluptat</p>
+            <img style="display:inline; float:right;" class="pic" src="http://lorempixel.com/80/80/" height="80px"/>
+            </div>            
+            <div id="mapTxt"><h3>Items in Sale</h3><p>Map TXT paragraph</p></div>
+            <div id="mapTxt"><h3>Map Txt</h3><p>Map TXT paragraph</p></div>
+            
+    
+        </div>
+        
+        
         <div class="picBox" id="first">
             <img class="itemPic" alt="" height="480px" src="media/Resized_20170308_155644.jpeg">
-            <span class="itemTxt"><h3 style="inline-block">Picture 1</h3>Nulla domesticarum proident tamen incurreret. Dolore imitarentur incurreret malis nescius. Iis si nulla iudicem. Ab velit cernantur. Laboris ullamco ad appellat sint appellat mentitum, voluptate an quid eiusmod.</span>
+
+            <span class="itemTxt"><h3>Picture 1</h3>Nulla domesticarum proident tamen incurreret. Dolore imitarentur incurreret malis nescius. Iis si nulla iudicem. Ab velit cernantur. Laboris ullamco ad appellat sint appellat mentitum, voluptate an quid eiusmod.</span>
             <img class="horizLine" src="media/horizontal-line-clipart.gif" />
             <br />
             <div class="price">
-                <span style="margin-left: 15px !important"> Price </span><span style="color: red"> $199.90</span>
+                <span> $199.90</span>
                 <br />
+
+                <button id="buttonNudge1" type="button">Buy</button>
             </div>
-            <button type="button" id="button1" class="price">Buy</button>
         </div>
 
         <div class="picBox" id="second">
             <img class="itemPic" alt="" height="420px" src="media/Resized_20170307_133304.jpeg">
-            <span class="itemTxt"><h3 style="inline-block">Picture 2</h3>Officia aliqua se pariatur exercitation. Consequat quo ipsum, singulis duis id 
+            <span class="itemTxt"><h3>Picture 2</h3>Officia aliqua se pariatur exercitation. Consequat quo ipsum, singulis duis id 
                 eiusmod despicationes, occaecat culpa fabulas iudicem, ubi quid labore nisi cernantur. Multos ea fabulas quo ab iis illum 
                 noster velit.</span>
             <img class="horizLine" src="media/horizontal-line-clipart.gif" />
             <br />
             <div class="price">
-                <span style="margin-left: 15px !important"> Price </span><span style="color: red"> Priceless! </span>
+                <span> Priceless! </span>
                 <br />
             </div>
-            <button style="width: 55px" type="button" id="button2" class="price">Buy</button>
+            <button type="button">Buy</button>
 
         </div>
         <div class="picBox">
             <img class="itemPic" alt="" height="280px" src="media/Resized_20170308_154949.jpeg">
-            <span class="itemTxt"><h3 style="inline-block">Picture 3</h3> Quis proident aut cohaerescant nam consequat labore ubi cupidatat concursionibus ne excepteur elit dolor e quae in ab duis appellat appellat, ad dolore eiusmod philosophari ex nescius nisi.</span>
+            <span class="itemTxt"><h3>Picture 3</h3> Quis proident aut cohaerescant nam consequat labore ubi cupidatat concursionibus ne excepteur elit dolor e quae in ab duis appellat appellat, ad dolore eiusmod philosophari ex nescius nisi.</span>
             <img class="horizLine" src="media/horizontal-line-clipart.gif" />
             <br />
             <div class="price">
-                <span style="margin-left: 15px !important"> Price </span><span style="color: red"> $49.90</span>
+                <span> $49.90</span>
                 <br />
             </div>
             <button type="button" id="button3" class="price">Buy</button>
@@ -88,11 +160,11 @@
 
         <div class="picBox">
             <img class="itemPic" alt="" width="660px" src="media/1487296374_p1110662.jpg">
-            <span class="itemTxt"><h3 style="inline-block">Picture 4</h3> Quae appellat vidisse.</span>
+            <span class="itemTxt"><h3>Picture 4</h3></span>
             <img class="horizLine" src="media/horizontal-line-clipart.gif" />
             <br />
             <div class="price">
-                <span style="margin-left: 15px !important"> Price </span><span style="color: red"> $69.90 or obo</span>
+                <span> $69.90 or obo</span>
                 <br />
             </div>
             <button type="button" id="button4" class="price">Buy</button>
@@ -105,7 +177,7 @@
             <img class="horizLine" src="media/horizontal-line-clipart.gif" />
             <br />
             <div class="price">
-                <span style="margin-left: 15px !important" class="price"> Price </span><span style="color: red"> Make offer</span>
+                <span> Make offer</span>
                 <br />
             </div>
             <button type="button" id="button5" class="price">Buy</button>
@@ -117,6 +189,25 @@
     <script src="//code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
     </script>
     <script>
+        function initMap() {
+            var uluru = {
+                lat: 41.2298728,
+                lng: -96.0996988
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 11,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+    <script>
+        $("header").load("header.html");
+        $("#footer").load("footer.html");
+        
         var movX = parseInt(Math.random() * 5) + 1;
         var movY = parseInt(Math.random() * 5) + 1;
 
@@ -128,10 +219,10 @@
         }
         //         $(".container-main").click(function(e) { 
         $("#ball" || "#container").click(function (e) {
-            //            var y = e.pageY;
-            //            var x = e.pageX;
-            //            $("#ball").css("top", y);
-            //            $("#ball").css("left", x);
+            var y = e.pageY;
+            var x = e.pageX;
+            $("#ball").css("top", y);
+            $("#ball").css("left", x);
             $("#ball").css("background-color", randomColor());
         });
 
@@ -169,9 +260,9 @@
             $('#sound1').get(0).play();
         });
 
-        $("header").load("header.html");
-        $("#footer").load("footer.html");
+
     </script>
+
 </body>
 
 </html>

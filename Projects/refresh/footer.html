@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Housekeeping -->
     <meta charset="utf-8">
@@ -14,31 +15,89 @@
 -->
     <!-- CSS Stylesheet href's -->
     <link rel="stylesheet" href="css/main.css">
-<style>
+    <style>
+        
         .paisleyBorderBottom {
-            /*            position: absolute;*/
             position: relative;
-/*            top: 6.0vmin;*/
             height: 5vmin;
             width: 100%;
             left: -0.0vmin;
             perspective: 150px;
             /*            z-index: +200;            */
-        }    
-</style>    
-</head>
+        }
 
-<body>
-<!--<h1>I are a footer dude</h1>-->
-<!--    <div>-->
-<!--    <footer id="footer">    -->
-        <img  class="paisleyBorderBottom" src="media/borders-holly2.png">
-<!--    </footer>-->
+        footer2 ul {
+            position: relative !important;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            background: rgba(147, 255, 166, 0.69);
+            /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(right, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.69));
+            /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(left, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.69));
+            /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(left, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.69));
+            /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to left , rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.01));
+            /* Standard syntax */
+            z-index: +10;
+        }
         
-    
-<!--    </div>-->
-<script src="//code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
-</script>
-<script></script>
+        footer2 ul li {
+            position: relative !important;
+            font-family: 'Architects Daughter', cursive !important;
+            text-shadow: 2px 2px  rgba(112, 127, 116, 1.0);            
+            display: block;
+            margin-left: 4vmin;
+            float: left;
+/*            left: 0;*/
+            color: rgba(255, 255, 255, 0.9);
+            padding: 14px 12px;
+            list-style-type: none;
+            
+            z-index: +10;
+        }
+/*        footer2 {position: relative !important; }*/
+        footer2 div ul a li a:hover {
+            background-color: rgba(112, 127, 116, 1.0);
+            color: black;
+            transition: all 1.0s ease-in-out;
+        }
+        
+
+    </style>
+</head>
+<!--holly2.png-->
+<body>
+
+    <footer2>
+        <div>
+            <div>
+                <img class="paisleyBorderBottom" src="media/borders-holly2.png">
+            </div>
+            <ul> 
+                <li>Dave (605) 661-1517 </li>
+                <a href="sales.html"><li>Estate Sales</li></a>
+                <a href="sales.html"><li>Downsizing</li></a>
+                <a href="sales.html"><li>Closing Business</li></a>
+                <a href="sales.html"><li>Senior Relocation</li></a>
+                <a href="sales.html"><li>Liquidations</li></a>
+                <a href="sales.html"><li>Moving</li></a>
+                <li>Thersea (605) 661-4555 </li>
+                <!--                <span id="title">Refresh Estate Sales</span>-->
+            </ul>
+        </div>
+    </footer2>
+
+
+    <!--    </div>-->
+    <script src="//code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
+    </script>
+    <script></script>
 </body>
+
 </html>

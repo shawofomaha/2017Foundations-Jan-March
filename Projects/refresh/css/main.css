@@ -97,27 +97,34 @@
         }
         
         button:hover {
-            background-color: white !important;
-            height: 6vmin;
-            width: 6vmin;
-            border: 2px solid red;
+/*            background-color: white !important;*/
+            color: white;
+            border: 3px solid rgba(255, 255, 255, 1.0);
+            font-size: 0.95em;
+            height: 11vmin;
+            width: 6.5vmin;
+/*            border: 2px solid red;*/
             transition: all 1.5s ease-in-out;
         }
         
         button {
-            color: rgba(0, 79, 26, 0.9);
-            left: 50%;
-            margin-left: 13%;
+            font-family: 'Architects Daughter', cursive;
+            font-size: 1.15em;
+            color: lightgray;
+/*            left: 50%;*/
+            margin-left: 11%;
             margin-bottom: 2%;
-            width: 12vmin !important;
-            height: 6vmin!important;
+            border: 1px solid black;
+            width: 9vmin !important;
+            height: 4.5vmin!important;
             border-radius: 25%;
-            background-color: rgba(216, 15, 15, 1.0);
-            /* red */
+            background-image: url("../media/cherry-wood-panels-background-header.jpg");
+/*            transform: translate(-50%, -50%);*/
+/*            left: 19.5vmin;*/
         }
         
         #container {
-            perspective: 400vmin;
+/*            perspective: 400vmin;*/
             position: relative;
             transition: all 0.5s ease;
             background-image: url("../media/cherry-wood-panels-background-header.jpg");
