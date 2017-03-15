@@ -33,7 +33,7 @@
             position: relative;
             top: -8vmin;
         }
-/*
+        /*
         
         #containerAbout:hover   {
             transform: rotate(0);
@@ -132,19 +132,19 @@
         }
         
         body {
-/*            height: 150 vmin;*/
+            /*            height: 150 vmin;*/
         }
         
         #aboutTitle {
             position: relative;
             font-size: 5.5vmin;
-/*            color: rgba(155, 244, 66, 0.9);*/
-            top: -22vmin; 
+            /*            color: rgba(155, 244, 66, 0.9);*/
+            top: -22vmin;
             z-index: +1;
             font-family: 'Architects Daughter', cursive;
-            color: rgba(242, 232, 218, 1.0);    
+            color: rgba(242, 232, 218, 1.0);
         }
-              
+        
         #containerAbout {
             display: flex;
             width: 60vmin;
@@ -153,10 +153,19 @@
             perspective: 300vmin;
             top: -15vmin;
             left: 50%;
-/*            z-index: 222;*/
-            transform: translate(-50%, -10%);        
+            /*            z-index: 222;*/
+            transform: translate(-50%, -10%);
         }
         
+        .frontPicTxt,
+        .leftPicTxt,
+        .rightPicTxt,
+        .backPicTxt,
+        .bottomPicTxt {
+            font-family: 'Architects Daughter', cursive;
+            font-size: 3.5vmin;
+            color: rgba(155, 244, 66, 0.9);
+        }
     </style>
 </head>
 
@@ -181,24 +190,33 @@
         <div id="containerAbout">
             <div id="cube">
                 <div class="side" id="front">
-                    <p>We LOVE our customers and are determined to meet the needs of succeeding in the daunting task of your estate sale.</p>
-                    <p>We provide a personalized service to meet the needs identified by you.</p>
-                    <p>We take great pride in the professional manner in which we consistently provide, in a timely manner, the most cost-effective, professional, and seasoned services.</p>
-                    <p>We have the skills and experience necessary to make an overwhelming priority seem manageable again.</p>
-                    <p>So contact us and delegate one of your many responsibility with peace of mind with our satisfaction guarantee.</p>
+                    <p class="frontPicTxt">We LOVE our customers and are
+                        <br /> determined to succeed in the daunting task
+                        <br /> of your estate sale!</p>
                 </div>
-                <div class="side" id="back">admodum quo mandaremus, duis fabulas non concursionibus, labore ab voluptate ab tamen, quo amet fidelissimae, nostrud sed arbitror. Quibusdam philosophari eu singulis an lorem .
+                <div class="side" id="back">
+                    <p class="backPicTxt">We provide a personalized service
+                        <br />meeting the needs you have identified.</p>
                 </div>
-                <div class="side" id="right">Cernantur o dolor, ex anim singulis si sunt possumus aliquip est legam arbitror iis fore quae, aute consequat si veniam aliqua e qui dolore pariatur adipisicing do sed mentitum te ingeniis si duis pariatur domesticarum.</div>
-                <div class="side" id="left">admodum quo mandaremus, duis fabulas non concursionibus, labore ab voluptate ab quibusdam ea fore fugiat. Et proident firmissimum. In magna pariatur consequat, hic fugiat consectetur.</div>
+                <div class="side" id="right">
+                    <p class="rightPicTxt">We take great pride in the professional manner in which we provide timely,
+                        <br />cost-effective but friendly service.</p>
+                </div>
+                <div class="side" id="left">
+                    <p class="leftPicTxt">We have the skills and experience,
+                        <br />to make an overwhelming task seem manageable again.</p>
+                </div>
                 <div class="side" id="top"></div>
-                <div class="side" id="bottom">admodum quo mandaremus, duis fabulas non concursionibus, labore ab voluptate ab tamen, quo amet fidelissimae, nostrud sed arbitror. Quibusdam philosopha. Lorem quibusdam ea fore fugiat. Et proident firmissimum. In magna pariatur consequat, hic fugiat consectetur</div>
+                <div class="side" id="bottom">
+                    <p class="bottomPicTxt">So<a href="index.html"> contact us </a>and delegate one of your many responsibilies,
+                        <br /> with peace of mind and with our satisfaction guarantee.</p>
+                </div>
             </div>
         </div>
     </div>
 
     <footer id="footer"></footer>
-    
+
     <script src="//code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
     </script>
     <script>
