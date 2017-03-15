@@ -26,11 +26,11 @@
             display: inline-block;
             position: absolute;
             font-family: 'Architects Daughter', cursive;
-/*            color: rgba(0, 0, 0, 1.0);*/
-/*            color: rgba(255, 210, 147, 1.0);*/
+            /*            color: rgba(0, 0, 0, 1.0);*/
+            /*            color: rgba(255, 210, 147, 1.0);*/
             color: rgba(242, 232, 218, 1.0);
             font-size: 9vmin;
-            text-shadow: 2px 2px  rgba(112, 127, 116, 1.0);
+            text-shadow: 2px 2px rgba(112, 127, 116, 1.0);
             line-height: 9vh;
             top: 13.5vmin;
             left: 5vmin;
@@ -48,10 +48,14 @@
         h2,
         h3 {
             text-align: center;
-            text-shadow: 2px 2px  rgba(112, 127, 116, 1.0);
+            text-shadow: 2px 2px rgba(112, 127, 116, 1.0);
             font-family: 'Architects Daughter', cursive;
             z-index: +1;
         }
+        
+        h3 {
+            text-shadow: 2px 2px rgba(82, 97, 86, 1.0);
+}
         
         h2 {
             color: rgba(242, 232, 218, 1.0);
@@ -59,7 +63,8 @@
         
         .picBox {
             border: 3px solid black;
-            background-color: rgba(211, 211, 211, 1.0);
+            /*            background-color: rgba(211, 211, 211, 1.0);*/
+            background-color: rgba(112, 127, 116, 1.0);
             width: 85vmin;
             border-radius: 35px;
             margin: 1vmin;
@@ -107,7 +112,8 @@
             width: 12vmin !important;
             height: 6vmin!important;
             border-radius: 25%;
-            background-color: rgba(216, 15, 15, 1.0); /* red */
+            background-color: rgba(216, 15, 15, 1.0);
+            /* red */
         }
         
         #container {
