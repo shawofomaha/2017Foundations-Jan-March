@@ -8,13 +8,6 @@
     <!-- CSS Stylesheet href's -->
     <link rel="stylesheet" href="css/main.css">
     <style>
-        #first,
-        #second {
-            /*            -webkit-align-self: center;*/
-            /* Safari 7.0+ */
-            /*            align-self: center;*/
-        }
-        
         #container {
             top: -28.25vmin !important;
         }
@@ -48,158 +41,191 @@
             border: 3px solid black;
             /*            background-color: rgba(211, 211, 211, 1.0);*/
             background-color: rgba(112, 127, 116, 1.0);
-            /*            padding-top:  +15vmin;*/
             width: 95%;
-            height: 25vmin;
-            /*            left: 10vmin;*/
+            height: 30vmin;
             border-radius: 35px;
             margin: 1vmin;
         }
         
+        #mapAll {
+            display: flex;
+/*            border: 1px solid black ;*/
+            width:68vmin;
+        }
+        
         #map {
-            display: inline-block;   
+            display: inline-block;
             position: relative;
-            
-            margin: 2vmin;
-            border: 2px dotted blue;
-/*            padding: 1.5vmin;*/
-            height: 20vmin;
-            width: 20vmin;
-/*            border-radius: 35px*/
-        }
-        
-        #mapTxt {
-            display: inline-block;   
-            position: relative;
-            
             margin: 1vmin;
-            height: 20vmin;
-            width: 20vmin;
-/*            border-radius: 35px*/
+            border: 2px dotted blue;
+            height: 25vmin;
+            width: 25vmin;
         }
-                
         
+        #mapTxt p {
+            display: inline-block;
+            position: relative;
+           margin-left: 3vmin;
+            /*            height: 20vmin;*/
+            width: 20vmin;
+        }
+        
+        #mapTxt p {
+            margin: 1vmin;
+            width: 20vmin;
+            text-align: center;
+        }
+        
+        #addrTxt {
+            width: 30vmin;
+            /*            margin: 1vmin;*/
+        }
+        #addrTxt p {
+            margin-left: 6vmin;
+        }
+        #saleDescTxt {
+            width: 110vmin;
+            /*            margin: 1vmin;            */
+        }
+        #saleDescTxt.txt {
+            font-size: .75em !important;
+        }
         .saleLocationInfoBox.hdg {}
+        
         .saleLocationInfoBox.txt {}
+        
         .saleLocationInfoBox.Pic {}
         
         footer2 ul {
-            top:  -36.5vmin !important;
+            top: -36.5vmin !important;
         }
-        
     </style>
 </head>
 
 <body>
     <header></header>
     <h2 id="salesTitle">&gt; Sales &lt;</h2>
+    <div>
+        <audio id="sound1">
+            <source src="media/refresh_paul4.mp3" type="audio/mpeg" />
+        </audio>
 
-    <audio id="sound1">
-        <source src="media/refresh_paul4.mp3" type="audio/mpeg" />
-    </audio>
+        <div id="container">
 
-    <div id="container">
+            <div id="ball"></div>
 
-        <div id="ball"></div>
-        <!--        <div style="height:55px, display:block;">&nbsp;d</div>-->
-        
-        <div class="saleLocationInfoBox">
-            <div id="map"></div> 
-            <div id="mapTxt"><h3>Location</h3><p>Map TXT paragraph</p></div>
+            <div class="saleLocationInfoBox">
+                
+                    <div id="mapTxt">
+                        <h3>Dates<br /> and<br /> Times</h3>
+                        <p>May 7, 2017 <br /> 9AM-6PM</p>
+                    </div>
+                <div id="mapAll">
+                    <div id="map"></div>
+                    <div id="addrTxt">
+                        <h3>Sale Address</h3>
+                        <p>12424 C St <br/>Omaha, NE 68144</p>
+                    </div>
+                </div>
+                <div id="saleDescTxt">
+                    <h3 class="hdg">Sale Description</h3>
+                    <p class="txt"><img style="display:inline; float:right;" class="pic" src="http://lorempixel.com/80/80/" height="80px" /> List of stuff includes: <span style="font-size: 2.75vmin;"></span>Van Briggle Tv Lamp Roseville Pottery Cambridge Fostoria Depression Glass Vintage Fiesta LG Flat Panel Tv Elvis Albums Reba Lots of old school vintage country albums 45's Stereo Speakers Oil Paintings Buffet Sofa Bed loveseats X2 Nice like new Basset Sofa Victorian Furniture Art Deco Furniture Mid-Century Modern Furniture Bar Cart Cut glass Decanter Cedar chest Frig Washer / Dryer Outdoor Swing Redwood patio furniture Garden tools Tools Silverplate Flatware Microwave Dining Table & Chairs Vintage Wedding Dress</p>
 
-            <div>
-            <h3 class="hdg">Sales Information</h3> <p class="txt">more text  Dolore imitarentur incurreret malis nescius. Iis si nulla iudicem. Ab velit cernantur. Laboris ullamco ad appellat sint appellat mentitum, voluptat</p>
-            <img style="display:inline; float:right;" class="pic" src="http://lorempixel.com/80/80/" height="80px"/>
-            </div>            
-            <div id="mapTxt"><h3>Items in Sale</h3><p>Map TXT paragraph</p></div>
-            <div id="mapTxt"><h3>Map Txt</h3><p>Map TXT paragraph</p></div>
-            
-    
-        </div>
-        
-        
-        <div class="picBox" id="first">
-            <img class="itemPic" alt="" height="480px" src="media/Resized_20170308_155644.jpeg">
+                </div>
+                <!--
+                <div id="mapTxt">
+                    <h3>Items in Sale</h3>
+                    <p>Map TXT paragraph</p>
+                </div>
+-->
 
-            <span class="itemTxt"><h3>Picture 1</h3>Nulla domesticarum proident tamen incurreret. Dolore imitarentur incurreret malis nescius. Iis si nulla iudicem. Ab velit cernantur. Laboris ullamco ad appellat sint appellat mentitum, voluptate an quid eiusmod.</span>
-            <img class="horizLine" src="media/horizontal-line-clipart.gif" />
-            <br />
-            <div class="price">
-                <span> $199.90</span>
-                <br />
 
-                <button id="buttonNudge1" type="button">Buy</button>
+
             </div>
-        </div>
 
-        <div class="picBox" id="second">
-            <img class="itemPic" alt="" height="420px" src="media/Resized_20170307_133304.jpeg">
-            <span class="itemTxt"><h3>Picture 2</h3>Officia aliqua se pariatur exercitation. Consequat quo ipsum, singulis duis id 
+
+            <div class="picBox" id="first">
+                <img class="itemPic" alt="" height="480px" src="media/Resized_20170308_155644.jpeg">
+
+                <span class="itemTxt"><h3>Picture 1</h3>Nulla domesticarum proident tamen incurreret. Dolore imitarentur incurreret malis nescius. Iis si nulla iudicem. Ab velit cernantur. Laboris ullamco ad appellat sint appellat mentitum, voluptate an quid eiusmod.</span>
+                <img class="horizLine" src="media/horizontal-line-clipart.gif" />
+                <br />
+                <div class="price">
+                    <span> $199.90</span>
+                    <br />
+
+                    <button id="buttonNudge1" type="button">Buy</button>
+                </div>
+            </div>
+
+            <div class="picBox" id="second">
+                <img class="itemPic" alt="" height="420px" src="media/Resized_20170307_133304.jpeg">
+                <span class="itemTxt"><h3>Picture 2</h3>Officia aliqua se pariatur exercitation. Consequat quo ipsum, singulis duis id 
                 eiusmod despicationes, occaecat culpa fabulas iudicem, ubi quid labore nisi cernantur. Multos ea fabulas quo ab iis illum 
                 noster velit.</span>
-            <img class="horizLine" src="media/horizontal-line-clipart.gif" />
-            <br />
-            <div class="price">
-                <span> Priceless! </span>
+                <img class="horizLine" src="media/horizontal-line-clipart.gif" />
                 <br />
-            </div>
-            <button type="button">Buy</button>
+                <div class="price">
+                    <span> Priceless! </span>
+                    <br />
+                </div>
+                <button type="button">Buy</button>
 
-        </div>
-        <div class="picBox">
-            <img class="itemPic" alt="" height="280px" src="media/Resized_20170308_154949.jpeg">
-            <span class="itemTxt"><h3>Picture 3</h3> Quis proident aut cohaerescant nam consequat labore ubi cupidatat concursionibus ne excepteur elit dolor e quae in ab duis appellat appellat, ad dolore eiusmod philosophari ex nescius nisi.</span>
-            <img class="horizLine" src="media/horizontal-line-clipart.gif" />
-            <br />
-            <div class="price">
-                <span> $49.90</span>
+            </div>
+            <div class="picBox">
+                <img class="itemPic" alt="" height="280px" src="media/Resized_20170308_154949.jpeg">
+                <span class="itemTxt"><h3>Picture 3</h3> Quis proident aut cohaerescant nam consequat labore ubi cupidatat concursionibus ne excepteur elit dolor e quae in ab duis appellat appellat, ad dolore eiusmod philosophari ex nescius nisi.</span>
+                <img class="horizLine" src="media/horizontal-line-clipart.gif" />
                 <br />
+                <div class="price">
+                    <span> $49.90</span>
+                    <br />
+                </div>
+                <button type="button" id="button3" class="price">Buy</button>
             </div>
-            <button type="button" id="button3" class="price">Buy</button>
-        </div>
 
-        <div class="picBox">
-            <img class="itemPic" alt="" width="660px" src="media/1487296374_p1110662.jpg">
-            <span class="itemTxt"><h3>Picture 4</h3></span>
-            <img class="horizLine" src="media/horizontal-line-clipart.gif" />
-            <br />
-            <div class="price">
-                <span> $69.90 or obo</span>
+            <div class="picBox">
+                <img class="itemPic" alt="" width="660px" src="media/1487296374_p1110662.jpg">
+                <span class="itemTxt"><h3>Picture 4</h3></span>
+                <img class="horizLine" src="media/horizontal-line-clipart.gif" />
                 <br />
+                <div class="price">
+                    <span> $69.90 or obo</span>
+                    <br />
+                </div>
+                <button type="button" id="button4" class="price">Buy</button>
             </div>
-            <button type="button" id="button4" class="price">Buy</button>
-        </div>
 
-        <div class="picBox">
-            <img class="itemPic" alt="" height="918px" src="media/living_room_b4_sale.jpeg">
-            <span class="itemTxt"><h3 style="inline-block">Picture 5</h3> Tempor ea quem. Ex amet a esse quo culpa ingeniis offendit. Litteris dolor illum vidisse sint ubi consequat o elit non excepteur an quid quamquam,fugiat possumus quo nulla quem, te summis dolore si quibusdam ne fugiat singulis ab possumus quo nulla quem, graviterque, deserunt est amet nostrud, quis id possumus. Ea minim exercitation, fugiat possumus quo nulla quem, te summis dolore si quibusdam ne fugiat singulis ab possumus quo nulla quem, graviterque, deserunt est amet nostrud, quis id possumus. Ea minim exercitation
+            <div class="picBox">
+                <img class="itemPic" alt="" height="918px" src="media/living_room_b4_sale.jpeg">
+                <span class="itemTxt"><h3 style="inline-block">Picture 5</h3> Tempor ea quem. Ex amet a esse quo culpa ingeniis offendit. Litteris dolor illum vidisse sint ubi consequat o elit non excepteur an quid quamquam,fugiat possumus quo nulla quem, te summis dolore si quibusdam ne fugiat singulis ab possumus quo nulla quem, graviterque, deserunt est amet nostrud, quis id possumus. Ea minim exercitation, fugiat possumus quo nulla quem, te summis dolore si quibusdam ne fugiat singulis ab possumus quo nulla quem, graviterque, deserunt est amet nostrud, quis id possumus. Ea minim exercitation
             </span>
-            <img class="horizLine" src="media/horizontal-line-clipart.gif" />
-            <br />
-            <div class="price">
-                <span> Make offer</span>
+                <img class="horizLine" src="media/horizontal-line-clipart.gif" />
                 <br />
+                <div class="price">
+                    <span> Make offer</span>
+                    <br />
+                </div>
+                <button type="button" id="button5" class="price">Buy</button>
             </div>
-            <button type="button" id="button5" class="price">Buy</button>
         </div>
     </div>
-
     <footer id="footer"></footer>
 
     <script src="//code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
     </script>
     <script>
         function initMap() {
-            var uluru = {
+            var salesLocation = {
                 lat: 41.2298728,
                 lng: -96.0996988
             };
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 11,
-                center: uluru
+                center: salesLocation
             });
             var marker = new google.maps.Marker({
-                position: uluru,
+                position: salesLocation,
                 map: map
             });
         }
@@ -207,7 +233,7 @@
     <script>
         $("header").load("header.html");
         $("#footer").load("footer.html");
-        
+
         var movX = parseInt(Math.random() * 5) + 1;
         var movY = parseInt(Math.random() * 5) + 1;
 
@@ -259,8 +285,6 @@
             alert("Coming Soon: full functionality!!");
             $('#sound1').get(0).play();
         });
-
-
     </script>
 
 </body>
