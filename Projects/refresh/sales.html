@@ -89,6 +89,7 @@
         }
         #saleDescTxt.txt {
             font-size: .75em !important;
+            overflow: auto;
         }
         .saleLocationInfoBox.hdg {}
         
@@ -132,17 +133,7 @@
                     <p class="txt"><img style="display:inline; float:right;" class="pic" src="http://lorempixel.com/80/80/" height="80px" /> List of stuff includes: <span style="font-size: 2.75vmin;"></span>Van Briggle Tv Lamp Roseville Pottery Cambridge Fostoria Depression Glass Vintage Fiesta LG Flat Panel Tv Elvis Albums Reba Lots of old school vintage country albums 45's Stereo Speakers Oil Paintings Buffet Sofa Bed loveseats X2 Nice like new Basset Sofa Victorian Furniture Art Deco Furniture Mid-Century Modern Furniture Bar Cart Cut glass Decanter Cedar chest Frig Washer / Dryer Outdoor Swing Redwood patio furniture Garden tools Tools Silverplate Flatware Microwave Dining Table & Chairs Vintage Wedding Dress</p>
 
                 </div>
-                <!--
-                <div id="mapTxt">
-                    <h3>Items in Sale</h3>
-                    <p>Map TXT paragraph</p>
-                </div>
--->
-
-
-
             </div>
-
 
             <div class="picBox" id="first">
                 <img class="itemPic" alt="" height="480px" src="media/Resized_20170308_155644.jpeg">
@@ -170,8 +161,8 @@
                     <br />
                 </div>
                 <button type="button">Buy</button>
-
             </div>
+            
             <div class="picBox">
                 <img class="itemPic" alt="" height="280px" src="media/Resized_20170308_154949.jpeg">
                 <span class="itemTxt"><h3>Picture 3</h3> Quis proident aut cohaerescant nam consequat labore ubi cupidatat concursionibus ne excepteur elit dolor e quae in ab duis appellat appellat, ad dolore eiusmod philosophari ex nescius nisi.</span>
@@ -208,8 +199,10 @@
                 </div>
                 <button type="button" id="button5" class="price">Buy</button>
             </div>
+            
         </div>
     </div>
+    
     <footer id="footer"></footer>
 
     <script src="//code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
@@ -229,8 +222,7 @@
                 map: map
             });
         }
-    </script>
-    <script>
+
         $("header").load("header.html");
         $("#footer").load("footer.html");
 
@@ -243,7 +235,7 @@
             var g = parseInt(Math.random() * 256);
             return "rgb(" + r + "," + g + "," + b + ")";
         }
-        //         $(".container-main").click(function(e) { 
+       
         $("#ball" || "#container").click(function (e) {
             var y = e.pageY;
             var x = e.pageX;
@@ -253,7 +245,6 @@
         });
 
         function moveBall() {
-            //            debugger;
             var ballWidth = $("#ball").width();
             var width = $("#container").width();
             var height = $("#container").height();
@@ -283,10 +274,9 @@
 
         $(".price").click(function () {
             alert("Coming Soon: full functionality!!");
-            $('#sound1').get(0).play();
+//            $('#sound1').get(0).play();
         });
     </script>
 
 </body>
-
 </html>
