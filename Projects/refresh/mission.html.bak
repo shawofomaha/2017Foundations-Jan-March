@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- CSS Stylesheet href's -->
+    <!-- Start WOWSlider.com HEAD section -->
+    <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+    <script type="text/javascript" src="engine1/jquery.js"></script>
+    <!-- End WOWSlider.com HEAD section -->
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">
+
+    <style>
+        .paisleyBorderBottom {
+            top: -6.75vmin;
+            z-index: 0;
+        }
+        
+        #footer {
+            /*    bottom: auto;*/
+            position: relative;
+            top: 62vmin;
+        }
+        
+        #wowslider-container1 {
+            position: absolute;
+            top: 13.5vmin !important;
+        }
+        
+        #missionTitle {
+            position: relative;
+            font-size: 5.5vmin;
+            color: rgba(155, 244, 66, 0.9);
+            top: -22vmin;
+            font-family: 'Architects Daughter', cursive;
+            color: rgba(242, 232, 218, 1.0);
+        }
+        
+        footer2 ul {
+            top: -7.25vmin !important;
+        }
+    </style>
+</head>
+
+
+<body>
+    <header></header>
+    <h2 id="missionTitle">&gt; Mission &lt;</h2>
+    <div>
+        <div id="#container">
+
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script type="text/javascript" src="engine1/wowslider.js"></script>
+    <script type="text/javascript" src="engine1/script.js"></script>
+    <!-- End WOWSlider.com BODY section -->
+
+    <script src="//code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
+    </script>
+    <script>
+        $("header").load("header.html");
+        $("#footer").load("footer.html");
+    </script>
+</body>
+
+</html>
