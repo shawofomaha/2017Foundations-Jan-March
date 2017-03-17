@@ -39,7 +39,6 @@
         .saleLocationInfoBox {
             display: flex;
             border: 3px solid black;
-            /*            background-color: rgba(211, 211, 211, 1.0);*/
             background-color: rgba(112, 127, 116, 1.0);
             width: 95%;
             height: 30vmin;
@@ -49,8 +48,7 @@
         
         #mapAll {
             display: flex;
-/*            border: 1px solid black ;*/
-            width:68vmin;
+            width: 68vmin;
         }
         
         #map {
@@ -65,8 +63,7 @@
         #mapTxt p {
             display: inline-block;
             position: relative;
-           margin-left: 3vmin;
-            /*            height: 20vmin;*/
+            margin-left: 3vmin;
             width: 20vmin;
         }
         
@@ -78,19 +75,21 @@
         
         #addrTxt {
             width: 30vmin;
-            /*            margin: 1vmin;*/
         }
+        
         #addrTxt p {
             margin-left: 6vmin;
         }
+        
         #saleDescTxt {
             width: 110vmin;
-            /*            margin: 1vmin;            */
         }
+        
         #saleDescTxt.txt {
             font-size: .75em !important;
             overflow: auto;
         }
+        
         .saleLocationInfoBox.hdg {}
         
         .saleLocationInfoBox.txt {}
@@ -100,6 +99,7 @@
         footer2 ul {
             top: -36.5vmin !important;
         }
+        
     </style>
 </head>
 
@@ -116,16 +116,18 @@
             <div id="ball"></div>
 
             <div class="saleLocationInfoBox">
-                
-                    <div id="mapTxt">
-                        <h3>Dates<br /> and<br /> Times</h3>
-                        <p>May 7, 2017 <br /> 9AM-6PM</p>
-                    </div>
+
+                <div id="mapTxt">
+                    <h3>Dates<br /> and<br /> Times</h3>
+                    <p>May 7, 2017
+                        <br /> 9AM-6PM</p>
+                </div>
                 <div id="mapAll">
                     <div id="map"></div>
                     <div id="addrTxt">
                         <h3>Sale Address</h3>
-                        <p>12424 C St <br/>Omaha, NE 68144</p>
+                        <p>12424 C St
+                            <br/>Omaha, NE 68144</p>
                     </div>
                 </div>
                 <div id="saleDescTxt">
@@ -162,7 +164,7 @@
                 </div>
                 <button type="button">Buy</button>
             </div>
-            
+
             <div class="picBox">
                 <img class="itemPic" alt="" height="280px" src="media/Resized_20170308_154949.jpeg">
                 <span class="itemTxt"><h3>Picture 3</h3> Quis proident aut cohaerescant nam consequat labore ubi cupidatat concursionibus ne excepteur elit dolor e quae in ab duis appellat appellat, ad dolore eiusmod philosophari ex nescius nisi.</span>
@@ -199,10 +201,10 @@
                 </div>
                 <button type="button" id="button5" class="price">Buy</button>
             </div>
-            
+
         </div>
     </div>
-    
+
     <footer id="footer"></footer>
 
     <script src="//code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
@@ -235,7 +237,7 @@
             var g = parseInt(Math.random() * 256);
             return "rgb(" + r + "," + g + "," + b + ")";
         }
-       
+
         $("#ball" || "#container").click(function (e) {
             var y = e.pageY;
             var x = e.pageX;
@@ -274,7 +276,7 @@
 
         $(".price").click(function () {
             alert("Coming Soon: full functionality!!");
-//            $('#sound1').get(0).play();
+            //            $('#sound1').get(0).play();
         });
     </script>
 

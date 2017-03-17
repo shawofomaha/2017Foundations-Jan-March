@@ -16,11 +16,7 @@
     <!-- CSS Stylesheet href's -->
     <link rel="stylesheet" href="css/main.css">
     <style>
-        #container {
-            /*            height: 125% !important;*/
-            top: -30.75vmin !important;
-        }
-        
+      
         .paisleyBorderBottom {
             top: -38.25vmin;
             z-index: -1;
@@ -39,19 +35,15 @@
         
         #indexInfoBox .para {
             position: relative;
-            /*            top: -1.5vmin;*/
             margin: 2vmin;
         }
         
         #indexInfoBox h3 {
             position: relative;
-            /*            top: -5.5vmin;*/
-            /*            text-shadow: 2px 2px rgba(142, 183, 135, 1.0);*/
             margin: 2vmin;
         }
         
         #indexInfoBox {
-            /*            display: flex;*/
             position: relative;
             overflow: auto;
             top: 2.05vmin;
@@ -63,115 +55,17 @@
             width: 80%;
             height: 60vmin;
             border-radius: 35px;
-            /*            left: 2vmin;*/
         }
         
         #container {
+            top: -30.75vmin !important;
             flex-direction: row;
             flex-wrap: wrap;
-            /*            height: 80vmin;*/
         }
         
         footer2 ul {
             top: -38.75vmin !important;
         }
-        /********** Accordian start ***********/
-        
-        ul#indexAccordian {
-            text-decoration: none;
-            list-style-type: none;
-            left: 5vmin;
-            /*            float: left;*/
-            /*            display: inline-flex;*/
-        }
-        
-        
-/*
-        button2.accordion.active,
-        button2.accordion:hover {        
-*/
-        
-/*        button2.accordion.active,*/
-        button2:hover {
-                        background-color: white !important;
-        
-            border: 3px solid rgba(255, 255, 255, 1.0);
-            font-size: 1.15em;
-            width: 11.5vmin !important;
-            height: 10.9vmin!important;            
-/*            height: 9vmin !important;*/
-/*
-            background-image: url("<img src="media/bullet-points.png" style="display: inline;
-            float: right;
-            " height="180px">");
-*/
-/*            width: 5.5vmin !important;*/
-            color: black;
-            /*            border: 2px solid red;*/
-            transition: all 1.5s ease-in-out;
-        }
-/*        button2.accordion {*/
-        button2  {
-            position: absolute;
-            font-family: 'Architects Daughter', cursive;
-            font-size: 1.15em;
-            color: lightgray;
-/*            margin: 1vmin;*/
-            border: 1px solid black;
-            width: 10vmin !important;
-            height: 9.5vmin!important;
-            border-radius: 25%;
-            padding: 4px;
-            background-color: rgba(112, 127, 116, 1.0);
-            transition: all 0.4s ease-in-out;
-                        
-/*            transform: translate(-95%, -25%);*/
-            z-index: 10;
-            top: 53vmin;
-            left: 22.5vmin;
-            ;
-        }
-        #myBtn {
-            margin: 5px;
-        }
-        
-        button22.accordion {
-            background-color: #eee;
-            color: #444;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-            transition: 0.4s;
-        }
-        
-        button22.accordion.active,
-        button22.accordion:hover {
-            background-color: #ddd;
-        }
-        
-        div.panel {
-            /*            display: inline;*/
-            padding: 0 18px;
-            background-color: black;
-            color: aliceblue;
-            width: 140vmin;
-            /*            display: hidden;*/
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.9s ease-out;
-            border-radius: 35px;
-        }
-        
-        button2.accordian {
-            list-style-type: none;
-            text-decoration: none;
-        }
-        /*        background-color: #ddd;*/
-        /********** Accordian end ******
         
         /******* Modal start *******/
         /* The Modal (background) */
@@ -203,9 +97,9 @@
             background-color: whitesmoke;
             font-family: 'Architects Daughter', cursive;
             font-size: 1.25em;
-            color: rgba(112, 127, 116, 1.0);            
-            margin: 15% auto;
-            /* 15% from the top and centered */
+            color: rgba(112, 127, 116, 1.0);
+            margin: 13% auto;
+            /* 13% from the top and centered */
             padding: 20px;
             border: 1px solid #888;
             width: 80%;
@@ -227,6 +121,34 @@
             text-decoration: none;
             cursor: pointer;
         }
+        
+        #myBtn:hover {
+            margin: 2px;
+            background-color: rgba(191, 137, 45, 1.0) !important;
+            color: rgba(89, 242, 55, 1.0);
+            width: 18vmin !important;
+            height: 11vmin !important;
+            transition: all 0.4s ease-in-out;
+        }
+        
+        #myBtn {
+            position: absolute;
+            font-family: 'Architects Daughter', cursive;
+            font-size: 1.15em;
+            margin: 5px;
+            /*            margin-left: 10px !important;*/
+            top: 0vmin;
+            width: 14vmin !important;
+            height: 10.5vmin !important;
+            color: darkblue;
+            background-color: rgba(255, 255, 255, 1.0);
+            top: 53vmin;
+            left: 20.5vmin;
+            border-radius: 25%;
+            padding-left: 14px;
+            background-color: rgba(112, 127, 116, 1.0);
+            transition: all 0.4s ease-in-out;
+        }
         /* Modal end */
     </style>
 </head>
@@ -245,7 +167,7 @@
                 <source src="media/Wrong-buzzer.mp3" type="audio/mpeg" />
             </audio>
 
-<!--            <div id="ball"></div>-->
+            <!--            <div id="ball"></div>-->
 
             <div id="indexInfoBox">
                 <div class="para">
@@ -258,72 +180,6 @@
                 </div>
             </div>
 
-
-            <!--
-            <button2 class="accordion">My Story</button2>
-            <div class="panel">My story panel</div>
-            
-            <button2 class="accordion">Our Story</button2>
-            <div class="panel"><img src="media/bullet-points.png" style="display:inline; float:right;" height="280px">
-                <p>We have attended many auctions and found that a box of items often sold at a price that was undervalued rather than items were sold separately. By organizing, cleaning, and researching individual items we increase the bottom line which means more profit for you and your family.</p>
-
-                <p>WE take pictures of many of your items and advertise on our website. This allows people to preview what they want to purchase. We also advertise on radio and print as you request. Often times there are a line of customers waiting to get into these sales.</p>
-                <p>
-                    We prefer to have these sales onsite at the home or business we are providing service. However we do sales off site but have found the return to the customer is greatly decreased do to increased cost of renting a facility moving the items and deposits.</p>
-                <p>
-                    Our company of trained professionals shows a personal record for your life long attachments. Our ultimate goal is to promote and present the best sale possible. Clearing your home business and maximizing your returns. Please call us for a free onsite consultation.</p>
-            </div>
--->
-
-            <!--            <ul id="indexAccordian">-->
-            <!--
-                <li>
-                    <button2 class="accordion notShown">Estate Sales</button2>
-                    <div class="panel">Estate Sales information here .... ???</div>
-                </li><br />
-                <li>
-                    <button2 class="accordion notShown">Downsizing</button2>
-                    <div class="panel">Downsizing  information here .... ???</div>
-                </li><br />
-                <li>
-                    <button2 class="accordion notShown">Closing Business</button2>
-                    <div class="panel">
-                        <p>  information here .... ???</p>
-                    </div>
-                </li><br />
-                <li>
-                    <button2 class="accordion notShown">Senior Relocation</button2>
-                    <div class="panel">
-                        <p>Senior Relocation  information here .... ???</p>
-                    </div>
-                </li><br />
-                <li>
-                    <button2 class="accordion notShown">Liquidations</button2>
-                    <div class="panel">
-                        <p>Liquidations  information here .... ???</p>
-                    </div>
-                </li><br />
-                <li>
-                    <button2 class="accordion notShown">Moving</button2>
-                    <div class="panel">
-                        <p>Moving  information here .... ???1</p>
-                    </div>
-                </li><br /> 
-                <li>
-                    <button2 class="accordion notShown">Dave</button2>
-                    <div class="panel">
-                        <p>Call Dave at (605) 661-1517</p>
-                    </div>
-                </li><br /> 
-                <li>
-                    <button2 class="accordion notShown">Theresa</button2>
-                    <div class="panel">
-                        <p>Call Theresa at (605) 661-4558</p>
-                    </div>
-                </li><br />                 
--->
-            <!--                <li>-->
-
             <!-- Trigger/Open The Modal -->
             <button2 id="myBtn">..more on "'Our Story'"</button2>
 
@@ -334,13 +190,15 @@
 
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <p>                <p>We have attended many auctions and found that a box of items often sold at a price that was undervalued rather than items were sold separately. By organizing, cleaning, and researching individual items we increase the bottom line which means more profit for you and your family.</p>
+                    <p>We have attended many auctions and found that a box of items often sold at a price that was undervalued rather than items were sold separately. By organizing, cleaning, and researching individual items we increase the bottom line which means more profit for you and your family.</p>
 
-                <p>WE take pictures of many of your items and advertise on our website. This allows people to preview what they want to purchase. We also advertise on radio and print as you request. Often times there are a line of customers waiting to get into these sales.</p>
-                <p>
-                    We prefer to have these sales onsite at the home or business we are providing service. However we do sales off site but have found the return to the customer is greatly decreased do to increased cost of renting a facility moving the items and deposits.</p>
-                <p>
-                    Our company of trained professionals shows a personal record for your life long attachments. Our ultimate goal is to promote and present the best sale possible. Clearing your home business and maximizing your returns. Please call us for a free onsite consultation.</p><p><img src="media/bullet-points.png" style="display:inline; margin-left:15%; " height="320px"></p>
+                    <p>WE take pictures of many of your items and advertise on our website. This allows people to preview what they want to purchase. We also advertise on radio and print as you request. Often times there are a line of customers waiting to get into these sales.</p>
+
+                    <p>We prefer to have these sales onsite at the home or business we are providing service. However we do sales off site but have found the return to the customer is greatly decreased do to increased cost of renting a facility moving the items and deposits.</p>
+
+                    <p>Our company of trained professionals shows a personal record for your life long attachments. Our ultimate goal is to promote and present the best sale possible. Clearing your home business and maximizing your returns. Please call us for a free onsite consultation.</p>
+
+                    <p><img src="media/bullet-points.png" style="display:inline; margin-left:15%; " height="320px"></p>
                 </div>
 
             </div>

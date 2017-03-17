@@ -33,13 +33,6 @@
             position: relative;
             top: -8vmin;
         }
-        /*
-        
-        #containerAbout:hover   {
-            transform: rotate(0);
-            transition: transform 2s;
-        }
-*/
         
         #cube {
             width: 100%;
@@ -132,30 +125,18 @@
         #bottom {
             background-color: black;
             backface-visibility: hidden;
-            /*            background-image: url("http://lorempixel.com/320/320/");*/
             transform: rotateX(-90deg) translateZ(30vmin);
         }
         
         #bottomBack {
             background-color: black;
             backface-visibility: hidden;
-            /*            background-image: url("http://lorempixel.com/320/320/");*/
             transform: rotateX(90deg) translateZ(-30vmin);
-        }
-        /*
-#card.flipped{
-    transform: rotateY(180deg);
-}
-*/
-        
-        body {
-            /*            height: 150 vmin;*/
         }
         
         #aboutTitle {
             position: relative;
             font-size: 5.5vmin;
-            /*            color: rgba(155, 244, 66, 0.9);*/
             top: -22vmin;
             z-index: +1;
             font-family: 'Architects Daughter', cursive;
@@ -170,7 +151,6 @@
             perspective: 3333vmin;
             top: -15vmin;
             left: 50%;
-            /*            z-index: 222;*/
             transform: translate(-50%, -10%);
         }
         
@@ -196,8 +176,8 @@
         }
         
         footer2 ul {
-            top:  -0.53vmin !important;
-        } 
+            top: -0.53vmin !important;
+        }
         
         button {
             left: -16vmin !important;
@@ -221,7 +201,6 @@
             <option value="Top">Top</option>
             <option value="Bottom">Bottom</option>
         </select>
-
 
         <div id="containerAbout">
             <div id="cube">
@@ -251,6 +230,7 @@
                     <p class="bottomBackPicTxt">So <a href="index.html">contact us</a> and delegate one of your many responsibilies,
                         <br /> with peace of mind and with <span class="underline">our</span> satisfaction guarantee.</p>
                 </div>
+                
             </div>
         </div>
     </div>
@@ -284,7 +264,7 @@
             lastSide = random;
             rotateCube(sides[random]);
         }, 9000);
+        
     </script>
 </body>
-
 </html>
