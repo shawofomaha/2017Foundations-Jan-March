@@ -20,8 +20,8 @@
             /*            position: absolute;*/
             position: fixed;
             top: 8.5vmin;
-            height: 5vmin;
-            width: 100%;
+            min-height: 5vmin;
+            min-width: 100%;
             left: -0.0vmin;
             perspective: 150px;
             /*            z-index: +200;            */
@@ -44,6 +44,7 @@
             background: -moz-linear-gradient(right, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.69));
             /* For Firefox 3.6 to 15 */
             background: linear-gradient(to right, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.01));
+           
             /* Standard syntax */
             z-index: +10;
         }
@@ -52,7 +53,7 @@
             font-family: 'Architects Daughter', cursive !important;
 /*            text-shadow: 2px 2px  rgba(112, 127, 116, 1.0);            */
             display: block;
-            height: 4.25vmin;
+            min-height: 4.25vmin;
 
             float: left;
             left: 0;
@@ -68,7 +69,7 @@
             background-color: rgba(112, 127, 116, 1.0); 
             color: black;
             transition: all 0.75s ease-in-out;
-        }
+        } 
         
         .logo {
             position: relative;
@@ -84,17 +85,17 @@
             position: absolute;
             /*            background-color: color: rgba(242, 232, 218, 1.0);*/
             top: -9vmin;
-            width: 34vmin;
-            height: 34vmin;
+            width: 24vmin;
+            height: 24vmin;
             z-index: +91;
         }
         
-        #title {
+        span#title {
             font-family: 'Architects Daughter', cursive;
             text-shadow: 2px 2px  rgba(112, 127, 116, 1.0);
             color: rgba(242, 232, 218, 0.9);
             font-size: 6vmin;
-            line-height: 6.75vmin;
+            line-height: 8.5vmin;
             padding-left: 2.5vmin;
             transform: translate(-50%,-50%)
         }

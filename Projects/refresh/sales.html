@@ -40,54 +40,59 @@
             display: flex;
             border: 3px solid black;
             background-color: rgba(112, 127, 116, 1.0);
-            width: 95%;
-            height: 30vmin;
+            min-width: 95%;
+            min-height: 30vmin;
             border-radius: 35px;
             margin: 1vmin;
+            white-space: normal;
+            overflow-x:auto;
         }
         
         #mapAll {
             display: flex;
-            width: 68vmin;
+            min-width: 36vmin;
         }
         
         #map {
             display: inline-block;
             position: relative;
-            margin: 1vmin;
+            margin: 2vmin 0 2vmin 0;
             border: 2px dotted blue;
-            height: 25vmin;
-            width: 25vmin;
+            min-height: 20vmin;
+            min-width: 20vmin;
         }
         
         #mapTxt p {
             display: inline-block;
             position: relative;
-            margin-left: 3vmin;
-            width: 20vmin;
-        }
-        
-        #mapTxt p {
-            margin: 1vmin;
-            width: 20vmin;
+/*            margin-left: 1vmin;*/
+            min-width: 20vmin;
+/*            overflow: scroll;   */
+/*            margin: 1vmin;*/
+/*            min-width: 20vmin;*/
             text-align: center;
         }
-        
+        #addrTxt h3 {
+            margin: 1vmin;
+        }
         #addrTxt {
-            width: 30vmin;
+            min-width: 15vmin;
         }
         
         #addrTxt p {
-            margin-left: 6vmin;
+            margin-left: 2vmin;
         }
         
         #saleDescTxt {
-            width: 110vmin;
+            min-width: 110vmin;
         }
         
         #saleDescTxt.txt {
             font-size: .75em !important;
             overflow: auto;
+        }
+        p.txt img.pic {
+            margin-right: 1vmin;
         }
         
         .saleLocationInfoBox.hdg {}

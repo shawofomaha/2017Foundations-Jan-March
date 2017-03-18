@@ -13,8 +13,8 @@
             position: absolute;
             top: 0vmin;
             left: 85%;
-            width: 40vmin;
-            height: 40vmin;
+            min-width: 40vmin;
+            min-height: 40vmin;
         }
         
         button {
@@ -34,9 +34,20 @@
             top: -8vmin;
         }
         
+        #containerAbout {
+/*            display: flex;*/
+            width: 60vmin;
+            height: 60vmin;
+            position: relative;
+            perspective: 3333vmin;
+            top: -15vmin;
+            left: 50%;
+            transform: translate(-50%, -10%);
+        }        
+        
         #cube {
-            width: 100%;
-            height: 100%;
+            min-width: 100%;
+            min-height: 100%;
             position: absolute;
             transform-style: preserve-3d;
             transition: transform 2s;
@@ -68,8 +79,8 @@
         }
         
         .side {
-            width: 100%;
-            height: 100%;
+            min-width: 100%;
+            min-height: 100%;
             position: absolute;
             box-sizing: border-box;
             border: 5px solid black;
@@ -88,11 +99,14 @@
         #bottom,
         #bottomBack {
             background-size: cover;
-            height: 60vmin;
-            transition: background-color 2sec;
+            min-height: 60vmin;
+            -webkit-transition:  background-color 3sec ease-in-out;
+            -moz-transition:  background-color 3sec ease-in-out;
+            -ms-transition:  background-color 3sec ease-in-out;
+            -o-transition:  background-color 3sec ease-in-out;
+            transition: background-color 3sec ease-in-out;
             padding: 2vmin;
             padding-top: 9vmin;
-            transition: background-color 3sec;
         }
         
         #bottomBack {}
@@ -142,17 +156,7 @@
             font-family: 'Architects Daughter', cursive;
             color: rgba(242, 232, 218, 1.0);
         }
-        
-        #containerAbout {
-            display: flex;
-            width: 60vmin;
-            height: 60vmin;
-            position: relative;
-            perspective: 3333vmin;
-            top: -15vmin;
-            left: 50%;
-            transform: translate(-50%, -10%);
-        }
+
         
         .frontPicTxt,
         .leftPicTxt,
