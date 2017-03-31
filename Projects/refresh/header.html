@@ -16,15 +16,35 @@
     <!-- CSS Stylesheet href's -->
     <link rel="stylesheet" href="css/main.css">
     <style>
+        .hdr {
+            width: 100%;
+            min-height: 25vmin;
+            background-color: rgba(0, 0, 0, 1.0);
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-flow: row wrap;
+            justify-content: flex-end;
+        }
+        
+        nav.hdr li {
+            font-size: 2.75vmin;
+            line-height: 2.75vmin;
+        }
+        
         .paisleyBorderTop {
-            /*            position: absolute;*/
             position: fixed;
             top: 8.5vmin;
             min-height: 5vmin;
             min-width: 100%;
             left: -0.0vmin;
             perspective: 150px;
-            /*            z-index: +200;            */
+        }
+        
+        a {
+            top: 7vmin;            
         }
         
         nav ul {
@@ -33,7 +53,6 @@
             padding: 0;
             overflow: hidden;
             position: fixed;
-            top: 0;
             width: 100%;
             background: rgba(147, 255, 166, 0.69);
             /* For browsers that do not support gradients */
@@ -52,11 +71,12 @@
             font-family: 'Architects Daughter', cursive !important;
             /*            text-shadow: 2px 2px  rgba(112, 127, 116, 1.0);            */
             display: block;
+            line-height: 5.5vmin;
             min-height: 4.25vmin;
+            font-size: 0.85em;
             float: left;
             left: 0;
             color: rgba(255, 255, 255, 0.9);
-            /*            text-align: center;*/
             padding: 14px 12px;
             text-decoration: none;
             list-style-type: none;
@@ -65,6 +85,8 @@
         
         nav li a:hover {
             background-color: rgba(112, 127, 116, 1.0);
+            font-size: 1.15em;
+            min-height: 8.5vmin;
             color: black;
             transition: all 0.75s ease-in-out;
         }
@@ -81,7 +103,6 @@
         
         img.logo {
             position: absolute;
-            /*            background-color: color: rgba(242, 232, 218, 1.0);*/
             top: -9vmin;
             width: 24vmin;
             height: 24vmin;
@@ -92,6 +113,7 @@
             font-family: 'Architects Daughter', cursive;
             text-shadow: 2px 2px rgba(112, 127, 116, 1.0);
             color: rgba(242, 232, 218, 0.9);
+/*            top: 0;*/
             font-size: 6vmin;
             line-height: 8.5vmin;
             padding-left: 2.5vmin;
