@@ -12,6 +12,7 @@
             height: 100%;
             overflow: scroll;
         }
+        
         body {
             min-height: 100vh;
             overflow: hidden;
@@ -53,8 +54,8 @@
             min-height: 30vmin;
             border-radius: 35px;
             margin: 1vmin;
-            white-space: normal;
-            overflow-x:auto;
+            white-space: normal;
+            overflow-x: auto;
         }
         
         #mapAll {
@@ -74,16 +75,18 @@
         #mapTxt p {
             display: inline-block;
             position: relative;
-/*            margin-left: 1vmin;*/
+            /*            margin-left: 1vmin;*/
             min-width: 20vmin;
-/*            overflow: scroll;   */
-/*            margin: 1vmin;*/
-/*            min-width: 20vmin;*/
+            /*            overflow: scroll;   */
+            /*            margin: 1vmin;*/
+            /*            min-width: 20vmin;*/
             text-align: center;
         }
+        
         #addrTxt h3 {
             margin: 1vmin;
         }
+        
         #addrTxt {
             min-width: 15vmin;
         }
@@ -100,6 +103,7 @@
             font-size: .75em !important;
             overflow: auto;
         }
+        
         p.txt img.pic {
             margin-right: 1vmin;
         }
@@ -113,7 +117,6 @@
         footer2 ul {
             top: -36.5vmin !important;
         }
-        
     </style>
 </head>
 
@@ -161,7 +164,8 @@
                     <span> $199.90</span>
                     <br />
 
-                    <button id="buttonNudge1" type="button">Buy</button>
+                    <!--                    <button id="buttonNudge1" type="button">Buy</button>-->
+                    <input type="button" onclick="location.href='http://buy.refreshestatesales.biz/public_html/buy/index.php/product/coffee-grinder/';" value="Buy" />
                 </div>
             </div>
 
@@ -175,8 +179,10 @@
                 <div class="price">
                     <span> Priceless! </span>
                     <br />
-                </div>
-                <button type="button">Buy</button>
+                
+<!--                <button type="button">Buy</button>-->
+                    <input type="button" onclick="location.href='http://buy.refreshestatesales.biz/public_html/buy/index.php/shop/';" value="Buy" /> 
+                </div>        
             </div>
 
             <div class="picBox">
@@ -187,8 +193,10 @@
                 <div class="price">
                     <span> $49.90</span>
                     <br />
-                </div>
-                <button type="button" id="button3" class="price">Buy</button>
+<!--                <button type="button" id="button3" class="price">Buy</button>-->
+                    <input type="button" onclick="location.href='http://buy.refreshestatesales.biz/public_html/buy/index.php/shop/';" value="Buy" /> 
+                    <br />
+                </div>         
             </div>
 
             <div class="picBox">
@@ -199,8 +207,9 @@
                 <div class="price">
                     <span> $69.90 or obo</span>
                     <br />
-                </div>
-                <button type="button" id="button4" class="price">Buy</button>
+<!--                <button type="button" id="button4" class="price">Buy</button>-->
+                    <input type="button" onclick="location.href='http://buy.refreshestatesales.biz/public_html/buy/index.php/shop/';" value="Buy" />       
+                </div>         
             </div>
 
             <div class="picBox">
@@ -212,8 +221,9 @@
                 <div class="price">
                     <span> Make offer</span>
                     <br />
-                </div>
-                <button type="button" id="button5" class="price">Buy</button>
+<!--                <button type="button" id="button5" class="price">Buy</button>-->
+                    <input type="button" onclick="location.href='http://buy.refreshestatesales.biz/public_html/buy/index.php/shop/';" value="Buy" />     
+                </div>         
             </div>
 
         </div>
@@ -288,11 +298,12 @@
         });
 
         $(".price").click(function () {
-            
-            alert("Coming Soon: full functionality!!");
+
+            //            alert("Coming Soon: full functionality!!");
             //            $('#sound1').get(0).play();
         });
     </script>
 
 </body>
+
 </html>
