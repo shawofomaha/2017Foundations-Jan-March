@@ -11,6 +11,7 @@ body {
     -o-transition: background-color 3sec ease-in-out;
     transition: background-color 3sec ease-in-out;
     margin: 0;
+/*    height: auto;*/
 }
 
 
@@ -23,7 +24,7 @@ h1 {
     display: inline-block;
     position: absolute;
     font-family: 'Architects Daughter', cursive;
-    color: rgba(92, 244, 66, 1.0);
+    / color: rgba(242, 232, 218, 1.0);
     font-size: 9vmin;
     text-shadow: 2px 2px rgba(112, 127, 116, 1.0);
     line-height: 9vmin;
@@ -100,25 +101,27 @@ h2 {
     text-align: center;
 }
 
-button:hover {
-    color: white;
-    border: 3px solid rgba(255, 255, 255, 1.0);
-    font-size: 0.95em;
-    min-height: 11vmin;
-    min-width: 6.5vmin;
+button,input:hover {
+    color: white !important;
+    border: 3px solid rgba(255, 255, 255, 1.0) !important;
+    font-size: 0.95em !important;
+/*    height: 9.5vmin !important;*/
+    width: 11.5vmin !important;
     transition: all 1.5s ease-in-out;
 }
 
-button {
-    font-family: 'Architects Daughter', cursive;
-    font-size: 1.15em;
-    color: lightgray;
-    margin-left: 11%;
-    margin-bottom: 2%;
-    border: 1px solid black;
-    width: 9vmin !important;
-    min-height: 4.5vmin!important;
-    border-radius: 25%;
+input,button {
+    font-family: 'Architects Daughter', cursive !important;
+    font-size: 1.15em !important;
+    color: lightgray !important;
+/*
+    margin-left: 11%!important;
+    margin-bottom: 2%!important;
+*/
+    border: 1px solid black !important;
+    min-width: 9vmin !important;
+    min-height: 4.5vmin !important;
+    border-radius: 25% !important;
     background-image: url("../media/cherry-wood-panels-background-header.jpg");
 }
 
