@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Housekeeping -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">
+
+    <!--
+    <link media="all and (min-width: 1001px) " rel="stylesheet" href="../css/Class 9-laptop.css">
+    <link media="all and (min-width: 1201px)" rel="stylesheet" href="../css/Class 9-desktop.css">    
+-->
+    <!-- CSS Stylesheet href's -->
+    <link rel="stylesheet" href="css/main.css">
+    <title>Refresh Estate Sales</title>
+    <style>
+        .hdr {
+            width: 100%;
+            min-height: 25vmin;
+            background-color: rgba(0, 0, 0, 1.0);
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-flow: row wrap;
+            justify-content: flex-end;
+        }
+        
+        nav.hdr li {
+            font-size: 2.75vmin;
+            line-height: 2.75vmin;
+        }
+        
+        .paisleyBorderTop {
+            position: fixed;
+            top: 8.5vmin;
+            min-height: 5vmin;
+            min-width: 100%;
+            left: -0.0vmin;
+            perspective: 150px;
+        }
+        
+        a {
+            top: 7vmin;            
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            background: rgba(147, 255, 166, 0.69);
+            /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(left, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.69));
+            /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(right, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.69));
+            /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(right, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.69));
+            /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to right, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.01));
+            /* Standard syntax */
+            z-index: +0;
+        }
+        
+        nav li a {
+            font-family: 'Architects Daughter', cursive !important;
+            /*            text-shadow: 2px 2px  rgba(112, 127, 116, 1.0);            */
+            display: block;
+            line-height: 5.5vmin;
+            min-height: 4.25vmin;
+            font-size: 0.85em;
+            float: left;
+            left: 0;
+            color: rgba(255, 255, 255, 0.9);
+            padding: 14px 12px;
+            text-decoration: none;
+            list-style-type: none;
+            z-index: +0;
+        }
+             
+        nav li a:hover {
+            background-color: rgba(255, 255,255, 1.0);
+            font-size: 1.45em;
+            color: black !important;
+            transition: all 0.75s ease-in-out;
+        }
+        
+/*
+        
+        nav li a:visited {
+            color: rgba(133, 0,133, 0.7) !important;
+        }        
+*/
+        
+/*
+        nav li:hover {
+            background-color: rgba(255, 255,255, 1.0);
+            font-size: 1.45em;
+            color: black !important;
+            transition: all 0.75s ease-in-out;
+        }        
+*/
+        
+        .logo {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            border-radius: 50%;
+            z-index: +15;
+            left: 85%;
+            transform: translate(-50%);
+        }
+        
+        img.logo {
+            position: absolute;
+            top: -9vmin;
+            width: 24vmin;
+            height: 24vmin;
+            z-index: +2;
+        }
+        
+        span#title {
+            font-family: 'Architects Daughter', cursive;
+            text-shadow: 2px 2px rgba(112, 127, 116, 1.0);
+            color: rgba(242, 232, 218, 0.9);
+/*            top: 0;*/
+            font-size: 6vmin;
+            line-height: 8.5vmin;
+            padding-left: 21.5vmin;
+/*            transform: translate(-50%, -50%) !important;*/
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="hdr">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mission.html">Mission</a></li>
+                <li><a href="sales.html">Sales</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="https://form.jotform.us/70744790444158">Contact</a></li>
+                <span id="title">Refresh Estate Sales</span>
+            </ul>
+            <div>
+                <a href="index.html"><img class="paisleyBorderTop" src="media/borders-holly2.png">
+                    <img class="logo" src="media/refresh-expanded.png"></a>
+            </div>
+        </nav>
+    </header>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPezit5P_aR8Ap4A-zJ-ELmYuuyPS33ig&callback=initMap">
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-94037734-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
