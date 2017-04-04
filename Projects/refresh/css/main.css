@@ -119,6 +119,7 @@ input, button {
     margin-bottom: 2%!important;
 */
     border: 1px solid black !important;
+    margin-bottom: 0.75vw;
     min-width: 9vmin !important;
     min-height: 4.5vmin !important;
     border-radius: 25% !important;
