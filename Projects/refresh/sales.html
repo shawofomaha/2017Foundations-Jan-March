@@ -295,7 +295,8 @@
             
             $('#sound1').get(0).play();
             clearInterval(myVar);
-            
+            $("#ball").css({"border": "3px dotted rgba(0, 255, 30, 1.0)"});
+            $("#ball").css({"background-color": "rgba(201, 129, 4, 1.0)"});
             $("#ball").css({ "transform": "translate(-50%, -50%)", "transition": "all 2.69s ease-in"});  
             myTimeoutVar1 = setTimeout(function(){ myStopFunction(); }, 12800);            
             myTimeoutVar2 = setTimeout(function(){ mySpinFunction(); }, 9000);        

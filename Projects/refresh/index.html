@@ -376,8 +376,10 @@
             
             $('#sound1').get(0).play();
             clearInterval(myVar);
-            
-            $("#ball").css({"top": 55, "left": 710, "transform": "translate(-50%, -50%)", "transition": "all 2.69s ease-in"});  
+            $("#ball").css({"border": "3px dotted rgba(242, 232, 218, 1.0)"});
+            $("#ball").css({"background-color": "rgba(201, 129, 4, 1.0)"});
+            $("#ball").css({ "top": 55, "left": 710, "transform": "translate(-50%, -50%)", "transition": "all 2.69s ease-in"}); 
+            $("#ball").css({ "top": 55, "left": 55, "transform": "translate(-50%, -50%)", "transition": "all 2.69s ease-in"});             
             myTimeoutVar1 = setTimeout(function(){ myStopFunction(); }, 12800);            
             myTimeoutVar2 = setTimeout(function(){ mySpinFunction(); }, 9000);        
         });        
