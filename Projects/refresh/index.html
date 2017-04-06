@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">
 
     <!--
-    <link media="all and (min-width: 1001px) " rel="stylesheet" href="../css/Class 9-laptop.css">
-    <link media="all and (min-width: 1201px)" rel="stylesheet" href="../css/Class 9-desktop.css">    
+    <link media="all and (min-width: 1001px) " rel="stylesheet" href="../css/phone.css">
+    <link media="all and (min-width: 1201px)" rel="stylesheet" href="../css/main.css">    
 -->
     <!-- CSS Stylesheet href's -->
     <link rel="stylesheet" href="css/main.css">
@@ -201,7 +201,7 @@
 
                     <p>So, take advantage of our unique and personable approach to help manage the burden. We will walk you through the process from pricing and inventory, to costs and then to sales! Let our specialists inspect and model handling procedures to maximize preservation and profit.</p>
 
-                    <p>We perform the difficult and tiring task of pictorially documenting your precious possessions, while helping you to advertise to a wider audience. This will help you attract more buyers to your event.</p>
+                    <p>We perform the difficult and tiring task of pictorially documenting your precious possessions, while helping you to advertise to a wider audience. This will help attract more buyers to your event.</p>
 
                     <p class="ownerContact">Call for a free onsite consultation. Dave: <a href="tel:605-661-1517 "> (605) 661-1517</a> or Theresa: <a href="tel:605-661-4558"> (605) 661-4558</a></p>
                     
@@ -283,24 +283,24 @@
             //*********** Modal end *************//
 
         // start of accordian js
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
-            acc[i].onclick = function () {
-                console.log("1) i= " + i + " acc=" + acc);
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.maxHeight) {
-                    console.log("2)off   i= " + i + " acc=" + acc);
-                    panel.style.maxHeight = null;
-                } else {
-                    //                        $(".notShown").style.maxHeight = 1;
-                    console.log("3)on i= " + i + " acc=" + acc);
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                }
-            }
-        }
+//        var acc = document.getElementsByClassName("accordion");
+//        var i;
+//
+//        for (i = 0; i < acc.length; i++) {
+//            acc[i].onclick = function () {
+//                console.log("1) i= " + i + " acc=" + acc);
+//                this.classList.toggle("active");
+//                var panel = this.nextElementSibling;
+//                if (panel.style.maxHeight) {
+//                    console.log("2)off   i= " + i + " acc=" + acc);
+//                    panel.style.maxHeight = null;
+//                } else {
+//                    //                        $(".notShown").style.maxHeight = 1;
+//                    console.log("3)on i= " + i + " acc=" + acc);
+//                    panel.style.maxHeight = panel.scrollHeight + "px";
+//                }
+//            }
+//        }
         // end of accordian js $(".notShown").toggleClass(""); notShown
 
 
