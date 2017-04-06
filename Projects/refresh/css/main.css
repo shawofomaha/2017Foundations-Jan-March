@@ -162,15 +162,20 @@ img {
     z-index: +15;
 }
 .spinBall {
-    -webkit-animation:spin 0.35s ease-in infinite;
-    -moz-animation:spin 0.35s ease-in infinite;
-    animation:spin 0.435s ease-in infinite;
+    -webkit-animation:spin 0.35s ease infinite;
+    -moz-animation:spin 0.35s ease infinite;
+    animation:spin 0.435s ease infinite;
 
 }
 
 @-moz-keyframes spin { 100% { -moz-transform: rotateY(180deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotateY(180deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotateY(180deg); } }
+
+@-moz-keyframes spin { 100% { -moz-transform: rotateX(180deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotateX(180deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotateX(180deg); } 
+
 
 /*
             #ball.flipped{
