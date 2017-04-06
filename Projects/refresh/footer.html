@@ -41,7 +41,14 @@
             /* Standard syntax */
             z-index: +10;
         }
-        
+
+/*
+        footer2 ul li, 
+        html body footer#footer footer2 div ul li a { 
+            color: rgba(255, 255, 255, 0.9) !important;  
+        }       
+*/
+
         footer2 ul li {
             position: relative !important;
             font-family: 'Architects Daughter', cursive !important;
@@ -50,24 +57,27 @@
             font-size: 0.85em;
             margin-left: 4vmin;
             float: left;
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255, 255, 255, 0.9) !important;     
             padding: 14px 12px;
             list-style-type: none;
             z-index: +10;
         }
+/*        155, 244, 66, 0.9*/
+        footer2 ul li a {
+           color: rgba(255, 255, 255, 0.9); 
+            
+        }
         
-/*
         #footer footer2 div ul a:hover {
             background-color: rgba(255, 255,255, 1.0);
-            font-size: 1.15em;
-            color: black !important;
+            font-size: 1.05em;
+            color: rgba(23, 71, 22, 0.9)!important;
             transition: all 0.75s ease-in-out;
         }
-*/
         
         #footer footer2 div ul li:hover {
             background-color: rgba(255, 255,255, 1.0);
-            font-size: 0.95em;
+            font-size: 1.05em;
             color: black !important;
             transition: all 0.75s ease-in-out;
         }        
@@ -88,7 +98,7 @@
                 <a href="about.html"><li>Senior Relocation</li></a>
                 <a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/"><li>Liquidations</li></a>
                 <a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/shop/"><li>Moving</li></a>
-                <li>Dave <a href="tel:1-605-661-1516"> (605) 661-1517</a> </li>
+                <span><li>Dave <a href="tel:1-605-661-1517"> (605) 661-1517</a> </li></span>
                 <li>Theresa <a href="tel:1-605-661-4558"> (605) 661-4558</a> </li>
             </ul>
         </div>

@@ -8,6 +8,12 @@
     <!-- CSS Stylesheet href's -->
     <link rel="stylesheet" href="css/main.css">
     <style>
+/*
+        html {
+            min-height: 100vh;
+            overflow: hidden;
+        }        
+*/
 
         #container {
             top: -28.25vmin !important;
@@ -271,10 +277,28 @@
             $("#ball").css("left", x);
         }
 
-        setInterval(moveBall, 25);
+        var myVar = setInterval(function () {
+            moveBall()
+        }, 25);
 
+        function myStopFunction() {
+            $("#ball").css({"display": "none"});            
+        }
+        
+        function mySpinFunction() {
+            $("#ball").toggleClass("spinBall");
+        }
+        
+        var myTimeoutVar1; 
+        var myTimeoutVar2; 
         $("#ball").click(function () {
+            
             $('#sound1').get(0).play();
+            clearInterval(myVar);
+            
+            $("#ball").css({ "transform": "translate(-50%, -50%)", "transition": "all 2.69s ease-in"});  
+            myTimeoutVar1 = setTimeout(function(){ myStopFunction(); }, 12800);            
+            myTimeoutVar2 = setTimeout(function(){ mySpinFunction(); }, 9000);        
         });
 
         $(".price").click(function () {

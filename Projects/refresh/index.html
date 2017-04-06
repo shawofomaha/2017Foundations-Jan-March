@@ -48,7 +48,8 @@
         
         #indexInfoBox {
             position: relative;
-            overflow: auto;
+            overflow-x: hidden;
+            overflow-y: auto;
             top: 2.05vmin;
             background-color: black;
             margin: 3.5vmin;
@@ -63,7 +64,15 @@
         p.ownerContact {
             transform: translate(20%);
         }
+         
+        p.ownerContact a {
+            color: rgba(255, 255, 255, 1.0);
+        }
         
+        p.ownerContact a:hover {
+            color: rgba(155, 244, 66, 0.9);
+        }
+               
         #container {
             top: -30.75vmin !important;
             flex-direction: row;
@@ -192,9 +201,10 @@
 
                     <p>So, take advantage of our unique and personable approach to help manage the burden. We will walk you through the process from pricing and inventory, to costs and then to sales! Let our specialists inspect and model handling procedures to maximize preservation and profit.</p>
 
-                    <p>We offer services to assist in the rigorous task of pictorially documenting the inventory regardless of size, while helping you to pre-advertise to a wider audience. This will help you attract more buyers to your event.</p>
+                    <p>We perform the difficult and tiring task of pictorially documenting your precious possessions, while helping you to advertise to a wider audience. This will help you attract more buyers to your event.</p>
 
-                    <p class="ownerContact">Call for a free onsite consultation. Dave: (605) 661-1517 or Theresa: (605) 661-4558</p>
+                    <p class="ownerContact">Call for a free onsite consultation. Dave: <a href="tel:1-605-661-1517 "> (605) 661-1517</a> or Theresa: <a href="tel:1-605-661-4558"> (605) 661-4558</a></p>
+                    
                 </div>
             </div>
 
@@ -331,17 +341,46 @@
             $("#ball").css("top", y);
             $("#ball").css("left", x);
         }
+//        var myVar = setInterval(function () {
+//            moveBall()
+//        }, 25);
+//
+//        function myStopFunction() {
+//            $("#ball").css({"display": "none"});            
+//        }
+//        
+//        var myTimeoutVar; 
+//        $("#ball").click(function () {
+//            $('#sound1').get(0).play();
+//            clearInterval(myVar);
+//            $("#ball").css({"top": 55, "left": 710, "transform": "translate(-50%, -50%)", "transition": "all 2.69s ease-in"});     
+//            myTimeoutVar = setTimeout(function(){ myStopFunction(); }, 14300);        
+//        });
 
-        setInterval(moveBall, 25);
+        
+        var myVar = setInterval(function () {
+            moveBall()
+        }, 25);
 
+        function myStopFunction() {
+            $("#ball").css({"display": "none"});            
+        }
+        
+        function mySpinFunction() {
+            $("#ball").toggleClass("spinBall");
+        }
+        
+        var myTimeoutVar1; 
+        var myTimeoutVar2; 
         $("#ball").click(function () {
+            
             $('#sound1').get(0).play();
-            //            $('#sound2').get(0).play();
-        });
-
-        $(".price").click(function () {
-            alert("Coming Soon: full functionality!!");
-        });
+            clearInterval(myVar);
+            
+            $("#ball").css({"top": 55, "left": 710, "transform": "translate(-50%, -50%)", "transition": "all 2.69s ease-in"});  
+            myTimeoutVar1 = setTimeout(function(){ myStopFunction(); }, 12800);            
+            myTimeoutVar2 = setTimeout(function(){ mySpinFunction(); }, 9000);        
+        });        
 
         $("header").load("header.html");
         $("#footer").load("footer.html");
