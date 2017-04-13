@@ -20,6 +20,11 @@
             overflow: hidden;
         }
         
+        #dummy {
+            height: 1px;
+            position: relative;
+        }
+        
         .paisleyBorderBottom {
             top: -38.25vmin;
             z-index: -1;
@@ -170,17 +175,17 @@
 
     <header>Head and nav in header.html</header>
     <h2 id="homeTitle">&gt; Home &lt;</h2>
-    <br />
+    <br /><div id="dummy">&nbsp</div>
     <div>
         <div id="container">
+            <div id="ball"></div>
+            
             <audio id="sound1">
                 <source src="media/refresh_paul4.mp3" type="audio/mpeg" />
             </audio>
             <audio id="sound2">
                 <source src="media/Wrong-buzzer.mp3" type="audio/mpeg" />
             </audio>
-
-            <div id="ball"></div>
 
             <div id="indexInfoBox">
                 <div class="para">
@@ -319,6 +324,7 @@
             var ballWidth = $("#ball").width();
             var width = $("#container").width();
             var height = $("#container").height();
+            height  = height + (height * .37);
             var x = parseInt($("#ball").css("left").split("px")[0]) + movX;
             var y = parseInt($("#ball").css("top").split("px")[0]) + movY;
             if (x > width - ballWidth / 2) {
@@ -355,7 +361,7 @@
         
         var myVar = setInterval(function () {
             moveBall()
-        }, 25);
+        }, 22);
 
         function myStopFunction() {
             $("#ball").css({"display": "none", "transition": "all 1.69s ease-in"});            

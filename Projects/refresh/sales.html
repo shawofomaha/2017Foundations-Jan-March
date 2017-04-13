@@ -264,6 +264,7 @@
             var ballWidth = $("#ball").width();
             var width = $("#container").width();
             var height = $("#container").height();
+            height  = height + (height * .07);
             var x = parseInt($("#ball").css("left").split("px")[0]) + movX;
             var y = parseInt($("#ball").css("top").split("px")[0]) + movY;
             if (x > width - ballWidth / 2) {
@@ -284,7 +285,7 @@
 
         var myVar = setInterval(function () {
             moveBall()
-        }, 25);
+        }, 22);
 
         function myStopFunction() {
             $("#ball").css({"display": "none"});            
