@@ -18,10 +18,8 @@
     <title>Refresh Estate Sales</title>
     <style>
         .hdr {
-            position: fixed;
-            top: 0;
             width: 100%;
-            min-height: 9vmin;
+            min-height: 25vmin;
             background-color: rgba(0, 0, 0, 1.0);
             display: -webkit-box;
             display: -moz-box;
@@ -115,7 +113,7 @@
             font-family: 'Architects Daughter', cursive !important;
             background: #1e2b33;
             /* menu bg color */
-/*            padding: .25em .25em;*/
+            padding: .25em .25em;
             position: fixed;
             z-index: 1;
         }
@@ -267,7 +265,6 @@
             left: 13px;
             -moz-transition-delay: .1s;
             -o-transition-delay: .1s;
-            -ms-transition-delay: .1s;
             -webkit-transition-delay: .1s;
             transition-delay: .1s;
         }
@@ -276,7 +273,6 @@
             left: 21px;
             -moz-transition-delay: .2s;
             -o-transition-delay: .2s;
-            -ms-transition-delay: .2s;
             -webkit-transition-delay: .2s;
             transition-delay: .2s;
         }
@@ -364,16 +360,19 @@
                     <span id="title">Refresh Estate Sales</span>
                 </ul>
 
+<!--
                 <div>
                     <a href="index.html"><img class="paisleyBorderTop" src="media/borders-holly2.png">
                         <img class="logo" src="media/refresh-expanded.png"></a>
                 </div>
+-->
             </nav>
 
         </header>
     </div>
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
-
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPezit5P_aR8Ap4A-zJ-ELmYuuyPS33ig&callback=initMap">
+    </script>
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;

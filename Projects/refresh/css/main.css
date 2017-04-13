@@ -1,3 +1,4 @@
+/*     .   main     .   */
 * {
     box-sizing: border-box;
 }
@@ -11,8 +12,9 @@ body {
     -o-transition: background-color 3sec ease-in-out;
     transition: background-color 3sec ease-in-out;
     margin: 0;
-/*    height: auto;*/
+    /*    height: auto;*/
 }
+
 
 
 #footer,
@@ -101,15 +103,17 @@ h2 {
     text-align: center;
 }
 
-button:hover, input:hover {
+button:hover,
+input:hover {
     color: white !important;
     border: 3px solid rgba(255, 255, 255, 1.0) !important;
     font-size: 0.95em !important;
-    width: 12.5vmin ;
+    width: 12.5vmin;
     transition: all 1.5s ease-in-out;
 }
 
-input, button {
+input,
+button {
     font-family: 'Architects Daughter', cursive !important;
     font-size: 1.15em !important;
     color: lightgray !important;
@@ -125,7 +129,7 @@ input, button {
 /* ************* end of item box ******* */
 
 #container {
-    position: relative;
+    position: inherit;
     transition: all 0.5s ease;
     background-image: url("../media/cherry-wood-panels-background-header.jpg");
     border: 1px solid black;
@@ -155,29 +159,56 @@ img {
     border-radius: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
-     transform-style: preserve-3d;
-/*     transition: all 2s;   */
+    transform-style: preserve-3d;
+    /*     transition: all 2s;   */
     top: 50%;
     left: 50%;
     z-index: +15;
 }
-.spinBall {
-    -webkit-animation:spin 0.35s ease infinite;
-    -moz-animation:spin 0.35s ease infinite;
-    animation:spin 0.435s ease infinite;
 
+.spinBall {
+    -webkit-animation: spin 0.35s ease infinite;
+    -moz-animation: spin 0.35s ease infinite;
+    animation: spin 0.435s ease infinite;
 }
 
-@-moz-keyframes spin { 100% { -moz-transform: rotateY(180deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotateY(180deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotateY(180deg); } }
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotateY(180deg);
+    }
+}
 
-@-moz-keyframes spin { 100% { -moz-transform: rotateX(180deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotateX(180deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotateX(180deg); } 
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotateY(180deg);
+    }
+}
 
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotateY(180deg);
+    }
+}
 
-/*
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotateX(180deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotateX(180deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotateX(180deg);
+    }
+    /*
             #ball.flipped{
                 transform: rotateY(180deg);
                 
@@ -195,45 +226,48 @@ img {
                 background-size: cover;
             }
 */
-            
-/*
+    /*
             .back{
                 background-image: url("https://blogblowfish.files.wordpress.com/2015/08/4863851-king-of-hearts-playing-card.jpg");
                 background-size: cover;
                 transform: rotateY(180deg);
             }
 */
-
-#ball:hover {
-    background-color: blue !important;
-    min-height: 20vmin;
-    min-width: 20vmin;
-}
-
-span {
-    display: inline;
-}
-
-::-webkit-scrollbar {
-    width: 19px;
-}
-
-::-webkit-scrollbar-track {
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    background: rgba(0, 0, 0, 0.1);
-}
-
-::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    background: rgba(0, 0, 0, 0.2);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.4);
-}
-
-::-webkit-scrollbar-thumb:window-inactive {
-    background: rgba(0, 0, 0, 0.05);
-}
+    #ball:hover {
+        background-color: blue !important;
+        min-height: 20vmin;
+        min-width: 20vmin;
+    }
+    span {
+        display: inline;
+    }
+    ::-webkit-scrollbar {
+        width: 19px;
+    }
+    ::-webkit-scrollbar-track {
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.1);
+    }
+    ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.2);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 0, 0, 0.4);
+    }
+    ::-webkit-scrollbar-thumb:window-inactive {
+        background: rgba(0, 0, 0, 0.05);
+    }
+    
+    span#title {
+        position: relative;
+        font-family: 'Architects Daughter', cursive;
+        text-shadow: 2px 2px rgba(112, 127, 116, 1.0);
+        color: rgba(242, 232, 218, 0.9);
+        top: -0vmin;
+        font-size: 6vmin;
+        line-height: 8.5vmin;
+        padding-left: 9.5vmin;
+    }

@@ -1,0 +1,18 @@
+/* .   Desktop   . */
+span#title {
+    position: relative;
+    font-family: 'Architects Daughter', cursive;
+    text-shadow: 2px 2px rgba(112, 127, 116, 1.0);
+    color: rgba(242, 232, 218, 0.9);
+    top: -3vmin !important;
+    left: 0vmin;
+    font-size: 6vmin;
+    line-height: 8.5vmin;
+    padding-left: 9.5vmin;
+    z-index: +15;
+}
+
+
+footer ul {
+    display: inline-block;
+}

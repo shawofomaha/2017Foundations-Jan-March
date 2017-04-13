@@ -1,9 +1,17 @@
-<!DOCTYPE html>
+     
+        .paisleyBorderBottom {
+             top: -122.2vmin;
+            z-index: +144;
+        }
+        <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <!-- CSS Stylesheet href's -->
     <link rel="stylesheet" href="css/main.css">
+    <link media="all and (min-width: 250px)" rel="stylesheet" href="css/handheld.css">
+    <link media="all and (min-width: 768px)" rel="stylesheet" href="css/desktop.css">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">
@@ -19,36 +27,38 @@
         
         button {
             position: fixed;
-            top: 34vmin !important;
-            left: -10.5% !important;
+            top: 16vmin !important;
+            left: -8.5% !important;
         }
         
         select {
             position: fixed;
-            top: 41vmin !important;
+            top: 22vmin !important;
             left: 2.75% !important;
         }
         
         h2 {
-            position: relative;
-            top: -8vmin;
+            position: fixed;
+            top: +2.5vmin;
         }
         
         #containerAbout {
 /*            display: flex;*/
+            justify-content: space-around;
+            position: inherit;
             width: 60vmin;
             height: 60vmin;
-            position: relative;
             perspective: 3333vmin;
-            top: -15vmin;
-            left: 50%;
-            transform: translate(-50%, -10%);
+            top: -80vmin;
+/*            left: 50%;*/
+            transform: translate(50%, -10%);
         }        
         
         #cube {
             min-width: 100%;
             min-height: 100%;
-            position: absolute;
+            position: relative;
+/*            left: 120%;*/
             transform-style: preserve-3d;
             transition: transform 2s;
             border-radius: 25%;
@@ -151,7 +161,7 @@
         #aboutTitle {
             position: relative;
             font-size: 5.5vmin;
-            top: -22vmin;
+            top: 0.0vmin;
             z-index: +1;
             font-family: 'Architects Daughter', cursive;
             color: rgba(155, 244, 66, 1.0);

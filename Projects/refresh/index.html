@@ -9,15 +9,14 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">
 
-    <!--
-    <link media="all and (min-width: 1001px) " rel="stylesheet" href="../css/phone.css">
-    <link media="all and (min-width: 1201px)" rel="stylesheet" href="../css/main.css">    
--->
     <!-- CSS Stylesheet href's -->
     <link rel="stylesheet" href="css/main.css">
+    <link media="all and (min-width: 250px)" rel="stylesheet" href="css/handheld.css">
+    <link media="all and (min-width: 768px)" rel="stylesheet" href="css/desktop.css">
+    
     <style>
         body {
-            min-height: 100vh;
+            min-height: 150vh;
             overflow: hidden;
         }
         
@@ -31,7 +30,7 @@
             font-size: 5.5vmin;
             text-shadow: 2px 2px rgba(112, 127, 116, 1.0);
             color: rgba(155, 244, 66, 0.9);
-            top: -22.5vmin;
+            top: 2.5vmin;
             z-index: +1;
             font-family: 'Architects Daughter', cursive;
         }
@@ -80,7 +79,7 @@
         }
         
         footer2 ul {
-            top: -38.75vmin !important;
+            top: -6.75vmin !important;
         }
         /******* Modal start *******/
         /* The Modal (background) */
@@ -141,9 +140,8 @@
             margin: 2px;
             background-color: rgba(191, 137, 45, 1.0) !important;
             color: rgba(89, 242, 55, 1.0);
-            /*            min-width: 17.5vmin !important;*/
             min-height: 7vmin !important;
-            border: 3px solid rgba(89, 242, 55, 1.0);
+            border: 1px solid rgba(89, 242, 55, 1.0);
             transition: all 0.4s ease-in-out;
         }
         
@@ -152,19 +150,16 @@
             font-family: 'Architects Daughter', cursive;
             font-size: 3.15vmin;
             margin: 5px;
-            /*            margin-left: 10px !important;*/
-            top: 0vmin;
             min-width: 19vmin !important;
             min-height: 3.5vmin !important;
             color: darkblue;
             background-color: rgba(255, 255, 255, 1.0);
-            top: 55.5vmin;
-            /*            left: 1vmin;*/
+            top: 86.5vmin;
             transform: translate(calc(-50%+5.5vmin));
             border-radius: 25%;
             padding-left: 14px;
             background-color: rgba(112, 127, 116, 1.0);
-            transition: all 0.4s ease-in-out;
+            transition: all 0.2s ease-in-out;
             z-index: +17;
         }
         /* Modal end */
@@ -209,7 +204,7 @@
             </div>
 
             <!-- Trigger/Open The Modal -->
-            <button2 id="myBtn">..more on "Our Story"</button2>
+            <button2 id="myBtn">..more on "Our Story"&nbsp;&nbsp;</button2>
 
             <!-- The Modal -->
             <div id="myModal" class="modal">
