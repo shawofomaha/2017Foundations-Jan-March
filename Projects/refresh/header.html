@@ -59,6 +59,8 @@
             width: 100%;
             background: rgba(147, 255, 166, 0.69);
             /* For browsers that do not support gradients */
+            background: -ms-linear-gradient(left, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.69));
+            /* For Microsoft */            
             background: -webkit-linear-gradient(left, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.69));
             /* For Safari 5.1 to 6.0 */
             background: -o-linear-gradient(right, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.69));
@@ -68,7 +70,7 @@
             background: linear-gradient(to right, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.01));
             /* Standard syntax */
             z-index: +0;
-        }
+        } 
         
         nav li a {
             font-family: 'Architects Daughter', cursive !important;
@@ -90,32 +92,18 @@
             background-color: rgba(255, 255, 255, 1.0);
             font-size: 1.35em;
             color: black !important;
-            -moz-transition: all .75s ease-in-out .75s;
-            -o-transition: all .75s ease-in-out .75s;
-            -webkit-transition: all .75s ease-in-out .75s;            
+            -moz-transition: all .75s ease-in-out;
+            -o-transition: all .75s ease-in-out;
+            -ms-transition: all .75s ease-in-out;
+            -webkit-transition: all .75s ease-in-out;            
             transition: all 0.75s ease-in-out;
         }
-        /*
-        
-        nav li a:visited {
-            color: rgba(133, 0,133, 0.7) !important;
-        }        
-*/
-        /*
-        nav li:hover {
-            background-color: rgba(255, 255,255, 1.0);
-            font-size: 1.45em;
-            color: black !important;
-            transition: all 0.75s ease-in-out;
-        }        
-*/
+
         /*     drop down menu  start***************************/
         
         header {
             font-family: 'Architects Daughter', cursive !important;
-            background: #1e2b33;
-            /* menu bg color */
-/*            padding: .25em .25em;*/
+            background: #1e2b33;  /* menu bg color */
             position: fixed;
             z-index: 1;
         }
@@ -141,7 +129,6 @@
         
         #menu ul li a {
             font-family: 'Architects Daughter', cursive !important;
-/*            color: #fff;*/
             color: rgba(242, 232, 218, 0.9);
             text-decoration: none;
             padding: 0.7em;
@@ -172,6 +159,7 @@
             overflow: hidden;
             height: 0;
         }
+        
     /* marko rgba(94, 163, 106, 1.0) */    
         #on-hidden-menu li {
             position: fixed;
@@ -179,10 +167,11 @@
             color: rgba(229, 221, 208, 0.9) !important;
             border-bottom: 1px solid #273640;
             opacity: 0;
-            -moz-transition: all .4s ease-in-out .2s;
-            -o-transition: all .4s ease-in-out .2s;
-            -webkit-transition: all .4s ease-in-out .2s;
-            transition: all .4s ease-in-out .2s;
+            -moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            -ms-transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
             position: relative;
         } 
         
@@ -200,9 +189,10 @@
             color: rgba(255, 255, 255, 1.0) !important;
             
             font-size: 1.15em;
-            -moz-transition: all .75s ease-in-out 75s;
-            -o-transition: all .75s ease-in-out 75s;
-            -webkit-transition: all .4s ease-in-out 75s;            
+            -moz-transition: all .75s ease-in-out;
+            -o-transition: all .75s ease-in-out;
+            -ms-transition: all .75s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;            
             transition: all 0.75s ease-in-out;
         }
         
@@ -222,9 +212,10 @@
         #on-hidden-menu .toggle:hover {
             color: rgba(255,255,255, 1.0) !important;
             font-size: 1.2em;
-            -moz-transition: all .75s ease-in-out .75s;
-            -o-transition: all .75s ease-in-out .75s;
-            -webkit-transition: all .75s ease-in-out .75s;            
+            -moz-transition: all .75s ease-in-out;
+            -o-transition: all .75s ease-in-out;
+            -ms-transition: all .75s ease-in-out;
+            -webkit-transition: all .75s ease-in-out;            
             transition: all 0.75s ease-in-out;
         }
         
@@ -236,9 +227,6 @@
             position: fixed;
             top: 3vmin;
             left: 3vmin;
-            /*            background-color: #f73a14;*/
-/*            background-image: url('../refresh/media/hamburger.png');*/
-/*            background-color: chartreuse;*/
             z-index: +5;
             cursor: pointer;
             border-radius: 2px;
@@ -247,9 +235,7 @@
         #on-hidden-menu .toggle:before,
         #on-hidden-menu .toggle:after,
         #on-hidden-menu .toggle span:before {
-            
             content: '';
-/*            color: rgba(229, 221, 208, 0.9) !important;*/
             width: 4px;
             height: 4px;
             background: #fff;
@@ -259,6 +245,7 @@
             left: -128vmin;
             -moz-transition: all .4s ease-in-out;
             -o-transition: all .4s ease-in-out;
+            -ms-transition: all .4s ease-in-out;
             -webkit-transition: all .4s ease-in-out;
             transition: all .4s ease-in-out;
         }
@@ -301,6 +288,7 @@
             transform: rotate(-225deg);
             left: 5px;
             -moz-transition-delay: .0s;
+            -ms-transition-delay: .0s;
             -o-transition-delay: .0s;
             -webkit-transition-delay: .0s;
             transition-delay: .0s;
@@ -371,6 +359,7 @@
             </nav>
 
         </header>
+        
     </div>
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 
@@ -395,7 +384,7 @@
             init: function () {
                 //                debugger;                
                 this.resize();
-                $('<div id="on-hidden-menu"><div class="toggle "><span>Menu</span></div><ul></ul></div>').hide().insertAfter(this.$menu);
+                $('<div id="on-hidden-menu"><div class="toggle "><span><img src="media/menu-hamburger-32x32.png" /></span></div><ul></ul></div>').hide().insertAfter(this.$menu);
                 // toggle
                 $('#on-hidden-menu .toggle').click(function () {
                     $('#on-hidden-menu').toggleClass('open');

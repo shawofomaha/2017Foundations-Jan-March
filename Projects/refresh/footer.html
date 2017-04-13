@@ -64,14 +64,18 @@
             list-style-type: none;
             z-index: +10;
         }
-/*        155, 244, 66, 0.9*/
+        
+        li.on-hidden {
+            padding-left: 12px;
+        }
+/*        rgba(155, 244, 66, 0.9);*/
         footer2 ul li a {
-           color: rgba(255, 255, 255, 0.9); 
-            
+           color: rgba(255, 255, 255, 0.9);   
         }
         
-        #footer footer2 div ul a:hover {
-            background-color: rgba(255, 255,255, 1.0);
+        #footer footer2 div ul a:hover,
+        li.on-hidden:hover {
+            background-color: rgba(255, 255,255, 1.0)!important;
             font-size: 1.05em;
             color: rgba(23, 71, 22, 0.9)!important;
             transition: all 0.75s ease-in-out;

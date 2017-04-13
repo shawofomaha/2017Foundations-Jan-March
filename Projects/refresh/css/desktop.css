@@ -16,3 +16,7 @@ span#title {
 footer ul {
     display: inline-block;
 }
+
+#on-hidden-menu ul {
+    display: none;
+}
