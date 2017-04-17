@@ -132,7 +132,9 @@
                         <br /> 9AM-6PM</p>
                 </div>
                 <div id="mapAll">
-                    <div id="map"></div>
+                    <div id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12002.512671007407!2d-96.09969875!3d41.22987285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1492444201260" width="120" height="170" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
                     <div id="addrTxt">
                         <h3>Sale Address</h3>
                         <p>12424 C St
@@ -225,20 +227,20 @@
 
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <script>
-        function initMap() {
-            var salesLocation = {
-                lat: 41.2298728,
-                lng: -96.0996988
-            };
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 11,
-                center: salesLocation
-            });
-            var marker = new google.maps.Marker({
-                position: salesLocation,
-                map: map
-            });
-        }
+//        function initMap() {
+//            var salesLocation = {
+//                lat: 41.2298728,
+//                lng: -96.0996988
+//            };
+//            var map = new google.maps.Map(document.getElementById('map'), {
+//                zoom: 11,
+//                center: salesLocation
+//            });
+//            var marker = new google.maps.Marker({
+//                position: salesLocation,
+//                map: map
+//            });
+//        }
 
         $("header").load("header.html");
         $("#footer").load("footer.html");
