@@ -322,7 +322,7 @@
             transition-delay: .0s;
 */
         }
-        
+
         #on-hidden-menu img{
             position: fixed;
             top: 1.75vmin;    
@@ -396,7 +396,7 @@
             init: function () {
                 //                debugger;                
                 this.resize();
-                $('<div id="on-hidden-menu"><div class="toggle "><span><img src="media/menu-hamburger-32x32.png" height="21vmin";/></span></div><ul></ul></div>').hide().insertAfter(this.$menu);
+                $('<div id="on-hidden-menu" style="z-index: +2222";><div class="toggle "><span><img src="media/menu-hamburger-32x32.png" height="21vmin";/></span></div><ul></ul></div>').hide().insertAfter(this.$menu);
                 // toggle
                 $('#on-hidden-menu .toggle').click(function () {
                     $('#on-hidden-menu').toggleClass('open');

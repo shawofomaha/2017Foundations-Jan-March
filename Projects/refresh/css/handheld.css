@@ -1,4 +1,5 @@
 /* .  handheld  . */
+
 span#title {
     position: inherit;
     font-family: 'Architects Daughter', cursive;
@@ -14,4 +15,8 @@ span#title {
 
 footer ul {
     display: none;
+}
+
+#on-hidden-menu li a {
+    z-index: +3333 !important;
 }
