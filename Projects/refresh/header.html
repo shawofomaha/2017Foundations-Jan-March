@@ -60,7 +60,7 @@
             background: rgba(147, 255, 166, 0.69);
             /* For browsers that do not support gradients */
             background: -ms-linear-gradient(left, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.69));
-            /* For Microsoft */            
+            /* For Microsoft */
             background: -webkit-linear-gradient(left, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.69));
             /* For Safari 5.1 to 6.0 */
             background: -o-linear-gradient(right, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.69));
@@ -70,7 +70,7 @@
             background: linear-gradient(to right, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.01));
             /* Standard syntax */
             z-index: +0;
-        } 
+        }
         
         nav li a {
             font-family: 'Architects Daughter', cursive !important;
@@ -92,7 +92,7 @@
             background-color: rgba(255, 255, 255, 1.0);
             font-size: 1.20em;
             color: black !important;
-/*
+            /*
             -moz-transition: all .75s ease-in-out;
             -o-transition: all .75s ease-in-out;
             -ms-transition: all .75s ease-in-out;
@@ -100,12 +100,12 @@
             transition: all 0.75s ease-in-out;
 */
         }
-
         /*     drop down menu  start***************************/
         
         header {
             font-family: 'Architects Daughter', cursive !important;
-            background: #1e2b33;  /* menu bg color */
+            background: #1e2b33;
+            /* menu bg color */
             position: fixed;
             z-index: 1;
         }
@@ -161,15 +161,15 @@
             overflow: hidden;
             height: 0;
         }
+        /* marko rgba(94, 163, 106, 1.0) */
         
-    /* marko rgba(94, 163, 106, 1.0) */    
         #on-hidden-menu li {
             position: fixed;
             background-color: rgba(94, 163, 106, 1.0);
             color: rgba(229, 221, 208, 0.9) !important;
             border-bottom: 1px solid #273640;
             opacity: 0;
-/*
+            /*
             -moz-transition: all .4s ease-in-out;
             -o-transition: all .4s ease-in-out;
             -ms-transition: all .4s ease-in-out;
@@ -177,10 +177,10 @@
             transition: all .4s ease-in-out;
 */
             position: relative;
-        } 
+        }
         
         #on-hidden-menu li a {
-/*            color: rgba(242, 232, 218, 1.0);*/
+            /*            color: rgba(242, 232, 218, 1.0);*/
             color: rgba(229, 221, 208, 1.0) !important;
             color: rgba(229, 221, 208, 1.0) !important;
             text-decoration: none;
@@ -192,7 +192,7 @@
             background-color: rgba(42, 73, 47, 1.0);
             color: rgba(255, 255, 255, 1.0) !important;
             font-size: 0.95em;
-/*
+            /*
             -moz-transition: all .75s ease-in-out;
             -o-transition: all .75s ease-in-out;
             -ms-transition: all .75s ease-in-out;
@@ -215,10 +215,10 @@
         }
         
         #on-hidden-menu .toggle:hover {
-            color: rgba(255,255,255, 1.0) !important;
+            color: rgba(255, 255, 255, 1.0) !important;
             font-size: 1.2em;
             cursor: auto;
-/*
+            /*
             -moz-transition: all .75s ease-in-out;
             -o-transition: all .75s ease-in-out;
             -ms-transition: all .75s ease-in-out;
@@ -251,7 +251,7 @@
             position: fixed;
             top: -177vmin;
             left: -128vmin;
-/*
+            /*
             -moz-transition: all .4s ease-in-out;
             -o-transition: all .4s ease-in-out;
             -ms-transition: all .4s ease-in-out;
@@ -262,7 +262,7 @@
         
         #on-hidden-menu .toggle:after {
             left: 13px;
-/*
+            /*
             -moz-transition-delay: .1s;
             -o-transition-delay: .1s;
             -ms-transition-delay: .1s;
@@ -273,7 +273,7 @@
         
         #on-hidden-menu .toggle span:before {
             left: 21px;
-/*
+            /*
             -moz-transition-delay: .2s;
             -o-transition-delay: .2s;
             -ms-transition-delay: .2s;
@@ -301,7 +301,7 @@
             -webkit-transform: rotate(-225deg);
             transform: rotate(-225deg);
             left: 5px;
-/*
+            /*
             -moz-transition-delay: .0s;
             -ms-transition-delay: .0s;
             -o-transition-delay: .0s;
@@ -315,19 +315,18 @@
             left: 13px;
             width: 2px;
             height: 2px;
-/*
+            /*
             -moz-transition-delay: .0s;
             -o-transition-delay: .0s;
             -webkit-transition-delay: .0s;
             transition-delay: .0s;
 */
         }
-
-        #on-hidden-menu img{
-            position: fixed;
-            top: 1.75vmin;    
-        }
         
+        #on-hidden-menu img {
+            position: fixed;
+            top: 1.75vmin;
+        }
         /*     drop down menu  end  *************************/
         
         .logo {
@@ -348,55 +347,19 @@
             z-index: +2;
         }
         
+        nav li {
+            display: none;
+            height: 0px;
+        }
+ 
     </style>
-</head>
-
-<body>
-    <div>
-        <header>
-            <nav id="menu" class="hdr">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="sales.html">Sales</a></li>
-                    <li><a href="mission.html">Mission</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/">Contact</a></li>
-                    <span id="title">Refresh Estate Sales</span>
-                </ul>
-               
-                <div>
-                    <a href="index.html"><img class="paisleyBorderTop" src="media/borders-holly2.png">
-                        <img class="logo" src="media/refresh-expanded.png"></a>
-                </div>
-            </nav>
-
-        </header>
-        
-    </div>
-    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
-
     <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-94037734-1', 'auto');
-        ga('send', 'pageview');
-
         hiddenNavBar = {
             $menu: $('#menu'),
             init: function () {
                 //                debugger;                
                 this.resize();
-                $('<div id="on-hidden-menu" style="z-index: +2222";><div class="toggle "><span><img src="media/menu-hamburger-32x32.png" height="21vmin";/></span></div><ul></ul></div>').hide().insertAfter(this.$menu);
+                $('<div id="on-hidden-menu" style="z-index: +2222";><div class="toggle "><span><img src="media/menu-hamburger-32x32.png" height="30vmin";/></span></div><ul></ul></div>').hide().insertAfter(this.$menu);
                 // toggle
                 $('#on-hidden-menu .toggle').click(function () {
                     $('#on-hidden-menu').toggleClass('open');
@@ -416,7 +379,7 @@
                     console.log(menuWidth, winW);
 
                     // When window is less < 768px, switch to mobile
-                    if (winW < 768) {
+                    if (winW < 2400) {
                         console.log('init' + " menuWidth: " + menuWidth + " winW: " + winW);
 
                         $('#on-hidden-menu').show();
@@ -445,6 +408,48 @@
             //            debugger;
             hiddenNavBar.init();
         })
+    </script>
+</head>
+
+<body>
+    <div>
+        <header>
+            <nav id="menu" class="hdr">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sales.html">Sales</a></li>
+                    <li><a href="mission.html">Mission</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/">Contact</a></li>
+                    <span id="title">Refresh Estate Sales</span>
+                </ul>
+
+                <div>
+                    <a href="index.html"><img class="paisleyBorderTop" src="media/borders-holly2.png">
+                        <img class="logo" src="media/refresh-expanded.png"></a>
+                </div>
+            </nav>
+
+        </header>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-94037734-1', 'auto');
+        ga('send', 'pageview');
     </script>
 </body>
 
