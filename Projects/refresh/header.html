@@ -347,6 +347,7 @@
             z-index: +2;
         }
         
+        /* hide this element in favor of hamburger nav, it will sucked into hamburger menu, this keeps it from briefly appearring while jquery completes page load   */
         nav li {
             display: none;
             height: 0px;
@@ -400,7 +401,7 @@
                     if ($('.on-hidden').size() == 0) {
                         $('#on-hidden-menu').removeClass('open').hide();
                     }
-                }, 10);
+                }, 01);
             }
         };
 

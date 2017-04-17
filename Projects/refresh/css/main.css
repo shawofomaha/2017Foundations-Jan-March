@@ -110,6 +110,7 @@ input:hover {
     font-size: 0.95em !important;
     width: 12.5vmin;
     transition: all 1.5s ease-in-out;
+    -webkit-transition: all 1.5s ease-in-out;
 }
 
 input,
