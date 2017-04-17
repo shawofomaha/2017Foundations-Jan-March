@@ -20,18 +20,6 @@
             min-height: 40vmin;
         }
         
-        button {
-            position: fixed;
-            top: 16vmin !important;
-            left: -8.5% !important;
-        }
-        
-        select {
-            position: fixed;
-            top: 22vmin !important;
-            left: 2.75% !important;
-        }
-        
         h2 {
             position: fixed;
             top: +2.5vmin;
@@ -64,7 +52,8 @@
             min-height: 100%;
             position: absolute;
             box-sizing: border-box;
-            border: 5px solid black;
+            /*            border: 5px solid black;*/
+            border: 1.5px solid rgba(244, 210, 161, 1.0);
             color: rgba(255, 255, 255, 0.8);
             font-size: 2.3vmin;
             text-align: center;
@@ -79,14 +68,15 @@
             left: -65%;
             position: absolute;
             box-sizing: border-box;
-            border: 3.5px solid rgba(155, 244, 66, 1.0);
+            /*            border: 3.5px solid rgba(155, 244, 66, 1.0);*/
+            border: 2.5px solid rgba(244, 210, 161, 1.0);
             color: rgba(255, 255, 255, 0.8);
             font-size: 2.3vmin;
             text-align: center;
             line-height: 2.3vmin;
             border-radius: 50%;
         }
-        /*
+/*
         rgba(35, 60, 39, 1.0);<=Green
         rgba(255, 175, 175, 1.0);<==Pink
         rgba(244, 210, 161, 1.0):<==Tan
@@ -119,8 +109,7 @@
         #left,
         #right,
         #top,
-        #bottom,
-        #bottomBack {
+        #bottom {
             background-size: cover;
             min-height: 45vmin;
             -webkit-transition: background-color 3sec ease-in-out;
@@ -131,9 +120,7 @@
             padding: 2vmin;
             padding-top: 9vmin;
         }
-        
-        
-        #bottomBack {}
+
         
         #back {
             background-color: black;
@@ -149,7 +136,7 @@
         #front {
             background-color: black;
             background-image: url("media/Workman%20Estate%20Sale.jpeg");
-            /*             backface-visibility: hidden;*/
+            backface-visibility: hidden;
             transform: rotateY(0deg) translateZ(54vmin);
         }
         
@@ -176,7 +163,6 @@
         
         #cube.showLeftBack {
             transform: rotateY(135deg);
-            /*            transform: rotateX(360deg);*/
         }
         
         #right {
@@ -229,16 +215,6 @@
             transform: rotateX(-90deg);
         }
         
-/*
-        .flip {
-            transform: rotateX(-180deg);
-        }
-        
-        .flipReverse {
-            transform: rotateX(180deg);
-        }
-*/
-        
         #bottom {
             background-color: black;
             backface-visibility: hidden;
@@ -249,11 +225,13 @@
             transform: rotateX(90deg);
         }
         
+/*
         #bottomBack {
             background-color: black;
             backface-visibility: hidden;
             transform: rotateX(-90deg) translateZ(-42vmin);
         }
+*/
         
         #aboutTitle {
             position: relative;
@@ -262,7 +240,7 @@
             z-index: +1;
             font-family: 'Architects Daughter', cursive;
             color: rgba(244, 210, 161, 1.0);
-            text-shadow: 2px 2px  rgba(2, 2, 2, 1.0);
+            text-shadow: 2px 2px rgba(255, 255, 255, 0.55);
         }
         
         .frontPicTxt,
@@ -273,35 +251,61 @@
         .leftPicTxt,
         .rightPicTxt,
         .backPicTxt,
-        .rightBackPicTxt,
-        .bottomBackPicTxt {
+        .rightBackPicTxt {
             font-family: 'Architects Daughter', cursive;
             font-size: 3.25vmin;
             color: rgba(155, 244, 66, 0.8);
             line-height: 5.0vmin;
-            text-shadow: 2px 2px  rgba(6, 6, 6, 1.0);
-        }
-
-        .bottomBackPicTxt {
-            font-size: 5.25vmin;
-            line-height: 6.0vmin;
+            text-shadow: 2px 2px rgba(6, 6, 6, 1.0);
         }
         
-        .frontPicTxt      {color: rgba(244, 210, 161, 1.0);}
-        .backPicTxt       {color: rgba(244, 210, 161, 1.0);}
-        .leftFrontPicTxt  {color: rgba(244, 210, 161, 1.0);}
-        .rightBackPicTxt  {color: rgba(244, 210, 161, 1.0);}
-        .leftBackPicTxt   {color: rgba(244, 210, 161, 1.0);}
-        .rightFrontPicTxt {color: rgba(244, 210, 161, 1.0);}
-        .leftPicTxt       {color: rgba(244, 210, 161, 1.0);}
-        .rightPicTxt      {color: rgba(244, 210, 161, 1.0);}
-        .topPicTxt        { color: rgba(244, 210, 161, 1.0);
-                            line-height: 5.0vmin;
-                            font-size: 5.0vmin;}
-        .bottomPicTxt     {color: rgba(244, 210, 161, 1.0);                                  line-height: 5.0vmin;
-                           font-size: 5.0vmin;}
-        .rightBackPicTxt  {color: rgba(244, 210, 161, 1.0);}        
-
+        .frontPicTxt {
+            color: rgba(244, 210, 161, 1.0);
+        }
+        
+        .backPicTxt {
+            color: rgba(244, 210, 161, 1.0);
+        }
+        
+        .leftFrontPicTxt {
+            color: rgba(244, 210, 161, 1.0);
+        }
+        
+        .rightBackPicTxt {
+            color: rgba(244, 210, 161, 1.0);
+        }
+        
+        .leftBackPicTxt {
+            color: rgba(244, 210, 161, 1.0);
+        }
+        
+        .rightFrontPicTxt {
+            color: rgba(244, 210, 161, 1.0);
+        }
+        
+        .leftPicTxt {
+            color: rgba(244, 210, 161, 1.0);
+        }
+        
+        .rightPicTxt {
+            color: rgba(244, 210, 161, 1.0);
+        }
+        
+        .topPicTxt {
+            color: rgba(244, 210, 161, 1.0);
+            line-height: 5.0vmin;
+            font-size: 5.0vmin;
+        }
+        
+        .bottomPicTxt {
+            color: rgba(244, 210, 161, 1.0);
+            line-height: 5.0vmin;
+            font-size: 5.0vmin;
+        }
+        
+        .rightBackPicTxt {
+            color: rgba(244, 210, 161, 1.0);
+        }
         
         .underline {
             text-decoration: underline;
@@ -311,9 +315,42 @@
             top: -0.53vmin !important;
         }
         
-        button {
-            left: 5vmin !important;
+        select {
+            display: inline-block;
+            position: relative;
+            top: -6.25vmin !important;
+            left: 2.75% !important;
+        }        
+        
+        #cube a {
+            display: inline-block;
+            color: rgba(0, 0, 255, 1.0);
+            text-shadow: 0px 0px rgba(6, 6, 6, 1.0);
+            background-color: rgba(244, 210, 161, 1.0);
+            border-radius: 15px;
+            border: 2px solid rgba(211, 211, 211, 1.0);
         }
+        
+        #cube a:hover {
+            /*            color: rgba(0,0,255,1.0);*/
+            font-size: 1.11em;
+            border: 2px solid rgba(255, 255, 255, 1.0);
+            transition: all 0.75s ease-in-out;
+        }
+        
+        button#spin {
+            position: relative;
+            top: -7vmin !important;
+            left: 5.5vmin !important;
+        }
+        
+        button#spin:hover {
+            border: 2px solid rgba(255, 255, 255, 1.0) !important;
+            transition: all 0.75s ease-in-out;
+        }
+        
+
+        
     </style>
 </head>
 
@@ -322,10 +359,11 @@
     <h2 id="aboutTitle">&gt; About &lt;</h2>
     <br />
     <br />
+    <div></div>
     <div>
-        <button type="button">Spin</button>
+        <button type="button" id="spin">Spin</button>
         <br />
-        <select>
+        <select enable>
             <option value="Front">Front</option>
             <option value="Back">Back</option>
             <option value="RightBack">RightBack</option>
@@ -340,62 +378,61 @@
 
         <div id="containerAbout">
             <div id="cube">
-                
+
                 <div class="side" id="front">
-                    <p class="frontPicTxt">front We LOVE our customers and are
+                    <p class="frontPicTxt">We LOVE our customers and are
                         <br /> determined to succeed in the daunting task
                         <br /> of your estate sale!</p>
                 </div>
-                
+
                 <div class="side" id="rightFront">
-                    <p class="rightFrontPicTxt">rightFront We take great pride in the professional manner in which we provide timely,
+                    <p class="rightFrontPicTxt">We take great pride in the professional manner in which we provide timely,
                         <br />cost-effective but friendly service.</p>
                 </div>
-                
+
                 <div class="side" id="leftFront">
-                    <p class="leftFrontPicTxt">leftFront We take great pride in the professional manner in which we provide timely,
+                    <p class="leftFrontPicTxt">We take great pride in the professional manner in which we provide timely,
                         <br />cost-effective but friendly service.</p>
                 </div>
 
                 <div class="side" id="back">
-                    <p class="backPicTxt">back We provide a personalized service
-                        <br />meeting the needs <span class="underline">you</span> have identified. So <a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/">contact us!</a></p>
+                    <p class="backPicTxt">We provide a personalized service
+                        <br />meeting the needs <span class="underline">you</span> have identified. So&nbsp;
+                        <br/> <a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/"> contact us! </a></p>
                 </div>
-                
+
                 <div class="side" id="rightBack">
-                    <p class="rightBackPicTxt">rightBack We take great pride in the professional manner in which we provide timely,
+                    <p class="rightBackPicTxt">We take great pride in the professional manner in which we provide timely,
                         <br />cost-effective but friendly service.</p>
                 </div>
 
                 <div class="side" id="leftBack">
-                    <p class="leftBackPicTxt">leftBack We take great pride in the professional manner in which we provide timely
+                    <p class="leftBackPicTxt">We take great pride in the professional manner in which we provide timely
                         <br />cost-effective but friendly service.</p>
                 </div>
 
                 <div class="side" id="right">
-                    <p class="rightPicTxt">right We take great pride in the professional manner in which we provide timely,
+                    <p class="rightPicTxt">We take great pride in the professional manner in which we provide timely,
                         <br />cost-effective but friendly service.</p>
                 </div>
 
                 <div class="side" id="left">
-                    <p class="leftPicTxt">left We have the skills and experience,
+                    <p class="leftPicTxt">We have the skills and experience,
                         <br />to make an overwhelming task seem manageable again.</p>
                 </div>
 
                 <div class="side top" id="top">
-                    <p class="topPicTxt">So<a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/"> contact us </a>and <br />delegate<br /> one of your many responsibilies,
-                        <br /> with peace of mind and with <span class="underline">our</span> satisfaction guarantee.</p>                
+                    <p class="topPicTxt">So &nbsp;
+                        <br/><a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/">contact us</a>
+                        <br /> and delegate one of your many responsibilies,
+                        <br /> with peace of mind and with <span class="underline">our</span> satisfaction guarantee.</p>
                 </div>
                 <div class="side Bot" id="bottom">
-                    <p class="bottomPicTxt">bottom So<a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/"> contact us </a>and delegate one of your many responsibilies,
+                    <p class="bottomPicTxt">bottom So
+                        <br /><a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/"> contact us </a>
+                        <br />and delegate one of your many responsibilies,
                         <br /> with peace of mind and with <span class="underline">our</span> satisfaction guarantee.</p>
                 </div>
-                <!--
-                <div class="side" id="bottomBack">
-                    <p class="bottomBackPicTxt">bottomBack So <a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/">contact us</a> and delegate one of your many responsibilies,
-                        <br /> with peace of mind and with <span class="underline">our</span> satisfaction guarantee.</p>
-                </div>
--->
 
             </div>
         </div>
@@ -429,12 +466,6 @@
             }
             lastSide = random;
             rotateCube(sides[random]);
-//            debugger;
-//            if (sides[random] === "Bottom") {
-//                $("#top").addClass("flip");
-//            } else {
-//                $("#top").addClass("flipReverse");
-//            }
         }, 5000);
     </script>
 </body>

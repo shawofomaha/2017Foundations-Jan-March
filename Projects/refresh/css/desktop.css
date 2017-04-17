@@ -18,6 +18,7 @@ footer ul {
 }
 
 #on-hidden-menu ul {
+    height: 0;
     display: none;
 }
 
