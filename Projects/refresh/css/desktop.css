@@ -20,3 +20,11 @@ footer ul {
 #on-hidden-menu ul {
     display: none;
 }
+
+        nav li a:hover {
+            -moz-transition: all .75s ease-in-out;
+            -o-transition: all .75s ease-in-out;
+            -ms-transition: all .75s ease-in-out;
+            -webkit-transition: all .75s ease-in-out;            
+            transition: all 0.75s ease-in-out;
+        }

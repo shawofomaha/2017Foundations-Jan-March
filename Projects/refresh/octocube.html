@@ -59,6 +59,42 @@
             transform: translate(-86%, -66%);
         }
         
+        #cube.showFront {
+            transform: rotateY(0deg);
+        }
+        
+        #cube.showBack {
+            transform: rotateY(180deg);
+        }
+        
+        #cube.showRightBack {
+            transform: rotateY(135deg);
+        }
+        
+        #cube.showRight {
+            transform: rotateY(-90deg);
+        }
+        
+        #cube.showRightFront {
+            transform: rotateY(45deg);
+        }
+        
+        #cube.showLeft {
+            transform: rotateY(90deg);
+        }
+        
+        #cube.showLeftBack {
+            transform: rotateY(-135deg);
+        }
+        
+        #cube.showTop {
+            transform: rotateX(-90deg);
+        }
+        
+        #cube.showBottom {
+            transform: rotateX(90deg);
+        }
+        
         .side {
             min-width: 100%;
             min-height: 100%;
@@ -86,11 +122,6 @@
             line-height: 2.3vmin;
             border-radius: 50%;
         }
-        /*
-        rgba(35, 60, 39, 1.0);<=Green
-        rgba(255, 175, 175, 1.0);<==Pink
-        rgba(244, 210, 161, 1.0):<==Tan
-*/
         
         .Bot {
             width: 140%;
@@ -104,9 +135,9 @@
             text-align: center;
             line-height: 2.3vmin;
             border: 15px solid transparent;
-            -moz-border-image: -moz-linear-gradient(top, rgba(35, 60, 39, 1.0) 0%, rgba(244, 210, 161, 1.0) 100%);
-            -webkit-border-image: -webkit-linear-gradient(top, rgba(35, 60, 39, 1.0) 0%, rgba(244, 210, 161, 1.0) 100%);
-            border-image: linear-gradient(to bottom, rgba(80, 132, 89, 1.0) 0%, rgba(244, 210, 161, 1.0) 100%);
+            -moz-border-image: -moz-linear-gradient(top, rgba(35, 60, 39, 1.0) 0%, rgba(255, 175, 175, 1.0) 100%);
+            -webkit-border-image: -webkit-linear-gradient(top, rgba(35, 60, 39, 1.0) 0%, rgba(255, 175, 175, 1.0) 100%);
+            border-image: linear-gradient(to bottom, rgba(80, 132, 89, 1.0) 0%, rgba(255, 175, 175, 1.0) 100%);
             border-image-slice: 1;
         }
         
@@ -132,112 +163,61 @@
             padding-top: 9vmin;
         }
         
-        
         #bottomBack {}
         
         #back {
-            background-color: black;
             background-image: url("http://lorempixel.com/g/800/600/");
-            backface-visibility: hidden;
+             backface-visibility: hidden; 
             transform: rotateY(180deg) translateZ(54vmin);
         }
         
-        #cube.showBack {
-            transform: rotateY(180deg);
-        }
-        
-        #front {
-            background-color: black;
-            background-image: url("media/Workman%20Estate%20Sale.jpeg");
-            /*             backface-visibility: hidden;*/
-            transform: rotateY(0deg) translateZ(54vmin);
-        }
-        
-        #cube.showFront {
-            transform: rotateY(0deg);
-        }
-        
         #rightBack {
-            background-image: url("http://lorempixel.com/g/900/740/abstract");
-            backface-visibility: hidden;
+            background-image: url("http://lorempixel.com/g/900/740/");
+             backface-visibility: hidden;
             transform: rotateY(135deg) translateZ(54vmin);
         }
         
-        #cube.showRightBack {
-            transform: rotateY(-135deg);
-        }
-        
-        #leftBack {
-            background-image: url("http://lorempixel.com/980/960/abstract");
-            backface-visibility: hidden;
-            transform: rotateY(-135deg) translateZ(54vmin);
-            <></>
-        }
-        
-        #cube.showLeftBack {
-            transform: rotateY(135deg);
-            /*            transform: rotateX(360deg);*/
-        }
-        
         #right {
-            background-image: url("media/holly3.JPG");
-            backface-visibility: hidden;
+            background-image: url("http://lorempixel.com/g/980/960/");
+             backface-visibility: hidden;
             transform: rotateY(90deg) translateZ(54vmin);
         }
         
-        #cube.showRight {
-            transform: rotateY(-90deg);
-        }
-        
-        #left {
-            background-image: url("media/holly.JPG");
-            backface-visibility: hidden;
-            transform: rotateY(-90deg) translateZ(54vmin);
-        }
-        
-        #cube.showLeft {
-            transform: rotateY(90deg);
-        }
-        
         #rightFront {
-            background-image: url("http://lorempixel.com/g/640/320");
-            backface-visibility: hidden;
+            background-image: url("http://lorempixel.com/g/640/320/");
+             backface-visibility: hidden;
             transform: rotateY(45deg) translateZ(54vmin);
         }
         
-        #cube.showRightFront {
-            transform: rotateY(-45deg);
+        #front {
+            background-image: url("media/Workman%20Estate%20Sale.jpeg");
+             backface-visibility: hidden;
+            transform: rotateY(0deg) translateZ(54vmin);
         }
         
         #leftFront {
-            background-image: url("http://lorempixel.com/240/240/cats");
-            backface-visibility: hidden;
+            background-image: url("http://lorempixel.com/g/1200/960/");
+             backface-visibility: hidden;
             transform: rotateY(-45deg) translateZ(54vmin);
         }
         
-        #cube.showLeftFront {
-            transform: rotateY(45deg);
+        #left {
+            background-image: url("http://lorempixel.com/1200/960/");
+             backface-visibility: hidden;
+            transform: rotateY(-90deg) translateZ(54vmin);
+        }
+        
+        #leftBack {
+            background-image: url("http://lorempixel.com/g/1200/960/");
+             backface-visibility: hidden;
+            transform: rotateY(-135deg) translateZ(54vmin);
         }
         
         #top {
             background-image: url("media/Workman%20Estate%20Sale.jpeg");
-            backface-visibility: hidden;
+             backface-visibility: hidden;
             transform: rotateX(90deg) translateZ(42vmin);
         }
-        
-        #cube.showTop {
-            transform: rotateX(-90deg);
-        }
-        
-/*
-        .flip {
-            transform: rotateX(-180deg);
-        }
-        
-        .flipReverse {
-            transform: rotateX(180deg);
-        }
-*/
         
         #bottom {
             background-color: black;
@@ -245,24 +225,19 @@
             transform: rotateX(-90deg) translateZ(22vmin);
         }
         
-        #cube.showBottom {
-            transform: rotateX(90deg);
-        }
-        
         #bottomBack {
             background-color: black;
             backface-visibility: hidden;
-            transform: rotateX(-90deg) translateZ(-42vmin);
+            transform: rotateX(90deg) translateZ(-42vmin);
         }
         
         #aboutTitle {
             position: relative;
             font-size: 5.5vmin;
-            top: 9.5vmin;
+            top: 2.5vmin;
             z-index: +1;
             font-family: 'Architects Daughter', cursive;
-            color: rgba(244, 210, 161, 1.0);
-            text-shadow: 2px 2px  rgba(2, 2, 2, 1.0);
+            color: rgba(155, 244, 66, 1.0);
         }
         
         .frontPicTxt,
@@ -273,35 +248,18 @@
         .leftPicTxt,
         .rightPicTxt,
         .backPicTxt,
-        .rightBackPicTxt,
+        .bottomPicTxt,
         .bottomBackPicTxt {
             font-family: 'Architects Daughter', cursive;
             font-size: 3.25vmin;
             color: rgba(155, 244, 66, 0.8);
             line-height: 5.0vmin;
-            text-shadow: 2px 2px  rgba(6, 6, 6, 1.0);
         }
-
+        
         .bottomBackPicTxt {
             font-size: 5.25vmin;
             line-height: 6.0vmin;
         }
-        
-        .frontPicTxt      {color: rgba(244, 210, 161, 1.0);}
-        .backPicTxt       {color: rgba(244, 210, 161, 1.0);}
-        .leftFrontPicTxt  {color: rgba(244, 210, 161, 1.0);}
-        .rightBackPicTxt  {color: rgba(244, 210, 161, 1.0);}
-        .leftBackPicTxt   {color: rgba(244, 210, 161, 1.0);}
-        .rightFrontPicTxt {color: rgba(244, 210, 161, 1.0);}
-        .leftPicTxt       {color: rgba(244, 210, 161, 1.0);}
-        .rightPicTxt      {color: rgba(244, 210, 161, 1.0);}
-        .topPicTxt        { color: rgba(244, 210, 161, 1.0);
-                            line-height: 5.0vmin;
-                            font-size: 5.0vmin;}
-        .bottomPicTxt     {color: rgba(244, 210, 161, 1.0);                                  line-height: 5.0vmin;
-                           font-size: 5.0vmin;}
-        .rightBackPicTxt  {color: rgba(244, 210, 161, 1.0);}        
-
         
         .underline {
             text-decoration: underline;
@@ -340,62 +298,55 @@
 
         <div id="containerAbout">
             <div id="cube">
-                
                 <div class="side" id="front">
-                    <p class="frontPicTxt">front We LOVE our customers and are
+                    <p class="frontPicTxt">We LOVE our customers and are
                         <br /> determined to succeed in the daunting task
                         <br /> of your estate sale!</p>
                 </div>
-                
                 <div class="side" id="rightFront">
-                    <p class="rightFrontPicTxt">rightFront We take great pride in the professional manner in which we provide timely,
+                    <p class="rightPicTxt">rightFront We take great pride in the professional manner in which we provide timely,
                         <br />cost-effective but friendly service.</p>
                 </div>
-                
                 <div class="side" id="leftFront">
-                    <p class="leftFrontPicTxt">leftFront We take great pride in the professional manner in which we provide timely,
+                    <p class="rightPicTxt"> leftFrontWe take great pride in the professional manner in which we provide timely,
                         <br />cost-effective but friendly service.</p>
                 </div>
 
                 <div class="side" id="back">
-                    <p class="backPicTxt">back We provide a personalized service
+                    <p class="backPicTxt">We provide a personalized service
                         <br />meeting the needs <span class="underline">you</span> have identified. So <a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/">contact us!</a></p>
                 </div>
-                
                 <div class="side" id="rightBack">
-                    <p class="rightBackPicTxt">rightBack We take great pride in the professional manner in which we provide timely,
+                    <p class="rightPicTxt"> rightBack We take great pride in the professional manner in which we provide timely,
                         <br />cost-effective but friendly service.</p>
                 </div>
+                <!--
+                <div class="side" id="leftback">
+                    <p class="rightPicTxt">leftback We take great pride in the professional manner in which we provide timely,
+                        <br />cost-effective but friendly service.</p>
+                </div> 
+-->
 
-                <div class="side" id="leftBack">
-                    <p class="leftBackPicTxt">leftBack We take great pride in the professional manner in which we provide timely
-                        <br />cost-effective but friendly service.</p>
-                </div>
 
                 <div class="side" id="right">
-                    <p class="rightPicTxt">right We take great pride in the professional manner in which we provide timely,
+                    <p class="rightPicTxt">We take great pride in the professional manner in which we provide timely,
                         <br />cost-effective but friendly service.</p>
                 </div>
 
                 <div class="side" id="left">
-                    <p class="leftPicTxt">left We have the skills and experience,
+                    <p class="leftPicTxt">We have the skills and experience,
                         <br />to make an overwhelming task seem manageable again.</p>
                 </div>
 
-                <div class="side top" id="top">
-                    <p class="topPicTxt">So<a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/"> contact us </a>and <br />delegate<br /> one of your many responsibilies,
-                        <br /> with peace of mind and with <span class="underline">our</span> satisfaction guarantee.</p>                
-                </div>
+                <div class="side top" id="top"></div>
                 <div class="side Bot" id="bottom">
-                    <p class="bottomPicTxt">bottom So<a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/"> contact us </a>and delegate one of your many responsibilies,
+                    <p class="bottomPicTxt">So<a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/"> contact us </a>and delegate one of your many responsibilies,
                         <br /> with peace of mind and with <span class="underline">our</span> satisfaction guarantee.</p>
                 </div>
-                <!--
                 <div class="side" id="bottomBack">
-                    <p class="bottomBackPicTxt">bottomBack So <a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/">contact us</a> and delegate one of your many responsibilies,
+                    <p class="bottomBackPicTxt">So <a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/">contact us</a> and delegate one of your many responsibilies,
                         <br /> with peace of mind and with <span class="underline">our</span> satisfaction guarantee.</p>
                 </div>
--->
 
             </div>
         </div>
@@ -422,20 +373,14 @@
 
         var lastSide = 0;
         setInterval(function () {
-            var sides = ["Front", "RightFront", "LeftFront", "Back", "RightBack", "LeftBack", "Right", "Left", "Top", "Top", "Bottom", "Bottom"];
-            var random = parseInt(Math.random() * 12);
+            var sides = ["Front", "RightFront", "LeftFront", "Back", "RightBack", "LeftBack", "Right", "Left", "Top", "Top", "Top", "Bottom", "Bottom", "Bottom"];
+            var random = parseInt(Math.random() * 14);
             while (random == lastSide) {
-                random = parseInt(Math.random() * 12);
+                random = parseInt(Math.random() * 14);
             }
             lastSide = random;
             rotateCube(sides[random]);
-//            debugger;
-//            if (sides[random] === "Bottom") {
-//                $("#top").addClass("flip");
-//            } else {
-//                $("#top").addClass("flipReverse");
-//            }
-        }, 5000);
+        }, 3000);
     </script>
 </body>
 
