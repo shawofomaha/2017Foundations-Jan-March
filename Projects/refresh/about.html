@@ -31,24 +31,40 @@
             width: 45vmin;
             height: 45vmin;
 /*            perspective: 253vmin;*/
+	perspective: 333vmin;
+	perspective-origin: 100% 450px;            
+            
+/*
 	perspective: 253vmin;
-	perspective-origin: 50% 450px;            
-            top: -80vmin;
+	perspective-origin: 45% 41vmin;  
+*/
+/*	perspective: none;*/
+/*	perspective-origin: 0 -10%;            */
+/*            top: -80vmin;*/
             transform: translate(+110%, +23%);
+/*
+transform-origin: +355x;
+transform-origin: top;            
+*/
+/*            transform-origin: top +275px;*/
         }
         
         #cube {
             min-width: 100%;
             min-height: 100%;
             position: relative;
-            left: 25%;
-            top: 27%;
+            left: 33%;
+            top: 10.15%;
             transform-style: preserve-3d;
             transition: transform 2s;
             -ms-transition: transform 2s;
             -webkit-transition: transform 2s;
             border-radius: 25%;
-            transform: translate(-86%, -66%);
+/*            transfo<></>rm: translate(+66%, -66%);*/
+/*
+transform-origin: -355x;
+transform-origin: top;           
+*/
         }
         
         .side {
@@ -66,10 +82,10 @@
         }
         
         .top {
-            width: 230%;
-            height: 185%;
-            top: -7%;
-            left: -65%;
+            width: 290%;
+            height: 105%;
+            top: -63%;
+            left: -85%;
             position: absolute;
             box-sizing: border-box;
             /*            border: 3.5px solid rgba(155, 244, 66, 1.0);*/
@@ -240,7 +256,8 @@
         #aboutTitle {
             position: relative;
             font-size: 5.5vmin;
-            top: 8.5vmin;
+            top: 8.05vmin;
+            left: -6.5vmin;
             z-index: +1;
             font-family: 'Architects Daughter', cursive;
             color: rgba(244, 210, 161, 1.0);
