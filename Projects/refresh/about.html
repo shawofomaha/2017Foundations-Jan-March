@@ -53,7 +53,7 @@ transform-origin: top;
             min-height: 100%;
             position: relative;
             left: 33%;
-            top: 10.15%;
+            top: 5.15%;
             transform-style: preserve-3d;
             transition: transform 2s;
             -ms-transition: transform 2s;
@@ -253,7 +253,7 @@ transform-origin: top;
         #aboutTitle {
             position: relative;
             font-size: 5.5vmin;
-            top: 10.05vmin;
+            top: 12.05vmin;
             left: -6.5vmin;
             z-index: +1;
             font-family: 'Architects Daughter', cursive;
@@ -350,14 +350,18 @@ transform-origin: top;
         }
         
         #facePosition {
+            position: fixed;
             font-family: 'Architects Daughter', cursive;
             width: 20vmin;
+            top: 21.5vmin;
+            left: +1.5vmin;
             text-align: center;
             font-size: 1.11em;
             color: rgba(244, 210, 161, 1.0);
             border: 2px solid red;
             border: 2px solid rgba(244, 210, 161, 1.0);
             border-radius: 15px;
+            z-index: +20;
         }
         
         button#spin {
@@ -388,7 +392,7 @@ transform-origin: top;
     <br />
     <div></div>
     <div>
-        <div id="facePosition"></div>
+        <span id="facePosition"></span><br />
         <button type="button" id="spin">Spin</button>
         <br />
         <select enable>
