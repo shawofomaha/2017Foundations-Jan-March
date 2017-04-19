@@ -483,6 +483,7 @@ transform-origin: top;
         $("button").click(function () {
             var side = $("select").val();
             rotateCube(side);
+            $("#facePosition").text(side);
         });
 
         var lastSide = 0;
