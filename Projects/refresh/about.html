@@ -26,27 +26,26 @@
         }
         
         #containerAbout {
-/*            justify-content: space-around;*/
+            /*            justify-content: space-around;*/
             position: inherit;
             width: 45vmin;
             height: 45vmin;
-/*            perspective: 253vmin;*/
-	perspective: 333vmin;
-	perspective-origin: 100% 450px;            
-            
-/*
+            /*            perspective: 253vmin;*/
+            perspective: 333vmin;
+            perspective-origin: 100% 450px;
+            /*
 	perspective: 253vmin;
 	perspective-origin: 45% 41vmin;  
 */
-/*	perspective: none;*/
-/*	perspective-origin: 0 -10%;            */
-/*            top: -80vmin;*/
+            /*	perspective: none;*/
+            /*	perspective-origin: 0 -10%;            */
+            /*            top: -80vmin;*/
             transform: translate(+110%, +23%);
-/*
+            /*
 transform-origin: +355x;
 transform-origin: top;            
 */
-/*            transform-origin: top +275px;*/
+            /*            transform-origin: top +275px;*/
         }
         
         #cube {
@@ -60,8 +59,8 @@ transform-origin: top;
             -ms-transition: transform 2s;
             -webkit-transition: transform 2s;
             border-radius: 25%;
-/*            transfo<></>rm: translate(+66%, -66%);*/
-/*
+            /*            transfo<></>rm: translate(+66%, -66%);*/
+            /*
 transform-origin: -355x;
 transform-origin: top;           
 */
@@ -96,7 +95,7 @@ transform-origin: top;
             line-height: 2.3vmin;
             border-radius: 50%;
         }
-/*
+        /*
         rgba(35, 60, 39, 1.0);<=Green
         rgba(255, 175, 175, 1.0);<==Pink
         rgba(244, 210, 161, 1.0):<==Tan
@@ -140,10 +139,9 @@ transform-origin: top;
             padding: 2vmin;
             padding-top: 9vmin;
         }
-
         
         #back {
-/*            background-color: black;*/
+            /*            background-color: black;*/
             background-image: url("http://lorempixel.com/g/800/600/");
             backface-visibility: hidden;
             transform: rotateY(180deg) translateZ(54vmin);
@@ -244,8 +242,7 @@ transform-origin: top;
         #cube.showBottom {
             transform: rotateX(90deg);
         }
-        
-/*
+        /*
         #bottomBack {
             background-color: black;
             backface-visibility: hidden;
@@ -334,7 +331,7 @@ transform-origin: top;
         
         footer2 ul {
             top: -0.53vmin !important;
-        }        
+        }
         
         #cube a {
             display: inline-block;
@@ -350,6 +347,15 @@ transform-origin: top;
             font-size: 1.11em;
             border: 2px solid rgba(255, 255, 255, 1.0);
             transition: all 0.75s ease-in-out;
+        }
+        
+        #facePosition {
+            font-family: 'Architects Daughter', cursive;
+            width: 21vmin;
+            text-align: center;
+            font-size: 1.11em;
+            color: aliceblue;
+            border: 2px solid red;
         }
         
         button#spin {
@@ -370,7 +376,6 @@ transform-origin: top;
             top: +0.25vmin !important;
             left: 2.75% !important;
         }
-        
     </style>
 </head>
 
@@ -381,6 +386,7 @@ transform-origin: top;
     <br />
     <div></div>
     <div>
+        <div id="facePosition"></div>
         <button type="button" id="spin">Spin</button>
         <br />
         <select enable>
@@ -486,6 +492,7 @@ transform-origin: top;
             }
             lastSide = random;
             rotateCube(sides[random]);
+            $("#facePosition").text(sides[random]);
         }, 5000);
     </script>
 </body>
