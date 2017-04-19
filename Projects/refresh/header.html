@@ -17,6 +17,11 @@
 
     <title>Refresh Estate Sales</title>
     <style>
+        
+        #title {
+/*            display: none;*/
+            line-height: 0px;
+        }
         .hdr {
             position: fixed;
             top: 0;
@@ -326,8 +331,12 @@
         
         #on-hidden-menu img {
             position: fixed;
-            top: 1.75vmin;
+            top: 3.25vmin;
         }
+        #on-hidden-menu div {
+            position: fixed;
+            top: 0.75vmin;
+        }        
         /*     drop down menu  end  *************************/
         
         .logo {
@@ -336,16 +345,16 @@
             margin: 0;
             border-radius: 50%;
             z-index: +15;
-            left: 85%;
-            transform: translate(-50%);
+            left: 40%;
+/*            transform: translate(-50%);*/
         }
         
         img.logo {
             position: absolute;
-            top: -9vmin;
+            top: -7.0vmin;
             width: 24vmin;
             height: 24vmin;
-            z-index: +2;
+            z-index: -0;
         }
         
         /* hide this element in favor of hamburger nav, it will sucked into hamburger menu, this keeps it from briefly appearring while jquery completes page load   */
@@ -361,7 +370,7 @@
             init: function () {
                 //                debugger;                
                 this.resize();
-                $('<div id="on-hidden-menu" style="z-index: +2222";><div class="toggle "><span><img src="media/menu-hamburger-32x32.png" height="30vmin";/></span></div><ul></ul></div>').hide().insertAfter(this.$menu);
+                $('<div id="on-hidden-menu" style="z-index: +2222";><div class="toggle "><span><img src="media/menu-hamburger-32x32.png" height="30vmin";/></span><br/><div>Menu</div></div><ul></ul></div>').hide().insertAfter(this.$menu);
                 // toggle
                 $('#on-hidden-menu .toggle').click(function () {
                     $('#on-hidden-menu').toggleClass('open');
@@ -423,7 +432,8 @@
                     <li><a href="mission.html">Mission</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/">Contact</a></li>
-                    <span id="title">Refresh Estate Sales</span>
+                    <span id="title"></span>
+<!--                    <span id="title">Refresh Estate Sales</span>-->
                 </ul>
 
                 <div>
