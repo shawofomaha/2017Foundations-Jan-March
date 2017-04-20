@@ -9,17 +9,17 @@
     <link rel="stylesheet" href="css/main.css">
     <link media="all and (min-width: 250px)" rel="stylesheet" href="css/handheld.css">
     <link media="all and (min-width: 768px)" rel="stylesheet" href="css/desktop.css">
-    
-    <style>
 
+    <style>
         #container {
             top: -20.25vmin !important;
         }
-
-        img.logo{
+        
+        img.logo {
             top: -8.5vmin !important;
-/*            transform: translate(312%) !important;*/
+            /*            transform: translate(312%) !important;*/
         }
+        
         #salesTitle {
             position: relative;
             font-size: 5.5vmin;
@@ -64,8 +64,16 @@
             position: relative;
             margin: 2vmin 0 2vmin 0;
             border: 2px dotted blue;
-            min-height: 20vmin;
-            min-width: 20vmin;
+/*            min-height: 20vmin;*/
+            min-width: 35vmin;
+        }
+        
+        #map iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
         
         #mapTxt p {
@@ -92,22 +100,21 @@
         }
         
         #saleDescTxt.txt {
-            
             overflow: auto;
         }
+        
         span.itemTxt {
             font-size: 3.25vmin !important;
         }
         
         p.txt img.pic {
-            
             margin-right: 1vmin;
-        }  
+        }
         
         .paisleyBorderBottom {
             top: -8.5vmin;
             z-index: -1;
-        }        
+        }
         
         footer2 ul {
             top: -9.0vmin !important;
@@ -134,9 +141,10 @@
                     <p>May 7, 2017
                         <br /> 9AM-6PM</p>
                 </div>
+
                 <div id="mapAll">
                     <div id="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12002.512671007407!2d-96.09969875!3d41.22987285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1492444201260" width="72vmin" height="230vmin" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12002.512671007407!2d-96.09969875!3d41.22987285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1492444201260"  frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                     <div id="addrTxt">
                         <h3>Sale Address</h3>
@@ -176,10 +184,10 @@
                 <div class="price">
                     <span> Priceless! </span>
                     <br />
-                
-<!--                <button type="button">Buy</button>-->
-                    <input type="button" onclick="location.href='http://buy.refreshestatesales.biz/public_html/buy/index.php/shop/';" value="Buy" /> 
-                </div>        
+
+                    <!--                <button type="button">Buy</button>-->
+                    <input type="button" onclick="location.href='http://buy.refreshestatesales.biz/public_html/buy/index.php/shop/';" value="Buy" />
+                </div>
             </div>
 
             <div class="picBox">
@@ -190,10 +198,10 @@
                 <div class="price">
                     <span> $49.90</span>
                     <br />
-<!--                <button type="button" id="button3" class="price">Buy</button>-->
-                    <input type="button" onclick="location.href='http://buy.refreshestatesales.biz/public_html/buy/index.php/shop/';" value="Buy" /> 
+                    <!--                <button type="button" id="button3" class="price">Buy</button>-->
+                    <input type="button" onclick="location.href='http://buy.refreshestatesales.biz/public_html/buy/index.php/shop/';" value="Buy" />
                     <br />
-                </div>         
+                </div>
             </div>
 
             <div class="picBox">
@@ -204,9 +212,9 @@
                 <div class="price">
                     <span> $69.90 or obo</span>
                     <br />
-<!--                <button type="button" id="button4" class="price">Buy</button>-->
-                    <input type="button" onclick="location.href='http://buy.refreshestatesales.biz/public_html/buy/index.php/shop/';" value="Buy" />       
-                </div>         
+                    <!--                <button type="button" id="button4" class="price">Buy</button>-->
+                    <input type="button" onclick="location.href='http://buy.refreshestatesales.biz/public_html/buy/index.php/shop/';" value="Buy" />
+                </div>
             </div>
 
             <div class="picBox">
@@ -218,9 +226,9 @@
                 <div class="price">
                     <span> Make offer</span>
                     <br />
-<!--                <button type="button" id="button5" class="price">Buy</button>-->
-                    <input type="button" onclick="location.href='http://buy.refreshestatesales.biz/public_html/buy/index.php/shop/';" value="Buy" />     
-                </div>         
+                    <!--                <button type="button" id="button5" class="price">Buy</button>-->
+                    <input type="button" onclick="location.href='http://buy.refreshestatesales.biz/public_html/buy/index.php/shop/';" value="Buy" />
+                </div>
             </div>
 
         </div>
@@ -230,9 +238,8 @@
 
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <script>
-
         $("header").load("header1.html");
-//        $("#footer").load("footer.html");
+        //        $("#footer").load("footer.html");
 
         var movX = parseInt(Math.random() * 5) + 1;
         var movY = parseInt(Math.random() * 5) + 1;
@@ -256,7 +263,7 @@
             var ballWidth = $("#ball").width();
             var width = $("#container").width();
             var height = $("#container").height();
-            height  = height + (height * .07);
+            height = height + (height * .07);
             var x = parseInt($("#ball").css("left").split("px")[0]) + movX;
             var y = parseInt($("#ball").css("top").split("px")[0]) + movY;
             if (x > width - ballWidth / 2) {
@@ -280,24 +287,37 @@
         }, 69);
 
         function myStopFunction() {
-            $("#ball").css({"display": "none"});            
+            $("#ball").css({
+                "display": "none"
+            });
         }
-        
+
         function mySpinFunction() {
             $("#ball").toggleClass("spinBall");
         }
-        
-        var myTimeoutVar1; 
-        var myTimeoutVar2; 
+
+        var myTimeoutVar1;
+        var myTimeoutVar2;
         $("#ball").click(function () {
-            
+
             $('#sound1').get(0).play();
             clearInterval(myVar);
-            $("#ball").css({"border": "5px dotted rgba(60, 104, 68, 1.0)"});
-            $("#ball").css({"background-color": "rgba(201, 129, 4, 1.0)"});
-            $("#ball").css({ "transform": "translate(-50%, -50%)", "transition": "all 2.69s ease-in"});  
-            myTimeoutVar1 = setTimeout(function(){ myStopFunction(); }, 12800);            
-            myTimeoutVar2 = setTimeout(function(){ mySpinFunction(); }, 9000);        
+            $("#ball").css({
+                "border": "5px dotted rgba(60, 104, 68, 1.0)"
+            });
+            $("#ball").css({
+                "background-color": "rgba(201, 129, 4, 1.0)"
+            });
+            $("#ball").css({
+                "transform": "translate(-50%, -50%)",
+                "transition": "all 2.69s ease-in"
+            });
+            myTimeoutVar1 = setTimeout(function () {
+                myStopFunction();
+            }, 12800);
+            myTimeoutVar2 = setTimeout(function () {
+                mySpinFunction();
+            }, 9000);
         });
 
         $(".price").click(function () {
