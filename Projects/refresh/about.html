@@ -12,6 +12,11 @@
     <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">
 
     <style>
+        img.logo {
+            position: fixed;
+            top: -9vmin !important;
+            left: 77vmin;
+        }
         img.homeLeft {
             position: absolute;
             top: 0vmin;
@@ -30,22 +35,9 @@
             position: inherit;
             width: 45vmin;
             height: 45vmin;
-            /*            perspective: 253vmin;*/
             perspective: 333vmin;
             perspective-origin: 100% 450px;
-            /*
-	perspective: 253vmin;
-	perspective-origin: 45% 41vmin;  
-*/
-            /*	perspective: none;*/
-            /*	perspective-origin: 0 -10%;            */
-            /*            top: -80vmin;*/
             transform: translate(+110%, +23%);
-            /*
-transform-origin: +355x;
-transform-origin: top;            
-*/
-            /*            transform-origin: top +275px;*/
         }
         
         #cube {
@@ -59,11 +51,6 @@ transform-origin: top;
             -ms-transition: transform 2s;
             -webkit-transition: transform 2s;
             border-radius: 25%;
-            /*            transfo<></>rm: translate(+66%, -66%);*/
-            /*
-transform-origin: -355x;
-transform-origin: top;           
-*/
         }
         
         .side {
@@ -71,7 +58,6 @@ transform-origin: top;
             min-height: 100%;
             position: absolute;
             box-sizing: border-box;
-            /*            border: 5px solid black;*/
             border: 1.5px solid rgba(244, 210, 161, 1.0);
             color: rgba(255, 255, 255, 0.8);
             font-size: 2.3vmin;
@@ -81,13 +67,12 @@ transform-origin: top;
         }
         
         .top {
-            width: 290%;
+            width: 275%;
             height: 105%;
-            top: -63%;
-            left: -85%;
+            top: -49%;
+            left: -71%;
             position: absolute;
             box-sizing: border-box;
-            /*            border: 3.5px solid rgba(155, 244, 66, 1.0);*/
             border: 2.5px solid rgba(244, 210, 161, 1.0);
             color: rgba(255, 255, 255, 0.8);
             font-size: 2.3vmin;
@@ -105,7 +90,7 @@ transform-origin: top;
             width: 140%;
             /*            height: 185%;*/
             border-radius: 0%;
-            top: -7%;
+            top: 33%;
             left: -25%;
             position: absolute;
             color: rgba(255, 255, 255, 0.8);
@@ -141,7 +126,6 @@ transform-origin: top;
         }
         
         #back {
-            /*            background-color: black;*/
             background-image: url("http://lorempixel.com/g/800/600/");
             backface-visibility: hidden;
             transform: rotateY(180deg) translateZ(54vmin);
@@ -176,7 +160,6 @@ transform-origin: top;
             background-image: url("http://lorempixel.com/980/960/abstract");
             backface-visibility: hidden;
             transform: rotateY(-135deg) translateZ(54vmin);
-            <></>
         }
         
         #cube.showLeftBack {
@@ -242,23 +225,16 @@ transform-origin: top;
         #cube.showBottom {
             transform: rotateX(90deg);
         }
-        /*
-        #bottomBack {
-            background-color: black;
-            backface-visibility: hidden;
-            transform: rotateX(-90deg) translateZ(-42vmin);
-        }
-*/
         
         #aboutTitle {
             position: relative;
             font-size: 5.5vmin;
-            top: 13.5vmin;
+            top: 16.5vmin;
             left: -6.5vmin;
             z-index: +1;
             font-family: 'Architects Daughter', cursive;
             color: rgba(244, 210, 161, 1.0);
-            text-shadow: 2px 2px rgba(255, 255, 255, 0.55);
+            text-shadow: 1px 1.5px rgba(255, 255, 255, 0.55);
         }
         
         .frontPicTxt,
@@ -343,7 +319,6 @@ transform-origin: top;
         }
         
         #cube a:hover {
-            /*            color: rgba(0,0,255,1.0);*/
             font-size: 1.11em;
             border: 2px solid rgba(255, 255, 255, 1.0);
             transition: all 0.75s ease-in-out;
@@ -356,12 +331,12 @@ transform-origin: top;
             top: 19.5vmin;
             left: +1.5vmin;
             text-align: center;
-            font-size: 1.11em;
+            font-size: 0.7em;
             color: rgba(244, 210, 161, 1.0);
             border: 2px solid red;
             border: 2px solid rgba(244, 210, 161, 1.0);
             border-radius: 15px;
-            z-index: +20;
+            z-index: +0;
         }
         
         button#spin {
@@ -474,7 +449,7 @@ transform-origin: top;
 
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <script>
-        $("header").load("header.html");
+        $("header").load("header1.html");
         //$("#footer").load("footer.html");
 
         //Front, Back, Right, Left, Top, Bottom,

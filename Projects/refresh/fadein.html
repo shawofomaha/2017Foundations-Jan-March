@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .fadein,
+        .fadeout {
+            opacity: 0;
+            -moz-transition: opacity 0.4s ease-in-out;
+            -o-transition: opacity 0.4s ease-in-out;
+            -webkit-transition: opacity 0.4s ease-in-out;
+            transition: opacity 0.4s ease-in-out;
+        }
+        
+        .fadein {
+            opacity: 1;
+        }
+        
+        #menuHamburgerButton {
+            border: 2px solid red;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container" style="padding: 40px">
+        <button id="menuHamburgerButton">menuHamburgerButton</button>
+        <div id="menuFade" class="fadeout">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sales.html">Sales</a></li>
+                <li><a href="mission.html">Mission</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/">Contact</a></li>
+                <span id="title"></span>
+                <!--                    <span id="title">Refresh Estate Sales</span>-->
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script>
+        $("#menuHamburgerButton").click(function () {
+            if ($("#menuFade").hasClass("fadeout"))
+                $("#menuFade").removeClass("fadeout").addClass("fadein");
+            else
+                $("#menuFade").removeClass("fadein").addClass("fadeout");
+        });
+    </script>
+</body>
+
+</html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">

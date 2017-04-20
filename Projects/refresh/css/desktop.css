@@ -2,7 +2,7 @@
 span#title {
     position: relative;
     font-family: 'Architects Daughter', cursive;
-    text-shadow: 2px 2px rgba(112, 127, 116, 1.0);
+    text-shadow: 0.75px 0.75px rgba(112, 127, 116, 1.0);
     color: rgba(242, 232, 218, 0.9);
     top: 1vmin !important;
     left: 0vmin;
@@ -13,9 +13,11 @@ span#title {
 }
 
 
+/*
 footer ul {
     display: inline-block;
 }
+*/
 
 /*#on-hidden-menu ul {*/
 /*
@@ -23,14 +25,14 @@ footer ul {
     display: none;
 }
 */
-nav li {
-    display: none;
-}
-/*
+/*nav li {*/
+/*    display: none;*/
+/*}*/
+
         nav li a:hover {
             -moz-transition: all .75s ease-in-out;
             -o-transition: all .75s ease-in-out;
             -ms-transition: all .75s ease-in-out;
             -webkit-transition: all .75s ease-in-out;            
             transition: all 0.75s ease-in-out;
-        }*/
+        }

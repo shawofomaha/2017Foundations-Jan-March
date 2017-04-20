@@ -13,9 +13,9 @@ span#title {
     z-index: +15;
 }
 
-footer ul {
-    display: none;
-}
+/*footer ul {*/
+/*    display: none;*/
+/*}*/
 
 #on-hidden-menu li a {
     z-index: +3333 !important;

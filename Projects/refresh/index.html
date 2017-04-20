@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link media="all and (min-width: 250px)" rel="stylesheet" href="css/handheld.css">
     <link media="all and (min-width: 768px)" rel="stylesheet" href="css/desktop.css">
-    
+
     <style>
         body {
             min-height: 150vh;
@@ -33,14 +33,14 @@
         #homeTitle {
             position: relative;
             font-size: 5.5vmin;
-/*            text-shadow: 2px 2px rgba(112, 127, 116, 1.0);*/
-           text-shadow:2px 2px  rgba(255, 255, 255, 0.55);
+            /*            text-shadow: 2px 2px rgba(112, 127, 116, 1.0);*/
+            text-shadow: 1px 1.25px rgba(255, 255, 255, 0.55);
             color: rgba(244, 210, 161, 0.9);
-            top: 14.5vmin;
+            top: 16.5vmin;
             left: -7vmin;
             z-index: +0;
             font-family: 'Architects Daughter', cursive;
-/*            transform: translate(-50%, -10%) !important;*/
+            /*            transform: translate(-50%, -10%) !important;*/
         }
         
         #indexInfoBox .para {
@@ -60,34 +60,27 @@
             overflow-x: hidden;
             overflow-y: auto;
             top: 2.05vmin;
-/*            background-color: black;*/
-            margin: 3.5vmin; 
-/*            color: aliceblue;*/
+            margin: 3.5vmin;
             color: rgba(2, 2, 2, 1.0) !important;
-/*            font-family: 'Architects Daughter', cursive; shadow*/
-/*            text-shadow: 1px 1px rgba(112, 127, 116, 1.0);*/
-/*            text-shadow: 1px 1px rgba(2, 1, 1, 1.0);*/
-             text-shadow: 1px 1.15px rgba(244, 210, 161, 0.95);
-/*            font-family: 'Akronim', cursive;*/
+            text-shadow: 1px 1.15px rgba(244, 210, 161, 0.95);
             text-shadow: 1px 1px rgba(244, 210, 161, 0.49);
             font-family: 'Aladin', cursive;
             font-weight: bolder;
-/*            font-family: 'Roboto', sans-serif;*/
             font-size: 3.75vmin;
             min-width: 80%;
             min-height: 60vmin;
-            border-top: 1px solid rgba(255,255,255,1.0);
-            border-bottom: 1px solid rgba(255,255,255,1.0);
+            border-top: 1px solid rgba(255, 255, 255, 1.0);
+            border-bottom: 1px solid rgba(255, 255, 255, 1.0);
             border-radius: 35px;
         }
         
         p.ownerContact {
             transform: translate(20%);
         }
-         
+        
         p.ownerContact a {
             text-shadow: 0px 0px rgba(244, 244, 244, 0.95);
-            background-color: rgba(211,211,211,0.5);
+            background-color: rgba(211, 211, 211, 0.5);
             border-radius: 7px;
             color: rgba(0, 0, 255, 1.0);
         }
@@ -95,7 +88,7 @@
         p.ownerContact a:hover {
             color: rgba(155, 244, 66, 0.9);
         }
-               
+        
         #container {
             top: -30.75vmin !important;
             flex-direction: row;
@@ -187,6 +180,11 @@
             z-index: +0;
         }
         /* Modal end */
+        
+        img.logo {
+            top: -9.0vmin !important;
+            left: 65vmin !important;
+        }
     </style>
 </head>
 
@@ -194,11 +192,12 @@
 
     <header>Head and nav in header.html</header>
     <h2 id="homeTitle">&gt; Home &lt;</h2>
-    <br /><div id="dummy">&nbsp</div>
+    <br />
+    <div id="dummy">&nbsp</div>
     <div>
         <div id="container">
             <div id="ball"></div>
-            
+
             <audio id="sound1">
                 <source src="media/refresh_paul4.mp3" type="audio/mpeg" />
             </audio>
@@ -209,13 +208,7 @@
             <div id="indexInfoBox">
                 <div class="para">
                     <h3>Our Story</h3>
-                    <!--
-                    <p>From antiques to ascots we have the personal experience necessary to help you liquidate your estate assets. After inherting a large quantity of possessions collected for a lifetime; we were inspired to help others in this daunting task.
-                    </p>
-                    <p>So take advantage of our unique and personable approach to help manage the burden. We will walk you through the process from: pricing(inventory) to costs and then to sales! Let our specialists inspect and model handling procedures to maximize preservation and profit. </p>
-                    <p>We offer services to assist in the rigorous task of pictorially documenting the inventory regardless of size, while helping you to pre-advertise to a wider audience and there-by increasing buyers at your event.</p>
-                    <p class="ownerContact">Call for a free onsite consultation. Dave: (605) 661-1517 or Theresa: (605) 661-4558</p>
--->
+
                     <p>From antiques to ascots, we have the personal experience necessary to help you liquidate your estate assets. After inheriting a large quantity of possessions collected over a lifetime, we were inspired to help others in this daunting task.</p>
 
                     <p>So, take advantage of our unique and personable approach to help manage the burden. We will walk you through the process from pricing and inventory, to costs and then to sales! Let our specialists inspect and model handling procedures to maximize preservation and profit.</p>
@@ -223,7 +216,7 @@
                     <p>We perform the difficult and tiring task of pictorially documenting your precious possessions, while helping you to advertise to a wider audience. This will help attract more buyers to your event.</p>
 
                     <p class="ownerContact">Call for a free onsite consultation. Dave or Theresa <a href="tel:605-661-9891">&nbsp; (605) 661-9891 &nbsp;&nbsp;</a></p>
-                    
+
                 </div>
             </div>
 
@@ -301,27 +294,6 @@
             }
             //*********** Modal end *************//
 
-        // start of accordian js
-//        var acc = document.getElementsByClassName("accordion");
-//        var i;
-//
-//        for (i = 0; i < acc.length; i++) {
-//            acc[i].onclick = function () {
-//                console.log("1) i= " + i + " acc=" + acc);
-//                this.classList.toggle("active");
-//                var panel = this.nextElementSibling;
-//                if (panel.style.maxHeight) {
-//                    console.log("2)off   i= " + i + " acc=" + acc);
-//                    panel.style.maxHeight = null;
-//                } else {
-//                    //                        $(".notShown").style.maxHeight = 1;
-//                    console.log("3)on i= " + i + " acc=" + acc);
-//                    panel.style.maxHeight = panel.scrollHeight + "px";
-//                }
-//            }
-//        }
-        // end of accordian js $(".notShown").toggleClass(""); notShown
-
 
         function randomColor() {
             var r = parseInt(Math.random() * 256);
@@ -343,7 +315,7 @@
             var ballWidth = $("#ball").width();
             var width = $("#container").width();
             var height = $("#container").height();
-            height  = height + (height * .37);
+            height = height + (height * .37);
             var x = parseInt($("#ball").css("left").split("px")[0]) + movX;
             var y = parseInt($("#ball").css("top").split("px")[0]) + movY;
             if (x > width - ballWidth / 2) {
@@ -361,50 +333,74 @@
             $("#ball").css("top", y);
             $("#ball").css("left", x);
         }
-//        var myVar = setInterval(function () {
-//            moveBall()
-//        }, 25);
-//
-//        function myStopFunction() {
-//            $("#ball").css({"display": "none"});            
-//        }
-//        
-//        var myTimeoutVar; 
-//        $("#ball").click(function () {
-//            $('#sound1').get(0).play();
-//            clearInterval(myVar);
-//            $("#ball").css({"top": 55, "left": 710, "transform": "translate(-50%, -50%)", "transition": "all 2.69s ease-in"});     
-//            myTimeoutVar = setTimeout(function(){ myStopFunction(); }, 14300);        
-//        });
+        //        var myVar = setInterval(function () {
+        //            moveBall()
+        //        }, 25);
+        //
+        //        function myStopFunction() {
+        //            $("#ball").css({"display": "none"});            
+        //        }
+        //        
+        //        var myTimeoutVar; 
+        //        $("#ball").click(function () {
+        //            $('#sound1').get(0).play();
+        //            clearInterval(myVar);
+        //            $("#ball").css({"top": 55, "left": 710, "transform": "translate(-50%, -50%)", "transition": "all 2.69s ease-in"});     
+        //            myTimeoutVar = setTimeout(function(){ myStopFunction(); }, 14300);        
+        //        });
 
-        
+
         var myVar = setInterval(function () {
             moveBall()
         }, 22);
 
         function myStopFunction() {
-            $("#ball").css({"display": "none", "transition": "all 1.69s ease-in"});            
+            $("#ball").css({
+                "display": "none",
+                "transition": "all 1.69s ease-in"
+            });
         }
-        
+
         function mySpinFunction() {
             $("#ball").toggleClass("spinBall");
         }
-        
-        var myTimeoutVar1; 
-        var myTimeoutVar2; 
+
+        var myTimeoutVar1;
+        var myTimeoutVar2;
         $("#ball").click(function () {
-            
+
             $('#sound1').get(0).play();
             clearInterval(myVar);
-            $("#ball").css({"border": "5px dotted rgba(60, 104, 68, 1.0)"});
-            $("#ball").css({"background-color": "rgba(201, 129, 4, 1.0)"});
-            $("#ball").css({ "top": 55, "left": 55, "transform": "translate(-50%, -50%)", "transition": "all 2.69s ease-in"});             
-            myTimeoutVar1 = setTimeout(function(){ myStopFunction(); }, 12800);            
-            myTimeoutVar2 = setTimeout(function(){ mySpinFunction(); }, 9000);        
-        });        
+            $("#ball").css({
+                "border": "5px dotted rgba(60, 104, 68, 1.0)"
+            });
+            $("#ball").css({
+                "background-color": "rgba(201, 129, 4, 1.0)"
+            });
+            $("#ball").css({
+                "top": 55,
+                "left": 55,
+                "transform": "translate(-50%, -50%)",
+                "transition": "all 2.69s ease-in"
+            });
+            myTimeoutVar1 = setTimeout(function () {
+                myStopFunction();
+            }, 12800);
+            myTimeoutVar2 = setTimeout(function () {
+                mySpinFunction();
+            }, 9000);
+        });
 
-        $("header").load("header.html");
-//        $("#footer").load("footer.html");
+        $("header").load("header1.html");
+        //        $("#footer").load("footer.html");
+
+        $("#menuHamburgerButton").click(function () {
+            debugger;
+            if ($("#menuFade").hasClass("fadeout"))
+                $("#menuFade").removeClass("fadeout").addClass("fadein");
+            else
+                $("#menuFade").removeClass("fadein").addClass("fadeout");
+        });
     </script>
 </body>
 
