@@ -28,7 +28,7 @@ h1 {
     font-family: 'Architects Daughter', cursive;
     color: rgba(92, 244, 66, 1.0);
     font-size: 9vmin;
-    text-shadow: 2px 2px rgba(112, 127, 116, 1.0);
+    text-shadow: 0.75px 0.75px rgba(112, 127, 116, 1.0);
     line-height: 9vmin;
     top: 13.5vmin;
     left: 5vmin;
@@ -45,14 +45,14 @@ h1.hdr {
 h2,
 h3 {
     text-align: center;
-    text-shadow: 2px 2px rgba(112, 127, 116, 1.0);
+    text-shadow: 0.75px 0.75px rgba(112, 127, 116, 1.0);
     font-family: 'Architects Daughter', cursive;
     font-size: 1.15em;
     z-index: +1;
 }
 
 h3 {
-    text-shadow: 2px 2px rgba(82, 97, 86, 1.0);
+    text-shadow: 0.75px 0.75px rgba(82, 97, 86, 1.0);
 }
 
 h2 {
@@ -100,6 +100,7 @@ h2 {
 }
 
 .price {
+    font-size: 3.25vmin !important;
     text-align: center;
 }
 
@@ -107,8 +108,8 @@ button:hover,
 input:hover {
     color: white !important;
     border: 2px solid rgba(255, 255, 255, 1.0) !important;
-    font-size: 0.95em !important;
-    width: 12.5vmin;
+    font-size: 3.25vmin !important;
+    width: 9.5vw;
     transition: all 1.5s ease-in-out;
     -webkit-transition: all 1.5s ease-in-out;
 }
@@ -120,8 +121,8 @@ button {
     color: lightgray !important;
     border: 1px solid black !important;
     margin-bottom: 0.75vw;
-    min-width: 9vmin !important;
-    min-height: 4.5vmin !important;
+    width: 9vw !important;
+    height: 7.5vh !important;
     border-radius: 25% !important;
     background-image: url("../media/cherry-wood-panels-background-header.jpg");
 }
@@ -265,7 +266,7 @@ img {
     span#title {
         position: relative;
         font-family: 'Architects Daughter', cursive;
-        text-shadow: 2px 2px rgba(112, 127, 116, 1.0);
+        text-shadow: 0.75px 0.75px rgba(112, 127, 116, 1.0);
         color: rgba(242, 232, 218, 0.9);
         top: -0vmin;
         font-size: 6vmin;
