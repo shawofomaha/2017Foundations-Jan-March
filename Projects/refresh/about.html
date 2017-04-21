@@ -38,14 +38,16 @@
             height: 45vmin;
             perspective: 333vmin;
             perspective-origin: 100% 450px;
-            transform: translate(+110%, +23%);
+            transform: translate(160%, 10vh);
+/*            transform: translate(+110%, +23%);*/
         }
         
         #cube {
             min-width: 100%;
             min-height: 100%;
             position: relative;
-            left: 33%;
+/*            left: 50%;*/
+/*            transform: translate(calc(50% - 0), 0%);*/
             top: 5.15%;
             transform-style: preserve-3d;
             transition: transform 2s;
@@ -70,8 +72,8 @@
         .top {
             width: 275%;
             height: 105%;
-            top: -49%;
-            left: -71%;
+            top: -5vh;
+            left: -90%;
             position: absolute;
             box-sizing: border-box;
             border: 2.5px solid rgba(244, 210, 161, 1.0);
@@ -373,16 +375,16 @@
         <button type="button" id="spin" value="Spin">Spin</button>
         <br />
         <select enable>
-            <option value="Front">Front</option>
-            <option value="Back">Back</option>
-            <option value="RightBack">RightBack</option>
-            <option value="RightFront">RightFront</option>
-            <option value="Right">Right</option>
-            <option value="Left">Left</option>
-            <option value="LeftFront">LeftFront</option>
-            <option value="LeftBack">LeftBack</option>
-            <option value="Top">Top</option>
-            <option value="Bottom">Bottom</option>
+            <option value="Front">1-Front</option>
+            <option value="Back">2-Back</option>
+            <option value="RightBack">3-RightBack</option>
+            <option value="RightFront">4-RightFront</option>
+            <option value="Right">5-Right</option>
+            <option value="Left">6-Left</option>
+            <option value="LeftFront">7-LeftFront</option>
+            <option value="LeftBack">8-LeftBack</option>
+            <option value="Top">9-Top</option>
+            <option value="Bottom">10-Bottom</option>
         </select>
 
         <div id="containerAbout">
@@ -465,6 +467,7 @@
             var side = $("select").val();
             rotateCube(side);
             $("#facePosition").text(side);
+//            console.log("*****side= " + side);
         });
 
         var lastSide = 0;
@@ -475,6 +478,8 @@
                 random = parseInt(Math.random() * 12);
             }
             lastSide = random;
+         
+//            console.log("random= " + random + " sides[random]= " + sides[random]);
             rotateCube(sides[random]);
             $("#facePosition").text(sides[random]);
         }, 7000);
