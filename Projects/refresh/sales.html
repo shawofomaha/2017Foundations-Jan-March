@@ -44,23 +44,43 @@
         .saleLocationInfoBox {
             font-size: 3.25vmin !important;
             display: flex;
-            border: 1.25px solid rgba(244, 210, 161,1.0);
-/*            background-color: rgba(112, 127, 116, 1.0);*/
+            border: 1.25px solid rgba(244, 210, 161, 1.0);
+            /*            background-color: rgba(112, 127, 116, 1.0);*/
             width: 165vmin;
-/*            width: 95% !important;*/
-/*            min-height: 30vmin;*/
+            /*            width: 95% !important;*/
+            /*            min-height: 30vmin;*/
             border-radius: 35px;
-            padding-top: 5vmin;
+            padding-top: 7.5vmin;
             margin: 1.5vmin;
             white-space: normal;
             overflow-x: auto;
             background: rgba(112, 127, 116, 1.0);
-/*
+            /*
             rgba(112, 127, 116, 1.0);
             rgba(16, 93, 0, 1.0);
             rgba(130, 190, 1, 1.0);
             rgba(118, 173, 0,1.0);
 */
+            /* For browsers that do not support gradients */
+            background: -ms-linear-gradient(left, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0));
+            /* For Microsoft */
+            background: -webkit-linear-gradient(left, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0));
+            /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0));
+            /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0));
+            /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0));
+            /* Standard syntax */
+        }
+        
+        .itemPic {
+            display: inline-block;
+            width: 95% !important;
+        }
+        
+        .picBox {
+            border: 1.25px solid rgba(244, 210, 161, 1.0);
             /* For browsers that do not support gradients */
             background: -ms-linear-gradient(left, rgba(118, 173, 0, 1.0), rgba(16, 93, 0, 1.0));
             /* For Microsoft */
@@ -71,41 +91,24 @@
             background: -moz-linear-gradient(right, rgba(118, 173, 0, 1.0), rgba(16, 93, 0, 1.0));
             /* For Firefox 3.6 to 15 */
             background: linear-gradient(to right, rgba(118, 173, 0, 1.0), rgba(16, 93, 0, 1.0));
-            /* Standard syntax */            
-        }
-        
-        .itemPic {
-            display: inline-block;
-            width: 95% !important;
-        }
-        
-        .picBox {
-            border: 1.25px solid rgba(244, 210, 161,1.0);
-                        /* For browsers that do not support gradients */
-            background: -ms-linear-gradient(left, rgba(118, 173, 0, 1.0), rgba(16, 93, 0, 1.0));
-            /* For Microsoft */
-            background: -webkit-linear-gradient(left, rgba(118, 173, 0, 1.0), rgba(16, 93, 0, 1.0));
-            /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(right, rgba(118, 173, 0, 1.0), rgba(16, 93, 0, 1.0));
-            /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(right, rgba(118, 173, 0, 1.0), rgba(16, 93, 0, 1.0));
-            /* For Firefox 3.6 to 15 */
-            background: linear-gradient(to right, rgba(118, 173, 0, 1.0), rgba(16, 93, 0, 1.0));
-            /* Standard syntax */  
+            /* Standard syntax */
         }
         
         #mapAll {
             display: flex;
-            min-width: 38vmin;
+            min-width: 50vmin;
         }
         
         #map {
             display: inline-block;
             position: relative;
-/*            margin: 2vmin 0 2vmin 0;*/
-            border: 2px dotted blue;
-/*            min-height: 20vmin;*/
-            min-width: 35vmin;
+            /*            margin: 2vmin 0 2vmin 0;*/
+            
+            /*            min-height: 20vmin;*/
+            min-width: 63vmin;
+            border: 0.55px solid  rgba(244, 210, 161, 0.9);
+            border-radius: 15px;            
+            
         }
         
         #map iframe {
@@ -113,15 +116,17 @@
             top: -2%;
             left: -2%;
             top: -0%;
-            left: -0%;            
+            left: -0%;
             width: 100%;
             height: 100%;
+            border-radius: 15px;
         }
         
         #mapTxt p {
             display: inline-block;
             position: relative;
             min-width: 20vmin;
+            margin-left: 2vmin;
             text-align: center;
         }
         
@@ -130,17 +135,17 @@
         }
         
         #addrTxt {
-            
             min-width: 26vmin;
         }
         
         #addrTxt p {
+            text-align: center;
             margin-left: 2vmin;
         }
         
         #saleDescTxt {
-/*            position: relative;*/
-/*            min-width: 110vmin;*/
+            /*            position: relative;*/
+            /*            min-width: 110vmin;*/
         }
         
         p.txt {
@@ -195,17 +200,19 @@
                     <h3>Dates<br /> and<br /> Times</h3>
                     <p>May 7, 2017
                         <br /> 9AM-6PM</p>
+                <div id="addrTxt">
+                    <h3>Sale Address</h3>
+                    <p>12424 C St
+                        <br/>Omaha, NE 68144</p>
+                </div>                    
                 </div>
+
 
                 <div id="mapAll">
                     <div id="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12002.512671007407!2d-96.09969875!3d41.22987285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1492444201260"  frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8358.951140745967!2d-96.09969875!3d41.22987285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1492737630750" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
-                    <div id="addrTxt">
-                        <h3>Sale Address</h3>
-                        <p>12424 C St
-                            <br/>Omaha, NE 68144</p>
-                    </div>
+
                 </div>
                 <div id="saleDescTxt">
                     <h3 class="hdg">Sale Description</h3>
@@ -215,7 +222,7 @@
             </div>
 
             <div class="picBox" id="first">
-                <img class="itemPic" alt=""   src="media/Resized_20170308_155644.jpeg">
+                <img class="itemPic" alt="" src="media/Resized_20170308_155644.jpeg">
 
                 <span class="itemTxt"><h3>Picture 1</h3>Nulla domesticarum proident tamen incurreret. Dolore imitarentur incurreret malis nescius. Iis si nulla iudicem. Ab velit cernantur. Laboris ullamco ad appellat sint appellat mentitum, voluptate an quid eiusmod.</span>
                 <img class="horizLine" src="media/horizontal-line-clipart.gif" />
@@ -230,7 +237,7 @@
             </div>
 
             <div class="picBox" id="second">
-                <img class="itemPic" alt=""   src="media/Resized_20170307_133304.jpeg">
+                <img class="itemPic" alt="" src="media/Resized_20170307_133304.jpeg">
                 <span class="itemTxt"><h3>Picture 2</h3>Officia aliqua se pariatur exercitation. Consequat quo ipsum, singulis duis id 
                 eiusmod despicationes, occaecat culpa fabulas iudicem, ubi quid labore nisi cernantur. Multos ea fabulas quo ab iis illum 
                 noster velit.</span>
@@ -246,7 +253,7 @@
             </div>
 
             <div class="picBox">
-                <img class="itemPic" alt=""   src="media/Resized_20170308_154949.jpeg">
+                <img class="itemPic" alt="" src="media/Resized_20170308_154949.jpeg">
                 <span class="itemTxt"><h3>Picture 3</h3> Quis proident aut cohaerescant nam consequat labore ubi cupidatat concursionibus ne excepteur elit dolor e quae in ab duis appellat appellat, ad dolore eiusmod philosophari ex nescius nisi.</span>
                 <img class="horizLine" src="media/horizontal-line-clipart.gif" />
                 <br />
@@ -260,7 +267,7 @@
             </div>
 
             <div class="picBox">
-                <img class="itemPic" alt=""   src="media/1487296374_p1110662.jpg">
+                <img class="itemPic" alt="" src="media/1487296374_p1110662.jpg">
                 <span class="itemTxt"><h3>Picture 4</h3></span>
                 <img class="horizLine" src="media/horizontal-line-clipart.gif" />
                 <br />
@@ -273,7 +280,7 @@
             </div>
 
             <div class="picBox">
-                <img class="itemPic" alt=""   src="media/living_room_b4_sale.jpeg">
+                <img class="itemPic" alt="" src="media/living_room_b4_sale.jpeg">
                 <span class="itemTxt"><h3 style="inline-block">Picture 5</h3> Tempor ea quem. Ex amet a esse quo culpa ingeniis offendit. Litteris dolor illum vidisse sint ubi consequat o elit non excepteur an quid quamquam,fugiat possumus quo nulla quem, te summis dolore si quibusdam ne fugiat singulis ab possumus quo nulla quem, graviterque, deserunt est amet nostrud, quis id possumus. Ea minim exercitation, fugiat possumus quo nulla quem, te summis dolore si quibusdam ne fugiat singulis ab possumus quo nulla quem, graviterque, deserunt est amet nostrud, quis id possumus. Ea minim exercitation
             </span>
                 <img class="horizLine" src="media/horizontal-line-clipart.gif" />
