@@ -329,7 +329,7 @@
             position: fixed;
             font-family: 'Architects Daughter', cursive;
             width: 20vmin;
-            top: 19.5vmin;
+            top: 25.5vmin;
             left: +1.5vmin;
             text-align: center;
             font-size: 0.7em;
@@ -342,14 +342,15 @@
         
         button#spin {
             position: relative;
-            top: 1vmin !important;
+            top: 0vmin !important;
+            font-size: 3.0vw !important;
             left: 5.5vmin !important;
         }
         
         button#spin:hover {
             border: 2px solid rgba(255, 255, 255, 1.0) !important;
-            transition: all 0.75s ease-in-out;
-            -webkit-transition: all 0.75s ease-in-out;
+            transition: all 0.45s ease-in-out;
+            -webkit-transition: all 0.45s ease-in-out;
         }
         
         select {
@@ -369,7 +370,7 @@
     <div></div>
     <div>
         <span id="facePosition"></span><br />
-        <button type="button" id="spin">Spin</button>
+        <button type="button" id="spin" value="Spin">Spin</button>
         <br />
         <select enable>
             <option value="Front">Front</option>
