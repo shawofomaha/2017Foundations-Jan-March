@@ -25,7 +25,7 @@
         }
         
         #missionTitle {
-            position: relative;
+            position: fixed;
             font-size: 5.5vmin;
             color: rgba(244, 210, 161, 0.9);
             text-shadow: 1px 1.25px  rgba(255, 255, 255, 0.55);
@@ -33,6 +33,7 @@
 /*            left: -4.5vmin;*/
             font-family: 'Architects Daughter', cursive;
             z-index: +12;
+            transform: translate(280%, 0%);
         }
         
         h2 {
@@ -55,12 +56,15 @@
         }
         
         #homeTitle {
+            position: fixed !important;
+/*            transform: translate(50%, 0%);*/
             z-index: +2 !important;
         }
         
         body div {
             position: relative;
-            left: 15%;
+            top: 12vh;
+            left: 25%;
         }
         
         #wowslider-container0 {
