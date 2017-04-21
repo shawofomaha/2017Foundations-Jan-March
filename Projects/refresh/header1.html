@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>-->
 <html lang="en">
 
 <head>
@@ -148,8 +148,8 @@
             width: 24vmin;
             height: 24vmin;
             /*            transform: translate(+25%, 0);*/
-            transform: translate(calc(112vmin - 42vmin), 0%);
-            transform: translate(calc(50vw - 10vw), 0%);
+/*            transform: translate(calc(112vmin - 42vmin), 0%);*/
+            transform: translate(calc(50vw - 7vw), 0%);
             z-index: -0;
         }
         /* hide this element in favor of hamburger nav, it will sucked into hamburger menu, this keeps it from briefly appearring while jquery completes page load   */
@@ -220,14 +220,14 @@
 <body>
     <div>
         <header>
-            <span id="title"></span>
+<!--            <span id="title"></span>-->
             <!--                    <span id="title">Refresh Estate Sales</span>-->
             <span id="menuText">Menu</span>
             <a href="#">
                 <button id="menuHamburgerButton">
-                    <div><img max-height="29vmin" max-width="29vmin" src="media/menu-hamburger-24x24.png"></a>
-            </div>
-            </button>
+                    <img src="media/menu-hamburger-24x24.png">
+                </button>
+            </a>
             <!--        <div id="menuFade" class="fadeout">            -->
             <nav id="menuFade" class="fadeout">
                 <ul>
@@ -269,7 +269,6 @@
                     "transition": "all 0.6s ease-in"
                 });
         });
-
     </script>
 
     <script>
