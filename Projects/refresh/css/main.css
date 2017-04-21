@@ -63,7 +63,7 @@ h2 {
 /* ************* Start of item box ******* */
 
 .picBox {
-    border: 3px solid black;
+    border: 1.25px solid rgba(244, 210, 161,1.0);
     background-color: rgba(112, 127, 116, 1.0);
     -webkit-transition: background-color 3sec ease-in-out;
     -moz-transition: background-color 3sec ease-in-out;
@@ -72,7 +72,7 @@ h2 {
     transition: background-color 3sec ease-in-out;
     width: 140vmin;
     border-radius: 35px;
-    margin: 1vmin;
+    margin: 3.0vmin;
     white-space: normal;
     overflow: auto;
 }
@@ -82,6 +82,7 @@ h2 {
     margin: 1.5vmin;
     border: 2px solid black;
     float: left;
+    margin: 3.0vmin;
     width: 53vmin;
 }
 
