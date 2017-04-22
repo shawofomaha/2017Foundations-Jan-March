@@ -134,43 +134,67 @@
             /*            left: 65vmin;*/
             /*            transform: translate(-50%);*/
         }
-        #menuHamburgerButton img:hover {
-            background-color: rgba(121, 201, 1,0.5);
-/*            width: 7.1vw;*/
-            height: 5.4vh;
-            min-width: 16px;
-            min-height: 16px; 
-            border-radius: 5px;
-            -moz-transition: all .35s ease-in-out;
-            -o-transition: all .35s ease-in-out;
-            -ms-transition: all .35s ease-in-out;
-            -webkit-transition: all .35s ease-in-out;
-            transition: all 0.35s ease-in-out;            
-        } 
+        /*
         #menuHamburgerButton div img {
             width: 7vw;
             height: 7vh;
             min-width: 13px;
             min-height: 13px;
         }
+*/
         
         img.logo {
             position: fixed;
             top: -7.0vmin;
             width: 24vmin;
             height: 24vmin;
-            /*            transform: translate(+25%, 0);*/
-/*            transform: translate(calc(112vmin - 42vmin), 0%);*/
             transform: translate(calc(50vw - 7vw), 0%);
             z-index: -0;
         }
-        /* hide this element in favor of hamburger nav, it will sucked into hamburger menu, this keeps it from briefly appearring while jquery completes page load   */
-        /*
-        nav li {
-            display: none;
-            height: 0px;
-        }
+        
+        #menuHamburgerButton {
+            /*
+            top: 3vh !important;
+            left: 0vw !important;
 */
+            background-image: none;
+            background-color: rgba(0, 0, 0, 0.0);
+            z-index: 2;
+        }
+        
+        button img {
+            ;
+            width: 3.5vw;
+            height: 7.5vh;
+            min-width: 12px !important;
+            min-height: 12px!important;
+            border-radius: 0px;
+        }
+        
+        button:hover {
+            border: 0px solid rgba(0, 0, 0, 0.0) !important;
+            border-radius: 0px !important;
+        }
+        
+        #menuHamburgerButton img {
+            position: fixed;
+            top: 2.0vh !important;
+            left: 3vw !important;
+        }
+        
+        #menuHamburgerButton img:hover {
+            background-color: rgba(121, 201, 1, 0.5);
+            /*            width: 7.1vw;*/
+            height: 8.5vh;
+            width: 4.7vw;
+            min-width: 24px !important;
+            min-height: 16px!important;
+            -moz-transition: all .35s ease-in-out;
+            -o-transition: all .35s ease-in-out;
+            -ms-transition: all .35s ease-in-out;
+            -webkit-transition: all .35s ease-in-out;
+            transition: all 0.35s ease-in-out;
+        }
         
         .fadein,
         .fadeout {
@@ -200,24 +224,6 @@
             color: rgba(255, 255, 255, 0.9);
         }
         
-        #menuHamburgerButton {
-            position: fixed;
-            top: -0.0vmin !important;
-            left: 3.5vmin;
-            /*            border: 2px solid red;*/
-            width: 4vmin;
-            height: 7.75vmin;
-            border: 0px solid rgba(222, 0, 0, 1.0) !important;
-            background-image: none;
-            background-color: rgba(0, 0, 0, 0.0);
-            z-index: 2;
-        }
-        
-        button img {
-            width: 3.5vw;
-            height: 7.5vh;            
-        }
-        
         #menuFade {
             display: none;
         }
@@ -228,12 +234,13 @@
 <body>
     <div>
         <header>
-<!--            <span id="title"></span>-->
+            <!--            <span id="title"></span>-->
             <!--                    <span id="title">Refresh Estate Sales</span>-->
-            <span id="menuText">Menu</span>
+            <!--            <span id="menuText">Menu</span>-->
             <a href="#">
                 <button id="menuHamburgerButton">
-                    <img src="media/menu-hamburger-24x24.png">
+                    <!--                    <img src="media/menu-hamburger-24x24.png">-->
+                    <img src="media/menu-hamburger-white-55x55.png">
                 </button>
             </a>
             <!--        <div id="menuFade" class="fadeout">            -->
