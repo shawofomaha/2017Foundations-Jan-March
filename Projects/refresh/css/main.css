@@ -12,7 +12,7 @@ body {
     -o-transition: background-color 3sec ease-in-out;
     transition: background-color 3sec ease-in-out;
     margin: 0;
-    /*    height: auto;*/
+
 }
 
 
@@ -31,7 +31,7 @@ h1 {
     text-shadow: 0.75px 0.75px rgba(112, 127, 116, 1.0);
     line-height: 9vmin;
     top: 13.5vmin;
-/*    left: 5vmin;*/
+ 
 }
 
 h1.hdr {
@@ -218,31 +218,7 @@ img {
         -webkit-transform: rotate(360deg);
         transform: rotateX(180deg);
     }
-    /*
-            #ball.flipped{
-                transform: rotateY(180deg);
-                
-            }
-            
-            #ball div{
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                backface-visibility: hidden;
-            }
-            
-            .front{
-                background-image: url(http://www.animatedimages.org/data/media/389/animated-coin-image-0011.gif);
-                background-size: cover;
-            }
-*/
-    /*
-            .back{
-                background-image: url("https://blogblowfish.files.wordpress.com/2015/08/4863851-king-of-hearts-playing-card.jpg");
-                background-size: cover;
-                transform: rotateY(180deg);
-            }
-*/
+
     #ball:hover {
         background-color: blue !important;
         min-height: 20vmin;

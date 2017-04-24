@@ -13,14 +13,12 @@
 
     <style>
         img.logo {
-/*            position: fixed;*/
+            /*            position: fixed;*/
             display: block;
             top: -8.5vmin !important;
-/*            transform: translate(312%) !important;*/
-/*            left: 77vmin;*/
         }
+        
         img.homeLeft {
-/*            position: absolute;*/
             top: 0vmin;
             left: 85%;
             min-width: 40vmin;
@@ -40,9 +38,8 @@
             perspective: 333vmin;
             perspective-origin: 100% 450px;
             transform: translate(160%, 10vh);
-            -ms-transform: translate(160%, 10vh); 
+            -ms-transform: translate(160%, 10vh);
             -webkit-transform: translate(160%, 10vh);
-/*            transform: translate(+110%, +23%);*/
         }
         
         #cube {
@@ -50,7 +47,6 @@
             min-height: 100%;
             position: relative;
             left: 17%;
-/*            transform: translate(calc(50% - 0), 0%);*/
             top: 5.15%;
             transform-style: preserve-3d;
             transition: transform 2s;
@@ -130,7 +126,7 @@
             padding: 2vmin;
             padding-top: 9vmin;
         }
-   
+        
         #back {
             background-image: url("http://lorempixel.com/g/800/600/");
             backface-visibility: hidden;
@@ -141,8 +137,8 @@
         
         #cube.showBack {
             transform: rotateY(180deg);
-        -ms-transform: rotateY(180deg);
-        -webkit-transform: rotateY(180deg);            
+            -ms-transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
         }
         
         #front {
@@ -150,138 +146,133 @@
             background-image: url("media/Workman%20Estate%20Sale.jpeg");
             backface-visibility: hidden;
             transform: rotateY(0deg) translateZ(54vmin);
-        -ms-transform: rotateY(0deg) translateZ(54vmin);
-        -webkit-transform: rotateY(0deg) translateZ(54vmin);            
+            -ms-transform: rotateY(0deg) translateZ(54vmin);
+            -webkit-transform: rotateY(0deg) translateZ(54vmin);
         }
         
         #cube.showFront {
             transform: rotateY(0deg);
-        -ms-transform: rotateY(0deg);
-        -webkit-transform: rotateY(0deg);            
+            -ms-transform: rotateY(0deg);
+            -webkit-transform: rotateY(0deg);
         }
         
         #rightBack {
             background-image: url("http://lorempixel.com/g/900/740/abstract");
             backface-visibility: hidden;
             transform: rotateY(135deg) translateZ(54vmin);
-        -ms-transform: rotateY(135deg) translateZ(54vmin);
-        -webkit-transform: rotateY(135deg) translateZ(54vmin);            
+            -ms-transform: rotateY(135deg) translateZ(54vmin);
+            -webkit-transform: rotateY(135deg) translateZ(54vmin);
         }
         
         #cube.showRightBack {
             transform: rotateY(-135deg);
-        -ms-transform: rotateY(-135deg);
-        -webkit-transform: rotateY(-135deg);            
+            -ms-transform: rotateY(-135deg);
+            -webkit-transform: rotateY(-135deg);
         }
         
         #leftBack {
             background-image: url("http://lorempixel.com/980/960/abstract");
             backface-visibility: hidden;
             transform: rotateY(-135deg) translateZ(54vmin);
-        -ms-transform: rotateY(-135deg) translateZ(54vmin);
-        -webkit-transform: rotateY(-135deg) translateZ(54vmin);            
+            -ms-transform: rotateY(-135deg) translateZ(54vmin);
+            -webkit-transform: rotateY(-135deg) translateZ(54vmin);
         }
         
         #cube.showLeftBack {
             transform: rotateY(135deg);
-        -ms-transform: rotateY(135deg);
-        -webkit-transform: rotateY(135deg);            
+            -ms-transform: rotateY(135deg);
+            -webkit-transform: rotateY(135deg);
         }
         
         #right {
             background-image: url("media/holly3.JPG");
             backface-visibility: hidden;
             transform: rotateY(90deg) translateZ(54vmin);
-        -ms-transform: rotateY(90deg) translateZ(54vmin);
-        -webkit-transform: rotateY(90deg) translateZ(54vmin);            
+            -ms-transform: rotateY(90deg) translateZ(54vmin);
+            -webkit-transform: rotateY(90deg) translateZ(54vmin);
         }
         
         #cube.showRight {
             transform: rotateY(-90deg);
-        -ms-transform: rotateY(-90deg)
-        -webkit-transform: rotateY(-90deg)             
+            -ms-transform: rotateY(-90deg) -webkit-transform: rotateY(-90deg)
         }
         
         #left {
             background-image: url("media/holly.JPG");
             backface-visibility: hidden;
             transform: rotateY(-90deg) translateZ(54vmin);
-        -ms-transform: rotateY(-90deg) translateZ(54vmin);
-        -webkit-transform: rotateY(-90deg) translateZ(54vmin);             
+            -ms-transform: rotateY(-90deg) translateZ(54vmin);
+            -webkit-transform: rotateY(-90deg) translateZ(54vmin);
         }
         
         #cube.showLeft {
             transform: rotateY(90deg);
-        -ms-
-        -webkit-            
+            -ms- -webkit-
         }
         
         #rightFront {
             background-image: url("http://lorempixel.com/g/640/320");
             backface-visibility: hidden;
             transform: rotateY(45deg) translateZ(54vmin);
-        -ms-
-        -webkit-            
+            -ms- -webkit-
         }
         
         #cube.showRightFront {
             transform: rotateY(-45deg);
-        -ms-transform: rotateY(-45deg);
-        -webkit-transform: rotateY(-45deg);            
+            -ms-transform: rotateY(-45deg);
+            -webkit-transform: rotateY(-45deg);
         }
         
         #leftFront {
             background-image: url("http://lorempixel.com/240/240/cats");
             backface-visibility: hidden;
             transform: rotateY(-45deg) translateZ(54vmin);
-        -ms-transform: rotateY(-45deg) translateZ(54vmin);
-        -webkit-transform: rotateY(-45deg) translateZ(54vmin);            
+            -ms-transform: rotateY(-45deg) translateZ(54vmin);
+            -webkit-transform: rotateY(-45deg) translateZ(54vmin);
         }
         
         #cube.showLeftFront {
             transform: rotateY(45deg);
-        -ms-transform: rotateY(45deg);
-        -webkit-transform: rotateY(45deg);            
+            -ms-transform: rotateY(45deg);
+            -webkit-transform: rotateY(45deg);
         }
         
         #top {
             background-image: url("media/Workman%20Estate%20Sale.jpeg");
             backface-visibility: hidden;
             transform: rotateX(90deg) translateZ(42vmin);
-        -ms-transform: rotateX(90deg) translateZ(42vmin);
-        -webkit-transform: rotateX(90deg) translateZ(42vmin);            
+            -ms-transform: rotateX(90deg) translateZ(42vmin);
+            -webkit-transform: rotateX(90deg) translateZ(42vmin);
         }
         
         #cube.showTop {
             transform: rotateX(-90deg);
-        -ms-transform: rotateX(-90deg);
-        -webkit-transform: rotateX(-90deg);            
+            -ms-transform: rotateX(-90deg);
+            -webkit-transform: rotateX(-90deg);
         }
         
         #bottom {
             background-color: black;
             backface-visibility: hidden;
             transform: rotateX(-90deg) translateZ(22vmin);
-        -ms-transform: rotateX(-90deg) translateZ(22vmin);
-        -webkit-transform: rotateX(-90deg) translateZ(22vmin);            
+            -ms-transform: rotateX(-90deg) translateZ(22vmin);
+            -webkit-transform: rotateX(-90deg) translateZ(22vmin);
         }
         
         #cube.showBottom {
             transform: rotateX(90deg);
-        -ms-transform: rotateX(90deg);
-        -webkit-transform: rotateX(90deg);            
+            -ms-transform: rotateX(90deg);
+            -webkit-transform: rotateX(90deg);
         }
         
         #aboutTitle {
             position: relative;
             font-size: 5.5vmin;
             top: 16.5vmin;
-/*            left:1 -6.5vmin;*/
             z-index: +1;
             font-family: 'Architects Daughter', cursive;
             color: rgba(244, 210, 161, 1.0);
             text-shadow: 1px 1.5px rgba(255, 255, 255, 0.55);
-/*            transform: translate(320%, 0);*/
         }
         
         .frontPicTxt,
@@ -415,7 +406,8 @@
     <br />
     <div></div>
     <div>
-        <span id="facePosition"></span><br />
+        <span id="facePosition"></span>
+        <br />
         <button type="button" id="spin" value="Spin">Spin</button>
         <br />
         <select enable>
@@ -511,22 +503,22 @@
             var side = $("select").val();
             rotateCube(side);
             $("#facePosition").text(side);
-//            console.log("*****side= " + side);
+            //            console.log("*****side= " + side);
         });
 
         var lastSide = 0;
         var randomIdx = 0;
         setInterval(function () {
-            var sides = ["Front", "Back", "RightBack", "RightFront", "Right", "Left", "LeftFront", "LeftBack", "Top", "Bottom", "Top",  "Bottom"];
+            var sides = ["Front", "Back", "RightBack", "RightFront", "Right", "Left", "LeftFront", "LeftBack", "Top", "Bottom", "Top", "Bottom"];
             var random = parseInt(Math.random() * 12);
             while (random == lastSide) {
                 random = parseInt(Math.random() * 12);
             }
             lastSide = random;
-         
-//            console.log("random= " + random + " sides[random]= " + sides[random]);
+
+            //            console.log("random= " + random + " sides[random]= " + sides[random]);
             randomIdx = random;
-            if (randomIdx == 10 ) {
+            if (randomIdx == 10) {
                 randomIdx = 8;
             } else if (randomIdx == 11) {
                 randomIdx = 9;

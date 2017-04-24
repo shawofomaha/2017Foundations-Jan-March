@@ -108,7 +108,8 @@
         nav li a:hover {
             background-color: rgba(211, 211, 211, 1.0);
             font-size: 2.75vw;
-            color: rgba(2, 211, 3, 1.0); !important;
+            color: rgba(2, 211, 3, 1.0);
+            !important;
             -moz-transition: all .55s ease-in-out;
             -o-transition: all .55s ease-in-out;
             -ms-transition: all .55s ease-in-out;
@@ -153,9 +154,10 @@
         }
         
         header {
-           border: 0px solid rgba(0, 0, 0, 0.0) !important; 
-            border: 0px solid rgba(255, 0, 0,1.0)!important;  
+            border: 0px solid rgba(0, 0, 0, 0.0) !important;
+            border: 0px solid rgba(255, 0, 0, 1.0)!important;
         }
+        
         #menuHamburgerButton {
             background-image: none;
             background-color: rgba(0, 0, 0, 0.0) !important;
@@ -163,18 +165,18 @@
             border-radius: 0px !important;
             z-index: -1;
         }
-        button {
-            
-        }
+        
+        button {}
+        
         button img {
-            width:5.5vw;
+            width: 5.5vw;
             height: 7.5vh;
             padding: 0.93vmin !important;
             min-width: 12px !important;
             min-height: 12px!important;
             border-radius: 5px;
         }
-
+        
         button:hover {
             width: 2vw;
             border: 0px solid rgba(0, 0, 0, 1.0) !important;
@@ -196,14 +198,14 @@
             height: 8.1vh;
             min-width: 18px !important;
             min-height: 18px!important;
-            border: 1.75px dotted rgba(0,211,0,1);
+            border: 1.75px dotted rgba(0, 211, 0, 1);
             -moz-transition: all .35s ease-in-out;
             -o-transition: all .35s ease-in-out;
             -ms-transition: all .35s ease-in-out;
             -webkit-transition: all .35s ease-in-out;
             transition: all 0.35s ease-in-out;
         }
-/*
+        /*
         a,
         a:hover,
         button:hover,
@@ -211,6 +213,7 @@
             border: 1px solid rgba(0, 0, 0,0.0) !important;
         }        
 */
+        
         .fadein,
         .fadeout {
             opacity: 0;
@@ -281,7 +284,6 @@
 
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <script>
-
         $("#menuHamburgerButton").click(function () {
             if ($("#menuFade").hasClass("fadeout"))
                 $("#menuFade").removeClass("fadeout").addClass("fadein").css({
