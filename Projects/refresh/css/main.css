@@ -44,15 +44,20 @@ h1.hdr {
 
 h2,
 h3 {
+    display: inline-block;
     text-align: center;
     text-shadow: 0.75px 0.75px rgba(112, 127, 116, 1.0);
     font-family: 'Architects Daughter', cursive;
     font-size: 1.15em;
     z-index: +1;
+    transform: translate( 330% , 0%);
 }
-
+h2 {
+     transform: translate(calc(200% - 6.5vw), 0%);
+}
 h3 {
     text-shadow: 0.75px 0.75px rgba(82, 97, 86, 1.0);
+  
 }
 
 h2 {
@@ -111,8 +116,8 @@ input:hover {
     border: 2px solid rgba(255, 255, 255, 1.0) !important;
     font-size: 3.25vmin !important;
     width: 9.5vw;
-    transition: all 1.5s ease-in-out;
-    -webkit-transition: all 1.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
 }
 
 input,

@@ -106,9 +106,9 @@
         }
         
         nav li a:hover {
-            background-color: rgba(255, 255, 255, 1.0);
+            background-color: rgba(211, 211, 211, 1.0);
             font-size: 2.75vw;
-            color: black !important;
+            color: rgba(2, 211, 3, 1.0); !important;
             -moz-transition: all .55s ease-in-out;
             -o-transition: all .55s ease-in-out;
             -ms-transition: all .55s ease-in-out;
@@ -152,10 +152,16 @@
             z-index: -0;
         }
         
+        header {
+           border: 0px solid rgba(0, 0, 0, 0.0) !important; 
+            border: 0px solid rgba(255, 0, 0,1.0)!important;  
+        }
         #menuHamburgerButton {
             background-image: none;
-            background-color: rgba(0, 0, 0, 0.0);
-            z-index: 2;
+            background-color: rgba(0, 0, 0, 0.0) !important;
+            border: 0px solid rgba(0, 0, 0, 0.0) !important;
+            border-radius: 0px !important;
+            z-index: -1;
         }
         button {
             
@@ -169,9 +175,9 @@
             border-radius: 5px;
         }
 
-        
         button:hover {
-            border: 0px solid rgba(0, 0, 0, 0.0) !important;
+            width: 2vw;
+            border: 0px solid rgba(0, 0, 0, 1.0) !important;
             border-radius: 0px !important;
         }
         
@@ -190,14 +196,21 @@
             height: 8.1vh;
             min-width: 18px !important;
             min-height: 18px!important;
-            border: 1.25px dotted rgba(0,211,0,1);
+            border: 1.75px dotted rgba(0,211,0,1);
             -moz-transition: all .35s ease-in-out;
             -o-transition: all .35s ease-in-out;
             -ms-transition: all .35s ease-in-out;
             -webkit-transition: all .35s ease-in-out;
             transition: all 0.35s ease-in-out;
         }
-        
+/*
+        a,
+        a:hover,
+        button:hover,
+        button {
+            border: 1px solid rgba(0, 0, 0,0.0) !important;
+        }        
+*/
         .fadein,
         .fadeout {
             opacity: 0;
