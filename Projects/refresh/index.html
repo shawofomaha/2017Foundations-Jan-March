@@ -32,15 +32,13 @@ media/white.png
         }
         
         #homeTitle {
-            border: 2px solid green;
-            width: 100%;
             position: relative;
 /*            position: fixed;*/
             font-size: 5.5vmin;
             /*            text-shadow: 2px 2px rgba(112, 127, 116, 1.0);*/
             text-shadow: .5px 0.25px rgba(255, 255, 255, 0.55);
             color: rgba(244, 210, 161, 0.9);
-            top: 15.5vmin;
+            top: 16.75vmin;
 /*            left: -1.0vmin;*/
             z-index: +2;
             font-family: 'Architects Daughter', cursive;
@@ -208,20 +206,23 @@ media/white.png
         }
         
         #simpleToggle:hover {
-            width: 6.5vw;
-            background-color: rgba(211, 211, 212, 1.0);
-            color: rgba(111, 111, 111, 1.0);
-            border-radius: 5px;
+            width: 5.75vw !important;
+            background-color: rgba(2, 2, 2, 1.0) !important;
+            background-image: none !important;
+            color: rgba(242, 242, 242, 1.0) !important;
+            border: 1px solid rgba(2,255,2,1.0) !important;
+            border-radius: 25% !important;
         }
         
         #simpleToggle {
-            position: absolute;
-            top: 19vh;
-            left: 7vw;
+/*            position: absolute;*/
+            position: relative;
+            top: 2vh;
+            left: 3.5vw;
             width: 5vw !important;
             height: 4vh !important;
             background-image: url("media/white.png");
-            background-color: azure;
+/*            background-color:  rgba(111, 111, 111, 1.0) !important;*/
             font-size: 0.95vw !important;
             color: rgba(2, 2, 2, 1.0) !important;
         }
@@ -232,31 +233,6 @@ media/white.png
             color: rgba(2, 2, 2, 1.0) !important;
         }
         
-/*
-        #homeTitle {
-            position: absolute;
-            transform: translate( 50vmin, 0%);
-        }
-*/
-        
-/*
-        simpH2 {
-            transform: translate( 302%, 0%) !important;
-        }
-        
-*/
-/*
-        #ourStory {
-            transform: translate(calc(335% - 2.7vw), 0%);
-            transform: translate( 75vmin, 0%);
-        }
-        
-        .simpH3 {
-            transform: translate(calc(200% + 2.5vw), 0%) !important;
-            left: +25vmin !important;
-        }
-*/
-        
         .tranformNot {
             transform: none;
         }
@@ -264,9 +240,9 @@ media/white.png
 </head>
 
 <body>
-
-    <header>Head and nav in header.html</header>
     <button id="simpleToggle">Simplify</button>
+    <header>Head and nav in header.html</header>
+    
     <h2 id="homeTitle">&gt; Home &lt;</h2>
     <br />
 
