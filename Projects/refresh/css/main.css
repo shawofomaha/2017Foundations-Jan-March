@@ -31,7 +31,7 @@ h1 {
     text-shadow: 0.75px 0.75px rgba(112, 127, 116, 1.0);
     line-height: 9vmin;
     top: 13.5vmin;
-    left: 5vmin;
+/*    left: 5vmin;*/
 }
 
 h1.hdr {
@@ -44,25 +44,27 @@ h1.hdr {
 
 h2,
 h3 {
-    display: inline-block;
+    display: block;
     text-align: center;
     text-shadow: 0.75px 0.75px rgba(112, 127, 116, 1.0);
     font-family: 'Architects Daughter', cursive;
     font-size: 1.15em;
     z-index: +1;
-    transform: translate( 330% , 0%);
+/*    transform: translate( 330% , 0%);*/
 }
 h2 {
-     transform: translate(calc(200% - 6.5vw), 0%);
+/*     transform: translate(calc(200% - 6.5vw), 0%);*/
 }
 h3 {
     text-shadow: 0.75px 0.75px rgba(82, 97, 86, 1.0);
   
 }
 
+/*
 h2 {
     color: rgba(155, 244, 66, 1.0);
 }
+*/
 
 
 /* ************* Start of item box ******* */
