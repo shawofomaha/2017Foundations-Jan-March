@@ -410,18 +410,20 @@
 
 
         $("#simpleToggle").click(function () {
-
-//            $("#container").css({
-//                "background-image": "url('media/white.png')"
-//            })
-
+            
             $("p").addClass("txtShadow");
             $("h2").addClass("txtShadow");
             $("h3").addClass("txtShadow");
             $("h4").addClass("txtShadow");
             $("#homeTitle").addClass("simpH2");
             $("#ourStory").addClass("simpH3");
-            myStopFunction();
+            myStopFunction();            
+
+            $("#container").css({
+                "background-image": "url('media/white.png')",
+                "transition": "all 2.4s ease-in-out"
+            })  
+
             $("#simpleToggle").css({
                 "display": "none"
             });
