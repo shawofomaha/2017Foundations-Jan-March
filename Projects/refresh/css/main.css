@@ -12,10 +12,7 @@ body {
     -o-transition: background-color 3sec ease-in-out;
     transition: background-color 3sec ease-in-out;
     margin: 0;
-
 }
-
-
 
 #footer,
 footer {
@@ -50,22 +47,12 @@ h3 {
     font-family: 'Architects Daughter', cursive;
     font-size: 1.15em;
     z-index: +1;
-/*    transform: translate( 330% , 0%);*/
 }
-h2 {
-/*     transform: translate(calc(200% - 6.5vw), 0%);*/
-}
+
 h3 {
     text-shadow: 0.75px 0.75px rgba(82, 97, 86, 1.0);
   
 }
-
-/*
-h2 {
-    color: rgba(155, 244, 66, 1.0);
-}
-*/
-
 
 /* ************* Start of item box ******* */
 
@@ -119,6 +106,7 @@ input:hover {
     font-size: 3.25vmin !important;
     width: 9.5vw;
     transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
 }
 
@@ -146,8 +134,9 @@ button {
     box-sizing: border-box;
     overflow: hidden;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     -webkit-flex-flow: wrap;
+    -ms-flex-flow: wrap;
     justify-content: space-around;
     align-content: space-around;
     top: -19.75vmin;
@@ -179,12 +168,19 @@ img {
 .spinBall {
     -webkit-animation: spin 0.35s ease infinite;
     -moz-animation: spin 0.35s ease infinite;
+    -ms-animation: spin 0.35s ease infinite;
     animation: spin 0.435s ease infinite;
 }
 
+/*
 @-moz-keyframes spin {
     100% {
         -moz-transform: rotateY(180deg);
+    }
+}
+@-ms-keyframes spin {
+    100% {
+        -ms-transform: rotateY(180deg);
     }
 }
 
@@ -207,6 +203,11 @@ img {
     }
 }
 
+@-ms-keyframes spin {
+    100% {
+        -ms-transform: rotateX(180deg);
+    }
+}
 @-webkit-keyframes spin {
     100% {
         -webkit-transform: rotateX(180deg);
@@ -218,6 +219,7 @@ img {
         -webkit-transform: rotate(360deg);
         transform: rotateX(180deg);
     }
+*/
 
     #ball:hover {
         background-color: blue !important;
