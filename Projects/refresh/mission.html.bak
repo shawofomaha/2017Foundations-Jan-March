@@ -2,47 +2,81 @@
 <html lang="en">
 
 <head>
-    <!-- CSS Stylesheet href's -->
+
     <!-- Start WOWSlider.com HEAD section -->
-    <link rel="stylesheet" type="text/css" href="engine1/style.css" />
-    <script type="text/javascript" src="engine1/jquery.js"></script>
+    <!-- add to the <head> of your page -->
+    <link rel="stylesheet" type="text/css" href="engine0/style.css" />
+    <script type="text/javascript" src="engine0/jquery.js"></script>
     <!-- End WOWSlider.com HEAD section -->
 
+    <!-- CSS Stylesheet href's -->
     <link rel="stylesheet" href="css/main.css">
+    <link media="all and (min-width: 250px)" rel="stylesheet" href="css/handheld.css">
+    <link media="all and (min-width: 768px)" rel="stylesheet" href="css/desktop.css">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">
 
     <style>
-        .paisleyBorderBottom {
-            top: -6.75vmin;
-            z-index: 0;
-        }
-        
-        #footer {
-            /*    bottom: auto;*/
-            position: relative;
-            top: 62vmin;
-        }
-        
-        #wowslider-container1 {
-            position: absolute;
-            top: 13.5vmin !important;
+        #wowslider-container0 {
+            display: none;
+            top: -0.5vmin !important;
         }
         
         #missionTitle {
-            position: relative;
+            position: fixed;
+            width: 100%;
+            display: block;
             font-size: 5.5vmin;
-            color: rgba(155, 244, 66, 0.9);
-            top: -22vmin;
+            color: rgba(244, 210, 161, 0.9);
+            text-shadow: 1px 1.25px rgba(255, 255, 255, 0.55);
+            top: 12.5vmin;
             font-family: 'Architects Daughter', cursive;
-            color: rgba(242, 232, 218, 1.0);
+            z-index: +2 !important;
+        }
+        
+        h2 {
+            top: 2.5vmin;
+        }
+        
+        .paisleyBorderBottom {
+            top: -9.5vmin;
+            z-index: +1;
         }
         
         footer2 ul {
-            top: -7.25vmin !important;
+            top: -10.0vmin !important;
+            z-index: +4922 !important;
+        }
+        
+        img#wows0_8 {
+            height: 55vh !important;
+            width: 75% !important;
+        }
+        
+        body div {
+            position: relative;
+            top: 13vh;
+            left: 15.75%;
+        }
+        
+        #wowslider-container0 {
+            width: 50%;
+            max-width: 50%;
+        }
+        
+        img.logo {
+            display: block;
+            top: -8.5vmin !important;
         }
     </style>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <!-- Start WOWSlider.com HEAD section -->
+    <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+    <script type="text/javascript" src="engine1/jquery.js"></script>
+    <!-- End WOWSlider.com HEAD section -->
+
 </head>
 
 
@@ -50,23 +84,25 @@
     <header></header>
     <h2 id="missionTitle">&gt; Mission &lt;</h2>
     <div>
-        <div id="#container">
+        <div id="wowContainer">
+
+
 
         </div>
+
+
+        <script>
+            $("header").load("header1.html");
+            $("#footer").load("footer.html");
+        </script>
+
     </div>
 
     <footer id="footer"></footer>
 
-    <script type="text/javascript" src="engine1/wowslider.js"></script>
-    <script type="text/javascript" src="engine1/script.js"></script>
-    <!-- End WOWSlider.com BODY section -->
+    <style>
 
-    <script src="//code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
-    </script>
-    <script>
-        $("header").load("header.html");
-        $("#footer").load("footer.html");
-    </script>
+    </style>
 </body>
 
 </html>
