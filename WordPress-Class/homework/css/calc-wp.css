@@ -22,8 +22,6 @@
             padding-left: 1%;
         }
         
-        #inputTag2 {}
-        
         input {
             border-radius: 15px;
         }
@@ -34,15 +32,6 @@
             font-size: 1.0em;
         }
         
-        radioPad {
-            /*    padding-right: 6vw;*/
-        }
-        /*
-input[type="radio" i] {
-    padding-right: 6vw;
-}
-*/
-        
         input {
             height: 5vmin;
             font-size: 1.0em;
@@ -50,7 +39,7 @@ input[type="radio" i] {
         
         #calculatorContainer {
             display: inline-block;
-            /*To allow text-align center to work*/
+
             width: 100vmin;
             box-sizing: border-box;
             padding: 4vmin;
@@ -69,8 +58,7 @@ input[type="radio" i] {
             min-height: 2em;
             background-color: lightgray;
             margin-bottom: 3vmin;
-            
-            line-height:2em;
+            line-height: 2.0em;
             padding: 1vmin;
             font-size: 2.0em;
             border-radius: 15px;
@@ -82,51 +70,33 @@ input[type="radio" i] {
         #calcText {
             position: absolute;
             right: 0;
-            margin-right: 2vmin;
+            margin-right: 2vw;
             white-space: nowrap;
         }
         
-        #calculatorButtons {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-        }
-        
-        .calcButton {
-            cursor: pointer;
-            display: inline-block;
-            box-sizing: border-box;
-            width: 18vmin;
-            height: 13vmin;
-            border: 1vmin solid black;
-            border-radius: 9vmin;
-            background-color: lightgray;
-            font-size: 2.0em;
-            vertical-align: middle;
-            text-align: center;
-            line-height: 11vmin;
-            margin: 2vmin;
-            font-weight: bold;
-            box-shadow: 0 2vmin 0px -0.4vmin lightgray;
-            -webkit-touch-callout: none;
-            /* iOS Safari */
-            -webkit-user-select: none;
-            /* Chrome/Safari/Opera */
-            -moz-user-select: none;
-            /* Firefox */
-            -ms-user-select: none;
-            /* Internet Explorer/Edge */
-            user-select: none;
-        }
-        
-        .calcButton:hover {
-            background-color: #aaaaaa;
-            box-shadow: 0 1vmin 0px -0.4vmin lightgray;
+        button#clear:hover,
+        #calcMe:hover {
+            background-color: rgba(244, 244, 244, 1.0);
             position: relative;
-            top: 1vmin;
+            font-size: 1.15em;
+        }
+        
+        button#clear,
+        #calcMe {
+            width: 5vw;
+            height: 6vh;
+            border: 1px solid black;
+            border-radius: 15px;
+            font-size: 1.0em;
+            vertical-align: top;
+            text-align: center;
+            line-height: 4vh;
+            font-weight: 400;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 0.75vh;
+        }
+        
+        #clear:hover {
+            background-color: #aaaaaa;
+            position: relative;
         }
