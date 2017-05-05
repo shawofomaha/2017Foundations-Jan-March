@@ -1,0 +1,118 @@
+        html { 
+            font-size: 1vw; 
+        }
+
+        body {
+            background-color: dimgray;
+            font-family: sans-serif;
+        }
+        
+        body {
+            overflow: scroll;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgba(2, 122, 2, 1.0);
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.0em;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 2.7em;
+        }
+        
+        .container {
+            margin-top: 2vh;
+            margin-bottom: 5vh;
+        }
+
+        
+        #toDoList {
+            min-width: 40vmin;
+            max-width: 65%;
+        }
+        
+        .listName {
+            border: 1px solid yellow;
+            border-radius: 15px;
+            background-color: rgba(211,211,211,0.9);
+            margin-left: 3vw;
+            margin-right: 3vw;
+            text-align: left;
+            display: block;
+            font-size: 1.0em;
+            position: relative;
+        }
+        
+        .task {
+            display: inline;
+            min-width: inherit;
+            max-width: inherit;
+            font-size: 1.0em;
+            font-weight: 400;
+            position: relative;
+        }
+        
+        .completed {
+            text-decoration: line-through;
+            color: dimgrey;
+        }
+        
+        .notCompleted {
+            text-decoration: none;
+        }
+        
+        .showCompletedButton {
+            display: inline;
+        }
+        
+        .hideCompletedButton {
+            display: none;
+        }
+        
+        .hideRemoveButton {
+            display: none;
+        }
+        
+        .showRemoveButton {
+            display: inline;
+            background-color: rgba(211,2,2,1.0);
+        }
+        
+        #addTask:hover {
+            height: 4vh;
+            width: 10vw;
+            font-size: 1.2em;
+            line-height: 2.3vh;
+            border-radius: 15px;
+            background-color: red;
+            -webkit-transition: all 0.3s cubic-bezier(.1, .73, .94, 1.0);
+            transition: all 0.3s cubic-bezier(.1, .73, .94, 1.0);
+        }
+        
+        #addTask,
+        button {
+            font-size: 1em;
+            line-height: 2vmin;
+            height: 4vh;
+            width: 8vw;
+            border-radius: 15px;
+            background-color: aqua;
+        }
+        
+        #inpuText {
+            font-size: 1.0em;
+            line-height: 1.0em;
+            width: 70vmin;
+        }
+        
+        .dudeIt{
+            text-align: left !important;
+            margin-left: 10w;
+        }
+        span.txt {
+            margin-left: 3vw;
+            margin-right: 3vw;
+        }

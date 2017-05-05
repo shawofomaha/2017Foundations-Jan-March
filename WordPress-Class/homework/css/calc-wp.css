@@ -1,0 +1,132 @@
+        html {
+            font-size: 1vw;
+        }
+        
+        body {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgba(2, 122, 2, 1.0);
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.0em;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+        
+        #inputTag1 {
+            padding-left: 1%;
+        }
+        
+        #inputTag2 {}
+        
+        input {
+            border-radius: 15px;
+        }
+        
+        #calcMe {
+            width: 8vw;
+            height: 6vh;
+            font-size: 1.0em;
+        }
+        
+        radioPad {
+            /*    padding-right: 6vw;*/
+        }
+        /*
+input[type="radio" i] {
+    padding-right: 6vw;
+}
+*/
+        
+        input {
+            height: 5vmin;
+            font-size: 1.0em;
+        }
+        
+        #calculatorContainer {
+            display: inline-block;
+            /*To allow text-align center to work*/
+            width: 100vmin;
+            box-sizing: border-box;
+            padding: 4vmin;
+            background-color: rgba(2, 255, 2, 1.0);
+            position: absolute;
+            top: 50%;
+            border-radius: 15px;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        
+        #calculatorDisplay {
+            position: relative;
+            box-sizing: border-box;
+            width: 100%;
+            min-height: 2em;
+            background-color: lightgray;
+            margin-bottom: 3vmin;
+            
+            line-height:2em;
+            padding: 1vmin;
+            font-size: 2.0em;
+            border-radius: 15px;
+            text-align: right;
+            font-family: 'Roboto', sans-serif;
+            overflow: hidden;
+        }
+        
+        #calcText {
+            position: absolute;
+            right: 0;
+            margin-right: 2vmin;
+            white-space: nowrap;
+        }
+        
+        #calculatorButtons {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+        
+        .calcButton {
+            cursor: pointer;
+            display: inline-block;
+            box-sizing: border-box;
+            width: 18vmin;
+            height: 13vmin;
+            border: 1vmin solid black;
+            border-radius: 9vmin;
+            background-color: lightgray;
+            font-size: 2.0em;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 11vmin;
+            margin: 2vmin;
+            font-weight: bold;
+            box-shadow: 0 2vmin 0px -0.4vmin lightgray;
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Chrome/Safari/Opera */
+            -moz-user-select: none;
+            /* Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+        }
+        
+        .calcButton:hover {
+            background-color: #aaaaaa;
+            box-shadow: 0 1vmin 0px -0.4vmin lightgray;
+            position: relative;
+            top: 1vmin;
+        }
