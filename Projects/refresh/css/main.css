@@ -1,11 +1,15 @@
 /*     .   main     .   */
 
+html {
+    font-size: 1vw;
+}
+
 * {
     box-sizing: border-box;
 }
 
 @media all and (max-width:400px) {
-/*
+    /*
     * {
         border: 1px dotted white;
     }
@@ -16,7 +20,7 @@
 }
 
 @media all and (max-width:767px) {
-/*
+    /*
     * {
         border: 1px solid white;
     }
@@ -27,24 +31,23 @@
 }
 
 @media all and (max-width:1070px) {
-/*
+    /*
     * {
         border: 1px solid red;
     }
 */
     .paisleyBorderTop {
         display: none !important;
-    }    
- 
+    }
 }
 
 @media all and (max-width:1399px) {
-/*
+    /*
     * {
         border: 1px solid blue;
     }
 */
-/*
+    /*
     .paisleyBorderTop {
         display: inline-block!important;
     }     
@@ -76,6 +79,7 @@ h1 {
     font-family: 'Architects Daughter', cursive;
     color: rgba(92, 244, 66, 1.0);
     font-size: 9vmin;
+    font-size: 7.0em;
     text-shadow: 0.75px 0.75px rgba(112, 127, 116, 1.0);
     line-height: 9vmin;
     top: 13.5vmin;
@@ -95,7 +99,8 @@ h3 {
     text-align: center;
     text-shadow: 0.75px 0.75px rgba(112, 127, 116, 1.0);
     font-family: 'Architects Daughter', cursive;
-    font-size: 1.15em;
+    font-size: 2.0em;
+    font-size: calc( 2.0rem + 10px );
     z-index: +1;
 }
 
@@ -148,6 +153,7 @@ h3 {
 
 .price {
     font-size: 3.25vmin !important;
+    font-size: 3.25vmin !important;
     text-align: center;
 }
 
@@ -155,6 +161,7 @@ button:hover,
 input:hover {
     color: white !important;
     border: 2px solid rgba(255, 255, 255, 1.0) !important;
+    font-size: 3.25vmin !important;
     font-size: 3.25vmin !important;
     width: 9.5vw;
     transition: all 0.5s ease-in-out;
@@ -166,6 +173,7 @@ input,
 button {
     font-family: 'Architects Daughter', cursive !important;
     font-size: 1.3em !important;
+    font-size: 1.3rem !important;
     color: lightgray !important;
     border: 1px solid black !important;
     margin-bottom: 0.75vw;
@@ -318,6 +326,7 @@ span#title {
     color: rgba(242, 232, 218, 0.9);
     top: -0vmin;
     font-size: 6vmin;
+    font-size: 6vmin;
     line-height: 8.5vmin;
     padding-left: 9.5vmin;
 }
@@ -329,6 +338,7 @@ span#title {
     background-image: none !important;
     color: rgba(242, 242, 242, 1.0) !important;
     font-family: sans-serif !important;
+    font-size: 1.49vw !important;
     font-size: 1.49vw !important;
     border: 1.5px dotted rgba(2, 255, 2, 1.0) !important;
     border-radius: 50% !important;
@@ -342,6 +352,7 @@ span#title {
     height: 6vh !important;
     background-color: rgba(222, 222, 222, 0.85) !important;
     background-image: none !important;
+    font-size: 2vw !important;
     font-size: 2vw !important;
     border-radius: 15px !important;
     color: rgba(2, 2, 2, 1.0) !important;
