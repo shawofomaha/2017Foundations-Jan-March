@@ -27,7 +27,7 @@
             top: 0;
             width: 100%;
             min-height: 9vmin;
-            background-color: rgba(0, 0, 0, 1.0);
+/*            background-color: rgba(0, 0, 0, 1.0);*/
             display: -webkit-box;
             display: -moz-box;
             display: -ms-flexbox;
@@ -35,12 +35,9 @@
             display: flex;
             -webkit-flex-flow: row wrap;
             justify-content: flex-end;
+            justify-content: center;
         }
-        
-        nav.hdr li {
-            font-size: 2.75vmin;
-            line-height: 2.75vmin;
-        }
+ 
         
         .paisleyBorderTop {
             position: fixed;
@@ -56,57 +53,7 @@
             top: 7vmin;
         }
         
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            position: fixed;
-            width: 100%;
-            background: rgba(147, 255, 166, 0.69);
-            /* For browsers that do not support gradients */
-            background: -ms-linear-gradient(left, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.69));
-            /* For Microsoft */
-            background: -webkit-linear-gradient(left, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.69));
-            /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(right, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.69));
-            /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(right, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.69));
-            /* For Firefox 3.6 to 15 */
-            background: linear-gradient(to right, rgba(147, 255, 166, 0.69), rgba(81, 219, 76, 0.01));
-            /* Standard syntax */
-            z-index: +0;
-        }
-        
-        nav li a {
-            font-family: 'Architects Daughter', cursive !important;
-            /*            text-shadow: 2px 2px  rgba(112, 127, 116, 1.0);            */
-            display: block;
-            line-height: 5.5vmin;
-            min-height: 4.25vmin;
-            font-size: 1.05em;
-            float: left;
-            left: 0;
-            color: rgba(255, 255, 255, 0.9);
-            padding: 14px 12px;
-            text-decoration: none;
-            list-style-type: none;
-            z-index: +0;
-        }
-        
-        nav li a:hover {
-            background-color: rgba(255, 255, 255, 1.0);
-            font-size: 1.20em;
-            color: black !important;
-            /*
-            -moz-transition: all .75s ease-in-out;
-            -o-transition: all .75s ease-in-out;
-            -ms-transition: all .75s ease-in-out;
-            -webkit-transition: all .75s ease-in-out;            
-            transition: all 0.75s ease-in-out;
-*/
-        }
-
+ 
    
         .logo {
             position: relative;
@@ -114,8 +61,8 @@
             margin: 0;
             border-radius: 50%;
             z-index: +15;
-            left: 40%;
-            /*            transform: translate(-50%);*/
+/*            left: 40%;*/
+            transform: translate(320%);
         }
         
         img.logo {
@@ -130,17 +77,18 @@
         .hamburger {
             position: fixed;
             top: -5vh;
+            left: 1vh;
             margin: 50px;
-            z-index: 2;
             color: rgba(222,222,222,1.0);
             cursor: pointer;
+            z-index: +55;
         }
         
         .line {
  
 /*            top: 7vh;*/
-            width: 50px;
-            height: 6px;
+            width: 3.5vw;
+            height: 0.50vh;
             border-radius: 20px;
             background: rgba(222,222,222,1.0);
             color: rgba(222,222,222,1.0);
@@ -154,12 +102,13 @@
             position: fixed;
             top: 0;
             left: -520px;
-/*            background: rgba(147, 255, 166, 1.0);*/
-            background: #1e2b33;
-            background-color: rgba(35, 60, 39, 1.0);            
+            background: rgba(0, 183, 6, 1.0);
+/*            background: #1e2b33;*/
+            
+/*            background-color: rgba(35, 60, 39, 1.0);            */
             transition: left .4s ease-in-out;
-            z-index: 2;
- 
+            z-index: 22;
+
             background: rgba(147, 255, 166, 1.0);
             /* For browsers that do not support gradients */
             background: -ms-linear-gradient(left, rgba(147, 255, 166, 1.0), rgba(81, 219, 76, 1.0));
@@ -170,7 +119,8 @@
             /* For Opera 11.1 to 12.0 */
             background: -moz-linear-gradient(right, rgba(147, 255, 166, 1.0), rgba(81, 219, 76, 1.0));
             /* For Firefox 3.6 to 15 */
-            background: linear-gradient(to right, rgba(147, 255, 166, 1.0), rgba(81, 219, 76, 0.01));            
+            background: linear-gradient(to right, rgba(147, 255, 166, 1.0), rgba(81, 219, 76, 0.01));
+            /* Standard syntax */            
             
         }
         
@@ -191,41 +141,35 @@
             font-family: 'Architects Daughter', cursive !important;
             line-height: 5.5vmin;
             min-height: 4.25vmin;
-            font-size: 2.05em;
+            font-size: 3.05em;
             float: left;
             left: 0;
             color: rgba(255, 255, 255, 0.9) !important;
             padding: 14px 12px;ant
             text-decoration: none;
             list-style-type: none;
-            z-index: +0;            
+            z-index: +210;            
         }
         
         .menu-item:hover {
 /*            background: rgba(2,255,2,1.0);*/
             cursor: pointer;
 /*            background-color: rgba(255, 255, 255, 1.0);*/
-            font-size: 2.50em;
+            font-size: 3.50em;
             color: black !important; 
             border-radius: 15px;
             width: 240px;
             display: inline;
-            background: rgba(147, 255, 166, 1.0);
-            /* For browsers that do not support gradients */
-            background: -ms-linear-gradient(left, rgba(81, 219, 76, 1.0)), rgba(147, 255, 166, 1.0));
-            /* For Microsoft */
-            background: -webkit-linear-gradient(left, rgba(81, 219, 76, 1.0), rgba(147, 255, 166, 1.0));
-            /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(right, rgba(81, 219, 76, 1.0), rgba(147, 255, 166, 1.0));
-            /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(right, rgba(81, 219, 76, 1.0), rgba(147, 255, 166, 1.0));
-            /* For Firefox 3.6 to 15 */
-            background: linear-gradient(to right, rgba(81, 219, 76, 1.0), rgba(147, 255, 166, 1.0));             
+            background: rgba(81, 219, 76, 1.0);
+            z-index: +210; 
             
-            z-index: +2;
+            
+/*            z-index: +2;*/
             
         }
-        
+        img {
+            border: 1px solid pink;
+        }
  
     </style>
 
@@ -237,8 +181,8 @@
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
-        </div>
-        <nav id="menu" class="hdr">
+        
+        <nav id="menu">
 
             <div class="menu">
                 <div class="menu-item"><a href="index.html">Home</a></div>
@@ -255,7 +199,7 @@
                     <img class="logo" src="media/refresh-expanded.png"></a>
             </div>
         </nav>
-
+        </div>
     </header>
 
 </div>
@@ -265,7 +209,7 @@
     <script>
         $(document).ready(function () {
 
-
+//            var container = $("#container");
             var menu = $(".menu");
             var hamburger = $(".hamburger");
             var line = $(".line");
@@ -275,9 +219,11 @@
                 menu.css("left", "0px");
                 line.css("background", "#FFF");
                 menuOpen = true;
+//                container.css("left", "520px");
             }
 
             function closeMenu() {
+//                container.css("left", "0px");
                 menu.css("left", "-520px");
                 line.css("background", "#BCAD90");
                 menuOpen = false;
