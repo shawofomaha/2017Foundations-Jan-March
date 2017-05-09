@@ -4,8 +4,6 @@
 }
 
 *, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -13,9 +11,6 @@ body {
     width: 100%;
     background-color: rgba(0, 0, 0, 1.0);
     -webkit-transition: background-color 3sec ease-in-out;
-    -moz-transition: background-color 3sec ease-in-out;
-    -ms-transition: background-color 3sec ease-in-out;
-    -o-transition: background-color 3sec ease-in-out;
     transition: background-color 3sec ease-in-out;
     margin: 0;
 }
@@ -60,15 +55,19 @@ h3 {
   
 }
 
+
+.paisleyBorderTop {
+/*    display: none;*/
+    display: inline-block;
+}
+
+
 /* ************* Start of item box ******* */
 
 .picBox {
     border: 1.25px solid rgba(244, 210, 161,1.0);
     background-color: rgba(112, 127, 116, 1.0);
     -webkit-transition: background-color 3sec ease-in-out;
-    -moz-transition: background-color 3sec ease-in-out;
-    -ms-transition: background-color 3sec ease-in-out;
-    -o-transition: background-color 3sec ease-in-out;
     transition: background-color 3sec ease-in-out;
     width: 140vmin;
     border-radius: 35px;
@@ -134,16 +133,21 @@ button {
 
 #container {
     position: inherit;
+    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     background-image: url("../media/cherry-wood-panels-background-header.jpg");
     border: 1px solid black;
     box-sizing: border-box;
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap; 
-    -webkit-flex-flow: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -ms-flex-flow: wrap;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -ms-flex-line-pack: distribute;
     align-content: space-around;
     top: -19.75vmin;
     width: 100%;
@@ -163,7 +167,9 @@ img {
     min-height: 15vmin;
     border-radius: 50%;
     position: absolute;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     /*     transition: all 2s;   */
     top: 50%;
@@ -173,8 +179,6 @@ img {
 
 .spinBall {
     -webkit-animation: spin 0.35s ease infinite;
-    -moz-animation: spin 0.35s ease infinite;
-    -ms-animation: spin 0.35s ease infinite;
     animation: spin 0.435s ease infinite;
 }
 
@@ -239,12 +243,10 @@ img {
         width: 19px;
     }
     ::-webkit-scrollbar-track {
-        -webkit-border-radius: 5px;
         border-radius: 5px;
         background: rgba(0, 0, 0, 0.1);
     }
     ::-webkit-scrollbar-thumb {
-        -webkit-border-radius: 5px;
         border-radius: 5px;
         background: rgba(0, 0, 0, 0.2);
     }

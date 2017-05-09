@@ -12,4 +12,11 @@ span#title {
     z-index: +15;
 }
 
- 
+ .paisleyBorderTop {
+/*    display: none;*/
+    display: inline-block;
+}
+
+.hamburger {
+    top: -5vmin !important;
+}

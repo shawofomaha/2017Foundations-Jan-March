@@ -13,9 +13,14 @@ span#title {
     z-index: +15;
 }
 
-/*footer ul {*/
-/*    display: none;*/
-/*}*/
+.paisleyBorderTop {
+    display: none;
+/*    display: inline-block;*/
+}
+
+.hamburger {
+    top: -9vmin !important;
+}
 
 #on-hidden-menu li a {
     z-index: +3333 !important;

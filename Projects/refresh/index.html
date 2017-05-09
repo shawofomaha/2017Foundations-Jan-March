@@ -11,11 +11,11 @@
 
     <!-- CSS Stylesheet href's -->
     <link rel="stylesheet" href="css/main.css">
-    <link media="all and (min-width: 250px)" rel="stylesheet" href="css/handheld.css">
-    <link media="all and (min-width: 768px)" rel="stylesheet" href="css/desktop.css">
+    <link media="all and (max-width: 445px)" rel="stylesheet" href="css/handheld.css">
+    <link media="all and (max-width: 1077px)" rel="stylesheet" href="css/desktop.css">
 
     <style>
-        .paisleyBorderBottom {
+        img.paisleyBorderBottom {
             top: -38.25vmin;
             z-index: -1;
         }
@@ -124,7 +124,7 @@
         
         .modal-content {
             background-color: rgba(2, 2, 2, 0.98);
-/*            background-color: whitesmoke;*/
+ 
             font-family: 'Architects Daughter', cursive;
             font-size: 1.25em;
             color: rgba(112, 127, 116, 1.0);
@@ -155,13 +155,10 @@
         #myBtn:hover {
             top: 0.5vmin;            
             margin: 2px;
-/*            background-color: rgba(191, 137, 45, 1.0);*/
-/*            color: rgba(89, 242, 55, 1.0);*/
-            
+         
             min-height: 7vmin !important;
             width: 19.5vw !important;
-/*            border: 1px solid rgba(89, 242, 55, 1.0);*/
-            
+         
             background-color: rgba(121, 201, 1, 0.5) !important;
             color: rgba(242, 242, 242, 1.0) !important;
             font-family: sans-serif !important;
@@ -178,18 +175,15 @@
             font-family: 'Architects Daughter', cursive;
             font-size: 3.15vw;
             margin: 5px;
-/*
-            min-width: 19vmin !important;
-            min-height: 3.5vmin !important;
-*/
+ 
             width: 20.5vw !important;            
-/*            color: darkblue;*/
+ 
             background-color: rgba(255, 255, 255, 1.0);
             top: 2.5vmin;
             margin-bottom: 3.5vmin;
-/*            border-radius: 25%;*/
+ 
             padding-left: 14px;
-/*            background-color: rgba(112, 127, 116, 1.0);*/
+ 
             background-color: rgba(222, 222, 222, 0.85) !important;
             font-size: 1.7vw !important;
             border-radius: 15px !important;
@@ -396,6 +390,7 @@ margin-left:-2%; " height="540px"></p>
             }
             $("#ball").css("top", y);
             $("#ball").css("left", x);
+            console.log("width: " + width);
         }
 
         var myVar = setInterval(function () {
