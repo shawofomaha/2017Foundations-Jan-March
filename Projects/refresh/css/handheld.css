@@ -23,13 +23,6 @@ span#title {
     left: +3vmin !important;
 }
 
- #simpleToggle { 
-    top: +5vmin !important;
-    left: +18vw !important;
-}
-
- #simpleToggle:hover { 
-}
 
 #on-hidden-menu li a {
     z-index: +3333 !important;
