@@ -152,12 +152,14 @@
             font-family: 'Architects Daughter', cursive !important;
             line-height: 5.5vmin;
             min-height: 4.25vmin;
-            font-size: 3.05em;
+            font-size: 3.05rem;
             float: left;
             left: 0;
             color: rgba(255, 255, 255, 0.9) !important;
             padding: 14px 12px;
-            ant text-decoration: none;
+            text-decoration: none;
+            border: 1.25px solid rgba(244, 210, 161, 1.0);
+            border-radius: 15px;
             list-style-type: none;
             z-index: +210;
         }
@@ -166,12 +168,13 @@
             /*            background: rgba(2,255,2,1.0);*/
             cursor: pointer;
             /*            background-color: rgba(255, 255, 255, 1.0);*/
-            font-size: 3.50em;
+            font-size: 3.50rem;
             color: black !important;
             border-radius: 15px;
             width: 320px;
             display: inline;
             background: rgba(81, 219, 76, 1.0);
+             border: 1.75px solid rgba(244, 210, 161, 1.0);
             z-index: +210;
             /*            z-index: +2;*/
         }
@@ -183,6 +186,15 @@
        .menu  a:link, .menu  a:visited, .menu a:hover, .menu a:active  {
             text-decoration: none; 
             color: rgba(211, 211, 211, 1.0) !important;
+        }
+        
+        .menu a:hover {
+            color: black !important;
+        }
+        #menuTitle {
+            font-family: 'Architects Daughter', cursive !important;
+            font-size: 1.7rem;
+            color: rgba(81, 219, 76, 1.0);
         }
     </style>
 
@@ -197,15 +209,16 @@
                 <div class="line"></div>
 
                 <nav>
-
+                     
                     <div class="menu">
+                        <span id="menuTitle">Refresh Estate Sales</span>                           
                         <div class="menu-item"><a href="index.html">Home</a></div>
                         <div class="menu-item"><a href="sales.html">Sales</a></div>
                         <div class="menu-item"><a href="mission.html">Mission</a></div>
                         <div class="menu-item"><a href="about.html">About</a></div>
                         <div class="menu-item"><a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/">Contact</a></div>
-                        <span id="title"></span>
-                        <!--                    <span id="title">Refresh Estate Sales</span>-->
+<!--                        <span id="title"></span>-->
+                        
                     </div>
                 </nav>
             </div>
