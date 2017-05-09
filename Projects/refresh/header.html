@@ -22,12 +22,17 @@
             line-height: 0px;
         }
         
+        header {
+            text-align: center;
+            width: 100%;
+        }
+        
         .hdr {
             position: fixed;
             top: 0;
             width: 100%;
             min-height: 9vmin;
-/*            background-color: rgba(0, 0, 0, 1.0);*/
+            /*            background-color: rgba(0, 0, 0, 1.0);*/
             display: -webkit-box;
             display: -moz-box;
             display: -ms-flexbox;
@@ -37,7 +42,6 @@
             justify-content: flex-end;
             justify-content: center;
         }
- 
         
         .paisleyBorderTop {
             position: fixed;
@@ -45,7 +49,7 @@
             min-height: 5vmin;
             min-width: 100%;
             left: -0.0vmin;
-/*            perspective: 150px;*/
+            /*            perspective: 150px;*/
             z-index: 0;
         }
         
@@ -53,75 +57,82 @@
             top: 7vmin;
         }
         
- 
-   
+        .logoWrapper {
+            /*            display: block;*/
+            /*            min-height: 2vh;*/
+            /*            border: 2px dotted orange;*/
+            /*            width: 100%;*/
+            /*            text-align: center;*/
+        }
+        
         .logo {
-            position: relative;
+            /*            position: absolute;*/
             padding: 0;
-            margin: 0;
+            display: inline-block;
+            margin: 0 auto;
             border-radius: 50%;
             z-index: +15;
-/*            left: 40%;*/
-            transform: translate(320%);
+            /*            transform: translate(320%);*/
         }
         
         img.logo {
             position: absolute;
-            top: -7.0vmin;
+            top: -9.0vmin;
+            transform: translate(calc(50% - 24vmin));
             width: 24vmin;
             height: 24vmin;
             z-index: -0;
         }
- 
         
         .hamburger {
             position: fixed;
+            display: inline-block;
             top: -5vh;
             left: 1vh;
             margin: 50px;
-            color: rgba(222,222,222,1.0);
+            color: rgba(222, 222, 222, 1.0);
             cursor: pointer;
             z-index: +55;
         }
         
         .line {
- 
-/*            top: 7vh;*/
+            /*            top: 7vh;*/
             width: 3.5vw;
             height: 0.50vh;
             border-radius: 20px;
-            background: rgba(222,222,222,1.0);
-            color: rgba(222,222,222,1.0);
+            background: rgba(222, 222, 222, 1.0);
+            color: rgba(222, 222, 222, 0.5);
             margin-bottom: 5px;
         }
         
         .menu {
-            width: 520px;
+            display: inline-block;
+            width: 320px;
             height: 100%;
-/*            background: #BCAD90;*/
+            /*            background: #BCAD90;*/
             position: fixed;
             top: 0;
-            left: -520px;
-            background: rgba(0, 183, 6, 1.0);
-/*            background: #1e2b33;*/
-            
-/*            background-color: rgba(35, 60, 39, 1.0);            */
+            left: -320px;
+            /*            background: rgba(0, 183, 6, 1.0);*/
+            /*            background: #385624;*/
+            background-image: url("media/cherry-wood-panels-background-header.jpg");
+            border: 1.25px solid rgba(244, 210, 161, 1.0);
+            border-radius: 15px;
+            /*            background-color: rgba(35, 60, 39, 1.0);            */
             transition: left .4s ease-in-out;
             z-index: 22;
-
-            background: rgba(147, 255, 166, 1.0);
+            /*            background: rgba(147, 255, 166, 1.0);*/
             /* For browsers that do not support gradients */
-            background: -ms-linear-gradient(left, rgba(147, 255, 166, 1.0), rgba(81, 219, 76, 1.0));
+            /*            background: -ms-linear-gradient(left, rgba(147, 255, 166, 1.0), rgba(81, 219, 76, 1.0));*/
             /* For Microsoft */
-            background: -webkit-linear-gradient(left, rgba(147, 255, 166, 1.0), rgba(81, 219, 76, 1.0));
+            /*            background: -webkit-linear-gradient(left, rgba(147, 255, 166, 1.0), rgba(81, 219, 76, 1.0));*/
             /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(right, rgba(147, 255, 166, 1.0), rgba(81, 219, 76, 1.0));
+            /*            background: -o-linear-gradient(right, rgba(147, 255, 166, 1.0), rgba(81, 219, 76, 1.0));*/
             /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(right, rgba(147, 255, 166, 1.0), rgba(81, 219, 76, 1.0));
+            /*            background: -moz-linear-gradient(right, rgba(147, 255, 166, 1.0), rgba(81, 219, 76, 1.0));*/
             /* For Firefox 3.6 to 15 */
-            background: linear-gradient(to right, rgba(147, 255, 166, 1.0), rgba(81, 219, 76, 0.01));
-            /* Standard syntax */            
-            
+            /*            background: linear-gradient(to right, rgba(147, 255, 166, 1.0), rgba(81, 219, 76, 0.01));*/
+            /* Standard syntax */
         }
         
         .menu-item:first-child {
@@ -133,8 +144,8 @@
         }
         
         .menu-item {
-            text-decoration: none;
-/*            color: #fff;*/
+            text-decoration: none !important;
+            /*            color: #fff;*/
             width: 100%;
             padding: 1rem 3rem;
             box-sizing: border-box;
@@ -145,71 +156,78 @@
             float: left;
             left: 0;
             color: rgba(255, 255, 255, 0.9) !important;
-            padding: 14px 12px;ant
-            text-decoration: none;
+            padding: 14px 12px;
+            ant text-decoration: none;
             list-style-type: none;
-            z-index: +210;            
+            z-index: +210;
         }
         
         .menu-item:hover {
-/*            background: rgba(2,255,2,1.0);*/
+            /*            background: rgba(2,255,2,1.0);*/
             cursor: pointer;
-/*            background-color: rgba(255, 255, 255, 1.0);*/
+            /*            background-color: rgba(255, 255, 255, 1.0);*/
             font-size: 3.50em;
-            color: black !important; 
+            color: black !important;
             border-radius: 15px;
-            width: 240px;
+            width: 320px;
             display: inline;
             background: rgba(81, 219, 76, 1.0);
-            z-index: +210; 
-            
-            
-/*            z-index: +2;*/
-            
+            z-index: +210;
+            /*            z-index: +2;*/
         }
+        
         img {
-            border: 1px solid pink;
+            /*            border: 1px solid pink;*/
         }
- 
+        
+        a:link, a:visited, a:hover, a:active  {
+            text-decoration: none; 
+            color: rgba(211, 211, 211, 1.0) !important;
+        }
     </style>
 
 </head>
-<body>
-<div>
-    <header>
-        <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        
-        <nav id="menu">
 
-            <div class="menu">
-                <div class="menu-item"><a href="index.html">Home</a></div>
-                <div class="menu-item"><a href="sales.html">Sales</a></div>
-                <div class="menu-item"><a href="mission.html">Mission</a></div>
-                <div class="menu-item"><a href="about.html">About</a></div>
-                <div class="menu-item"><a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/">Contact</a></div>
-                <span id="title"></span>
-                <!--                    <span id="title">Refresh Estate Sales</span>-->
+<body>
+    <div>
+        <header>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+
+                <nav>
+
+                    <div class="menu">
+                        <div class="menu-item"><a href="index.html">Home</a></div>
+                        <div class="menu-item"><a href="sales.html">Sales</a></div>
+                        <div class="menu-item"><a href="mission.html">Mission</a></div>
+                        <div class="menu-item"><a href="about.html">About</a></div>
+                        <div class="menu-item"><a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/">Contact</a></div>
+                        <span id="title"></span>
+                        <!--                    <span id="title">Refresh Estate Sales</span>-->
+                    </div>
+                </nav>
             </div>
-            
-            <div>
-                <a href="index.html"><img class="paisleyBorderTop" src="media/borders-holly2.png">
+            <img class="paisleyBorderTop" src="media/borders-holly2.png">
+            <!--                    <div>-->
+            <div class="logoWrapper">
+                <a href="index.html">
                     <img class="logo" src="media/refresh-expanded.png"></a>
             </div>
-        </nav>
-        </div>
-    </header>
+            <!--                    </div>-->
 
-</div>
-<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
+        </header>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
 
-//            var container = $("#container");
+            //            var container = $("#container");
             var menu = $(".menu");
             var hamburger = $(".hamburger");
             var line = $(".line");
@@ -219,12 +237,12 @@
                 menu.css("left", "0px");
                 line.css("background", "#FFF");
                 menuOpen = true;
-//                container.css("left", "520px");
+                //                container.css("left", "520px");
             }
 
             function closeMenu() {
-//                container.css("left", "0px");
-                menu.css("left", "-520px");
+                //                container.css("left", "0px");
+                menu.css("left", "-320px");
                 line.css("background", "#BCAD90");
                 menuOpen = false;
             }
@@ -237,11 +255,11 @@
                 }
             }
 
-            hamburger.on({
-                mouseenter: function () {
-                    openMenu();
-                }
-            });
+            //            hamburger.on({
+            //                mouseenter: function () {
+            //                    openMenu();
+            //                }
+            //            });
 
             menu.on({
                 mouseleave: function () {

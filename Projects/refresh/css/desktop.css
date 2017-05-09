@@ -12,27 +12,4 @@ span#title {
     z-index: +15;
 }
 
-
-/*
-footer ul {
-    display: inline-block;
-}
-*/
-
-/*#on-hidden-menu ul {*/
-/*
-    height: 0;
-    display: none;
-}
-*/
-/*nav li {*/
-/*    display: none;*/
-/*}*/
-
-        nav li a:hover {
-            -moz-transition: all .75s ease-in-out;
-            -o-transition: all .75s ease-in-out;
-            -ms-transition: all .75s ease-in-out;
-            -webkit-transition: all .75s ease-in-out;            
-            transition: all 0.75s ease-in-out;
-        }
+ 
