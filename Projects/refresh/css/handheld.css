@@ -19,7 +19,16 @@ span#title {
 }
 
 .hamburger {
-    top: -9vmin !important;
+    top: -3vmin !important;
+    left: +3vmin !important;
+}
+
+ #simpleToggle { 
+    top: +5vmin !important;
+    left: +18vw !important;
+}
+
+ #simpleToggle:hover { 
 }
 
 #on-hidden-menu li a {

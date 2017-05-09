@@ -19,4 +19,5 @@ span#title {
 
 .hamburger {
     top: -5vmin !important;
+    left: +0vw !important;
 }

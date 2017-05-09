@@ -1,10 +1,13 @@
 /*     .   main     .   */
+
 * {
     box-sizing: border-box;
 }
 
-*, *:after, *:before {
-  box-sizing: border-box;
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
 }
 
 body {
@@ -29,7 +32,6 @@ h1 {
     text-shadow: 0.75px 0.75px rgba(112, 127, 116, 1.0);
     line-height: 9vmin;
     top: 13.5vmin;
- 
 }
 
 h1.hdr {
@@ -52,12 +54,10 @@ h3 {
 
 h3 {
     text-shadow: 0.75px 0.75px rgba(82, 97, 86, 1.0);
-  
 }
 
-
 .paisleyBorderTop {
-/*    display: none;*/
+    /*    display: none;*/
     display: inline-block;
 }
 
@@ -65,7 +65,7 @@ h3 {
 /* ************* Start of item box ******* */
 
 .picBox {
-    border: 1.25px solid rgba(244, 210, 161,1.0);
+    border: 1.25px solid rgba(244, 210, 161, 1.0);
     background-color: rgba(112, 127, 116, 1.0);
     -webkit-transition: background-color 3sec ease-in-out;
     transition: background-color 3sec ease-in-out;
@@ -182,6 +182,7 @@ img {
     animation: spin 0.435s ease infinite;
 }
 
+
 /*
 @-moz-keyframes spin {
     100% {
@@ -231,44 +232,76 @@ img {
     }
 */
 
-    #ball:hover {
-        background-color: blue !important;
-        min-height: 20vmin;
-        min-width: 20vmin;
-    }
-    span {
-        display: inline;
-    }
-    ::-webkit-scrollbar {
-        width: 19px;
-    }
-    ::-webkit-scrollbar-track {
-        border-radius: 5px;
-        background: rgba(0, 0, 0, 0.1);
-    }
-    ::-webkit-scrollbar-thumb {
-        border-radius: 5px;
-        background: rgba(0, 0, 0, 0.2);
-    }
-    ::-webkit-scrollbar-thumb:hover {
-        background: rgba(0, 0, 0, 0.4);
-    }
-    ::-webkit-scrollbar-thumb:window-inactive {
-        background: rgba(0, 0, 0, 0.05);
-    }
-    
-    span#title {
-        position: relative;
-        font-family: 'Architects Daughter', cursive;
-        text-shadow: 0.75px 0.75px rgba(112, 127, 116, 1.0);
-        color: rgba(242, 232, 218, 0.9);
-        top: -0vmin;
-        font-size: 6vmin;
-        line-height: 8.5vmin;
-        padding-left: 9.5vmin;
-    }
+#ball:hover {
+    background-color: blue !important;
+    min-height: 20vmin;
+    min-width: 20vmin;
+}
 
-            /* Color Green 
+span {
+    display: inline;
+}
+
+::-webkit-scrollbar {
+    width: 19px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+span#title {
+    position: relative;
+    font-family: 'Architects Daughter', cursive;
+    text-shadow: 0.75px 0.75px rgba(112, 127, 116, 1.0);
+    color: rgba(242, 232, 218, 0.9);
+    top: -0vmin;
+    font-size: 6vmin;
+    line-height: 8.5vmin;
+    padding-left: 9.5vmin;
+}
+
+#simpleToggle:hover {
+    width: 11.75vw !important;
+    left: 14.5vw;
+    background-color: rgba(121, 201, 1, 0.5) !important;
+    background-image: none !important;
+    color: rgba(242, 242, 242, 1.0) !important;
+    font-family: sans-serif !important;
+    font-size: 1.49vw !important;
+    border: 1.5px dotted rgba(2, 255, 2, 1.0) !important;
+    border-radius: 50% !important;
+}
+
+#simpleToggle {
+    position: absolute;
+    top: 0vh;
+    left: 15.5vw;
+    width: 9.5vw !important;
+    height: 6vh !important;
+    background-color: rgba(222, 222, 222, 0.85) !important;
+    background-image: none !important;
+    font-size: 2vw !important;
+    border-radius: 15px !important;
+    color: rgba(2, 2, 2, 1.0) !important;
+}
+
+
+/* Color Green 
             rgba(112, 127, 116, 1.0);
             rgba(16, 93, 0, 1.0);
             rgba(130, 190, 1, 1.0);

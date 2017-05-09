@@ -11,10 +11,11 @@
 
     <!-- CSS Stylesheet href's -->
     <link rel="stylesheet" href="css/main.css">
-    <link media="all and (max-width: 445px)" rel="stylesheet" href="css/handheld.css">
-    <link media="all and (max-width: 1077px)" rel="stylesheet" href="css/desktop.css">
+    <link media="all and (min-width: 100px) and (max-width: 449px)" rel="stylesheet" href="css/handheld.css">
+    <link media="all and (min-width: 459px) and (max-width: 2401px) " rel="stylesheet" href="css/desktop.css">
 
     <style>
+/*
         img.paisleyBorderBottom {
             top: -38.25vmin;
             z-index: -1;
@@ -23,6 +24,7 @@
         p {
             z-index: -5;
         }
+*/
         
         #homeTitle {
             position: relative;
@@ -94,9 +96,11 @@
             flex-wrap: wrap;
         }
         
+/*
         footer2 ul {
             top: -6.75vmin !important;
         }
+*/
         /******* Modal start *******/
         /* The Modal (background) */
         
@@ -183,7 +187,6 @@
             z-index: +0;
         }
         /* Modal end */
- 
         
         h4 {
             display: block;
@@ -195,30 +198,7 @@
             z-index: +1;
         }
         
-        #simpleToggle:hover {
-            width: 11.75vw !important;
-            left: 14.5vw;
-            background-color: rgba(121, 201, 1, 0.5) !important;
-            background-image: none !important;
-            color: rgba(242, 242, 242, 1.0) !important;
-            font-family: sans-serif !important;
-            font-size: 1.49vw !important;
-            border: 1.5px dotted rgba(2, 255, 2, 1.0) !important;
-            border-radius: 50% !important;
-        }
-        
-        #simpleToggle {
-            position: fixed;
-            top: 2.75vh;
-            left: 15.5vw;
-            width: 9.5vw !important;
-            height: 6vh !important;
-            background-color: rgba(222, 222, 222, 0.85) !important;
-            background-image: none !important;
-            font-size: 2vw !important;
-            border-radius: 15px !important;
-            color: rgba(2, 2, 2, 1.0) !important;
-        }
+
         
         .txtShadow {
             font-family: sans-serif;
@@ -237,6 +217,10 @@
             width: 99%;
         }
         
+ #simpleToggle { 
+    top: 1vmin !important;
+    left: +11vw !important;
+}        
     </style>
 </head>
 
