@@ -1,0 +1,26 @@
+{
+  "short_name": "RefreshEstateSales",
+  "name": "Refresh Estate Sales biz",
+  "background_color": "#2196F3",
+  "display": "standalone",
+  "orientation": "landscape",
+  "theme_color": "#2196F3",
+  "start_url": "index.html?launcher=true",
+  "icons": [
+    {
+      "src": "media/Refresh Estate Sales Logo ( 48x48 ).png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "media/Refresh Estate Sales Logo ( 96x96 ).png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "media/Refresh Estate Sales Logo ( 192x192 ).png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
+}
