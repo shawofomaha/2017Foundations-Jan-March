@@ -17,6 +17,12 @@ html {
     .paisleyBorderTop {
         display: none !important;
     }
+        #wowContainer {
+            top: 5.5vmin !important;
+            left: -29.5vw !important;
+            width: 100%;
+        }
+    
         #wowslider-container1 {
             max-width: 320px;
             max-height: 240px;
@@ -48,8 +54,29 @@ html {
 */
     .paisleyBorderTop {
         display: none !important;
+        
     }
-    
+        #wowslider-container1 {
+            max-width: 320px;
+            max-height: 240px;
+        }
+        
+        #wowslider-container1 {
+            width: 320px;
+        }
+        
+        #wowslider-container1 .ws_images {
+            max-height: 240px;
+            max-width: 320px;
+        }
+        
+        #wowslider-container1 .ws_images ul a {
+            max-height: 240px;
+        }
+        
+        #wowslider-container1 .ws_images > div > img {
+            max-height: 240px;
+        }    
 }
 
 @media all and (max-width:1070px) {
