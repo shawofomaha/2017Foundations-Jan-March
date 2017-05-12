@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Akronim|Aladin|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: rgba(2,2,2,0.5);
+            font-family: 'Syncopate', sans-serif;
+            font-size: 1.5em;
+/*            border: 1px solid yellow;*/
+        }
+        
+        h1 {
+            color: rgba(255,255,254,1.0);
+        }
+        
+        #columnWidthNbr,
+        #inputNbr {
+            color: red;
+        }
+        
+        button {
+            background: blue;
+            color: white;
+        }
+        #chessBoardShow {
+/*            border: 1vmin solid rgba(2,2,2,1.0);*/
+            top: 5vmin;
+            position: relative;
+        }
+        
+        .board {
+            position: relative;
+            top: -5px;
+            margin-left: -3px;
+            margin-right: -3px;
+            margin-bottom: -3px;
+            padding: 0;       
+        }
+        
+        .container,
+        #chessBoardShow {
+            text-align: center;
+        }
+        
+        h1 {
+            text-align: center;
+            text-shadow: 0.5vw 0.5vw  rgba(2, 2, 2, 0.55);
+        }
+        
+        .input {
+            position: relative;
+            border: 1px solid rgba(2, 2, 2, 1.0);
+            background-color: rgba(2, 2, 2, 0.3);
+            border-radius: 15px;
+            width: 80%;
+            left: 20vmin;
+        }
+        
+        .tag, input {
+            color: rgba(255,255,254,1.0);
+            padding-top: 1vmin;
+            margin-top: 3vmin;
+            margin-bottom: 3vmin;
+            margin-right: 1vmin;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>WordPress  Week 2 In Class<br/> 4.1 Chess Board</h1>
+    <div class="container">
+        <div class="input">
+            <input type="number" id="inputNbr"><span class="tag">&lt;-# of Tiles</span>
+            <input type="number" id="columnWidthNbr"><span  class="tag">&lt;-# in Row</span>
+            <button type="button">Build Chess Board</button>
+        </div>
+        <div id="chessBoardShow"></div>
+    </div>
+</body>
+
+</html>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        var gridSize = 0;
+        var lineLength = 0;
+
+        function chessboardPrtFunc(gridSize) {
+            var inputErr;
+            var whiteEmoji = "<span class='board'>⬜️</span>";
+            var blackEmoji = "<span class='board'>⬛️</span>";
+            var gridSize;
+            var lineCtr = 1;
+            var rowSize = 8;
+            var prtBlack = true;
+            var j = 1;
+
+            for (i = 1; i < gridSize; i++) {
+
+                if (isEven(lineCtr)) {
+                    prtBlack = false;
+                } else {
+                    prtBlack = true;
+                }
+
+                for (j = 1; j < lineLength; j++) {
+                    if (prtBlack) {
+                        appendItem(blackEmoji);
+                        prtBlack = false;
+                    } else {
+                        appendItem(whiteEmoji);
+                        prtBlack = true;
+                    }
+                    i++;
+                }
+                if (j == (lineLength)) {
+                    lineCtr++;
+                    $("#chessBoardShow").append("<br />");
+                }
+            }
+        }
+
+        function isEven(n) {
+            return n % 2 == 0;
+        }
+
+        function appendItem(item) {
+            $("#chessBoardShow").append(item);
+        }
+         
+        function resetBoard() {
+            $("#chessBoardShow").text("").css({
+                "color": "rgba(255,255,254,1.0)",
+                "font-family": "Roboto, sans-serif",
+                "transition": "all 1.69s ease-in"
+            });
+        }
+
+        $("button").click(function () {
+            resetBoard();
+            
+            // get input numbers
+            gridSize = $("#inputNbr").val();
+            gridSize++; // Increment for outer loop 
+            lineLength = $("#columnWidthNbr").val();
+            lineLength++; // Increment for line loop
+            if (lineLength > gridSize) {
+                inputErr = "# in Row " + ( lineLength - 1 ) + " CANNOT be larger than the # of Tiles " + ( gridSize - 1 ) + " !!";
+                appendItem(inputErr);
+                $("#chessBoardShow").css({
+                    "background-color": "rgba(255,255,254,0.7);",
+                    "color": "rgba(211,42,42,1.0)",
+                    "font-family": "Roboto, sans-serif",
+                    "transition": "all 1.69s ease-in"
+                });
+            } else {
+                chessboardPrtFunc(gridSize);     
+            }            
+        });
+    });
+</script>

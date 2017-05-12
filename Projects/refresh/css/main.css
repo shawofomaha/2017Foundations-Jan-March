@@ -45,7 +45,7 @@ html {
             max-height: 240px;
         }    
 }
-@media all and (max-width:600px) {}
+
 @media all and (max-width:767px) {
     /*
     * {
