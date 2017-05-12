@@ -5,7 +5,7 @@
     <!-- Housekeeping -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!--  JSON Manifest -->
     <link rel="manifest" href="manifest.json">
 
@@ -70,20 +70,25 @@
             height: 24vmin;
             z-index: -0;
         }
-        
-        .hamburger {
-            position: fixed;
+/*        body {background: white;}*/
+        .hamburger img {
+            position: absolute;
+            color: white;
+/*            background-color: antiquewhite;*/
             display: inline-block;
-            top: -5vh;
-            left: 1vh;
+            width: 8vw;
+            height: 8vh;
+            top: -6.5vh;
+            left: -1vw;
             margin: 50px;
             color: rgba(222, 222, 222, 1.0);
             cursor: pointer;
             z-index: +5555;
         }
         
-        .line {
+/*        .line {*/
             /*            top: 7vh;*/
+/*
             width: 3.5vw;
             height: 0.40vh;
             border-radius: 20px;
@@ -91,6 +96,7 @@
             color: rgba(222, 222, 222, 0.5);
             margin-bottom: 5px;
         }
+*/
         
         .menu {
             display: inline-block;
@@ -187,11 +193,15 @@
 <body>
     <div>
         <header>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
 
+            <div class="hamburger">
+                <!--
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+-->
+                <img class="hamburger" src="media/hamburger-white-bars%20copy.png" />
+                
                 <nav>
 
                     <div class="menu">
@@ -226,13 +236,13 @@
 
             //            var container = $("#container");
             var menu = $(".menu");
-            var hamburger = $(".hamburger");
-            var line = $(".line");
+            var hamburger = $("img.hamburger");
+//            var line = $(".line");
             var menuOpen;
 
             function openMenu() {
                 menu.css("left", "0px");
-                line.css("background", "#FFF");
+//                line.css("background", "#FFF");
                 menuOpen = true;
                 //                container.css("left", "520px");
             }
@@ -240,7 +250,7 @@
             function closeMenu() {
                 //                container.css("left", "0px");
                 menu.css("left", "-320px");
-                line.css("background", "#BCAD90");
+//                line.css("background", "#BCAD90");
                 menuOpen = false;
             }
 

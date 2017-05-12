@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    
+    <h1>WordPress  Week 2 In Class 2.1 FizzBizz</h1>
+
+<!--    <input type="number" id="inputNbr">-->
+    <button type="button">Number in Fizz</button>
+    <div id="fizzShow"></div>
+
+</body>
+
+</html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        background-color: red;
+    }
+    
+    button {
+        background: blue;
+        color: white;
+    }
+    
+    #fizzShow,h1 {
+        text-align: center;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        var fizzSize = 100;
+
+        function fizzPrtFunc() {
+           
+            fizzSize = 100;
+            console.log("fizzSize= " + fizzSize);
+            for (i = 1; i < fizzSize; i++) {
+                console.log(i);
+                var show5 = (i % 5);
+                var show3 = (i % 3);
+//                console.log("show i %= 5,3,i = " + show + " " + show2 +  " " + i );
+                if ( show5 == 0  && show3 == 0  ) {
+                    $("#fizzShow").append("<b>" + "FizzBuzz" + "</b> <br />");
+                } else if ( show3 == 0 ) {
+                     $("#fizzShow").append("<b>" + "Fizz" + "</b> <br />");                  
+                } else if ( show5 == 0) {
+                     $("#fizzShow").append("<b>" + "Buzz" + "</b> <br />")                    
+                } else {
+                    $("#fizzShow").append("<b>" + i + "</b> <br />");
+                }
+
+                
+            }
+        }
+
+        $("button").click(function () {
+//            fizzSize = $("#inputNbr").val();;
+            console.log("fizzSize= " + fizzSize);
+             $("#fizzShow").text("");
+
+            fizzPrtFunc();
+        });
+
+    });
+</script>
