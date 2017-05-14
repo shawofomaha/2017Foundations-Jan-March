@@ -14,7 +14,6 @@
             background-color: rgba(2, 2, 2, 0.5);
             font-family: 'Syncopate', sans-serif;
             font-size: 1.5em;
-            /*            border: 1px solid yellow;*/
         }
         
         h1 {
@@ -27,7 +26,7 @@
             animation-iteration-count: infinite;
             animation-direction: alternate;
             transition: all 0.4s ease-in;
-            -webkit-transition: all 1.69s ease-in;
+            -webkit-transition: all 0.4s ease-in;
         }
         
         @keyframes colorCrossFade {
@@ -69,7 +68,6 @@
         }
         
         #chessBoardShow {
-            /*            border: 1vmin solid rgba(2,2,2,1.0);*/
             top: 5vmin;
             position: relative;
         }
@@ -100,13 +98,9 @@
         .errorClass {
             width: 50% !important;
             left: 25%;
-            border-bottom: 5px solid rgba(211, 42, 42, 1.0);
             border-bottom: 5px solid rgba(2, 2, 2, 1.0);
             background-color: rgba(255, 255, 254, 0.7);
-            /*        color: rgba(211,42,42,1.0);*/
             font-family: "Roboto, sans-serif";
-            transition: all 1.69s ease-in;
-            -webkit-transition: all 1.69s ease-in;
             border-radius: 15px;
             animation-delay: .2s;
             animation-name: colorCrossFade2;
@@ -114,7 +108,7 @@
             animation-iteration-count: infinite;
             animation-direction: alternate;
             transition: all 0.4s ease-in;
-            -webkit-transition: all 1.69s ease-in;
+            -webkit-transition: all 0.49s ease-in;
         }
         
         @keyframes colorCrossFade2 {
@@ -145,7 +139,9 @@
 </head>
 
 <body>
+
     <h1>WordPress  Week 2 In Class<br/> 4.2 Chess Board</h1>
+
     <div id="chessBoardConsole"></div>
     <div class="container">
         <div class="input">
@@ -153,8 +149,8 @@
             <button type="button">Build Chess Board</button>
         </div>
         <div id="chessBoardShow"></div>
-
     </div>
+
 </body>
 
 </html>
@@ -167,7 +163,7 @@
         var lineLength = 0;
         var lineReturn = "<br />";
         var prtMe = "";
-            var inputErr; 
+        var inputErr;
 
         function chessboardPrtFunc(gridSize) {
             var whiteEmoji = "<span class='board'>⬜️</span>";
@@ -189,24 +185,15 @@
 
                 loopLine = true;
                 lineItem = 0;
-                do {
-
-                    if (lineItem < lineLength) {
+                do { if (lineItem < lineLength) {
                         if (gridSizeCtr < gridSize) {
+                            gridSizeCtr++;
+                            lineItem++;
                             if (prtBlack) {
                                 appendItem(blackEmoji);
-                                gridSizeCtr++;
-                                lineItem++;
                                 prtBlack = false;
-                                blackEmoji;
-                                chessBoardConsole(prtMe);                 
                             } else {
                                 appendItem(whiteEmoji);
-                                prtBlack = true;
-                                gridSizeCtr++;
-                                lineItem++;
-                                 whiteEmoji;
-                                chessBoardConsole(prtMe);
                                 prtBlack = true;
                             }
                         } else {
@@ -223,7 +210,6 @@
             }
         }
 
-
         function isEven(n) {
             return n % 2 == 0;
         }
@@ -238,7 +224,6 @@
         }
 
         function chessBoardConsole(prtMe) {
-            //   $("#chessBoardConsole").append("<p>" + prtMe + lineReturn + "</p>");
             console.log(prtMe);
         }
 
@@ -256,11 +241,11 @@
                 inputErr = "The # of Tiles " + (gridSize - 0) + " must be greater than 8!!";
                 appendItem(inputErr);
                 $("#chessBoardShow").addClass("errorClass").removeClass("normalClass");
-            } else if ( remainder !== 0 ) { 
+            } else if (remainder !== 0) {
                 inputErr = "The # of Tiles " + (gridSize - 0) + " must be a multiple of 8!!";
                 appendItem(inputErr);
-                $("#chessBoardShow").addClass("errorClass").removeClass("normalClass");                
-            
+                $("#chessBoardShow").addClass("errorClass").removeClass("normalClass");
+
             } else {
                 chessboardPrtFunc(gridSize);
             }

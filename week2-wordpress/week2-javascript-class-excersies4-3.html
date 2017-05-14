@@ -14,7 +14,6 @@
             background-color: rgba(2, 2, 2, 0.5);
             font-family: 'Syncopate', sans-serif;
             font-size: 1.5em;
-            /*            border: 1px solid yellow;*/
         }
         
         h1 {
@@ -27,7 +26,7 @@
             animation-iteration-count: infinite;
             animation-direction: alternate;
             transition: all 0.4s ease-in;
-            -webkit-transition: all 1.69s ease-in;
+            -webkit-transition: all 0.4s ease-in;
         }
         
         @keyframes colorCrossFade {
@@ -69,7 +68,6 @@
         }
         
         #chessBoardShow {
-            /*            border: 1vmin solid rgba(2,2,2,1.0);*/
             top: 5vmin;
             position: relative;
         }
@@ -83,15 +81,17 @@
             padding: 0;
         }
         
+        #chessBoardConsole,
         .container,
         #chessBoardShow {
+            font-family: "Roboto, sans-serif";
             text-align: center;
         }
         
         .normalClass {
             width: auto;
             color: rgba(255, 255, 254, 1.0);
-            font-family: "Roboto, sans-serif";
+            font-family: "Montserrat, sans-serif";
             transition: all 1.69s ease-in;
             -webkit-transition: all 1.69s ease-in;
             border-radius: 0px;
@@ -106,7 +106,7 @@
             border-radius: 15px;
             animation-delay: .2s;
             animation-name: colorCrossFade2;
-            animation-duration: 2.0s;
+            animation-duration: 2.5s;
             animation-iteration-count: infinite;
             animation-direction: alternate;
             transition: all 0.4s ease-in;
@@ -131,7 +131,7 @@
         #chessBoardConsole {
             color: blue;
             background-color: aliceblue;
-            font-size: 0.73rem;
+            font-size: 1.5rem;
         }
         
         .cookie {
@@ -141,7 +141,9 @@
 </head>
 
 <body>
+    
     <h1>WordPress  Week 2 In Class<br/> 4.3 Chess Board</h1>
+    
     <div id="chessBoardConsole"></div>
     <div class="container">
         <div class="input">
@@ -150,8 +152,8 @@
             <button type="button">Build Chess Board</button>
         </div>
         <div id="chessBoardShow"></div>
-
     </div>
+    
 </body>
 
 </html>
@@ -163,8 +165,8 @@
         var gridSizeCtr = 0;
         var lineLength = 0;
         var lineReturn = "<br />";
-        var prtMe = "";
-            var inputErr; 
+        var inputErr;
+        var remainder = 0;
 
         function chessboardPrtFunc(gridSize) {
             var whiteEmoji = "<span class='board'>⬜️</span>";
@@ -172,10 +174,10 @@
             var cookieEmoji = "<span class='board cookie'>🍪</span>";
             var gridSizeCtr = 0;
             var lineCtr = 1;
-            //            var rowSize = 8;
             var prtBlack = true;
             var lineItem = 0;
             var loopLine = true;
+            var cookieCnt = 0;  
 
             while (gridSizeCtr < gridSize) {
 
@@ -191,23 +193,18 @@
 
                     if (lineItem < lineLength) {
                         if (gridSizeCtr < gridSize) {
+                            gridSizeCtr++;
+                            lineItem++;
                             if (prtBlack) {
                                 appendItem(blackEmoji);
-                                gridSizeCtr++;
-                                lineItem++;
                                 prtBlack = false;
-                                prtMe = ".. black block  .." + blackEmoji;
-                                chessBoardConsole(prtMe);                 
                             } else {
                                 appendItem(whiteEmoji);
                                 prtBlack = true;
-                                gridSizeCtr++;
-                                lineItem++;
-                                prtMe = ".. white block  .." + whiteEmoji;
-                                chessBoardConsole(prtMe);
-                                prtBlack = true;
                             }
                         } else {
+                            cookieCnt++;
+                            $("#chessBoardConsole").text("If you want to remove cookies at the end of the board, please do the math! Divide #Tiles by #Rows. There should be NO remainder! You have a remainder of " + cookieCnt + " extra!  So add or subtract to get to a multiple of #Rows.");
                             appendItem(cookieEmoji);
                             lineItem++;
                         }
@@ -220,7 +217,6 @@
                 while (loopLine);
             }
         }
-
 
         function isEven(n) {
             return n % 2 == 0;
@@ -235,11 +231,6 @@
             $("#chessBoardConsole").text("");
         }
 
-        function chessBoardConsole(prtMe) {
-            //   $("#chessBoardConsole").append("<p>" + prtMe + lineReturn + "</p>");
-            console.log(prtMe);
-        }
-
         $("button").click(function () {
             resetBoard();
 
@@ -248,6 +239,7 @@
             gridSize = gridSize * 1;
             lineLength = $("#columnWidthNbr").val();
             lineLength = lineLength * 1;
+            remainder = gridSize % (lineLength - 0);
 
             // error check for linesize greater than squares in grid
             if (lineLength > gridSize) {
