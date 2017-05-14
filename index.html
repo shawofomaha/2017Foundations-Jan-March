@@ -17,16 +17,16 @@
 
 <body id="main">
 
-    <div class="page">
+    <div class="page container">
 
         <h1>Marko's Web <span id="blue">I</span><span id="red">n</span><span id="green">d</span><span id="blue2">e</span><span id="purple">x</span> </h1>
 
-        <div class="container">
+        <div class="">
             <div id="typedtext" class="blue"></div>
         </div>
 
-        <div class="container">
-            <h3 id="h3_first">Work done in Class</h3>
+        <div class="">
+            <h3 id="h3_first">Work done in Foundations Class</h3>
             <ul>
                 <li><a href="class html/week 2-working.html">Class INPUTs in html</a></li>
                 <li><a href="class html/week 2-working-day2.html">More Inputs Video Audio</a></li>
@@ -59,8 +59,8 @@
 
         </div>
         <br />
-        <div class="container">
-            <h3 id="h3_second">Weekend Home Work</h3>
+        <div class="">
+            <h3 id="h3_second">Weekend Foundations Home Work</h3>
             <ul>
                 <li><a href="homework/Class_3_Homework_Website_Evaluation.html">Week 1 - 3 Web sites Evaluation on the use of Color </a></li>
                 <li><a href="homework/css-properties.html">Week 2 -Class CSS Properties</a></li>
@@ -78,7 +78,26 @@
 
         </div>
         <br />
-        <div class="container">
+        <div class="">
+            <h3 id="h3_second">Weekend WordPress Home Work</h3>
+            <ul>
+                <li><a href="WordPress-Class/homework-wk1/week1-assignment1-calculator.html">Week 1 - Calculator</a></li>
+                <li><a href="WordPress-Class/homework-wk1/week1-assignment2-to-do-list.html">Week 1 - To Do List</a></li>
+                <li><a href="WordPress-Class/week2-wordpress/week2-javascript-class-excersies1-3.html">Week 2 - Console Triangles 1.3 </a></li> 
+                <li><a href="WordPress-Class/week2-wordpress/week2-javascript-class-excersies2-1.html">Week 2 - FizzBizz  2.1 </a></li>
+                <li><a href="WordPress-Class/week2-wordpress/week2-javascript-class-excersies3-1.html">Week 2 - Responsive Header 3.1 </a></li>
+                <li><a href="WordPress-Class/week2-wordpress/week2-javascript-class-excersies4-1.html">Week 2 - Chess Board Build Standard 4.1 </a></li>
+                <li><a href="WordPress-Class/week2-wordpress/week2-javascript-class-excersies4-2.html">Week 2 - Chess Board Build One Input 4.2 </a></li>
+                <li><a href="WordPress-Class/week2-wordpress/week2-javascript-class-excersies4-3.html">Week 2 - Chess Board Build Two Inputs 4.3 </a></li>
+ 
+<!--                <li><a href="WordPress-Class/week2-wordpress/ ">Week 2 -  1.3 </a></li>                -->
+                
+            </ul>
+
+        </div>
+        
+        <br />
+        <div class="">
             <h3 id="h3_third">Outside Projects</h3>
             <ul>
                 <li><a href="Projects/Refresh-Original%20Client%20Demo/index.html">Refresh Estate Sales - Original Site Demo, Iteration 1</a></li>                
@@ -89,7 +108,7 @@
             </ul>
         </div>
 
-        <div class="container">
+        <div class="">
             <img src="http://lorempixel.com/320/320/" />
         </div>
 
@@ -105,8 +124,8 @@
     
     .container {
         height: auto;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
+        flex-wrap:wrap-reverse;
         flex-grow: 1;
     }
     
@@ -114,7 +133,7 @@
         width: auto;
         border: 1px dotted blue;
         box-sizing: border-box;
-        overflow: hidden;
+        overflow: auto`;
     }
     
     .pageRight {
@@ -124,7 +143,7 @@
     img {
         border-radius: 15vw;
         width: 15vw;
-        filter: alpha(opacity=60);
+        filter: alpha(opacity=20);
     }
     
     .pageBottom img {
@@ -166,7 +185,7 @@
     }
     
     #h3_third {
-        left: 17.5vmin;
+        left: 14.5vmin;
     }
     ul {
         display: inline-block;
@@ -195,8 +214,8 @@
         padding: 0 0 0 0;
         margin: 0 0 0 0;
     }
-    /* The animation code */
     
+    /* The animation code */
     @keyframes colorCrossFade {
         from {
             color: rgba(255, 0, 0, 0.99);
@@ -212,7 +231,6 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: bottom;
-        /*        border-radius: 15%;*/
     }
     
     #blue,
