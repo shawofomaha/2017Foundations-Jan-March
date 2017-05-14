@@ -7,10 +7,34 @@
     <title></title>
 </head>
 <style>
-        body {
-        background-color: rgba(2, 255, 2, 0.5);
+    body {
+        background-color: rgba(2, 2, 2, 0.5);
+        font-family: 'Syncopate', sans-serif;
+        font-size: 1.5em;
+        /*            border: 1px solid yellow;*/
     }
     
+    h1 {
+        color: rgba(255, 255, 254, 1.0);
+        text-align: center;
+        text-shadow: 0.5vw 0.5vw rgba(2, 2, 2, 0.55);
+        animation-delay: .2s;
+        animation-name: colorCrossFade;
+        animation-duration: 6.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        transition: all 0.4s ease-in;
+        -webkit-transition: all 1.69s ease-in;
+    }
+    
+    @keyframes colorCrossFade {
+        from {
+            color: rgba(66, 254, 41, 0.99);
+        }
+        to {
+            color: rgba(255, 255, 66, 0.99);
+        }
+    }
     * {
         box-sizing: border-box;
         padding: 0;
