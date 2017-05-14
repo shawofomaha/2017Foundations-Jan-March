@@ -6,43 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
 </head>
-
-<body>
-
-    <h1>WordPress  Week 2 In Class 3.1 Responsive Header</h1>
-
-    <header>
-        <div class="container">
-            <img src="http://empoweredprocessing.com/wp-content/uploads/2016/08/client_techmaverick.png" alt="Our Logo" id="logo" />
-            <nav id="main-nav">
-                <ul class="regMenu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Photos</a></li>
-                </ul>
-            </nav>
-
-            <div class="menu">
-                <img class="hamburgerIcon" src=" https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" />
-                <ul class="hamburger">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Photos</a></li>
-                </ul>
-            </div>
-
-        </div>
-    </header>
-
-</body>
-
-</html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body {
-        background-color: rgba(2,255,2,0.5);
+        body {
+        background-color: rgba(2, 255, 2, 0.5);
     }
     
     * {
@@ -80,7 +46,7 @@ body {
     }
     
     #main-nav ul,
-   .hamburger ul {
+    .hamburger ul {
         display: flex;
         list-style-type: none;
         justify-content: flex-end;
@@ -98,24 +64,22 @@ body {
     .hamburgerIcon {
         position: absolute;
         display: none;
-        top: 5vh;
+        top: 9vh;
         right: 5vw;
         width: 10vw;
         height: 10vh;
     }
     
     ul.hamburger {
-        position:  static;
-        top: -18vh;
-        right: -6vh;    
+        position: static;
+        position: absolute;
+        top: 7vh !important;
+        right: -8vh;
     }
+    
     .hamburger {
-        position:  static;
+        position: static;
         display: none;
-/*
-        top: -18vh;
-        right: -6vh;
-*/
         margin: 50px;
         color: rgba(222, 222, 222, 1.0);
         cursor: pointer;
@@ -123,7 +87,8 @@ body {
         z-index: +0;
     }
     
-    .hamburger li a, .hamNoTxtDeco {
+    .hamburger li a,
+    .hamNoTxtDeco {
         text-decoration: none;
         list-style-type: none;
     }
@@ -132,24 +97,50 @@ body {
         #main-nav {
             display: none;
         }
-        
-        .hamburgerIcon   {
+        .hamburgerIcon {
             display: inline-block;
         }
-        
-/*
-        * {
-            border: 1px dotted red;
-        }
-*/
-    }
-
 </style>
+
+<body>
+
+    <h1>WordPress  Week 2 In Class 3.1 Responsive Header</h1>
+
+    <header>
+        <div class="container">
+            <img src="http://empoweredprocessing.com/wp-content/uploads/2016/08/client_techmaverick.png" alt="Our Logo" id="logo" />
+            <nav id="main-nav">
+                <ul class="regMenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Photos</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu">
+                <img class="hamburgerIcon" src=" https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" />
+                <ul class="hamburger">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Photos</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+
+</body>
+
+</html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function () {
         var menu = $(".main-nav");
-        var hamburger = $(".hamburger");  
+        var hamburger = $(".hamburger");
         var hamburgerLi = $(".hamburger li a");
         var hamburgerIcon = $(".hamburgerIcon");
         var menuOpen;

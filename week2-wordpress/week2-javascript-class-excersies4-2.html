@@ -38,7 +38,31 @@
                 color: rgba(255, 255, 66, 0.99);
             }
         }
-
+        
+        .input {
+            position: relative;
+            border: 1px solid rgba(2, 2, 2, 1.0);
+            background-color: rgba(2, 2, 2, 0.3);
+            border-radius: 15px;
+            width: 80%;
+            left: 20vmin;
+        }
+        
+        .tag,
+        input {
+            color: rgba(255, 255, 254, 1.0);
+            padding-top: 1vmin;
+            margin-top: 3vmin;
+            margin-bottom: 3vmin;
+            margin-right: 1vmin;
+        }
+        
+        #columnWidthNbr,
+        #inputNbr {
+            font-size: 1.25rem;
+            color: red;
+        }
+        
         button {
             background: blue;
             color: white;
@@ -108,14 +132,24 @@
             margin-top: -9px;
         }
         
+        #chessBoardConsole {
+            color: blue;
+            background-color: aliceblue;
+            font-size: 0.73rem;
+        }
+        
+        .cookie {
+            z-index: -5;
+        }
     </style>
 </head>
 
 <body>
-    <h1>WordPress  Week 2 In Class<br/> 4.1 Chess Board</h1>
- 
+    <h1>WordPress  Week 2 In Class<br/> 4.2 Chess Board</h1>
+    <div id="chessBoardConsole"></div>
     <div class="container">
         <div class="input">
+            <input type="number" id="inputNbr"><span class="tag">&lt;-# of Tiles</span>
             <button type="button">Build Chess Board</button>
         </div>
         <div id="chessBoardShow"></div>
@@ -129,16 +163,23 @@
 <script>
     $(document).ready(function () {
         var gridSize = 0;
+        var gridSizeCtr = 0;
         var lineLength = 0;
         var lineReturn = "<br />";
+        var prtMe = "";
+            var inputErr; 
 
         function chessboardPrtFunc(gridSize) {
             var whiteEmoji = "<span class='board'>⬜️</span>";
             var blackEmoji = "<span class='board'>⬛️</span>";
+            var cookieEmoji = "<span class='board cookie'>🍪</span>";
+            var gridSizeCtr = 0;
             var lineCtr = 1;
             var prtBlack = true;
-            
-            for (i = 0; i < gridSize; i++) {
+            var lineItem = 0;
+            var loopLine = true;
+
+            while (gridSizeCtr < gridSize) {
 
                 if (isEven(lineCtr)) {
                     prtBlack = false;
@@ -146,20 +187,39 @@
                     prtBlack = true;
                 }
 
-                for (j = 0; j < 8; j++) {
-                    if (prtBlack) {
-                        appendItem(blackEmoji);
-                        prtBlack = false;
-                    } else {
-                        appendItem(whiteEmoji);
-                        prtBlack = true;
-                    }
+                loopLine = true;
+                lineItem = 0;
+                do {
 
-                    if (j == 7 ) {
+                    if (lineItem < lineLength) {
+                        if (gridSizeCtr < gridSize) {
+                            if (prtBlack) {
+                                appendItem(blackEmoji);
+                                gridSizeCtr++;
+                                lineItem++;
+                                prtBlack = false;
+                                blackEmoji;
+                                chessBoardConsole(prtMe);                 
+                            } else {
+                                appendItem(whiteEmoji);
+                                prtBlack = true;
+                                gridSizeCtr++;
+                                lineItem++;
+                                 whiteEmoji;
+                                chessBoardConsole(prtMe);
+                                prtBlack = true;
+                            }
+                        } else {
+                            appendItem(cookieEmoji);
+                            lineItem++;
+                        }
+                    } else {
+                        loopLine = false;
                         lineCtr++;
                         $("#chessBoardShow").append(lineReturn);
                     }
                 }
+                while (loopLine);
             }
         }
 
@@ -174,16 +234,36 @@
 
         function resetBoard() {
             $("#chessBoardShow").addClass("normalClass").removeClass("errorClass").text("");
+            $("#chessBoardConsole").text("");
+        }
+
+        function chessBoardConsole(prtMe) {
+            //   $("#chessBoardConsole").append("<p>" + prtMe + lineReturn + "</p>");
+            console.log(prtMe);
         }
 
         $("button").click(function () {
             resetBoard();
 
-            // set grid numbers
-            gridSize = 8 * 1;
+            // get input numbers
+            gridSize = $("#inputNbr").val();
+            gridSize = gridSize * 1;
             lineLength = 8 * 1;
             var remainder = gridSize % lineLength;
-            chessboardPrtFunc(gridSize);
+
+            // error check for linesize greater than squares in grid
+            if (lineLength > gridSize) {
+                inputErr = "The # of Tiles " + (gridSize - 0) + " must be greater than 8!!";
+                appendItem(inputErr);
+                $("#chessBoardShow").addClass("errorClass").removeClass("normalClass");
+            } else if ( remainder !== 0 ) { 
+                inputErr = "The # of Tiles " + (gridSize - 0) + " must be a multiple of 8!!";
+                appendItem(inputErr);
+                $("#chessBoardShow").addClass("errorClass").removeClass("normalClass");                
+            
+            } else {
+                chessboardPrtFunc(gridSize);
+            }
         });
     });
 </script>
