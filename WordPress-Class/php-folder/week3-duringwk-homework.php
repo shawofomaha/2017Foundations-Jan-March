@@ -12,11 +12,9 @@ h1 {
 }
 p {
 	font-size: 1.5rem;
-	font-size: 1.25rem;
-
-	/*width: 70%;*/
-	/*padding-left: 7em;*/
-	/*padding-right: 3em;*/
+	width: 70%;
+	padding-left: 7em;
+	padding-right: 3em;
 }
 
 .modelOutput {
@@ -43,12 +41,12 @@ $hobbies = array( 'music',
 
 // $pets = 'Pip'; 
 
-$pets = array(  'Pip', 
-				'TinTin', 
-				'', 
-				'', 
-				'CoCo'
-	);
+// $pets = array(  'Pip', 
+// 				'TinTin', 
+// 				'', 
+// 				'', 
+// 				'CoCo'
+// 	);
 
 $shawOfOmaha = array(
 
@@ -106,74 +104,75 @@ foreach ($hobbies as $hobbys) {
 }
 
 
-$pets = array(  'Pip',
-                'TinTin',
+$pets = array(  'PipAAAA',
+                'BBBBBB',
                 '',
                 '',
                 'CoCo'
    );
-// $pets =   'PipAAAA';
-// $pets =   '';
-
- 
 
 $numItems = count($pets);  // know the length of array
+echo "*** a1";
 if ($shawOfOmaha['has_pets'] == true) {
 
     echo "<p>I do have pets.";
-    if (!is_array($pets)) {
-    // echo "*** a3<br>";
-        echo " The pet's name is $pets.";
+    echo "*** a2<br>";
+    if (is_string($shawOfOmaha['pet_names'])) {
+    echo "*** a3<br>";
+        echo " The pet's name is $shawOfOmaha[pet_names].";
     } else {
-        // echo "*** a4<br>";
+        echo "*** a4<br>";
         // assume an array
         if ($numItems > 1) {
+            echo "*** a5<br>";
             echo " Their names are ";
         } else {
+            echo "*** a6<br>";
             echo " The name is ";
         }
+        echo "*** a7<br>";
         $j = 0;
         $emptyVariable = isset($pets[$j]);
-        if ($emptyVariable) {  // avoid null entries open if(emptyVariable a)
+        if ($emptyVariable) {  // avoid null entries
+            echo "*** a8 emptyVariable= $emptyVariable  <br>";
             foreach ($pets as $pet) {
                 $emptyVariable = isset($pet[$j]);
-                // echo "*** a9. emptyVariable= $emptyVariable p:$pet[$j] open if(emptyVariable a)<br>";
-                // echo is_string($emptyVariable)."*** a9b. :is_string.  p:$pet[$j] open if(emptyVariable a)<br>";
+                echo "*** a9. emptyVariable= $emptyVariable<br>";
+                echo is_string($emptyVariable)."*** a9b. :is_string.  p:$pet[$j]<br>";
                 $j++;
-                // echo "<br>*** a9 j=$j emptyVariable=$emptyVariable pet=$pet";
-            
-            if ($emptyVariable || $pet > " " ) { // avoid null entries open if(emptyVariable b)
-                    // echo "<br><br>*** a10 open if(emptyVariable b) emptyVariable=$emptyVariable numItems=$numItems j=$j";
-            		if (($numItems) == $j) {
-            			// echo "*** a10b if (( numItems - 1) == j j=$j) {<br>";
-            			echo " and $pet! </p>";
-            		} else {
-            			// echo "*** a10b if (( numItems - 1) == j j=$j) { pet=$pet<br>";
-					    switch ($numItems - 1) {
-						    case 1 :
-                                // echo "*** a11 numItems=$numItems j=$j<br>";			
-							    echo $pet ;
+            } 
+            if ($emptyVariable) { // avoid null entries
+echo "*** a10<br>";
+					switch ($numItems) {
+						case 1 :
+echo "*** a11<br>";			
+							echo $pet ;
 							break;
 
-						    case $i :
-                                // echo "*** a12 numItems=$numItems j=$j<br>";			
-							    echo "and $pet! </p>";
+						case $i :
+echo "*** a12<br>";			
+							echo "and $pet! </p>";
 							break;	
 
-						    default :
-                                 // echo "*** a13 numItems=$numItems j=$j<br> ";		
-							    echo " $pet,";
+						default :
+echo "*** a13<br>";		
+							echo " $pet, </p>";
 							break;
-					    }//close switch
-                    }//close if (( numItems - 1) == numItems) {				
-         		}
-		    }		
-	    } else {
-	        echo "I do not have pets.</p>";
-	   }//close if(emptyVariable a)   
-   }//close if (is_string(shawOfOmaha['pet_names']
-}//close if ( shawOfOmaha['has_pets']
 
+					} 
+echo "*** a14<br>";	
+				}
+         }
+echo "*** a15<br>";
+			}		
+echo "*** a16<br>";
+		} 
+echo "*** a17<br>";
+	} else {
+echo "*** a18<br>";
+	echo "I do not have pets.</p>";
+}
+echo "*** a22-exit<br>";
 
 ?>
 
