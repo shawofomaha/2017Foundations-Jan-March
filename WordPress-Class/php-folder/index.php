@@ -106,62 +106,53 @@ foreach ($hobbies as $hobbys) {
 }
 
 
-$pets = array(  'Pip',
+$pets = array(  '',
+	            'Pip',
                 'TinTin',
                 '',
                 '',
                 'CoCo'
    );
-// $pets =   'PipAAAA';
-// $pets =   '';
+// $pets =   'PipAAAA'; // test no array
+// $pets =   '';        // test empty string
 
- 
 
 $numItems = count($pets);  // know the length of array
 if ($shawOfOmaha['has_pets'] == true) {
 
     echo "<p>I do have pets.";
-    if (!is_array($pets)) {
-    // echo "*** a3<br>";
+    if (!is_array($pets) && $pets > " ") {
         echo " The pet's name is $pets.";
     } else {
-        // echo "*** a4<br>";
-        // assume an array
-        if ($numItems > 1) {
-            echo " Their names are ";
-        } else {
-            echo " The name is ";
-        }
+    	if ($pets > " ") {
+            // assume an array
+            if ($numItems > 1) {
+                echo " Their names are ";
+            } else {
+                echo " The name is ";
+            }    		
+    	}
+
         $j = 0;
         $emptyVariable = isset($pets[$j]);
         if ($emptyVariable) {  // avoid null entries open if(emptyVariable a)
             foreach ($pets as $pet) {
                 $emptyVariable = isset($pet[$j]);
-                // echo "*** a9. emptyVariable= $emptyVariable p:$pet[$j] open if(emptyVariable a)<br>";
-                // echo is_string($emptyVariable)."*** a9b. :is_string.  p:$pet[$j] open if(emptyVariable a)<br>";
                 $j++;
-                // echo "<br>*** a9 j=$j emptyVariable=$emptyVariable pet=$pet";
-            
-            if ($emptyVariable || $pet > " " ) { // avoid null entries open if(emptyVariable b)
-                    // echo "<br><br>*** a10 open if(emptyVariable b) emptyVariable=$emptyVariable numItems=$numItems j=$j";
+            if ($emptyVariable || $pet > " " ) { // avoid null entries 
             		if (($numItems) == $j) {
-            			// echo "*** a10b if (( numItems - 1) == j j=$j) {<br>";
             			echo " and $pet! </p>";
             		} else {
-            			// echo "*** a10b if (( numItems - 1) == j j=$j) { pet=$pet<br>";
 					    switch ($numItems - 1) {
-						    case 1 :
-                                // echo "*** a11 numItems=$numItems j=$j<br>";			
+						    case 1 :			
 							    echo $pet ;
 							break;
 
-						    case $i :
-                                // echo "*** a12 numItems=$numItems j=$j<br>";			
+						    case $i :			
 							    echo "and $pet! </p>";
 							break;	
 
-						    default :
-                                 // echo "*** a13 numItems=$numItems j=$j<br> ";		
+						    default :		
 							    echo " $pet,";
 							break;
 					    }//close switch
