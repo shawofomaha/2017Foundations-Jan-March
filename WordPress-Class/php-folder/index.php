@@ -1,6 +1,9 @@
 <style>
 body {
 	background-color: rgba(211,211,211,1.0);
+	background-image: url("LAKE SUNSET OCT 2013.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 html {
 	font-size: 1em;
@@ -11,26 +14,41 @@ h1 {
 	text-align: center;
 }
 p {
-	font-size: 1.5rem;
 	font-size: 1.25rem;
+	width: 70%;
+	padding-left: 7em;
+	padding-right: 3em;
+}
 
-	/*width: 70%;*/
-	/*padding-left: 7em;*/
-	/*padding-right: 3em;*/
+.modelOutputContainer {
+	position: relative;
+	left: 7.5%;
+	background-color: rgba(211,211,211,0.4);
+	border: 2px solid black;
+	border-radius: 15px;
+	padding-left: 7em;
+	padding-right: 3em;	
+	width: 65%;
 }
 
 .modelOutput {
 	width: 70%;
-	padding-left: 14em;
+	padding-left: 7em;
 	padding-right: 3em;	
 	font-size: 0.75rem;
-	color: rgba(155,155,155,1.0);
+	color: rgba(66,66,66,1.0);
 }
 </style>
-<h1>Marko aka a <strong>PHP</strong> Dude</h1>
+
+<h1>Marko a <strong>PHP</strong> Dude</h1>
 
 <?php
-
+/*  This PHP program builds four paragraphs:
+	1) Hello my name is
+	2) Where I live and favorite candy, drink and tv show.
+	3) Spare time for hobbies.
+	4) Reveal if a Pet owner or not ...
+ */
 $hobbies = array( 'music',
                  'computers',
                  'baseball',
@@ -43,12 +61,15 @@ $hobbies = array( 'music',
 
 // $pets = 'Pip'; 
 
-$pets = array(  'Pip', 
-				'TinTin', 
-				'', 
-				'', 
-				'CoCo'
-	);
+$pets = array(  'BarbaraAnn',
+	            'Pip',
+                'TinTin',
+                '',
+                '',
+                'CoCo'
+   );
+// $pets =   'PipAAAA'; // test no array
+// $pets =   '';        // test empty string
 
 $shawOfOmaha = array(
 
@@ -66,10 +87,24 @@ $shawOfOmaha = array(
 
 );
 
-echo "<p>Hi! My name is  $shawOfOmaha[firstname] <i>$shawOfOmaha[middlename]</i> $shawOfOmaha[lastname]. </p>";
+//Move array info to variables, makes the para's read more 'normal'
+$firstname         = $shawOfOmaha['firstname'];
+$lastname          = $shawOfOmaha['lastname'];
+$middlename        = $shawOfOmaha['middlename'];
+$address           = $shawOfOmaha['address'];
+$city              = $shawOfOmaha['city'];
+$favorite_candy    = $shawOfOmaha['favorite_candy'];
+$favorite_drink    = $shawOfOmaha['favorite_drink'];
+$favorite_tv_show  = $shawOfOmaha['favorite_tv_show'];
+$has_pets          = $shawOfOmaha['has_pets'];	
+		
+//Output para 1) Hello my name is
+echo "<p>Hi! My name is  $firstname  <i>$middlename</i> $lastname. </p>";
 
-echo "<p>I live at $shawOfOmaha[address] in $shawOfOmaha[city]. My favorite candy is $shawOfOmaha[favorite_candy],  my favorite drink is $shawOfOmaha[favorite_drink], and I love watching $shawOfOmaha[favorite_tv_show].</p>";
+//Output para 2) Where I live and favorite candy, drink and tv show.
+echo "<p>I live at $address in $city. My favorite candy is $favorite_candy, my favorite drink is $favorite_drink, and I love watching $favorite_tv_show.</p>";
 
+//Loop the hobbies array and build hobby para 3) Spare time for hobbies.
 $numItems = count($hobbies); // know the length of array
 $i = 0;
 echo "<p>In my spare time, ";
@@ -106,19 +141,9 @@ foreach ($hobbies as $hobbys) {
 }
 
 
-$pets = array(  '',
-	            'Pip',
-                'TinTin',
-                '',
-                '',
-                'CoCo'
-   );
-// $pets =   'PipAAAA'; // test no array
-// $pets =   '';        // test empty string
-
-
+//Loop the Pet array and build the pet para 4) Reveal if a Pet owner or not ..
 $numItems = count($pets);  // know the length of array
-if ($shawOfOmaha['has_pets'] == true) {
+if ($has_pets) {
 
     echo "<p>I do have pets.";
     if (!is_array($pets) && $pets > " ") {
@@ -159,28 +184,26 @@ if ($shawOfOmaha['has_pets'] == true) {
                     }//close if (( numItems - 1) == numItems) {				
          		}
 		    }		
-	    } else {
-	        echo "I do not have pets.</p>";
-	   }//close if(emptyVariable a)   
-   }//close if (is_string(shawOfOmaha['pet_names']
+	    } 
+	}//close if(emptyVariable a)   
+} else {
+	echo "I do not have pets.</p>";
 }//close if ( shawOfOmaha['has_pets']
 
 
 ?>
 
-<p class="modelOutput" style="font-size: 1rem;">
- Above, I tried to match the following outputs: </p>
-<p class="modelOutput">
-Hi! My name is *firstname* *middlename* *lastname*. </p>
+<div class="modelOutputContainer">
+	<p class="modelOutput"">
+	Above, I tried to match the following outputs: </p>
+	<p class="modelOutput">
+	Hi! My name is *firstname* *middlename* *lastname*. </p>
 
-<p class="modelOutput">I live at *address*. My favorite candy is *favorite_candy*, my favorite drink is *favorite_drink*, and I love watching *favorite_tv_show*.</p>
+	<p class="modelOutput">I live at *address*. My favorite candy is *favorite_candy*, my favorite drink is *favorite_drink*, and I love watching *favorite_tv_show*.</p>
 
-<p class="modelOutput">In my spare time, I enjoy *hobbies*.</p>
+	<p class="modelOutput">In my spare time, I enjoy *hobbies*.</p>
 
-<p class="modelOutput">I do (not) have pets. (Their names are *pet_names*.)</p>	
-
-
-
-</p>
-
+	<p class="modelOutput">I do (not) have pets. (Their names are *pet_names*.)</p>	
+	</p>
+</div>
 <!-- <p> It is <?php echo date('z'); ?>th day of the month</p> -->
