@@ -21,17 +21,19 @@
     
     .container {
         height: auto;
-/*        flex-direction: row;*/
-/*        justify-content: space-between; */
-/*        flex-wrap:wrap-reverse;*/
-/*        flex-grow: 1;*/
+        flex-direction: row;
+        justify-content: space-between; 
+        flex-wrap:wrap-reverse;
+        flex-grow: 1;
+/*
         display: grid;
         grid-template-columns: 40px 50px auto 50px 40px;
         grid-template-rows: 25% 100px auto;
+*/
     }
     
     .ulHeading {
-        display:inline-grid;
+/*        display:inline-grid;*/
     }
     
     .page {
@@ -57,7 +59,7 @@
     }
     
     h1 {
-        width: 10vw;
+/*        width: 10vw;*/
         position: relative;
         /* The element to apply the animation to */
         animation-delay: 5s;
@@ -68,7 +70,7 @@
         font-family: 'Pacifico', cursive;
         font-size: 7vmin;
         text-shadow: 0 0 3px #FF0000;
-        margin-left: 22vw;
+/*        margin-left: 22vw;*/
     }
     
     #typedtext {
@@ -82,7 +84,8 @@
     h3,
     .ulHeading {
         position: relative;
-        left: 15vmin;
+        text-align: center;
+/*        left: 15vmin;*/
         margin: 0;
         padding: 0;
         height: 2.75vh;
@@ -91,7 +94,7 @@
     }
     
     #h3_third {
-        left: 14.5vmin;
+/*        left: 14.5vmin;*/
     }
     ul {
         display: inline-block;
@@ -132,6 +135,8 @@
     }
     
     #main {
+        height: auto;
+        min-height: 250vh;
         background-color: rgba(221, 234, 255, 1.0);
         background-image: url("http://lorempixel.com/g/1200/960/");
         background-size: cover;
@@ -159,20 +164,30 @@
         color: rgb(170, 43, 198);
         font-style: italic;
     }
+    .ulHeadingImg, 
+    .hdrCenter {
+        text-align: center;
+
+    }
     
+    .typedtext {
+        float: left;    
+        margin-left: 20vw;
+    }
 
 </style>    
 
 <body id="main">
 
     <div class="page container">
-
-        <h1>Marko's Web <span id="blue">I</span><span id="red">n</span><span id="green">d</span><span id="blue2">e</span><span id="purple">x</span> </h1>
-
-        <div class="ulHeading">
+        <div class="hdrCenter">
+            <h1>Marko's Web <span id="blue">I</span><span id="red">n</span><span id="green">d</span><span id="blue2">e</span><span id="purple">x</span> </h1>
+        </div>
+        
+        <div class="ulHeading typedtext">
             <div id="typedtext" class="blue"></div>
         </div>
-
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         <div class="ulHeading">
             <h3 id="h3_first">Foundations Class Work</h3>
             <ul>
@@ -206,7 +221,7 @@
             </ul>
 
         </div>
-        <br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         <div class="ulHeading">
             <h3 id="h3_second">Foundations Home Work</h3>
             <ul>
@@ -225,7 +240,7 @@
             </ul>
 
         </div>
-        <br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         <div class="ulHeading">
             <h3 id="h3_second">WordPress Home Work</h3>
             <ul>
@@ -244,7 +259,7 @@
 
         </div>
         
-        <br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         <div class="ulHeading">
             <h3 id="h3_third">Outside Projects</h3>
             <ul>
@@ -255,8 +270,8 @@
                 <li><a href="#">&nbsp;</a></li>
             </ul>
         </div>
-
-        <div class="ulHeading">
+        <br /><br /><br /><br /><br /><br />
+        <div class="ulHeadingImg">
             <img src="http://lorempixel.com/320/320/" />
         </div>
 
