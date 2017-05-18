@@ -66,7 +66,7 @@ $pets = array(  'BarbaraAnn',
                 'TinTin',
                 '',
                 '',
-                'CoCo'
+                ' they are all cats'
    );
 // $pets =   'PipAAAA'; // test no array
 // $pets =   '';        // test empty string
