@@ -1,7 +1,7 @@
 <style>
 body {
 	background-color: rgba(211,211,211,1.0);
-	background-image: url("LAKE SUNSET OCT 2013.svg");
+    background-image: url("https://shawofomaha.github.io/2017Foundations-Jan-March/WordPress-Class/homework-wk1/media/LAKE SUNSET OCT 2013.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -42,10 +42,11 @@ p {
 h5 {
     float: right;
     padding-right: 5vw;
+    color: rgba(242,242,242,0.65);
 }
 </style>
-<h5> <?php echo date('F d Y'); ?></h5>
-<h1>Mark a PHP Pgmr 🐉</h1>
+<h5> <?php echo date('F d, Y'); ?></h5>
+<h1>Mark is a PHP Pgmr 🐉</h1>
 
 <?php
 /*  This PHP program builds four paragraphs:
