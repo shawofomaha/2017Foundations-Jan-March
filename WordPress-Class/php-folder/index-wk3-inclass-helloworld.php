@@ -12,6 +12,7 @@ html {
 h1 {
 	font-size: 2.5rem;
 	text-align: center;
+    color: rgba(2,211,99,0.8);
 }
 p {
 	font-size: 1.25rem;
@@ -38,9 +39,13 @@ p {
 	font-size: 0.75rem;
 	color: rgba(66,66,66,1.0);
 }
+h5 {
+    float: right;
+    padding-right: 5vw;
+}
 </style>
-
-<h1>Marko a <strong>PHP</strong> Dude</h1>
+<h5> <?php echo date('F d Y'); ?></h5>
+<h1>Mark a PHP Pgmr 🐉</h1>
 
 <?php
 /*  This PHP program builds four paragraphs:
@@ -206,4 +211,3 @@ if ($has_pets) {
 	<p class="modelOutput">I do (not) have pets. (Their names are *pet_names*.)</p>	
 	</p>
 </div>
-<!-- <p> It is <?php echo date('z'); ?>th day of the month</p> -->
