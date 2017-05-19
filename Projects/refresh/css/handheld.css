@@ -19,13 +19,8 @@ span#title {
 }
 
 .hamburger {
-/*
-    top: -3vmin !important;
-    left: +3vmin !important;
-*/
-/*            position: absolute;*/
-            top: -15rem;
-            left: -15rem;    
+    top: -42rem;
+    left: -15rem;    
 }
 
 
