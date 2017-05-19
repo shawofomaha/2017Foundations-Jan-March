@@ -1,4 +1,5 @@
 /* .   Desktop   . */
+
 span#title {
     position: relative;
     font-family: 'Architects Daughter', cursive;
@@ -12,16 +13,13 @@ span#title {
     z-index: +15;
 }
 
- .paisleyBorderTop {
-/*    display: none;*/
+.paisleyBorderTop {
+    /*    display: none;*/
     display: inline-block;
 }
 
 .hamburger {
-/*
-    top: -5vmin !important;
-    left: +0vw !important;
-*/
+    top: -14rem;
+    float: left;
+    left: -14rem;
 }
-
-

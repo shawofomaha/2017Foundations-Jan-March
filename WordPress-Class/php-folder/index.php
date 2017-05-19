@@ -1,29 +1,32 @@
- <h1>dude</h1>
+ <h1>Dude's Site Forms</h1>
 
-<<?php 
+<?php ?>
 
-echo "===========. hello<br/>";
-$variable = null;
+<div class"container">
+ 
+<?php  ?>
 
-if ('x' !== 'y') {
-    echo "yes<br/>";
-    $variable = true;
-} else {
-    echo "no<br/>";
-    $variable = false;
+<?php 
+// if  (#_POST){ ?>
+
 }
 
-echo " variable=$variable <br/>";
-
-echo PHP_EOL;
-
-$variable = ('x' !== 'y') ? "yes" : "no";
-
-echo " variable=$variable <br/>";
-echo "===========";
 
 
 
+<form method="POST" action="">
+    <label for="firstname">First Name:</label>
+    <input type="text" name="firstname" id="firstname"><br/>
+
+    <label for="lastname">First Name:</label>
+    <input type="text" name="lastname" id="lastname"><br/>
+  
+    <label for="email">Email:</label>
+    <input type="text" name="email" id="email"><br/>
+    
+  <button type="submit">Click here to Submit</button>
+</form>
+
+</div>
 
 
- ?>

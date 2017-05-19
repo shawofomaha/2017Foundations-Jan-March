@@ -1,111 +1,78 @@
 /*     .   main     .   */
+  
+  html {
+      font-size: 1vw;
+  }
+  
+  * {
+      box-sizing: border-box;
+  }
+  
+  @media all and (max-width:445px) {
 
-html {
-    font-size: 1vw;
+      .paisleyBorderTop {
+          display: none !important;
+      }
+      #wowContainer {
+          top: 5.5vmin !important;
+          left: -29.5vw !important;
+          width: 100%;
+      }
+      #wowslider-container1 {
+          max-width: 320px;
+          max-height: 240px;
+      }
+      #wowslider-container1 {
+          width: 320px;
+      }
+      #wowslider-container1 .ws_images {
+          max-height: 240px;
+          max-width: 320px;
+      }
+      #wowslider-container1 .ws_images ul a {
+          max-height: 240px;
+      }
+      #wowslider-container1 .ws_images > div > img {
+          max-height: 240px;
+      }
+      .hamburger {
+          top: -17rem;
+          /*            float: left;*/
+          left: -14rem;
+      }
+  }
+  
+  @media all and (max-width:767px) {
+      .paisleyBorderTop {
+          display: none !important;
+      }
+      #wowslider-container1 {
+          max-width: 320px;
+          max-height: 240px;
+      }
+      #wowslider-container1 {
+          width: 320px;
+      }
+      #wowslider-container1 .ws_images {
+          max-height: 240px;
+          max-width: 320px;
+      }
+      #wowslider-container1 .ws_images ul a {
+          max-height: 240px;
+      }
+      #wowslider-container1 .ws_images > div > img {
+          max-height: 240px;
+      }
+  }
+  
+  @media all and (max-width:1070px) {}
+  
+  .paisleyBorderTop {
+      display: none !important;
+  }
 }
 
-* {
-    box-sizing: border-box;
-}
-
-@media all and (max-width:400px) {
-    /*
-    * {
-        border: 1px dotted white;
-    }
-*/
-    .paisleyBorderTop {
-        display: none !important;
-    }
-        #wowContainer {
-            top: 5.5vmin !important;
-            left: -29.5vw !important;
-            width: 100%;
-        }
-    
-        #wowslider-container1 {
-            max-width: 320px;
-            max-height: 240px;
-        }
-        
-        #wowslider-container1 {
-            width: 320px;
-        }
-        
-        #wowslider-container1 .ws_images {
-            max-height: 240px;
-            max-width: 320px;
-        }
-        
-        #wowslider-container1 .ws_images ul a {
-            max-height: 240px;
-        }
-        
-        #wowslider-container1 .ws_images > div > img {
-            max-height: 240px;
-        }    
-}
-
-@media all and (max-width:767px) {
-    /*
-    * {
-        border: 1px solid white;
-    }
-*/
-    .paisleyBorderTop {
-        display: none !important;
-        
-    }
-        #wowslider-container1 {
-            max-width: 320px;
-            max-height: 240px;
-        }
-        
-        #wowslider-container1 {
-            width: 320px;
-        }
-        
-        #wowslider-container1 .ws_images {
-            max-height: 240px;
-            max-width: 320px;
-        }
-        
-        #wowslider-container1 .ws_images ul a {
-            max-height: 240px;
-        }
-        
-        #wowslider-container1 .ws_images > div > img {
-            max-height: 240px;
-        }    
-}
-
-@media all and (max-width:1070px) {
-    /*
-    * {
-        border: 1px solid red;
-    }
-*/
-    .paisleyBorderTop {
-        display: none !important;
-    }
-    
-    
-}
-
-@media all and (max-width:1399px) {
-    /*
-    * {
-        border: 1px solid blue;
-    }
-*/
-    /*
-    .paisleyBorderTop {
-        display: inline-block!important;
-    }     
-*/
-}
-
-
+@media all and (max-width:1399px) {}
 *,
 *:after,
 *:before {
@@ -119,12 +86,10 @@ body {
     transition: background-color 3sec ease-in-out;
     margin: 0;
 }
-
 #footer,
 footer {
     margin-top: 7.5vmin;
 }
-
 h1 {
     display: inline-block;
     position: absolute;
@@ -136,7 +101,6 @@ h1 {
     line-height: 9vmin;
     top: 13.5vmin;
 }
-
 h1.hdr {
     display: inline-block;
     position: relative;
@@ -144,7 +108,6 @@ h1.hdr {
     margin: 0;
     padding: 0;
 }
-
 h2,
 h3 {
     display: block;
@@ -152,22 +115,18 @@ h3 {
     text-shadow: 0.75px 0.75px rgba(112, 127, 116, 1.0);
     font-family: 'Architects Daughter', cursive;
     font-size: 2.0em;
-    font-size: calc( 2.0rem + 10px );
+    font-size: calc( 2.0rem + 10px);
     z-index: +1;
 }
-
 h3 {
     text-shadow: 0.75px 0.75px rgba(82, 97, 86, 1.0);
 }
-
 .paisleyBorderTop {
     display: none;
     /*    display: inline-block;*/
 }
 
-
 /* ************* Start of item box ******* */
-
 .picBox {
     border: 1.25px solid rgba(244, 210, 161, 1.0);
     background-color: rgba(112, 127, 116, 1.0);
@@ -179,7 +138,6 @@ h3 {
     white-space: normal;
     overflow: auto;
 }
-
 .itemPic {
     display: inline;
     margin: 1.5vmin;
@@ -188,7 +146,6 @@ h3 {
     margin: 3.0vmin;
     width: 53vmin;
 }
-
 .itemTxt {
     font-family: sans-serif;
     display: inline;
@@ -196,7 +153,6 @@ h3 {
     width: 27vmin;
     margin: 0.5vmin .5vmin 1.5vmin 0;
 }
-
 .horizLine {
     display: inline-block;
     width: 28%;
@@ -210,24 +166,23 @@ h3 {
     text-align: center;
 }
 */
-
 button:hover,
 input:hover {
     color: white !important;
     border: 2px solid rgba(255, 255, 255, 1.0) !important;
     font-size: 3.25vmin !important;
-    font-size:  calc( 1.35rem + 1.2vw )!important;
+    font-size: calc( 1.35rem + 1.2vw)!important;
     width: 9.5vw;
     transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
 }
-
 input,
 button {
     font-family: 'Architects Daughter', cursive !important;
-/*    font-size: 1.3em !important;*/
-    font-size: calc( 1.2rem + 1vw )!important;
+    /*    font-size: 1.3em !important;*/
+    
+    font-size: calc( 1.2rem + 1vw)!important;
     color: lightgray !important;
     border: 1px solid black !important;
     margin-bottom: 0.75vw;
@@ -237,9 +192,7 @@ button {
     background-image: url("../media/cherry-wood-panels-background-header.jpg");
 }
 
-
 /* ************* end of item box ******* */
-
 #container {
     position: inherit;
     -webkit-transition: all 0.5s ease;
@@ -262,11 +215,9 @@ button {
     width: 100%;
     overflow: auto;
 }
-
 img {
     border-radius: 35px;
 }
-
 #ball {
     background-image: url(http://www.animatedimages.org/data/media/389/animated-coin-image-0011.gif);
     background-size: contain;
@@ -281,16 +232,15 @@ img {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     /*     transition: all 2s;   */
+    
     top: 50%;
     left: 50%;
     z-index: +1;
 }
-
 .spinBall {
     -webkit-animation: spin 0.35s ease infinite;
     animation: spin 0.435s ease infinite;
 }
-
 
 /*
 @-moz-keyframes spin {
@@ -340,39 +290,31 @@ img {
         transform: rotateX(180deg);
     }
 */
-
 #ball:hover {
     background-color: blue !important;
     min-height: 20vmin;
     min-width: 20vmin;
 }
-
 span {
     display: inline;
 }
-
 ::-webkit-scrollbar {
     width: 19px;
 }
-
 ::-webkit-scrollbar-track {
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.1);
 }
-
 ::-webkit-scrollbar-thumb {
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.2);
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.4);
 }
-
 ::-webkit-scrollbar-thumb:window-inactive {
     background: rgba(0, 0, 0, 0.05);
 }
-
 span#title {
     position: relative;
     font-family: 'Architects Daughter', cursive;
@@ -384,7 +326,6 @@ span#title {
     line-height: 8.5vmin;
     padding-left: 9.5vmin;
 }
-
 #simpleToggle:hover {
     width: 11.75vw !important;
     left: 14.5vw;
@@ -397,7 +338,6 @@ span#title {
     border: 1.5px dotted rgba(2, 255, 2, 1.0) !important;
     border-radius: 50% !important;
 }
-
 #simpleToggle {
     position: absolute;
     top: 0vh;
@@ -411,7 +351,6 @@ span#title {
     border-radius: 15px !important;
     color: rgba(2, 2, 2, 1.0) !important;
 }
-
 
 /* Color Green 
             rgba(112, 127, 116, 1.0);

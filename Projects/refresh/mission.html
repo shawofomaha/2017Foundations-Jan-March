@@ -96,13 +96,24 @@
         
         #wowslider-container1 .ws_images > div > img {
             max-height: 780px;
-/*            color: rgba(66,66,66,1.0);*/
+            /*            color: rgba(66,66,66,1.0);*/
         }
         
-        .hamburger img {
-            top: -10vmin !important;
-            left: -22vmin !important;
+        @media all and (max-width: 445px) {
+            .hamburger {
+                position: absolute;
+                top: -46vmin;
+                left: -42vmin;
+            }
         }
+        
+/*
+        .hamburger {
+            position: absolute;
+            top: -15rem;
+            left: -15rem;
+        }
+*/
     </style>
 
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>

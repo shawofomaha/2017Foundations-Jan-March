@@ -151,7 +151,7 @@ foreach ($hobbies as $hobbys) {
 $numItems = count($pets);  // know the length of array
 if ($has_pets) {
 
-    echo "<p>I do have pets.";
+    echo "<p>I do have pets. "; 
     if (!is_array($pets) && $pets > " ") {
         echo " The pet's name is $pets.";
     } else {
@@ -212,3 +212,21 @@ if ($has_pets) {
 	<p class="modelOutput">I do (not) have pets. (Their names are *pet_names*.)</p>	
 	</p>
 </div>
+
+<<?php 
+// echo "=============================================================================<br/>";
+// print_r($shawOfOmaha);
+// echo "==============================================================================<br/><br/><br/>";
+// print_r($hobbies);
+// echo "==============================================================================<br/><br/><br/>";
+// print_r($pets);
+// echo "=============================================================================<br/><br/><br/>";
+// var_dump($shawOfOmaha);
+// echo "==============================================================================<br/>";
+// var_dump($hobbies);
+// echo "==============================================================================<br/>";
+// var_dump($pets);
+// echo "==============================================================================<br/>";
+
+
+ ?>

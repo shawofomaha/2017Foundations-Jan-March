@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#boxshadow {
+    position: relative;
+    width: 30vw;
+    height: 45vh;
+    -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    padding: 3vmin;
+    padding-right: 5vmin;
+    padding-bottom: 2vmin;
+    background: white;
+    background-image: url(/media/cherry-wood-panels-background-header.jpg);
+    background: blackopacity: 0.5;
+}
+
+/* Make the image fit the box */
+#boxshadow img {
+    width: 100%;
+    border: 1.5vmin solid #8a4419;
+    border-style: inset;
+    height: auto;
+}
+
+#boxshadow::after {
+    content: '';
+    position: absolute;
+    z-index: -1; /* hide shadow behind image */
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);                
+    width: 70%; 
+    left: 15%; /* one half of the remaining 30% */
+    height: 100px;
+    bottom: 0;
+}
+</style>
+</head>
+<body>
+
+<div id="boxshadow">
+  <img src="https://shawofomaha.github.io/2017Foundations-Jan-March/WordPress-Class/homework-wk1/media/LAKE SUNSET OCT 2013.svg" alt="" height="auto">
+</div>
+
+</body>
+</html>

@@ -136,6 +136,10 @@
             z-index: +5555;
         }
         
+        img {
+            /*            border: 1px solid pink;*/
+        }
+        
         .menu a:link,
         .menu a:visited,
         .menu a:hover,
@@ -162,29 +166,32 @@
         .bar1,
         .bar2,
         .bar3 {
-            width: 4vw;
-            height: 0.4vh;
-/*            background-color: #000;*/
-            background-color: rgba(242, 242, 242, 1.0);
-            color: rgba(242, 242, 242, 1.0);
-            margin: 0.4rem;
+            width: 2.5rem;
+            height: 0.30rem;
+            background-color: #000;
+            color: beige;
+            margin: 0.15rem;
             transition: 0.4s;
+            position: relative;
+            top: 1.5vmin;
+            left: -190vmin;
             position: absolute;
-            top: 2.0vh;
-            left: 5vw;
+            top: 1.75vmin;
+            left: 5vmin;
         }
         
         .bar2 {
-            top: 3.0vh;
+            top: 2.75vmin;
         }
         
         .bar3 {
-            top: 4.0vh;
+            top: 3.85vmin;
         }
         
         .change .bar1 {
-            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-            transform: rotate(-45deg) translate(-9px, 6px);
+            -2px,
+            -1px -webkit-transform: rotate(-45deg) translate(-0.25rem, 0.15rem);
+            transform: rotate(-45deg) translate(-0.25rem, 0.15rem);
         }
         
         .change .bar2 {
@@ -192,15 +199,18 @@
         }
         
         .change .bar3 {
-            -webkit-transform: rotate(45deg) translate(-8px, -8px);
-            transform: rotate(45deg) translate(-2.7px, -3px);
+            -webkit-transform: rotate(45deg) translate(-0.20rem, -0.20rem);
+            transform: rotate(45deg) translate(-0.20rem, -0.20rem);
         }
         
         .menuShow {
             left: 0px;
-            top: +58px;
         }
         
+        header,
+        body {
+            background-color: aliceblue;
+        }
     </style>
 
 </head>
@@ -254,6 +264,18 @@
 
         menu.on({
             mouseleave: function () {
+                toggleMenu()
+            }
+        });
+
+        hamburgerb.on({
+            mouseenter: function () {
+                toggleMenu()
+            }
+        });
+
+        hamburger.on({
+            click: function () {
                 toggleMenu();
             }
         })
