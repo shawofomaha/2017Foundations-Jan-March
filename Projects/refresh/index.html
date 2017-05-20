@@ -40,13 +40,14 @@
             font-family: sans-serif !important;
             font-size: 1.49rem !important;
             font-size: 1.49rem !important;
-            border: 0l.5rem dotted rgba(2, 255, 2, 1.0) !important;
+            border: 0.5rem dotted rgba(2, 255, 2, 1.0) !important;
             border-radius: 50% !important;
         }
         
         #simpleToggle {
             position: absolute;
-            top: -1.0rem;;
+            top: -1.0rem;
+            ;
             left: 14rem;
             width: 9.5rem !important;
             height: 3rem !important;
@@ -56,7 +57,7 @@
             border-radius: 1.5rem !important;
             color: rgba(2, 2, 2, 1.0) !important;
         }
-       
+        
         .para {
             background: rgba(112, 127, 116, 0.65);
             border-radius: 1.5rem;
@@ -78,16 +79,17 @@
             background: -moz-linear-gradient(right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 0.65));
             /* For Firefox 3.6 to 15 */
             background: linear-gradient(to right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 0.65));
-            /* Standard syntax */ 
-            
+            /* Standard syntax */
+            /*
             box-shadow: 1rem 2rem 4remx rgba(0, 0, 0, .8);
             -moz-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.8);
             -webkit-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .8);            box-shadow: 1rem 2rem 4remx rgba(0, 0, 0, .8);
             -moz-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.8);
             -webkit-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .8);            
+*/
         }
         
-        #indexInfoBox .para {
+        #indexInfoBox #para {
             position: relative;
             margin: 2rem;
         }
@@ -105,7 +107,7 @@
             top: 2.05rem;
             margin: 3.5rem;
             background-color: rgba(232, 195, 150, 0.35);
-/*            background-color: rgba(22, 22, 22, 0.55);*/
+            /*            background-color: rgba(22, 22, 22, 0.55);*/
             color: rgba(2, 2, 2, 0.99);
             /* Stan2 */
             text-shadow: 0.11rem 0.11rem rgba(198, 75, 13, 1.0);
@@ -268,6 +270,23 @@
             transition: all 2.7s ease-in-out;
         }
         
+        .colorRed {
+            color: red;
+        }
+        
+        .boxShadow {
+            box-shadow: .25rem 0.27rem rgba(4, 4, 4, 0.85), 1rem 1rem 2rem rgba(211, 211, 211, 0.7);
+        }
+        
+        .boxBorder {
+            padding: 1.5rem; 
+            border-top: 0.17rem solid rgba(111, 111, 111, 1.0);
+            border-bottom: 0.77rem solid rgba(111, 111, 111, 1.0);
+            border-left: 0.97rem groove rgba(111, 111, 111, 1.0);
+            border-right: 0.17rem solid rgba(111, 111, 111, 1.0);
+            border-radius: 1.25rem;
+        }
+        
         .tranformNot {
             transform: none;
         }
@@ -276,15 +295,13 @@
             width: 99%;
         }
         
-         
         @media screen and (max-width:1399px) {
             #simpleToggle {
-                top: -1.5rem  !important;
+                top: -1.5rem !important;
                 left: +17rem !important;
             }
         }
-
-                
+        
         @media screen and (max-width:1075px) {
             #simpleToggle {
                 top: -1.5rem !important;
@@ -318,20 +335,20 @@
     <br />
 
     <div>
-        
-            <div id="ball"></div>
 
-            <audio id="sound1">
-                <source src="media/refresh_paul4.mp3" type="audio/mpeg" />
-            </audio>
-            <audio id="sound2">
-                <source src="media/Wrong-buzzer.mp3" type="audio/mpeg" />
-            </audio>
+        <div id="ball"></div>
+
+        <audio id="sound1">
+            <source src="media/refresh_paul4.mp3" type="audio/mpeg" />
+        </audio>
+        <audio id="sound2">
+            <source src="media/Wrong-buzzer.mp3" type="audio/mpeg" />
+        </audio>
 
         <div id="container">
 
             <div id="indexInfoBox">
-                <div class="para">
+                <div id="para">
                     <h3 id="ourStory">Our Story</h3>
 
                     <p>From antiques to ascots, we have the personal experience necessary to help you liquidate your estate assets. After inheriting a large quantity of possessions, we were inspired to help others in this daunting task.</p>
@@ -485,21 +502,22 @@
         $("#simpleToggle").click(function () {
 
 
-            $("#container,#indexInfoBox, .para ").css({
-                
+            $("#container,#indexInfoBox, #para ").css({
                 "background-image": "url('media/white.png')",
                 "-webkit-transition": "all 3.7s ease-in-out",
                 "-moz-transition": "all 3.7s ease-in-out",
                 "-ms-transition": "all 3.7s ease-in-out",
                 "transition": "all 3.7s ease-in-out"
             });
-  
+
             var myTimeoutVar1;
             myTimeoutVar1 = setTimeout(function () {
                 $("p").addClass("txtShadow");
                 $("h2").addClass("txtShadow");
                 $("h3").addClass("txtShadow");
                 $("h4").addClass("txtShadow");
+                $("#para").addClass("boxShadow");
+
             }, 4200);
 
             var myTimeoutVar3;
@@ -510,7 +528,7 @@
 
             var myTimeoutVar2;
             myTimeoutVar2 = setTimeout(function () {
-
+                $("#para").addClass("boxBorder");
                 myStopFunction();
 
             }, 4650);
