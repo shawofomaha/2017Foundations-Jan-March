@@ -116,7 +116,7 @@ h2,
 h3 {
     display: block;
     text-align: center;
-    text-shadow: 0.35rem 0.11rem rgba(112, 127, 116, 1.0);
+    text-shadow: 0.11rem 0.11rem rgba(112, 127, 116, 1.0);
     font-family: 'Architects Daughter', cursive;
     font-size: 2.0rem;
     /*    font-size: calc( 2.0rem + 10px);*/
@@ -124,7 +124,7 @@ h3 {
 }
 
 h3 {
-    text-shadow: 0.35rem 0.9rem rgba(82, 97, 86, 1.0);
+    text-shadow: 0.11rem 0.11rem rgba(82, 97, 86, 1.0);
 }
 
 .paisleyBorderTop {
@@ -136,7 +136,10 @@ h3 {
 /* ************* Start of item box ******* */
 
 .picBox {
-    border: 0.5rem solid rgba(244, 210, 161, 1.0);
+/*    border: 0.5rem solid rgba(244, 210, 161, 1.0);*/
+    border: 0.95rem solid rgba(244, 210, 161, 1.0); 
+    border-radius: 0rem !important;
+    border-style:   ridge;
     background-color: rgba(112, 127, 116, 1.0);
     -webkit-transition: background-color 3sec ease-in-out;
     transition: background-color 3sec ease-in-out;
@@ -187,9 +190,11 @@ button:hover,
 input:hover {
     color: white !important;
     border: 0.21rem solid rgba(255, 255, 255, 1.0) !important;
-    font-size: 1.4rem !important;
-    font-size: calc( 2.2rem + 0.5px)!important;
-    width: 9.5rem;
+/*    font-size: 1.4rem !important;*/
+/*    font-size: calc( 2.2rem + 0.5px)!important;*/
+/*    width: 9.5rem;*/
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
     -webkit-transition: all 0.5s cubic-bezier(1, 1.96, 1, 0.99);
     transition: all 0.5s cubic-bezier(1, 1.96, 1, 0.99);
     -ms-transition: all 0.5s cubic-bezier(0.37, 0.39, 0.23, 0.82);
