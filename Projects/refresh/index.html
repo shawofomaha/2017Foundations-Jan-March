@@ -1,73 +1,126 @@
-v<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <!-- Housekeeping -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!--  JSON Manifest -->
-    <link rel="manifest" href="manifest.json">    
+    <link rel="manifest" href="manifest.json">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Akronim|Aladin|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">
 
     <!-- CSS Stylesheet href's -->
     <link rel="stylesheet" href="css/main.css">
-    <link media="all and (min-width: 100px) and (max-width: 776px)" rel="stylesheet" href="css/handheld.css">
-    <link media="all and (min-width: 777px) and (max-width: 2401px) " rel="stylesheet" href="css/desktop.css">
- 
+    <link media="all and (max-width: 445px)" rel="stylesheet" href="css/handheld.css">
+    <link media="all and (max-width: 1077px)" rel="stylesheet" href="css/desktop.css">
+
     <style>
-        
         #homeTitle {
-            position: relative;
-/*            font-size: 5.5vmin;*/
+            /*            border: 1pz dotted pink;*/
+            position: absolute;
+            width: 100%;
+            display: block;
+            text-align: center;
             font-size: 3.7rem;
-            text-shadow: .5px 0.25px rgba(255, 255, 255, 0.55);
+            text-shadow: 1rem 1rem 2rem rgba(242, 255, 221, 0.7), 0 0 25rem rgba(255, 255, 255, 0.7), 0 0 2rem rgba(2, 2, 2, 0.7);
             color: rgba(244, 210, 161, 0.9);
-            top: 16.75vmin;
-            z-index: +2;
+            top: 4.5rem;
+            z-index: +5;
             font-family: 'Architects Daughter', cursive;
+        }
+        
+        #simpleToggle:hover {
+            width: 11.75rem !important;
+            background-color: rgba(121, 201, 1, 0.5) !important;
+            background-image: none !important;
+            color: rgba(242, 242, 242, 1.0) !important;
+            font-family: sans-serif !important;
+            font-size: 1.49rem !important;
+            font-size: 1.49rem !important;
+            border: 0l.5rem dotted rgba(2, 255, 2, 1.0) !important;
+            border-radius: 50% !important;
+        }
+        
+        #simpleToggle {
+            position: absolute;
+            top: -1.0rem;;
+            left: 14rem;
+            width: 9.5rem !important;
+            height: 3rem !important;
+            background-color: rgba(222, 222, 222, 0.85) !important;
+            background-image: none !important;
+            font-size: 2rem !important;
+            border-radius: 1.5rem !important;
+            color: rgba(2, 2, 2, 1.0) !important;
+        }
+       
+        .para {
+            background: rgba(112, 127, 116, 0.65);
+            border-radius: 1.5rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            /* Color Green 
+            rgba(112, 127, 116, 1.0);
+            rgba(16, 93, 0, 1.0);
+            rgba(130, 190, 1, 1.0);
+            rgba(118, 173, 0,1.0);
+*/
+            /* For browsers that do not support gradients */
+            background: -ms-linear-gradient(left, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 0.65));
+            /* For Microsoft */
+            background: -webkit-linear-gradient(left, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 0.65));
+            /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 0.65));
+            /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 0.65));
+            /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 0.65));
+            /* Standard syntax */ 
+            
+            box-shadow: 1rem 2rem 4remx rgba(0, 0, 0, .8);
+            -moz-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.8);
+            -webkit-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .8);            box-shadow: 1rem 2rem 4remx rgba(0, 0, 0, .8);
+            -moz-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.8);
+            -webkit-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .8);            
         }
         
         #indexInfoBox .para {
             position: relative;
-            margin: 2vmin;
+            margin: 2rem;
         }
         
         #indexInfoBox h3 {
             position: relative;
-            margin: 2vmin;
-            z-index: +0;
+            text-shadow: 1rem 1rem 2rem rgba(0, 0, 238, 0.7), 0 0 25rem rgba(0, 0, 238, 0.7), 0 0 2rem rgba(0, 0, 238, 0.7);
+            text-shadow: .25rem 0.27rem rgba(0, 0, 238, 0.85), 1rem 1rem 2rem rgba(0, 0, 238, 0.7);
         }
         
         #indexInfoBox {
             position: relative;
             overflow-x: hidden;
             overflow-y: auto;
-            top: 2.05vmin;
-            margin: 3.5vmin;
-            color: rgba(2, 2, 2, 1.0);
-            /* orig */
-            text-shadow: 1px 1.15px rgba(244, 210, 161, 0.95);
-            /* orig */
-            color: rgba(198, 75, 13, 1.0);
-            /* Stan */
-            text-shadow: 3.5px 3.75px rgba(2, 2, 2, 1.0);
-            /* Stan */
+            top: 2.05rem;
+            margin: 3.5rem;
+            background-color: rgba(232, 195, 150, 0.35);
+/*            background-color: rgba(22, 22, 22, 0.55);*/
             color: rgba(2, 2, 2, 0.99);
             /* Stan2 */
-            text-shadow: 0.55px 1.15px rgba(198, 75, 13, 1.0);
-            /* Stan2 */
+            text-shadow: 0.11rem 0.11rem rgba(198, 75, 13, 1.0);
             font-family: 'Aladin', cursive;
             font-weight: bolder;
-            font-size: 3.75vmin;
-            font-size: calc(1.75rem + 15px);
+            font-size: 2.25rem;
             min-width: 80%;
-            border-bottom: 1px solid rgba(255, 255, 255, 1.0);
-            border-left: 1px solid rgba(255, 255, 255, 1.0);
-            border-right: 1px solid rgba(255, 255, 255, 1.0);
-            border-radius: 35px;
+            border-top: 0.17rem solid rgba(255, 255, 255, 0.65);
+            border-bottom: 0.77rem solid rgba(255, 255, 255, 1.0);
+            border-left: 0.97rem groove rgba(255, 255, 255, 1.0);
+            border-right: 0.17rem solid rgba(255, 255, 255, 1.0);
+            border-radius: 1.5rem;
+            box-shadow: 1rem 2rem 4remx rgba(0, 0, 0, .8);
+            -moz-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.8);
+            -webkit-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .8);
         }
         
         p.ownerContact {
@@ -75,9 +128,9 @@ v<!DOCTYPE html>
         }
         
         p.ownerContact a {
-            text-shadow: .25px 0.25px rgba(244, 244, 244, 0.95);
+            text-shadow: .25rem 0.25rem rgba(244, 244, 244, 0.95);
             background-color: rgba(211, 211, 211, 0.5);
-            border-radius: 7px;
+            border-radius: 1.5rem;
             color: rgba(0, 0, 255, 1.0);
         }
         
@@ -86,15 +139,11 @@ v<!DOCTYPE html>
         }
         
         #container {
-            top: -30.75vmin !important;
+            position: absolute !important;
+            top: +7.0rem !important;
             flex-direction: row;
             flex-wrap: wrap;
         }
-        /*
-        footer2 ul {
-            top: -6.75vmin !important;
-        }
-*/
         /******* Modal start *******/
         /* The Modal (background) */
         
@@ -123,8 +172,7 @@ v<!DOCTYPE html>
         .modal-content {
             background-color: rgba(2, 2, 2, 0.98);
             font-family: 'Architects Daughter', cursive;
-            font-size: 1.25em;
-            font-size: 1.25rem;
+            font-size: 2.25rem;
             color: rgba(112, 127, 116, 1.0);
             margin: 13% auto;
             /* 13% from the top and centered */
@@ -152,40 +200,51 @@ v<!DOCTYPE html>
         }
         
         #myBtn:hover {
-            top: 0.5vmin;
-            margin: 2px;
-            min-height: 7vmin !important;
-            width: 19.5vw !important;
+            min-height: 3rem !important;
+            width: 19.5rem !important;
             background-color: rgba(121, 201, 1, 0.5) !important;
             color: rgba(242, 242, 242, 1.0) !important;
             font-family: sans-serif !important;
-            font-size: 1.59vw !important;
-            font-size: 1.59vw !important;
-            border: 1.5px dotted rgba(2, 255, 2, 1.0) !important;
-            border-radius: 50% !important; 
-/*            transition: all 0.4s ease-in-out;
+            font-size: 1.59rem !important;
+            border: 0.21rem dotted rgba(2, 255, 2, 1.0) !important;
+            border-radius: 50% !important;
+            /*    color: white !important;*/
+            /*    border: 0.21rem solid rgba(255, 255, 255, 1.0) !important;*/
+            /*
+    font-size: 1.4rem !important;
+    font-size: calc( 2.2rem + 0.5px)!important;
+    width: 9.5rem;
+*/
+            /*
+    transition: all 0.7s cubic-bezier(1, 1.96, 1, 0.99);
+    -ms-transition: all 0.7s cubic-bezier(0.37, 0.39, 0.23, 0.82);
+    -webkit-transition: all 0.7s cubic-bezier(0.37, 0.39, 0.23, 0.82);            
+*/
+            /*            transition: all 0.4s ease-in-out;
             (0.43, 0.1, 0.56, 0.96);
             (0.9, -0.55, 0, 1.18);
             (0.57, 0.53, 0.6, 1.01)
             */
-            transition: all 0.4s cubic-bezier(0.9, -0.55, 0, 1.18);
+            /*            transition: all 0.7s ease-in-out;;*/
         }
         
         #myBtn {
             position: relative;
             font-family: 'Architects Daughter', cursive;
-            margin: 5px;
-            width: 20.5vw !important;
+            width: 20.5rem !important;
+            height: 2.7rem;
             background-color: rgba(255, 255, 255, 1.0);
-            top: 2.5vmin;
-            margin-bottom: 3.5vmin;
-            padding-left: 14px;
+            top: 2.5rem;
+            margin-bottom: 3.5rem;
+            padding-left: 1rem;
             background-color: rgba(222, 222, 222, 0.85) !important;
-            font-size: 1.7vw !important;
-            font-size: 1.7vw !important;
-            border-radius: 15px !important;
+            font-size: 1.7rem !important;
+            text-align: center;
+            line-height: 2.7rem;
+            border-radius: 1.5rem !important;
             color: rgba(2, 2, 2, 1.0) !important;
-            transition: all 0.39s ease-in-out;
+            transition: all 0.7s ease-in-out;
+            box-shadow: .25rem 0.27rem rgba(4, 4, 4, 0.85), 1rem 1rem 2rem rgba(211, 211, 211, 0.7);
             z-index: +0;
         }
         /* Modal end */
@@ -196,8 +255,7 @@ v<!DOCTYPE html>
             color: rgba(222, 222, 222, 1.0);
             text-shadow: 0.75px 0.75px rgba(112, 127, 116, 1.0);
             font-family: 'Architects Daughter', cursive;
-            font-size: 1.15em;
-            font-size: 1.15em;
+            font-size: 2.15em;
             z-index: +1;
         }
         
@@ -218,30 +276,41 @@ v<!DOCTYPE html>
             width: 99%;
         }
         
-        #simpleToggle {
-            top: 1vmin !important;
-            left: +11vw !important;
+         
+        @media screen and (max-width:1399px) {
+            #simpleToggle {
+                top: -1.5rem  !important;
+                left: +17rem !important;
+            }
+        }
+
+                
+        @media screen and (max-width:1075px) {
+            #simpleToggle {
+                top: -1.5rem !important;
+                left: +10.5rem !important;
+            }
         }
         
         @media screen and (max-width:767px) {
             #simpleToggle {
-                top: 1vmin !important;
-                left: +17vw !important;
+                top: -1.5rem !important;
+                left: +5.80rem !important;
             }
         }
         
         @media screen and (max-width:600px) {
             #simpleToggle {
-                top: 12vmin !important;
-                left: +22vw !important;
+                top: -1.5rem!important;
+                left: +5.80rem !important;
             }
-        }        
+        }
     </style>
 </head>
-    
+
 
 <body>
-    
+
     <button id="simpleToggle">Simplify</button>
     <header>Head and nav in header.html</header>
 
@@ -249,9 +318,7 @@ v<!DOCTYPE html>
     <br />
 
     <div>
- 
-        <div id="container">
-
+        
             <div id="ball"></div>
 
             <audio id="sound1">
@@ -260,6 +327,8 @@ v<!DOCTYPE html>
             <audio id="sound2">
                 <source src="media/Wrong-buzzer.mp3" type="audio/mpeg" />
             </audio>
+
+        <div id="container">
 
             <div id="indexInfoBox">
                 <div class="para">
@@ -381,7 +450,7 @@ v<!DOCTYPE html>
         function mySpinFunction() {
             $("#ball").toggleClass("spinBall");
         }
-        
+
         // //
         var myTimeoutVar1;
         var myTimeoutVar2;
@@ -416,14 +485,15 @@ v<!DOCTYPE html>
         $("#simpleToggle").click(function () {
 
 
-            $("#container").css({
+            $("#container,#indexInfoBox, .para ").css({
+                
                 "background-image": "url('media/white.png')",
                 "-webkit-transition": "all 3.7s ease-in-out",
                 "-moz-transition": "all 3.7s ease-in-out",
                 "-ms-transition": "all 3.7s ease-in-out",
                 "transition": "all 3.7s ease-in-out"
             });
-
+  
             var myTimeoutVar1;
             myTimeoutVar1 = setTimeout(function () {
                 $("p").addClass("txtShadow");

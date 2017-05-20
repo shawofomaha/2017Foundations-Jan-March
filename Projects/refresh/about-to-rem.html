@@ -7,38 +7,77 @@
     <link rel="stylesheet" href="css/main.css">
     <link media="all and (min-width: 100px) and (max-width: 776px)" rel="stylesheet" href="css/handheld.css">
     <link media="all and (min-width: 777px) and (max-width: 2401px) " rel="stylesheet" href="css/desktop.css">
-    
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">
 
     <style>
-   
+        html {
+            font-size: 1em;
+        }
+        
         h2 {
-/*
             position: fixed;
             top: +2.5vmin;
-*/
         }
+        
+        # containerAbouthold {
+/*
+            width: 25rem;
+            height: 25rem;            
+*/
+
+        }        
         
         #containerAbout {
             /*            justify-content: space-around;*/
-/*            top: 5rem;*/
-            position: inherit;
+            text-align: center;
+            position: relative;
+            top: 17rem;
+/*
             width: 45vmin;
             height: 45vmin;
+*/
+/*
             perspective: 333vmin;
             perspective-origin: 100% 450px;
-            transform: translate(160%, 18rem);
-            -ms-transform: translate(160%, 18rem);
-            -webkit-transform: translate(160%, 18rem);
+*/
+         
+            position: relative;
+/*
+            max-height: 100%;
+            max-width: 100%;
+*/
+            width: 50rem;
+            height: 50rem; 
+            max-height: 50rem;
+            max-height: 50rem;
+            perspective: 333vmin;
+            perspective-origin: 100% 450px;
+/*            transform: translate(160%, 10vh);*/
+/*
+            -ms-transform: translate(160%, 10vh);
+            -webkit-transform: translate(160%, 10vh);
+*/
+/*    width: 100%;*/
+/*    display: block;*/
+/*    text-align: center;             */
+            
         }
-        
+        #cube  {
+/*
+            top: 4.5rem;
+            left: -12rem;
+*/
+        }
         #cube {
             min-width: 100%;
             min-height: 100%;
             position: relative;
+/*
             left: 17%;
             top: 5.15%;
+*/
             transform-style: preserve-3d;
             transition: transform 2s;
             -ms-transition: transform 2s;
@@ -53,24 +92,24 @@
             box-sizing: border-box;
             border: 1.5px solid rgba(244, 210, 161, 1.0);
             color: rgba(255, 255, 255, 0.8);
-            font-size: 2.3vmin;
+            font-size: 2.1rem;
             text-align: center;
-            line-height: 2.3vmin;
+            line-height: 2.1rem;
             border-radius: 25%;
         }
         
         .top {
-            width: 275%;
-            height: 105%;
-            top: -5vh;
-            left: -90%;
+/*            width: 275%;*/
+/*            height: 105%;*/
+/*            top: -5vh;*/
+/*            left: -90%;*/
             position: absolute;
             box-sizing: border-box;
             border: 2.5px solid rgba(244, 210, 161, 1.0);
             color: rgba(255, 255, 255, 0.8);
-            font-size: 2.3vmin;
+            font-size: 2.1rem;
             text-align: center;
-            line-height: 2.3vmin;
+            line-height: 2.1rem;
             border-radius: 50%;
         }
         /*
@@ -80,16 +119,19 @@
 */
         
         .Bot {
-            width: 140%;
+/*            width: 140%;*/
+            width: 100%
             border-radius: 0%;
+/*
             top: 33%;
             left: -25%;
+*/
             position: absolute;
             color: rgba(255, 255, 255, 0.8);
-            font-size: 2.3vmin;
-            text-align: center;
-            line-height: 2.3vmin;
-            border: 15px solid transparent;
+            font-size: 2.1rem;
+            text-align: center;           
+            line-height: 2.1rem;
+            border: 5rem solid transparent;
             -moz-border-image: -moz-linear-gradient(top, rgba(35, 60, 39, 1.0) 0%, rgba(244, 210, 161, 1.0) 100%);
             -webkit-border-image: -webkit-linear-gradient(top, rgba(35, 60, 39, 1.0) 0%, rgba(244, 210, 161, 1.0) 100%);
             border-image: linear-gradient(to bottom, rgba(80, 132, 89, 1.0) 0%, rgba(244, 210, 161, 1.0) 100%);
@@ -107,22 +149,22 @@
         #top,
         #bottom {
             background-size: cover;
-            min-height: 45vmin;
+            min-height: 7.5rem;
             -webkit-transition: background-color 3sec ease-in-out;
             -moz-transition: background-color 3sec ease-in-out;
             -ms-transition: background-color 3sec ease-in-out;
             -o-transition: background-color 3sec ease-in-out;
             transition: background-color 3sec ease-in-out;
-            padding: 2vmin;
-            padding-top: 9vmin;
+            padding: 1rem;
+            padding-top: 3rem;
         }
         
         #back {
             background-image: url("http://lorempixel.com/g/800/600/");
             backface-visibility: hidden;
-            transform: rotateY(180deg) translateZ(54vmin);
-            -ms-transform: rotateY(180deg) translateZ(54vmin);
-            -webkit-transform: rotateY(180deg) translateZ(54vmin);
+            transform: rotateY(180deg) translateZ(54rem);
+            -ms-transform: rotateY(180deg) translateZ(54rem);
+            -webkit-transform: rotateY(180deg) translateZ(54rem);
         }
         
         #cube.showBack {
@@ -135,9 +177,9 @@
             background-color: black;
             background-image: url("media/Workman%20Estate%20Sale.jpeg");
             backface-visibility: hidden;
-            transform: rotateY(0deg) translateZ(54vmin);
-            -ms-transform: rotateY(0deg) translateZ(54vmin);
-            -webkit-transform: rotateY(0deg) translateZ(54vmin);
+            transform: rotateY(0deg) translateZ(54rem);
+            -ms-transform: rotateY(0deg) translateZ(54rem);
+            -webkit-transform: rotateY(0deg) translateZ(54rem);
         }
         
         #cube.showFront {
@@ -149,9 +191,9 @@
         #rightBack {
             background-image: url("http://lorempixel.com/g/900/740/abstract");
             backface-visibility: hidden;
-            transform: rotateY(135deg) translateZ(54vmin);
-            -ms-transform: rotateY(135deg) translateZ(54vmin);
-            -webkit-transform: rotateY(135deg) translateZ(54vmin);
+            transform: rotateY(135deg) translateZ(54rem);
+            -ms-transform: rotateY(135deg) translateZ(54rem);
+            -webkit-transform: rotateY(135deg) translateZ(54rem);
         }
         
         #cube.showRightBack {
@@ -163,9 +205,9 @@
         #leftBack {
             background-image: url("http://lorempixel.com/980/960/abstract");
             backface-visibility: hidden;
-            transform: rotateY(-135deg) translateZ(54vmin);
-            -ms-transform: rotateY(-135deg) translateZ(54vmin);
-            -webkit-transform: rotateY(-135deg) translateZ(54vmin);
+            transform: rotateY(-135deg) translateZ(54rem);
+            -ms-transform: rotateY(-135deg) translateZ(54rem);
+            -webkit-transform: rotateY(-135deg) translateZ(54rem);
         }
         
         #cube.showLeftBack {
@@ -177,9 +219,9 @@
         #right {
             background-image: url("media/holly3.JPG");
             backface-visibility: hidden;
-            transform: rotateY(90deg) translateZ(54vmin);
-            -ms-transform: rotateY(90deg) translateZ(54vmin);
-            -webkit-transform: rotateY(90deg) translateZ(54vmin);
+            transform: rotateY(90deg) translateZ(54rem);
+            -ms-transform: rotateY(90deg) translateZ(54rem);
+            -webkit-transform: rotateY(90deg) translateZ(54rem);
         }
         
         #cube.showRight {
@@ -190,9 +232,9 @@
         #left {
             background-image: url("media/holly.JPG");
             backface-visibility: hidden;
-            transform: rotateY(-90deg) translateZ(54vmin);
-            -ms-transform: rotateY(-90deg) translateZ(54vmin);
-            -webkit-transform: rotateY(-90deg) translateZ(54vmin);
+            transform: rotateY(-90deg) translateZ(54rem);
+            -ms-transform: rotateY(-90deg) translateZ(54rem);
+            -webkit-transform: rotateY(-90deg) translateZ(54rem);
         }
         
         #cube.showLeft {
@@ -203,7 +245,7 @@
         #rightFront {
             background-image: url("http://lorempixel.com/g/640/320");
             backface-visibility: hidden;
-            transform: rotateY(45deg) translateZ(54vmin);
+            transform: rotateY(45deg) translateZ(54rem);
             -ms- -webkit-
         }
         
@@ -216,9 +258,9 @@
         #leftFront {
             background-image: url("http://lorempixel.com/240/240/cats");
             backface-visibility: hidden;
-            transform: rotateY(-45deg) translateZ(54vmin);
-            -ms-transform: rotateY(-45deg) translateZ(54vmin);
-            -webkit-transform: rotateY(-45deg) translateZ(54vmin);
+            transform: rotateY(-45deg) translateZ(54rem);
+            -ms-transform: rotateY(-45deg) translateZ(54rem);
+            -webkit-transform: rotateY(-45deg) translateZ(54rem);
         }
         
         #cube.showLeftFront {
@@ -230,9 +272,9 @@
         #top {
             background-image: url("media/Workman%20Estate%20Sale.jpeg");
             backface-visibility: hidden;
-            transform: rotateX(90deg) translateZ(42vmin);
-            -ms-transform: rotateX(90deg) translateZ(42vmin);
-            -webkit-transform: rotateX(90deg) translateZ(42vmin);
+            transform: rotateX(90deg) translateZ(42rem);/*54rem*/
+            -ms-transform: rotateX(90deg) translateZ(42rem);
+            -webkit-transform: rotateX(90deg) translateZ(42rem);
         }
         
         #cube.showTop {
@@ -244,9 +286,9 @@
         #bottom {
             background-color: black;
             backface-visibility: hidden;
-            transform: rotateX(-90deg) translateZ(22vmin);
-            -ms-transform: rotateX(-90deg) translateZ(22vmin);
-            -webkit-transform: rotateX(-90deg) translateZ(22vmin);
+            transform: rotateX(-90deg) translateZ(22rem); /*54rem*/
+            -ms-transform: rotateX(-90deg) translateZ(22rem);
+            -webkit-transform: rotateX(-90deg) translateZ(22rem);
         }
         
         #cube.showBottom {
@@ -255,33 +297,17 @@
             -webkit-transform: rotateX(90deg);
         }
         
-        .dufus {
-            position: absolute;
-            width: 100%;
-            display: block;
-            text-align: center;
-            font-size: 3.7rem;
-            text-shadow: 1rem 1rem 2rem rgba(242, 255, 221, 0.7), 0 0 25rem rgba(255, 255, 255, 0.7), 0 0 2rem rgba(2, 2, 2, 0.7);
-            color: rgba(244, 210, 161, 0.9);
-            top: 4.5rem;
-            z-index: +5;
-            font-family: 'Architects Daughter', cursive;            
-            
-        }
-        
         #aboutTitle {
-/*            position: relative;*/
-            position: absolute;
-            width: 100%;
-            display: block;
-            text-align: center;            
-            font-size: 3.7rem;
             top: 3.0rem;
             z-index: +1;
             font-family: 'Architects Daughter', cursive;
             color: rgba(244, 210, 161, 1.0);
-            text-shadow: .22rem .33rem rgba(255, 255, 255, 0.55);
-            text-shadow: 1rem 1rem 2rem rgba(242, 255, 221, 0.7), 0 0 25rem rgba(242, 255, 2215, 0.7), 0 0 2rem rgba(242, 255, 221, 0.7);            
+            text-shadow: 1px 1.5px rgba(255, 255, 255, 0.55);
+            width: 100%;
+            display: block;
+            text-align: center;
+            font-size: 3.7rem;
+            text-shadow: 1rem 1rem 2rem rgba(255, 255, 255, 0.7), 0 0 25rem rgba(255, 255, 255, 0.9), 0 0 2rem rgba(2, 211, 2, 0.7);
         }
         
         .frontPicTxt,
@@ -294,10 +320,10 @@
         .backPicTxt,
         .rightBackPicTxt {
             font-family: 'Architects Daughter', cursive;
-            font-size: 3.25vmin;
+            font-size: 2.25rem;
             color: rgba(155, 244, 66, 0.8);
-            line-height: 5.0vmin;
-            text-shadow: 2px 2px rgba(6, 6, 6, 1.0);
+            line-height: 3.0rem;
+            text-shadow: 0.75rem 0.75rem rgba(6, 6, 6, 1.0);
         }
         
         .frontPicTxt {
@@ -334,14 +360,14 @@
         
         .topPicTxt {
             color: rgba(244, 210, 161, 1.0);
-            line-height: 5.0vmin;
-            font-size: 5.0vmin;
+            line-height: 3.0rem;
+            font-size: 3.0rem;
         }
         
         .bottomPicTxt {
             color: rgba(244, 210, 161, 1.0);
-            line-height: 5.0vmin;
-            font-size: 5.0vmin;
+            line-height: 3.0rem;
+            font-size: 3.0rem;
         }
         
         .rightBackPicTxt {
@@ -352,65 +378,67 @@
             text-decoration: underline;
         }
         
-        footer2 ul {
+/*        footer2 ul {*/
+/*
             top: -0.53vmin !important;
         }
+*/
         
         #cube a {
             display: inline-block;
             color: rgba(0, 0, 255, 1.0);
-            text-shadow: 0px 0px rgba(6, 6, 6, 1.0);
+            text-shadow: 0.05rem 0.05rem rgba(6, 6, 6, 1.0);
             background-color: rgba(244, 210, 161, 1.0);
             border-radius: 15px;
             border: 2px solid rgba(211, 211, 211, 1.0);
         }
         
         #cube a:hover {
-            font-size: 1.11em;
-            border: 2px solid rgba(255, 255, 255, 1.0);
+            font-size: 1.11rem;
+            border: 0.5rem solid rgba(255, 255, 255, 1.0);
             transition: all 0.75s ease-in-out;
         }
         
         #facePosition {
-            position: relative;
+            position: absolute;
             font-family: 'Architects Daughter', cursive;
-            width: 15rem;
-            top: 7rem;
+            width: 20rem;
+            top: 25.5rem;
+            left: +1.5rem;
             text-align: center;
-            font-size: 1.75vw;
+            font-size: 1.75rem;
             color: rgba(244, 210, 161, 1.0);
-            border: 2px solid red;
-            border: 2px solid rgba(244, 210, 161, 1.0);
-            border-radius: 15px;
+            border: 0.5rem solid rgba(244, 210, 161, 1.0);
+            border-radius: 1.5rem;
             z-index: +0;
         }
         
         button#spin {
             position: relative;
-            top:  7rem; !important;
+            top: 5.25rem !important;
             font-size: 1.75rem !important;
-            left: -0.60rem !important;
+            left: 5.5rem !important;
         }
         
         button#spin:hover {
-            border: 2px solid rgba(255, 255, 255, 1.0) !important;
+            border: 0.5rem solid rgba(255, 255, 255, 1.0) !important;
             transition: all 0.45s ease-in-out;
             -webkit-transition: all 0.45s ease-in-out;
         }
         
         select {
+/*            display: inline-block;*/
             position: relative;
-            display: inline-block;
-            position: relative;
-            top:  7rem; !important;
-            left: 3.75rem !important;
+            top: +6.5rem !important;
+            left: 2.75rem !important;
         }
-
+        
         .floatLeft {
             float: left;
             margin-left: 1.5rem;
         }
         
+
     </style>
 </head>
 
@@ -419,7 +447,6 @@
     <h2 id="aboutTitle">&gt; About &lt;</h2>
     <main>
         <div class="floatLeft">
-            <div id="facePosition"></div>
             <button type="button" id="spin" value="Spin">Spin</button>
             <select enable>
                 <option value="Front">1-Front</option>
@@ -433,9 +460,8 @@
                 <option value="Top">9-Top</option>
                 <option value="Bottom">10-Bottom</option>
             </select>
-            
         </div>
-        
+<!--        <div id="containerAbouthold">-->
         <div id="containerAbout">
             <div id="cube">
 
@@ -458,8 +484,7 @@
                 <div class="side" id="back">
                     <p class="backPicTxt">We provide a personalized service
                         <br />meeting the needs <span class="underline">you</span> have identified. So&nbsp;
-                        <br/> 
-                        <a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/"> contact us! </a></p>
+                        <br/> <a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/"> contact us! </a></p>
                 </div>
 
                 <div class="side" id="rightBack">
@@ -496,8 +521,9 @@
                 </div>
 
             </div>
+<!--            </div>-->
         </div>
-    </div>
+    </main> 
 
     <footer id="footer"></footer>
 

@@ -70,6 +70,10 @@
             z-index: -0;
         }
         
+        .menu2 {
+            
+        }
+        
         .menu {
             display: inline-block;
             width: 320px;
@@ -155,8 +159,13 @@
         }
         
         .hamburgerContainer {
+            position: absolute;
+            top: 0.75rem;
+            left: 1.5rem;
+/*            border: 5px dotted white;*/
             display: inline-block;
             cursor: pointer;
+            z-index: +4;
         }
         
         .bar1,
@@ -185,20 +194,24 @@
         .change .bar1 {
             -webkit-transform: rotate(-45deg) translate(-9px, 6px);
             transform: rotate(-45deg) translate(-9px, 6px);
+            transition: left .4s ease-in-out;
         }
         
         .change .bar2 {
             opacity: 0;
+            transition: left .4s ease-in-out;
         }
         
         .change .bar3 {
             -webkit-transform: rotate(45deg) translate(-8px, -8px);
             transform: rotate(45deg) translate(-2.7px, -3px);
+            transition: left .4s ease-in-out;
         }
         
         .menuShow {
             left: 0px;
-            top: +58px;
+            top: +55px;
+            transition: left .4s ease-in-out;
         }
         
     </style>
@@ -208,15 +221,15 @@
 <body>
     <div>
         <header>
-
-            <div class="hamburger">
-                <div class="hamburgerContainer" onclick="myFunction(this)">
+            <div class="hamburger menu2">
+                <div class="hamburgerContainer" onclick="toggleMenu(this)">
                     <div class="bar1"></div>
                     <div class="bar2"></div>
                     <div class="bar3"></div>
                 </div>
+                <img class="paisleyBorderTop" src="media/borders-holly2.png">
                 <nav>
-                    <div class="menu">
+                    <div class="menu menu2">
                         <span id="menuTitle">Refresh Estate Sales</span>
                         <div class="menu-item"><a href="index.html">Home</a></div>
                         <div class="menu-item"><a href="sales.html">Sales</a></div>
@@ -227,7 +240,7 @@
                     </div>
                 </nav>
             </div>
-            <img class="paisleyBorderTop" src="media/borders-holly2.png">
+            
             <div class="logoWrapper">
                 <a href="index.html">
                     <img class="logo" src="media/refresh-expanded.png"></a>
@@ -241,22 +254,21 @@
         var menuOpen = false;
         var menu = $(".menu");
         var hamburger = $(".hamburgerContainer");
-        var hamburgerb = $(".hamburger");
 
-        function myFunction(x) {
-            toggleMenu();
+        function toggleMenu(x) {
+            toggleMenuFunc();
         }
 
-        function toggleMenu() {
+        function toggleMenuFunc() {
             hamburger.toggleClass("change");
             menu.toggleClass("menuShow");
         }
 
-        menu.on({
-            mouseleave: function () {
-                toggleMenu();
-            }
-        })
+//        menu.on ({
+//            mouseleave: function () {
+//                toggleMenuFunc();
+//            }
+//        })
     </script>
 </body>
 

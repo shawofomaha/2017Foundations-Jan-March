@@ -12,7 +12,7 @@
 
     <style>
         #container {
-            top: -20.25vmin !important;
+            top: 15.75vmin;
         }
         
         img.logo {
@@ -20,6 +20,7 @@
         }
         
         #salesTitle {
+/*
             position: relative;
             font-size: 5.5vmin;
             font-size: calc( 2.00rem + 2vw ) ;
@@ -27,11 +28,13 @@
             text-shadow: .75px 0.35px rgba(255, 255, 255, 0.55);
             top: 15.5vmin;
             font-family: 'Architects Daughter', cursive;
+*/
             z-index: +2;
         }
         
         .price {
-            left: 43px !important;
+            text-align: center;
+/*            left: 43px !important;*/
             color: rgb(242, 232, 218);
 /*            font-size: 1.20em;*/
             font-size: calc( 1.20rem + 1vw ) ;
@@ -45,11 +48,11 @@
 /*            font-size: 3.25vmin !important;*/
             font-size: calc( 1.00rem + 1vw ) ;
             display: flex;
-            border: 1.25px solid rgba(244, 210, 161, 1.0);
-           
-            border-radius: 35px;
+            border: 1.37rem solid rgba(244, 210, 161, 1.0);
+            border-style: inset;
+/*            border-radius: 35px;*/
             padding-top: 7.5vmin;
-            margin: 1.5vmin;
+            margin: 1.5rem;
             white-space: normal;
             overflow-x: auto;
             background: rgba(112, 127, 116, 1.0);
@@ -79,6 +82,8 @@
         
         .picBox {
             border: 1.25px solid rgba(244, 210, 161, 1.0);
+            border: 1.37rem solid rgba(244, 210, 161, 1.0);
+            border-style: inset;
             /* For browsers that do not support gradients */
             background: -ms-linear-gradient(left, rgba(118, 173, 0, 1.0), rgba(16, 93, 0, 1.0));
             /* For Microsoft */
@@ -152,11 +157,11 @@
         }
          
         span.itemTxt {
+            text-align: center;
             width: 95% !important;
-/*            font-size: 3.25vmin !important;*/
             font-size: calc( 1.00rem + 1vw );
-            margin-left: 3vw;
-            margin-right: 2vw;
+            margin-left: 3rem;
+            margin-right: 2rem;
         }
         
         p.txt img.pic {
@@ -181,7 +186,7 @@
 
 <body>
     <header></header>
-    <h2 id="salesTitle">&gt; Sales &lt;</h2>
+    <h1 id="salesTitle">&gt; Sales &lt;</h1>
     <div>
         <audio id="sound1">
             <source src="media/refresh_paul4.mp3" type="audio/mpeg" />
@@ -228,9 +233,10 @@
                 <div class="price">
                     <span> $795.90</span>
                     <br />
-
-                    <!--                    <button id="buttonNudge1" type="button">Buy</button>-->
+                    <div class="centerMe">
+                    
                     <input type="button" onclick="location.href='http://buy.refreshestatesales.biz/public_html/buy/index.php/product/coffee-grinder/';" value="Buy" />
+                    </div>    
                 </div>
             </div>
 

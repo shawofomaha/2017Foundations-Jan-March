@@ -19,7 +19,6 @@ span#title {
 }
 
 .hamburger {
-    top: -14rem;
-    float: left;
-    left: -14rem;
+    top: -6rem;
+    left: -12rem;
 }
