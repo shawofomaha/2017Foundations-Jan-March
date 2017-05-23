@@ -158,14 +158,11 @@ h3 {
     border-style: outset;
     border-radius: 0rem;
     display: inline;
-    margin: 1.5rem;
-    /*    border: 2px solid black;*/
-    float: left;
-    margin: 2.0rem;
+
     box-shadow: 1rem 2rem 4remx rgba(0, 0, 0, .5);
     -moz-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .5);
-    width: 53rem;
+    max-width: 53em;
 }
 
 .itemTxt {

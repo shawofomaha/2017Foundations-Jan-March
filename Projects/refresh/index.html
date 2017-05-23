@@ -25,15 +25,17 @@
             display: block;
             text-align: center;
             font-size: 3.7rem;
-            text-shadow: 1rem 1rem 2rem rgba(242, 255, 221, 0.7), 0 0 25rem rgba(255, 255, 255, 0.7), 0 0 2rem rgba(2, 2, 2, 0.7);
+/*            text-shadow: 1rem 1rem 2rem rgba(242, 255, 221, 0.7), 0 0 25rem rgba(255, 255, 255, 0.7), 0 0 2rem rgba(2, 2, 2, 0.7);*/
             color: rgba(244, 210, 161, 0.9);
+            text-shadow: 0rem 1rem 1rem rgba(66, 66, 66, 0.7), 0 0 6.5rem rgba(111, 111, 112, 0.7), 0.4rem 0.5rem 0.5rem;            
             top: 4.5rem;
             z-index: +5;
             font-family: 'Architects Daughter', cursive;
+            transition: all 0.7s ease-in-out;
         }
-        
+       
         #simpleToggle:hover {
-            width: 11.75rem !important;
+            max-width: 11.75rem !important;
             background-color: rgba(121, 201, 1, 0.5) !important;
             background-image: none !important;
             color: rgba(242, 242, 242, 1.0) !important;
@@ -42,12 +44,12 @@
             font-size: 1.49rem !important;
             border: 0.5rem dotted rgba(2, 255, 2, 1.0) !important;
             border-radius: 50% !important;
+            transition: all 0.7s ease-in-out;
         }
         
         #simpleToggle {
             position: absolute;
             top: -1.0rem;
-            ;
             left: 14rem;
             width: 9.5rem !important;
             height: 3rem !important;
@@ -59,10 +61,11 @@
         }
         
         .para {
-            background: rgba(112, 127, 116, 0.65);
+            background: rgba(112, 227, 116, 0.65);
             border-radius: 1.5rem;
-            padding-left: 2rem;
-            padding-right: 2rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            text-align: justify;
             /* Color Green 
             rgba(112, 127, 116, 1.0);
             rgba(16, 93, 0, 1.0);
@@ -96,8 +99,7 @@
         
         #indexInfoBox h3 {
             position: relative;
-            text-shadow: 1rem 1rem 2rem rgba(0, 0, 238, 0.7), 0 0 25rem rgba(0, 0, 238, 0.7), 0 0 2rem rgba(0, 0, 238, 0.7);
-            text-shadow: .25rem 0.27rem rgba(0, 0, 238, 0.85), 1rem 1rem 2rem rgba(0, 0, 238, 0.7);
+            text-shadow: 0rem 1rem 1rem rgba(165, 165, 166, 0.7), 0 0 6.5rem rgba(111, 111, 112, 0.7), 0.4rem 0.5rem 0.5rem;
         }
         
         #indexInfoBox {
@@ -113,7 +115,7 @@
             text-shadow: 0.11rem 0.11rem rgba(198, 75, 13, 1.0);
             font-family: 'Aladin', cursive;
             font-weight: bolder;
-            font-size: 2.25rem;
+            font-size: 1.85rem;
             min-width: 80%;
             border-top: 0.17rem solid rgba(255, 255, 255, 0.65);
             border-bottom: 0.77rem solid rgba(255, 255, 255, 1.0);
@@ -126,6 +128,7 @@
         }
         
         p.ownerContact {
+            font-size: 0.5rem;
             transform: translate(20%);
         }
         
@@ -257,14 +260,14 @@
             color: rgba(222, 222, 222, 1.0);
             text-shadow: 0.75px 0.75px rgba(112, 127, 116, 1.0);
             font-family: 'Architects Daughter', cursive;
-            font-size: 2.15em;
+            font-size: 1.50em;
             z-index: +1;
         }
         
         .txtShadow {
             font-family: sans-serif;
             text-shadow: none !important;
-            font-size: 1.5rem;
+            font-size: 1.0rem;
             color: rgba(2, 2, 2, 1.0) !important;
             -moz-transition: all 2.7s ease-in-out;
             -ms-transition: all 2.7s ease-in-out;

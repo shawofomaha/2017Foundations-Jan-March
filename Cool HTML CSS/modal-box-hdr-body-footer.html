@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<!-- GOOGLE FONT CDN -->
+<script src="https://use.fontawesome.com/fa5fdc74f8.js">
+    <!-- font awesome ---->
+</script>
+
+<body>
+    <i class="fa fa-bars fa-3x" aria-hidden="true"></i>
+    <!-- font awesome ---->
+    <div class="w3-container">
+        <br>
+        <a href="default.asp" target="_blank">This is a link</a>
+        <br>
+        <h2>W3.CSS Animated Modal</h2>
+        <i class="fa fa-bars fa-4x" aria-hidden="true"></i>
+        <hr>
+        <h5>Google Icons</h5>
+        <h1>phone</h1>
+
+        <i class="material-icons">phone</i>
+        <i class="material-icons" style="font-size:36px">phone</i>
+        <i class="material-icons" style="font-size:48px;color:red">phone</i>
+
+        <p>Used on a button:</p>
+        <button style="font-size:24px">Button <i class="material-icons">phone</i></button>
+
+        <p>Unicode:</p>
+        <i class="material-icons">&#xe0cd;</i>
+        <hr>
+        <hr>
+        <hr>
+        <p>Zoom in the modal with the w3-animate-zoom class, or slide in the modal from a specific direction using the w3-animate-top, w3-animate-bottom, w3-animate-left or w3-animate-right class:</p>
+        <div class="para">Voluptate sint cernantur, arbitror sunt probant. A anim incurreret exquisitaque ne quibusdam exercitation a admodum. Iis nulla fugiat fore commodo, eu vidisse iis arbitror, aut summis eiusmod, malis litteris ex esse duis id dolore proident qui laboris sed eram singulis a esse dolore o quid coniunctione mentitum labore quibusdam est an possumus eruditionem. Duis an ex anim pariatur o an quis comprehenderit, a fore laboris concursionibus, iudicem esse eram qui quae ab et nisi offendit transferrem, aliqua non arbitror eu sunt se quorum nam admodum ea quis, hic sed tractavissent. Eu o irure cillum dolore non si tamen commodo. Fugiat pariatur sed quae velit o a minim ullamco consequat ut doctrina varias noster nam tamen a ullamco in elit quibusdam, pariatur tamen consequat litteris, ubi dolor laborum reprehenderit, tempor do eram nescius ut iis quo comprehenderit. Minim admodum in enim lorem, laboris anim varias cernantur legam, ad summis hic malis te quibusdam cillum proident.
+
+        </div>
+        
+        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Animated Modal</button>
+
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-animate-right w3-card-4">
+                <header class="w3-container w3-teal">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                    <h2>Modal Header</h2>
+                </header>
+                <div class="w3-container">
+                    <p>Some text..</p>
+                    <p>Some text..</p>
+                </div>
+                <footer class="w3-container w3-teal">
+                    <p>Modal Footer</p>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<style>
+    a:link,
+    a:visited {
+        background-color: white;
+        color: black;
+        border: 2px solid green;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+    
+    a:hover,
+    a:active {
+        background-color: green;
+        color: white;
+        transition: all 800ms ease-out;
+    }
+    
+    a {
+/*        border-radius: 30px;*/
+        border-style: outset !important;
+        border: 0.25rem outset rgba(111,111,115,1.0) !important;
+    }
+    
+    html {
+        font-size: 1.4em;
+    }
+    
+    .para {
+        background-color: rgba(211, 211, 211, 0.6);
+        border-left-style: outset;
+        border-top-style: outset;
+        border-right-style: inset;
+        border-bottom-style: inset;
+        border-width: 0.45rem;
+        border-left-color: darkgrey;
+        border-top-color: dimgray;
+        border-bottom-color: aliceblue;
+        border-right-color: black;
+        outline-style: outset;
+        outline-width: 0.45rem;
+        outline-color: rgba(2, 255, 2, 1.0);
+    }
+    
+    body {
+        background-size: cover;
+        background-image: url(../media/Workman%20Estate%20Sale.jpeg);
+        background-attachment: scroll;
+        height: 200%;
+    }
+</style>
+
+</html>

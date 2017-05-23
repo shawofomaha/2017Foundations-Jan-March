@@ -1,0 +1,123 @@
+html {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 1em;
+    background-color: rgba(42, 42, 211, 0.17);
+}
+
+hr {
+    border: 1px solid rgba(192, 192, 252, 1.0);
+    position: relative;
+    width: 80%;
+    left: -3.65rem;
+}
+
+hr.pet {
+    left: 0rem;
+}
+
+.center {
+    color: blue;
+    margin: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 2em;
+}
+
+button {
+    width: 23rem;
+    height: 1.75rem;
+    border-radius: 1.75rem;
+    left: -1rem !important;
+    position: relative;
+    box-shadow: 1rem 3rem 5rem rgba(0, 0, 0, .8);
+    -moz-box-shadow: 1rem 3rem 5rem rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 1rem 3rem 5rem rgba(0, 0, 0, .8);
+}
+
+.group {
+    padding-left: 1.83rem;
+    margin-left: 2.5rem;
+    border: 0.11rem ridge rgba(192, 192, 252, 1.0);
+    border-radius: 0.55rem;
+    width: 70%;
+    margin-bottom: .33rem;
+}
+
+input[type="text"],
+input[type="radio"] {
+    margin-left: 2.5rem !important;
+}
+
+label,
+input,
+h1,
+content,
+.postOutput {
+    display: block;
+    left: 10rem;
+    padding-left: 2.5rem;
+}
+
+h1 {
+    width: 80%;
+    padding-left: 0.0rem !important;
+    margin: auto;
+    color: rgba(115, 117, 119, 1.0);
+    text-shadow: 0.0625rem 0.0625rem 0.125rem black, 0 0 3.5rem blue, 0 0 0.300rem rgba(42, 42, 211, 0.47);
+}
+
+span {
+    position: relative;
+    left: 11rem;
+}
+
+p {
+    display: block;
+    left: 10rem;
+    padding-left: 5.5rem;
+}
+
+input {
+    padding-left: 0rem;
+    width: 15rem;
+}
+
+form,
+.postOutput,
+.errorScreen {
+    border: 0.22rem ridge rgba(192, 192, 252, 1.0);
+    padding: .55rem;
+    width: 76%;
+    border-radius: 0.55rem;
+    margin-bottom: 5rem;
+    box-shadow: 2rem 4rem 7rem rgba(0, 0, 0, .8);
+    -moz-box-shadow: 2rem 4rem 7rem rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 2rem 4rem 7rem rgba(0, 0, 0, .8);
+}
+
+.postOutput {
+    left: 2rem;
+    position: relative;
+}
+
+#state {
+    width: 2em;
+}
+
+#zipcode {
+    width: 5em;
+}
+
+.error {
+    color: red;
+    border: 0.15rem solid red;
+    border-radius: 0.55rem;
+}
+
+.errorl {
+    color: red;
+}
