@@ -1,0 +1,536 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <!-- Housekeeping -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!--  JSON Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">
+
+    <!-- CSS Stylesheet href's -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link media="all and (min-width: 100px) and (max-width: 600px)" rel="stylesheet" href="css/handheld.css">
+    <link media="all and (min-width: 601px) and (max-width: 2401px) " rel="stylesheet" href="css/desktop.css">
+
+
+    <style>
+        #homeTitle {
+            /*            border: 1pz dotted pink;*/
+            position: absolute;
+            width: 100%;
+            display: block;
+            text-align: center;
+            font-size: 3.7rem;
+            color: rgba(244, 210, 161, 0.9);
+            text-shadow: 0rem 1rem 1rem rgba(66, 66, 66, 0.7), 0 0 6.5rem rgba(111, 111, 112, 0.7), 0.4rem 0.5rem 0.5rem;            
+            top: 6.5rem;
+            z-index: +5;
+            font-family: 'Architects Daughter', cursive;
+            transition: all 0.7s ease-in-out;
+        }
+       
+        #simpleToggle:hover {
+            max-width: 11.75rem !important;
+            background-color: rgba(121, 201, 1, 0.5) !important;
+            background-image: none !important;
+            color: rgba(242, 242, 242, 1.0) !important;
+            font-family: sans-serif !important;
+            font-size: 1.49rem !important;
+            font-size: 1.49rem !important;
+            border: 0.5rem dotted rgba(2, 255, 2, 1.0) !important;
+            border-radius: 50% !important;
+            transition: all 0.7s ease-in-out;
+        }
+        
+        #simpleToggle {
+            position: absolute;
+            top: 1.0rem;
+            left: 7rem;
+            width: 9.5rem !important;
+            height: 3rem !important;
+            background-color: rgba(222, 222, 222, 0.85) !important;
+            background-image: none !important;
+            font-size: 2rem !important;
+            border-radius: 1.5rem !important;
+            color: rgba(2, 2, 2, 1.0) !important;
+        }
+        
+        .para {
+            background: rgba(112, 227, 116, 0.65);
+            border-radius: 1.5rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            text-align: justify;
+            /* Color Green 
+            rgba(112, 127, 116, 1.0);
+            rgba(16, 93, 0, 1.0);
+            rgba(130, 190, 1, 1.0);
+            rgba(118, 173, 0,1.0);
+*/
+            /* For browsers that do not support gradients */
+            background: -ms-linear-gradient(left, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 0.65));
+            /* For Microsoft */
+            background: -webkit-linear-gradient(left, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 0.65));
+            /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 0.65));
+            /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 0.65));
+            /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 0.65));
+            /* Standard syntax */
+            /*
+            box-shadow: 1rem 2rem 4remx rgba(0, 0, 0, .8);
+            -moz-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.8);
+            -webkit-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .8);            box-shadow: 1rem 2rem 4remx rgba(0, 0, 0, .8);
+            -moz-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.8);
+            -webkit-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .8);            
+*/
+        }
+        
+        #indexInfoBox #para {
+            position: relative;
+            margin: 2rem;
+        }
+        
+        #indexInfoBox h3 {
+            position: relative;
+            text-shadow: 0rem 1rem 1rem rgba(165, 165, 166, 0.7), 0 0 6.5rem rgba(111, 111, 112, 0.7), 0.4rem 0.5rem 0.5rem;
+        }
+        
+        #indexInfoBox {
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: auto;
+            top: 5.5rem;
+            padding: 3.5rem;
+            background-color: rgba(232, 195, 150, 0.35);
+            /*            background-color: rgba(22, 22, 22, 0.55);*/
+            color: rgba(2, 2, 2, 0.99);
+            /* Stan2 */
+            text-shadow: 0.11rem 0.11rem rgba(198, 75, 13, 1.0);
+            font-family: 'Aladin', cursive;
+            font-weight: bolder;
+            background-image: url("media/cherry-wood-panels-background-header.jpg");            
+            font-size: 1.85rem;
+            min-width: 80%;
+            border-top: 0.17rem solid rgba(255, 255, 255, 0.65);
+            border-bottom: 0.77rem solid rgba(255, 255, 255, 1.0);
+            border-left: 0.97rem groove rgba(255, 255, 255, 1.0);
+            border-right: 0.17rem solid rgba(255, 255, 255, 1.0);
+            border-radius: 1.5rem;
+            box-shadow: 1rem 2rem 4remx rgba(0, 0, 0, .8);
+            -moz-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.8);
+            -webkit-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .8);
+        }
+        
+        p.ownerContact {
+            font-size: 0.5rem;
+            transform: translate(20%);
+        }
+        
+        p.ownerContact a {
+            text-shadow: .25rem 0.25rem rgba(244, 244, 244, 0.95);
+            background-color: rgba(211, 211, 211, 0.5);
+            border-radius: 1.5rem;
+            color: rgba(0, 0, 255, 1.0);
+        }
+        
+        p.ownerContact a:hover {
+            color: rgba(155, 244, 66, 0.9);
+        }
+
+        /******* Modal start *******/
+        /* The Modal (background) */
+        
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 111;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+        /* Modal Content/Box */
+        
+        .modal-content {
+            background-color: rgba(2, 2, 2, 0.98);
+            font-family: 'Architects Daughter', cursive;
+            font-size: 2.25rem;
+            color: rgba(112, 127, 116, 1.0);
+            margin: 13% auto;
+            /* 13% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 35px;
+            /* Could be more or less, depending on screen size */
+        }
+        /* The Close Button */
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        #myBtn:hover {
+            position: relative;
+            top: 0rem;
+            left: 0rem;
+            min-height: 3rem !important;
+            width: 19.5rem !important;
+            background-color: rgba(121, 201, 1, 0.5) !important;
+            color: rgba(242, 242, 242, 1.0) !important;
+            font-family: sans-serif !important;
+            font-size: 1.59rem !important;
+            border: 0.21rem dotted rgba(2, 255, 2, 1.0) !important;
+            border-radius: 50% !important;
+            transition: all 0.7s ease-in-out;
+        }
+        
+        #myBtn {
+            position: relative;
+            margin-left: 8.5%;
+            font-family: 'Architects Daughter', cursive;
+            background-color: rgba(255, 255, 255, 1.0);
+            background-color: rgba(222, 222, 222, 0.85) !important;
+            font-size: 1.7rem !important;
+            border-radius: 1.5rem !important;
+            color: rgba(2, 2, 2, 1.0) !important;
+            transition: all 0.7s ease-in-out;
+            box-shadow: .25rem 0.27rem rgba(4, 4, 4, 0.85), 1rem 1rem 2rem rgba(211, 211, 211, 0.7);
+            z-index: +0;
+        }
+        /* Modal end */
+        
+        h4 {
+            display: block;
+            text-align: center;
+            color: rgba(222, 222, 222, 1.0);
+            text-shadow: 0.75px 0.75px rgba(112, 127, 116, 1.0);
+            font-family: 'Architects Daughter', cursive;
+            font-size: 1.50em;
+            z-index: +1;
+        }
+        
+        .txtShadow {
+            font-family: sans-serif;
+            text-shadow: none !important;
+            font-size: 1.0rem;
+            color: rgba(2, 2, 2, 1.0) !important;
+            -moz-transition: all 2.7s ease-in-out;
+            -ms-transition: all 2.7s ease-in-out;
+            transition: all 2.7s ease-in-out;
+        }
+        
+        .colorRed {
+            color: red;
+        }
+        
+        .boxShadow {
+            box-shadow: .25rem 0.27rem rgba(4, 4, 4, 0.85), 3.5rem 2.5rem 2rem rgba(77, 77, 77, 0.7);
+        }
+        
+        .boxBorder {
+            padding: 1.5rem; 
+            border-top: 0.17rem solid rgba(111, 111, 111, 1.0);
+            border-bottom: 0.77rem solid rgba(111, 111, 111, 1.0);
+            border-left: 0.97rem groove rgba(111, 111, 111, 1.0);
+            border-right: 0.17rem solid rgba(111, 111, 111, 1.0);
+            border-radius: 1.25rem;
+        }
+        
+        .tranformNot {
+            transform: none;
+        }
+        
+        .popPic {
+            width: 99%;
+        }
+        
+        @media screen and (max-width:1399px) {
+            #simpleToggle {
+                top: -1.5rem !important;
+                left: +17rem !important;
+            }
+        }
+        
+        @media screen and (max-width:1075px) {
+            #simpleToggle {
+                top: -1.5rem !important;
+                left: +10.5rem !important;
+            }
+        }
+        
+        @media screen and (max-width:767px) {
+            #simpleToggle {
+                top: -1.5rem !important;
+                left: +5.80rem !important;
+            }
+        }
+        
+        @media screen and (max-width:600px) {
+            #simpleToggle {
+                top: -1.5rem!important;
+                left: +5.80rem !important;
+            }
+        }
+    </style>
+    
+    <!-- Gravity Scan Site Verification -->
+    <meta name="gravityscan-site-verification" content="5c7497d02a69ee8d58405d2dfe9ab8bd0429609139809fe48214bab23df6afac"/>    
+</head>
+
+
+<body>
+
+    <button id="simpleToggle">Simplify</button>
+    <header>Head and nav in header.html</header>
+
+    <h2 id="homeTitle">&gt; Home &lt;</h2>
+    <br />
+
+    <div>
+
+        <div id="ball"></div>
+
+        <audio id="sound1">
+            <source src="media/refresh_paul4.mp3" type="audio/mpeg" />
+        </audio>
+        <audio id="sound2">
+            <source src="media/Wrong-buzzer.mp3" type="audio/mpeg" />
+        </audio>
+
+        <div id="container">
+
+            <div id="indexInfoBox">
+                <div id="para">
+                    <h3 id="ourStory">Our Story</h3>
+
+                    <p>From antiques to ascots, we have the personal experience necessary to help you liquidate your estate assets. After inheriting a large quantity of possessions, we were inspired to help others in this daunting task.</p>
+
+                    <p>So, take advantage of our unique and personable approach to help manage your burden. We will walk you through the Estate Sale process from pricing and inventory, to costs and then finally sales! Let our specialists both inspect and model handling procedures to help you maximize preservation and your profit.</p>
+
+                    <p>We perform the difficult and tiring task of pictorially documenting your precious possessions, while helping you to advertise to a wider audience. This will help attract more buyers to your event.</p>
+
+                    <h4 class="ownerContact">Call for a free onsite consultation.<br/> Dave or Theresa <a href="tel:605-661-9891">(605) 661-9891</a></h4>
+
+                </div>
+            </div>
+
+
+            <!-- Trigger/Open The Modal -->
+            <button2 id="myBtn">..more on "Our Story"&nbsp;&nbsp;</button2>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p><img class="popPic" src="media/Refresh more on Our Story1.PNG"></p>
+                    <p><img class="popPic" src="media/Refresh more on Our Story.PNG"></p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script>
+        var movX = parseInt(Math.random() * 5) + 1;
+        var movY = parseInt(Math.random() * 5) + 1;
+
+        //************ Modal start ***********//
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            //*********** Modal end *************//
+
+
+        function randomColor() {
+            var r = parseInt(Math.random() * 256);
+            var b = parseInt(Math.random() * 256);
+            var g = parseInt(Math.random() * 256);
+            return "rgb(" + r + "," + g + "," + b + ")";
+        }
+
+        $("#ball" || "#container").click(function (e) {
+            $("#ball").css("background-color", randomColor());
+        });
+
+        function moveBall() {
+            //            debugger;
+            var ballWidth = $("#ball").width();
+            var width = $("#container").width();
+            var height = $("#container").height();
+            height = height + (height * .37);
+            var x = parseInt($("#ball").css("left").split("px")[0]) + movX;
+            var y = parseInt($("#ball").css("top").split("px")[0]) + movY;
+            if (x > width - ballWidth / 2) {
+                movX = movX * -1;
+            }
+            if (y > height - ballWidth / 2) {
+                movY = movY * -1;
+            }
+            if (x < 0 + ballWidth / 2) {
+                movX = movX * -1;
+            }
+            if (y < 0 + ballWidth / 2) {
+                movY = movY * -1;
+            }
+            $("#ball").css("top", y);
+            $("#ball").css("left", x);
+            console.log("width: " + width);
+        }
+
+        var myVar = setInterval(function () {
+            moveBall()
+        }, 69);
+
+        function myStopFunction() {
+            $("#ball").css({
+                "display": "none"
+            });
+        }
+
+        function mySpinFunction() {
+            $("#ball").toggleClass("spinBall");
+        }
+
+        // //
+        var myTimeoutVar1;
+        var myTimeoutVar2;
+        $("#ball").click(function () {
+
+            $('#sound1').get(0).play();
+            clearInterval(myVar);
+            $("#ball").css({
+                "border": "5px dotted rgba(60, 104, 68, 1.0)"
+            });
+            $("#ball").css({
+                "background-color": "rgba(201, 129, 4, 1.0)"
+            });
+            $("#ball").css({
+                "top": 55,
+                "left": 55,
+                "transform": "translate(-50%, -50%)",
+                "transition": "all 2.69s ease-in"
+            });
+            myTimeoutVar1 = setTimeout(function () {
+                myStopFunction();
+            }, 12800);
+            myTimeoutVar2 = setTimeout(function () {
+                mySpinFunction();
+            }, 9000);
+        });
+
+        $("header").load("header.html");
+        //        $("#footer").load("footer.html");
+
+
+        $("#simpleToggle").click(function () {
+
+
+            $("#container,#indexInfoBox, #para ").css({
+                "background-image": "url('media/white.png')",
+                "-webkit-transition": "all 3.7s ease-in-out",
+                "-moz-transition": "all 3.7s ease-in-out",
+                "-ms-transition": "all 3.7s ease-in-out",
+                "transition": "all 3.7s ease-in-out"
+            });
+
+            var myTimeoutVar1;
+            myTimeoutVar1 = setTimeout(function () {
+                $("p").addClass("txtShadow");
+                $("h2").addClass("txtShadow");
+                $("h3").addClass("txtShadow");
+                $("h4").addClass("txtShadow");
+                $("#para").addClass("boxShadow");
+
+            }, 4200);
+
+            var myTimeoutVar3;
+            myTimeoutVar3 = setTimeout(function () {
+                $("#homeTitle").addClass("simpH2");
+                $("#ourStory").addClass("simpH3");
+            }, 6950);
+
+            var myTimeoutVar2;
+            myTimeoutVar2 = setTimeout(function () {
+                $("#para").addClass("boxBorder");
+                myStopFunction();
+
+            }, 4650);
+
+            var myTimeoutVar4;
+            myTimeoutVar4 = setTimeout(function () {
+                $("#indexInfoBox").addClass("boxBorder");
+                $("#simpleToggle").css({
+                    "display": "none",
+                    "transition": "all 3.7s ease-in-out"
+                });
+            }, 5350);
+        });
+    </script>
+</body>
+
+</html>

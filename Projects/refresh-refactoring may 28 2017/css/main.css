@@ -1,0 +1,225 @@
+/*  v1.01   .   main.css June 2017   . by Mark J Shaw  */
+
+html {
+    font-size: 1em;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media all and (max-width:600px) {
+    .paisleyBorderTop {
+        display: none !important;
+    }
+    #wowContainer {
+        top: 5.5vmin !important;
+        left: -29.5vw !important;
+        width: 100%;
+    }
+    #wowslider-container1 {
+        max-width: 320px;
+        max-height: 240px;
+    }
+    #wowslider-container1 {
+        width: 320px;
+    }
+    #wowslider-container1 .ws_images {
+        max-height: 240px;
+        max-width: 320px;
+    }
+    #wowslider-container1 .ws_images ul a {
+        max-height: 240px;
+    }
+    #wowslider-container1 .ws_images > div > img {
+        max-height: 240px;
+    }
+    .hamburger {
+        top: -12rem;
+        left: -14rem;
+    }
+}
+
+@media all and (max-width:1001px) {
+    .paisleyBorderTop {
+        display: none !important;
+    }
+    #wowslider-container1 {
+        max-width: 320px;
+        max-height: 240px;
+    }
+    #wowslider-container1 {
+        width: 320px;
+    }
+    #wowslider-container1 .ws_images {
+        max-height: 240px;
+        max-width: 320px;
+    }
+    #wowslider-container1 .ws_images ul a {
+        max-height: 240px;
+    }
+    #wowslider-container1 .ws_images > div > img {
+        max-height: 240px;
+    }
+}
+
+@media all and (max-width:1400px) {
+    .hamburger {
+        top: -0rem;
+        left: -0rem;
+    }
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1.0);
+    -webkit-transition: background-color 3sec ease-in-out;
+    transition: background-color 3sec ease-in-out;
+    margin: 0;
+}
+
+#footer,
+footer {
+    margin-top: 7.5rem;
+}
+
+h1 {
+    width: 100%;
+    display: block;
+    text-align: center;
+    position: absolute;
+    font-family: 'Architects Daughter', cursive;
+    color: rgba(92, 244, 66, 1.0);
+    font-size: 4rem;
+    line-height: 4rem;
+    top: 6.5rem;
+    text-shadow: 1rem 1rem 2rem black, 0 0 25rem blue, 0 0 2rem rgba(2, 255, 2, 0.7);
+}
+
+h1.hdr {
+    display: inline-block;
+    position: relative;
+    background-color: rgba(0, 0, 0, 1.0);
+    margin: 0;
+    padding: 0;
+}
+
+h2,
+h3 {
+    display: block;
+    text-align: center;
+    text-shadow: 0.11rem 0.11rem rgba(112, 127, 116, 1.0);
+    font-family: 'Architects Daughter', cursive;
+    font-size: 2.0rem;
+    z-index: +1;
+}
+
+h3 {
+    text-shadow: 0.11rem 0.11rem rgba(82, 97, 86, 1.0);
+}
+
+button:hover,
+input:hover {
+    color: white !important;
+    border: 0.21rem solid rgba(255, 255, 255, 1.0) !important;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: background-color all 1.5sec ease-in-out;
+    transition: background-color all 1.5sec ease-in-out;
+}
+
+input,
+button {
+    font-family: 'Architects Daughter', cursive !important;
+    font-size: calc( 1.2rem + 1vw)!important;
+    color: lightgray !important;
+    border: 0.11rem solid black !important;
+    border-radius: 25%;
+    transition: all 1.5sec ease-in-out;
+    -webkit-transition: all 1.5sec ease-in-out;
+}
+
+img {
+    border-radius: 1.5rem;
+}
+
+#ball {
+    background-image: url(http://www.animatedimages.org/data/media/389/animated-coin-image-0011.gif);
+    background-size: contain;
+    background-position: center;
+    background-color: rgba(0, 79, 26, 0.9);
+    min-width: 7.5rem;
+    min-height: 7.5rem;
+    border-radius: 50%;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    top: 50%;
+    left: 50%;
+    z-index: +1;
+}
+
+.spinBall {
+    -webkit-animation: spin 0.35s ease infinite;
+    animation: spin 0.435s ease infinite;
+}
+
+#ball:hover {
+    background-color: blue !important;
+    min-height: 20vmin;
+    min-width: 20vmin;
+}
+
+span {
+    display: inline;
+}
+
+::-webkit-scrollbar {
+    width: 19px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+span#title {
+    position: relative;
+    font-family: 'Architects Daughter', cursive;
+    text-shadow: 0.35rem 0.11rem rgba(112, 127, 116, 1.0);
+    color: rgba(242, 232, 218, 0.9);
+    top: -0vmin;
+    font-size: 6vmin;
+    font-size: 6vmin;
+    line-height: 8.5vmin;
+    padding-left: 9.5vmin;
+}
+
+
+/* Color Green 
+            rgba(112, 127, 116, 1.0);
+            rgba(16, 93, 0, 1.0);
+            rgba(130, 190, 1, 1.0);
+            rgba(118, 173, 0,1.0);
+*/

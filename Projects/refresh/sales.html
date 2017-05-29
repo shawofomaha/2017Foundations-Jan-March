@@ -26,7 +26,7 @@
         .price {
             text-align: center;
             color: rgb(242, 232, 218);
-            font-size: calc( 1.20rem + 1vw ) ;
+            font-size: calc( 1.20rem + 1vw);
         }
         
         #buttonNudge1 {
@@ -34,12 +34,14 @@
         }
         
         .saleLocationInfoBox {
-            font-size: calc( 1.00em + 1vw );
+/*            height: auto;*/
+            max-height: 90vmin;
+            font-size: calc( 1.00em + 1vw);
             display: flex;
             border: 1.37rem solid rgba(244, 210, 161, 1.0);
             border-style: inset;
             padding-top: 7.5vmin;
-            margin: 1.5rem;
+/*            margin: 1.5rem;*/
             white-space: normal;
             overflow-x: auto;
             background: rgba(112, 127, 116, 1.0);
@@ -69,7 +71,7 @@
         }
         
         .picBox {
-        /* For browsers that do not support gradients */
+            /* For browsers that do not support gradients */
             background: -ms-linear-gradient(left, rgba(118, 173, 0, 1.0), rgba(16, 93, 0, 1.0));
             /* For Microsoft */
             background: -webkit-linear-gradient(left, rgba(118, 173, 0, 1.0), rgba(16, 93, 0, 1.0));
@@ -83,36 +85,47 @@
             padding: 0.5em 2em;
         }
         
-        #mapDiv {
+        .mapDateAddr {
+/*            outline: 2px dotted white;*/
+            height: 60%;
             
         }
         
+        #mapDiv {
+/*            left: -20em;*/
+        }
+        
         #mapAll {
+            position: sticky;
+/*            outline: 2px solid yellow;*/
             display: flex;
-            min-width: 50vmin;
+    
+            left: 12em;
+            top: 13em;
+            /*            min-width: 4em;*/
+            height: 8em;
             padding-bottom: 1.5em;
         }
         
         #map {
             display: inline-block;
             position: relative;
-            min-width: 63vmin;
+            width: 8em;
             border: 0.55px solid rgba(244, 210, 161, 0.9);
             border-radius: 15px;
+            top: 1em;
+            left: 6em;
         }
         
         #map iframe {
-            position: absolute;
-            top: -2%;
-            left: -2%;
-            top: -0%;
-            left: -0%;
+            position: sticky;
             width: 100%;
             height: 100%;
             border-radius: 15px;
         }
         
-        #mapTxt p {
+        #mapTxt > p {
+/*            outline: 2px solid yellow;*/
             display: inline-block;
             position: relative;
             min-width: 20vmin;
@@ -122,25 +135,69 @@
             top: -2.5em;
         }
         
-        #addrTxt h3 {
+        #saleDescTxt > h3 {
+            position: relative;
+            width: 70vw;
+        }
+        #mapTxt > h3 {
+            position: relative;
+            top: -2.25em;
+        }
+        #addrTxt h3,
+        #mapTxt h3 {
+            display: inline-block;
+            text-align: right;
             margin: 1em;
-            top: -3.5em;
+/*            top: -3.5em;*/
+        }
+        
+        
+        .hdg {
+            position: relative;
+            width: 65%;
+/*            border: 2px solid yellow;*/
+        }
+        .addr {
+/*            outline: 2px solid yellow;*/
+            top: -8.75em !important;
+            left: -0.0em;
+            position: relative;
+        }
+        p.addr {
+            position: relative;
+            top: 0em;
+        }
+        
+        #addrTxt > p,
+        #mapTxt > p {
+            text-align: right;
+            font-size: 0.75em;
+            padding: .5em;
+        }
+        
+        #mapTxt > p {
+            top: -5.25em;
+            left: 0em;
+        }
+        
+        #addrTxt > h3 {
+            top: -4.5em;
+            position: relative;            
         }
         
         #addrTxt {
-            min-width: 26vmin;
-        }
-        
-        #addrTxt p {
-            text-align: right;
-            font-size: 0.75em;
-            padding-left: .4em;
+            position: relative;
+            
         }
         
         #saleDescTxt {
-            padding-left: 10vw;
+/*            outline: 2px dashed white;*/
+            height: 60%;
+            position: relative;
+            padding: 2em;
             font-size: 1.3rem;
             text-align: justify;
+            overflow: hidden;
         }
         
         p.txt {
@@ -154,18 +211,26 @@
             text-align: justify;
             overflow: auto;
         }
-         
+        
         span.itemTxt {
             text-align: center;
             width: 95% !important;
-/*            font-size: calc( 1.00em + 1vw );*/
+            /*            font-size: calc( 1.00em + 1vw );*/
             font-size: 1.2em;
             text-align: justify;
-            padding: 1em;   
+            padding: 1em;
         }
         
         .itemPic {
-/*            padding: 2em;*/
+            /*            padding: 2em;*/
+        }
+        #saleDescTxt > p > img {
+            
+        }
+        .salesPic {
+            border-radius: 5em;
+            float:right;
+            padding: 1em;
         }
         
         p.txt img.pic {
@@ -175,7 +240,6 @@
         .horizLine {
             transform: translate(115%);
         }
-
     </style>
 </head>
 
@@ -192,29 +256,29 @@
             <div id="ball"></div>
 
             <div class="saleLocationInfoBox">
-
-                <div id="mapTxt">
-                    <h3>Sale<br>Date</h3>
-                    <p>May 7, 2018
-                        <br> 9AM-6PM</p>
-                    <div id="addrTxt">
-                        <h3>Address</h3>
-                        <p>12424 C St
-                            <br/>Omaha, NE 68144</p>
+                <div class="mapDateAddr">
+                    <div>
+                        <span id="mapTxt">
+                            <h3>Sale Date</h3>
+                            <p>May 7, 2018 9AM-6PM</p>
+                        </span>
+                    </div>
+                    <div>
+                        <span id="addrTxt">
+                            <h3>Address</h3>
+                            <p class="addr">12424 C St Omaha, NE 68144</p>
+                        </span>
+                    </div>
+                    <div id="mapAll">
+                        <div id="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8358.951140745967!2d-96.09969875!3d41.22987285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1492737630750" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
 
-
-                <div id="mapAll">
-                    <div id="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8358.951140745967!2d-96.09969875!3d41.22987285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1492737630750" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div>
-
-                </div>
-                
                 <div id="saleDescTxt">
                     <h3 class="hdg">Estate Sale  Description</h3>
-                    <p class="txt"><img style="display:inline; float:right;" class="pic" src="http://lorempixel.com/80/80/" /> List of stuff includes: <span></span>Van Briggle Tv Lamp Roseville Pottery Cambridge Fostoria Depression Glass Vintage Fiesta LG Flat Panel Tv Elvis Albums Reba Lots of old school vintage country albums 45's Stereo Speakers Oil Paintings Buffet Sofa Bed loveseats X2 Nice like new Basset Sofa Victorian Furniture Art Deco Furniture Mid-Century Modern Furniture Bar Cart Cut glass Decanter Cedar chest Frig Washer / Dryer Outdoor Swing Redwood patio furniture Garden tools Tools Silverplate Flatware Microwave Dining Table & Chairs Vintage Wedding Dress</p>
+                    <p class="txt"><img  class="salesPic" src="http://lorempixel.com/80/80/" /> List of stuff includes: <span></span>Van Briggle Tv Lamp Roseville Pottery Cambridge Fostoria Depression Glass Vintage Fiesta LG Flat Panel Tv Elvis Albums Reba Lots of old school vintage country albums 45's Stereo Speakers Oil Paintings Buffet Sofa Bed loveseats X2 Nice like new Basset Sofa Victorian Furniture Art Deco Furniture Mid-Century Modern Furniture Bar Cart Cut glass Decanter Cedar chest Frig Washer / Dryer Outdoor Swing Redwood patio furniture Garden tools Tools Silverplate Flatware Microwave Dining Table & Chairs Vintage Wedding Dress </p>
 
                 </div>
             </div>
@@ -229,9 +293,9 @@
                     <span> $795.90</span>
                     <br />
                     <div class="centerMe">
-                    
-                    <input type="button" onclick="location.href='http://buy.refreshestatesales.biz/public_html/buy/index.php/product/coffee-grinder/';" value="Buy" />
-                    </div>    
+
+                        <input type="button" onclick="location.href='http://buy.refreshestatesales.biz/public_html/buy/index.php/product/coffee-grinder/';" value="Buy" />
+                    </div>
                 </div>
             </div>
 
@@ -253,12 +317,14 @@
 
             <div class="picBox">
                 <figure>
-                     <figcaption><h2> Dr.Harters liver pill</h2></figcaption>
+                    <figcaption>
+                        <h2> Dr.Harters liver pill</h2></figcaption>
                     <img class="itemPic" alt="Dr Harters Liver Pill picture" src="media/Dr.Harters%20liver%20pill.png" title="Dr Harters Liver Pill">
-                   
+
                 </figure>
                 <figure>
-                     <figcaption><h2> Dr.Harters liver pill, back</h2></figcaption>                    
+                    <figcaption>
+                        <h2> Dr.Harters liver pill, back</h2></figcaption>
                     <img class="itemPic" alt="Dr Harters Liver Pill back picture" title="Dr Harters Liver Pill back" caption="This is a caption" src="media/Dr.Harters%20liver%20pill%20back.png">
                 </figure>
                 <span class="itemTxt"><h3>Picture 3</h3> Dr.Harters liver pill.</span>
@@ -269,7 +335,7 @@
                     <br />
                     <!--                <button type="button" id="button3" class="price">Buy</button>-->
                     <input type="button" onclick="location.href='http://buy.refreshestatesales.biz/public_html/buy/index.php/shop/';" value="Buy" />
-                    <br />
+                  
                 </div>
             </div>
 

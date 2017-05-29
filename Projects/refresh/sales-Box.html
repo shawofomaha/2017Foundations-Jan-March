@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">
+
+    <!-- CSS Stylesheet href's -->
+    <!--    <link rel="stylesheet" href="css/main.css">-->
+    <link media="all and (min-width: 100px) and (max-width: 776px)" rel="stylesheet" href="css/handheld.css">
+    <link media="all and (min-width: 777px) and (max-width: 2401px) " rel="stylesheet" href="css/desktop.css"> saleDescTxt
+
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        main {
+            display: grid;
+            grid: [row1-start] "aside article article" [row1-end] [row2-start] "aside article article" [row2-end] [row3-start] "aside article article" [row3-end] [row4-start] "aside aside   article" [row4-end] [row5-start] "aside aside   article" [row5-end] / auto 50px auto;
+            grid-auto-flow: column;
+            grid-auto-rows: 1fr;
+            grid-auto-columns: auto;
+            /*
+            grid-template-columns: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] 1fr [col3-end];
+            grid-template-rows: [row1-start] auto [row1-end row2-start] 50% [row2-end row3-start] auto [rowl3-end];
+            grid-template-areas:
+*/
+        }
+        /*
+      grid: [row1-start] "header header header" 1fr [row1-end]
+        [row2-start] "footer footer footer" 25px [row2-end]
+        / auto 50px auto;
+*/
+        
+        aside {
+            outline: 2px solid white;
+        }
+        
+        article {
+            outline: 2px solid orange;
+        }
+        
+        .saleLocationInfoBox {
+            position: relative;
+            font-size: calc( 1.00em + 1vw);
+            border: 1.37rem solid rgba(244, 210, 161, 1.0);
+            border-style: outset;
+/*            transform: translate(20%, 3em);*/
+            background: rgba(112, 127, 116, 1.0);
+            /* Color Green 
+            rgba(112, 127, 116, 1.0);
+            rgba(16, 93, 0, 1.0);
+            rgba(130, 190, 1, 1.0);
+            rgba(118, 173, 0,1.0);
+*/
+            /* For browsers that do not support gradients */
+            background: -ms-linear-gradient(left, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0));
+            /* For Microsoft */
+            background: -webkit-linear-gradient(left, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0));
+            /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0));
+            /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0));
+            /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0));
+            /* Standard syntax */
+        }
+
+        
+        .mapDateAddr {
+            outline: 2px dotted white;
+        }
+        
+        figure.map {
+/*            margin-left: (calc    (50vw - 8em/2 ));*/
+            margin-left: calc( 50vw - 6em );
+        }
+        
+        #map {
+            display: inline-block;
+            position: relative;
+           
+            border: 0.55px solid rgba(244, 210, 161, 0.9);
+            border-radius: 15px;
+        }
+                
+        
+        #map iframe {
+/*            position: sticky;*/
+            position: relative;
+            width: 8em;
+            left: 40rem;
+/*            width: 100%;*/
+            height: 100%;
+            border-radius: 15px;
+/*            transform: translate( calc(100%));*/
+        }
+        
+        #mapTxt > p {
+            position: relative;
+            width: 70vw;
+            outline: 2px solid yellow;
+            display: inline-block;
+            position: relative;
+            text-align: center;
+            font-size: 0.75em;
+        }
+        
+        #saleDescTxt > h3 #saleDescTxt > h3 {
+            position: relative;
+        }
+        
+        #saleDescTxt {
+            outline: 2px dashed white;
+            position: relative;
+            font-size: 1.3rem;
+            text-align: justify;
+            overflow: auto;
+        }
+        
+        #addrTxt > p,
+        #mapTxt > p  {
+            width: 100%;
+        }
+        
+        #addrTxt h3,
+        #mapTxt h3 {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            font-size: 0.75em;
+            padding: .5em;            
+        }
+        
+        .hdg {
+            position: relative;
+            text-align: center;
+        }
+        
+        .addr {
+            outline: 2px solid yellow;
+            position: relative;
+        }
+        
+        p.addr {
+            position: relative;
+            top: 0em;
+            text-align: center;
+        }
+
+        
+        p.txt,
+        #saleDescTxt > p {
+            text-align: justify;
+            position: relative;
+            width: 95% !important;
+            width: 19vw;
+            margin: 0.5em 1.0em 1.0em 1.0em;
+        }
+        
+        span.itemTxt {
+            text-align: center;
+            width: 95% !important;
+            font-size: 1.2em;
+            text-align: justify;
+        }
+        
+        #saleDescTxt > p > img,
+        #saleDescTxt > p > span > img {
+            border-radius: 5em;
+            margin: .33em .11em .33em .55em;
+        }
+        
+        #saleDescTxt > p > span > img {
+            width: 9.25rem;
+            border-radius: .5em;
+        }
+        
+        .floatRight {
+            float: right;
+        }
+        
+        .floatLeft {
+            float: left;
+        }
+        
+        .center {
+            display: inline-block;
+            border-radius: 5em;
+            width: 10rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .horizLine {
+            transform: translate(115%);
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <section class="saleLocationInfoBox">
+            <aside class="mapDateAddr">
+                <div>
+                    <span id="mapTxt">
+                            <h3>Sale Date</h3>
+                            <p>May 7, 2018 9AM-6PM</p>
+                        </span>
+                </div>
+                <div>
+                    <span id="addrTxt">
+                            <h3>Address</h3>
+                            <p class="addr">12424 C St Omaha, NE 68144</p>
+                        </span>
+                </div>
+                <figure class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8358.951140745967!2d-96.09969875!3d41.22987285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1492737630750" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <figcaption style="text-align: center;">Sales Map</figcaption>
+                </figure>
+            </aside>
+
+            <article>
+                <div id="saleDescTxt">
+                    <h3 class="hdg">Estate Sale  Description</h3>
+                    <p class="txt"> List of stuff includes: <span></span>Van Briggle Tv Lamp Roseville Pottery Cambridge Fostoria Depression Glass Vintage Fiesta LG Flat Panel Tv Elvis Albums Reba Lots of old school vintage country albums 45's Stereo Speakers Oil Paintings Buffet Sofa Bed loveseats X2 Nice like new Basset Sofa Victorian Furniture Art Deco Furniture Mid-Century Modern Furniture Bar Cart Cut glass <span class=" center"><img  class="salesPic" src="http://lorempixel.com/160/160/" /></span>Decanter Cedar chest Frig Washer / Dryer Outdoor Swing Redwood patio furniture Garden tools Tools Silverplate Flatware Microwave Dining Table & Chairs Vintage Wedding Dress </p>
+                    <p>Van Briggle Tv Lamp Roseville Pottery Cambridge Fostoria Depression Glass Vintage<img class="salesPic floatRight" src="http://lorempixel.com/85/85/" /> Fiesta LG Flat Panel Tv Elvis Albums Reba Lots of old school vintage country albums 45's Stereo Speakers Oil Paintings Buffet Sofa Bed loveseats X2 Nice like new Basset Sofa Victorian Furniture Art Deco Furniture Mid-Century Modern Furniture Bar Cart Cut glass Decanter Cedar chest Frig Washer / Dryer Outdoor Swing Redwood patio furniture Garden tools Tools Silverplate Flatware Microwave Dining Table & Chairs Vintage Wedding Dress</p>
+                    <p>Van Briggle Tv Lamp Roseville Pottery Cambridge Fostoria Depression Glass Vintage<img class="salesPic floatLeft" src="http://lorempixel.com/80/80/" /> Fiesta LG Flat Panel Tv Elvis Albums Reba Lots of old school vintage country albums 45's Stereo Speakers Oil Paintings Buffet Sofa Bed loveseats X2 Nice like new Basset Sofa Victorian Furniture Art Deco Furniture Mid-Century Modern Furniture Bar Cart Cut glass Decanter Cedar chest Frig Washer / Dryer Outdoor Swing Redwood patio furniture Garden tools Tools Silverplate Flatware Microwave Dining Table & Chairs Vintage Wedding Dress</p>
+
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+<footer id="footer"></footer>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script>
+    $("header").load("header.html");
+    //        $("#footer").load("footer.html");
+</script>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+             <div class="saleLocationInfoBox">
+                <div class="mapDateAddr">
+                    <div>
+                        <span id="mapTxt">
+                            <h3>Sale Date</h3>
+                            <p>May 7, 2018 9AM-6PM</p>
+                        </span>
+                    </div>
+                    <div>
+                        <span id="addrTxt">
+                            <h3>Address</h3>
+                            <p class="addr">12424 C St Omaha, NE 68144</p>
+                        </span>
+                    </div>
+                    <div id="mapAll">
+                        <div id="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8358.951140745967!2d-96.09969875!3d41.22987285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1492737630750" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="saleDescTxt">
+                    <h3 class="hdg">Estate Sale  Description</h3>
+                    <p class="txt"><img  class="salesPic" src="http://lorempixel.com/80/80/" /> List of stuff includes: <span></span>Van Briggle Tv Lamp Roseville Pottery Cambridge Fostoria Depression Glass Vintage Fiesta LG Flat Panel Tv Elvis Albums Reba Lots of old school vintage country albums 45's Stereo Speakers Oil Paintings Buffet Sofa Bed loveseats X2 Nice like new Basset Sofa Victorian Furniture Art Deco Furniture Mid-Century Modern Furniture Bar Cart Cut glass Decanter Cedar chest Frig Washer / Dryer Outdoor Swing Redwood patio furniture Garden tools Tools Silverplate Flatware Microwave Dining Table & Chairs Vintage Wedding Dress </p>
+
+                </div>
+            </div>   
+</body>
+</html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><style></style>

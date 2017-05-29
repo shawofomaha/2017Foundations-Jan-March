@@ -1,0 +1,570 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <!-- Housekeeping -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!--  JSON Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">
+
+    <!-- CSS Stylesheet href's -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link media="all and (min-width: 100px) and (max-width: 600px)" rel="stylesheet" href="css/handheld.css">
+    <link media="all and (min-width: 601px) and (max-width: 2401px) " rel="stylesheet" href="css/desktop.css">
+
+    <style>
+        h2 {
+            /*
+            position: fixed;
+            top: +2.5vmin;
+*/
+        }
+        
+        #containerAbout {
+            /*            justify-content: space-around;*/
+            /*            top: 5rem;*/
+            position: inherit;
+            width: 45vmin;
+            height: 45vmin;
+            perspective: 333vmin;
+            perspective-origin: 100% 450px;
+            transform: translate(160%, 20rem);
+            -ms-transform: translate(160%, 20rem);
+            -webkit-transform: translate(160%, 20rem);
+        }
+        
+        #cube {
+            min-width: 100%;
+            min-height: 100%;
+            position: relative;
+            left: 17%;
+            top: 5.15%;
+            transform-style: preserve-3d;
+            transition: transform 2s;
+            -ms-transition: transform 2s;
+            -webkit-transition: transform 2s;
+            border-radius: 25%;
+        }
+        
+        .side {
+            min-width: 100%;
+            min-height: 100%;
+            position: absolute;
+            box-sizing: border-box;
+            border: 1.5px solid rgba(244, 210, 161, 1.0);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 2.3vmin;
+            text-align: center;
+            line-height: 2.3vmin;
+            border-radius: 25%;
+        }
+        
+        .top {
+            width: 275%;
+            height: 105%;
+            top: -5vh;
+            left: -90%;
+            position: absolute;
+            box-sizing: border-box;
+            border: 2.5px solid rgba(244, 210, 161, 1.0);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 2.3vmin;
+            text-align: center;
+            line-height: 2.3vmin;
+            border-radius: 50%;
+        }
+        /*
+        rgba(35, 60, 39, 1.0);<=Green
+        rgba(255, 175, 175, 1.0);<==Pink
+        rgba(244, 210, 161, 1.0):<==Tan
+*/
+        
+        .Bot {
+            width: 140%;
+            height: 30%;
+            border-radius: 0%;
+            top: 33%;
+            left: -25%;
+            position: absolute;
+            color: rgba(255, 255, 255, 0.8);
+            
+            text-align: center;
+            line-height: 2.3vmin;
+            border: 15px solid transparent;
+            -moz-border-image: -moz-linear-gradient(top, rgba(35, 60, 39, 1.0) 0%, rgba(244, 210, 161, 1.0) 100%);
+            -webkit-border-image: -webkit-linear-gradient(top, rgba(35, 60, 39, 1.0) 0%, rgba(244, 210, 161, 1.0) 100%);
+            border-image: linear-gradient(to bottom, rgba(80, 132, 89, 1.0) 0%, rgba(244, 210, 161, 1.0) 100%);
+            border-image-slice: 1;
+        }
+        
+        #front,
+        #back,
+        #leftFront,
+        #rightBack,
+        #leftBack,
+        #rightFront,
+        #left,
+        #right,
+        #top,
+        #bottom {
+            background-size: cover;
+            min-height: 45vmin;
+            -webkit-transition: background-color 3sec ease-in-out;
+            -moz-transition: background-color 3sec ease-in-out;
+            -ms-transition: background-color 3sec ease-in-out;
+            -o-transition: background-color 3sec ease-in-out;
+            transition: background-color 3sec ease-in-out;
+            padding: 2vmin;
+            padding-top: 9vmin;
+        }
+        
+        #back {
+            background-image: url("http://lorempixel.com/g/800/600/");
+            backface-visibility: hidden;
+            transform: rotateY(180deg) translateZ(54vmin);
+            -ms-transform: rotateY(180deg) translateZ(54vmin);
+            -webkit-transform: rotateY(180deg) translateZ(54vmin);
+        }
+        
+        #cube.showBack {
+            transform: rotateY(180deg);
+            -ms-transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+        }
+        
+        #front {
+            background-color: black;
+            background-image: url("media/Workman%20Estate%20Sale.jpeg");
+            backface-visibility: hidden;
+            transform: rotateY(0deg) translateZ(54vmin);
+            -ms-transform: rotateY(0deg) translateZ(54vmin);
+            -webkit-transform: rotateY(0deg) translateZ(54vmin);
+        }
+        
+        #cube.showFront {
+            transform: rotateY(0deg);
+            -ms-transform: rotateY(0deg);
+            -webkit-transform: rotateY(0deg);
+        }
+        
+        #rightBack {
+            background-image: url("http://lorempixel.com/g/900/740/abstract");
+            backface-visibility: hidden;
+            transform: rotateY(135deg) translateZ(54vmin);
+            -ms-transform: rotateY(135deg) translateZ(54vmin);
+            -webkit-transform: rotateY(135deg) translateZ(54vmin);
+        }
+        
+        #cube.showRightBack {
+            transform: rotateY(-135deg);
+            -ms-transform: rotateY(-135deg);
+            -webkit-transform: rotateY(-135deg);
+        }
+        
+        #leftBack {
+            background-image: url("http://lorempixel.com/980/960/abstract");
+            backface-visibility: hidden;
+            transform: rotateY(-135deg) translateZ(54vmin);
+            -ms-transform: rotateY(-135deg) translateZ(54vmin);
+            -webkit-transform: rotateY(-135deg) translateZ(54vmin);
+        }
+        
+        #cube.showLeftBack {
+            transform: rotateY(135deg);
+            -ms-transform: rotateY(135deg);
+            -webkit-transform: rotateY(135deg);
+        }
+        
+        #right {
+            background-image: url("media/holly3.JPG");
+            backface-visibility: hidden;
+            transform: rotateY(90deg) translateZ(54vmin);
+            -ms-transform: rotateY(90deg) translateZ(54vmin);
+            -webkit-transform: rotateY(90deg) translateZ(54vmin);
+        }
+        
+        #cube.showRight {
+            transform: rotateY(-90deg);
+            -ms-transform: rotateY(-90deg) -webkit-transform: rotateY(-90deg)
+        }
+        
+        #left {
+            background-image: url("media/holly.JPG");
+            backface-visibility: hidden;
+            transform: rotateY(-90deg) translateZ(54vmin);
+            -ms-transform: rotateY(-90deg) translateZ(54vmin);
+            -webkit-transform: rotateY(-90deg) translateZ(54vmin);
+        }
+        
+        #cube.showLeft {
+            transform: rotateY(90deg);
+            -ms- -webkit-
+        }
+        
+        #rightFront {
+            background-image: url("http://lorempixel.com/g/640/320");
+            backface-visibility: hidden;
+            transform: rotateY(45deg) translateZ(54vmin);
+            -ms- -webkit-
+        }
+        
+        #cube.showRightFront {
+            transform: rotateY(-45deg);
+            -ms-transform: rotateY(-45deg);
+            -webkit-transform: rotateY(-45deg);
+        }
+        
+        #leftFront {
+            background-image: url("http://lorempixel.com/240/240/cats");
+            backface-visibility: hidden;
+            transform: rotateY(-45deg) translateZ(54vmin);
+            -ms-transform: rotateY(-45deg) translateZ(54vmin);
+            -webkit-transform: rotateY(-45deg) translateZ(54vmin);
+        }
+        
+        #cube.showLeftFront {
+            transform: rotateY(45deg);
+            -ms-transform: rotateY(45deg);
+            -webkit-transform: rotateY(45deg);
+        }
+        
+        #top {
+            background-image: url("media/Workman%20Estate%20Sale.jpeg");
+            backface-visibility: hidden;
+            transform: rotateX(90deg) translateZ(42vmin);
+            -ms-transform: rotateX(90deg) translateZ(42vmin);
+            -webkit-transform: rotateX(90deg) translateZ(42vmin);
+        }
+        
+        #cube.showTop {
+            transform: rotateX(-90deg);
+            -ms-transform: rotateX(-90deg);
+            -webkit-transform: rotateX(-90deg);
+        }
+        
+        #bottom {
+            background-color: black;
+            backface-visibility: hidden;
+            transform: rotateX(-90deg) translateZ(22vmin);
+            -ms-transform: rotateX(-90deg) translateZ(22vmin);
+            -webkit-transform: rotateX(-90deg) translateZ(22vmin);
+        }
+        
+        #cube.showBottom {
+            transform: rotateX(90deg);
+            -ms-transform: rotateX(90deg);
+            -webkit-transform: rotateX(90deg);
+        }
+        
+        .dufus {
+            position: absolute;
+            width: 100%;
+            display: block;
+            text-align: center;
+            font-size: 3.7rem;
+            text-shadow: 1rem 1rem 2rem rgba(242, 255, 221, 0.7), 0 0 25rem rgba(255, 255, 255, 0.7), 0 0 2rem rgba(2, 2, 2, 0.7);
+            color: rgba(244, 210, 161, 0.9);
+            top: 4.5rem;
+            z-index: +5;
+            font-family: 'Architects Daughter', cursive;
+        }
+        
+        #aboutTitle {
+            /*            position: relative;*/
+            position: absolute;
+            width: 100%;
+            display: block;
+            text-align: center;
+            font-size: 3.7rem;
+            top: 6.0rem;
+            z-index: +1;
+            font-family: 'Architects Daughter', cursive;
+            color: rgba(244, 210, 161, 1.0);
+            text-shadow: .22rem .33rem rgba(255, 255, 255, 0.55);
+            text-shadow: 1rem 1rem 2rem rgba(242, 255, 221, 0.7), 0 0 25rem rgba(242, 255, 2215, 0.7), 0 0 2rem rgba(242, 255, 221, 0.7);
+        }
+        
+        .frontPicTxt,
+        .leftFrontPicTxt,
+        .rightFrontPicTxt,
+        .leftBackPicTxt,
+        .rightBackPicTxt,
+        .leftPicTxt,
+        .rightPicTxt,
+        .backPicTxt,
+        .rightBackPicTxt {
+            font-family: 'Architects Daughter', cursive;
+            font-size: 3.25vmin;
+            color: rgba(155, 244, 66, 0.8);
+            line-height: 5.0vmin;
+            text-shadow: 2px 2px rgba(6, 6, 6, 1.0);
+        }
+        
+        .frontPicTxt {
+            color: rgba(244, 210, 161, 1.0);
+        }
+        
+        .backPicTxt {
+            color: rgba(244, 210, 161, 1.0);
+        }
+        
+        .leftFrontPicTxt {
+            color: rgba(244, 210, 161, 1.0);
+        }
+        
+        .rightBackPicTxt {
+            color: rgba(244, 210, 161, 1.0);
+        }
+        
+        .leftBackPicTxt {
+            color: rgba(244, 210, 161, 1.0);
+        }
+        
+        .rightFrontPicTxt {
+            color: rgba(244, 210, 161, 1.0);
+        }
+        
+        .leftPicTxt {
+            color: rgba(244, 210, 161, 1.0);
+        }
+        
+        .rightPicTxt {
+            color: rgba(244, 210, 161, 1.0);
+        }
+        
+        .topPicTxt {
+            color: rgba(244, 210, 161, 1.0);
+            line-height: 5.0vmin;
+            font-size: 5.0vmin;
+        }
+        
+        .bottomPicTxt {
+            color: rgba(244, 210, 161, 1.0);
+            line-height: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .rightBackPicTxt {
+            color: rgba(244, 210, 161, 1.0);
+        }
+        
+        .underline {
+            text-decoration: underline;
+        }
+        
+        footer2 ul {
+            top: -0.53vmin !important;
+        }
+        
+        #cube a {
+            display: inline-block;
+            color: rgba(0, 0, 255, 1.0);
+            text-shadow: 0px 0px rgba(6, 6, 6, 1.0);
+            background-color: rgba(244, 210, 161, 1.0);
+            border-radius: 15px;
+            border: 2px solid rgba(211, 211, 211, 1.0);
+        }
+        
+        #cube a:hover {
+            font-size: 1.11em;
+            border: 2px solid rgba(255, 255, 255, 1.0);
+            transition: all 0.75s ease-in-out;
+        }
+        
+        #facePosition {
+            position: relative;
+            font-family: 'Architects Daughter', cursive;
+            width: 15rem;
+            top: 7rem;
+            text-align: center;
+            font-size: 1.75vw;
+            color: rgba(244, 210, 161, 1.0);
+            border: 2px solid red;
+            border: 2px solid rgba(244, 210, 161, 1.0);
+            border-radius: 15px;
+            z-index: +0;
+        }
+        
+        button#spin {
+            position: relative;
+            top: 7rem;
+            font-size: 1.75rem !important;
+            left: -0.60rem !important;
+            z-index: +3;
+        }
+        
+        button#spin:hover {
+            border: 2px solid rgba(255, 255, 255, 1.0) !important;
+            transition: all 0.45s ease-in-out;
+            -webkit-transition: all 0.45s ease-in-out;
+            z-index: +3;
+        }
+        
+        select {
+            position: relative;
+            display: inline-block;
+            position: relative;
+            top: 7rem;
+            left: 3.75rem !important;
+            z-index: +3;
+        }
+        
+        .floatLeft {
+            float: left;
+            margin-left: 1.5rem;
+        }
+        
+        img.logo  {
+            top: -9.0vmin;
+            transform: translate(calc(-50% - 24vmin)) !important;              
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="floatLeft w3-container">
+        <div id="facePosition"></div>
+        <button type="button" id="spin" value="Spin">Spin</button>
+        <select enable>
+            <option value="Front">1-Front</option>
+            <option value="Back">2-Back</option>
+            <option value="RightBack">3-RightBack</option>
+            <option value="RightFront">4-RightFront</option>
+            <option value="Right">5-Right</option>
+            <option value="Left">6-Left</option>
+            <option value="LeftFront">7-LeftFront</option>
+            <option value="LeftBack">8-LeftBack</option>
+            <option value="Top">9-Top</option>
+            <option value="Bottom">10-Bottom</option>
+        </select>
+
+    </div>
+    <header></header>
+    <h2 id="aboutTitle">&gt; About &lt;</h2>
+    <main>
+
+
+        <div id="containerAbout">
+            <div id="cube">
+
+                <div class="side" id="front">
+                    <p class="frontPicTxt">We LOVE our customers and are
+                        <br /> determined to succeed in the daunting task
+                        <br /> of your estate sale!</p>
+                </div>
+
+                <div class="side" id="rightFront">
+                    <p class="rightFrontPicTxt">We take great pride in the professional manner in which we provide timely,
+                        <br />cost-effective but friendly service.</p>
+                </div>
+
+                <div class="side" id="leftFront">
+                    <p class="leftFrontPicTxt">We take great pride in the professional manner in which we provide timely,
+                        <br />cost-effective but friendly service.</p>
+                </div>
+
+                <div class="side" id="back">
+                    <p class="backPicTxt">We provide a personalized service
+                        <br />meeting the needs <span class="underline">you</span> have identified. So&nbsp;
+                        <br/>
+                        <a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/"> contact us! </a></p>
+                </div>
+
+                <div class="side" id="rightBack">
+                    <p class="rightBackPicTxt">We take great pride in the professional manner in which we provide timely,
+                        <br />cost-effective but friendly service.</p>
+                </div>
+
+                <div class="side" id="leftBack">
+                    <p class="leftBackPicTxt">We take great pride in the professional manner in which we provide timely
+                        <br />cost-effective but friendly service.</p>
+                </div>
+
+                <div class="side" id="right">
+                    <p class="rightPicTxt">We take great pride in the professional manner in which we provide timely,
+                        <br />cost-effective but friendly service.</p>
+                </div>
+
+                <div class="side" id="left">
+                    <p class="leftPicTxt">We have the skills and experience,
+                        <br />to make an overwhelming task seem manageable again.</p>
+                </div>
+
+                <div class="side top" id="top">
+                    <p class="topPicTxt">So .&nbsp;.&nbsp;.&nbsp;
+                        <br/><a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/">contact us</a>
+                        <br /> and delegate one of your many responsibilies,
+                        <br /> with peace of mind and with <span class="underline">our</span> satisfaction guarantee.</p>
+                </div>
+                <div class="side Bot" id="bottom">
+                    <p class="bottomPicTxt">So .&nbsp;.&nbsp;.&nbsp;
+                        <br /><a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/"> contact us </a>
+                        <br />and delegate one of your many responsibilies,
+                        <br /> with peace of mind and with <span class="underline">our</span> satisfaction guarantee.</p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <footer id="footer"></footer>
+    </main>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script>
+        $("header").load("header.html");
+        //$("#footer").load("footer.html");
+
+        $(document).ready(function () {
+
+            //Front, Back, Right, Left, Top, Bottom,
+            //RightFront, LeftFront, RightBack, LeftBack
+            function rotateCube(side) {
+                $("#cube").attr("class", "");
+                $("#cube").addClass("show" + side);
+            }
+
+            $("button").click(function () {
+                var side = $("select").val();
+                rotateCube(side);
+                $("#facePosition").text(side);
+                //            console.log("*****side= " + side);
+            });
+
+            var lastSide = 0;
+            var randomIdx = 0;
+            setInterval(function () {
+                var sides = ["Front", "Back", "RightBack", "RightFront", "Right", "Left", "LeftFront", "LeftBack", "Top", "Bottom", "Top", "Bottom"];
+                var random = parseInt(Math.random() * 12);
+                while (random == lastSide) {
+                    random = parseInt(Math.random() * 12);
+                }
+                lastSide = random;
+
+                //            console.log("random= " + random + " sides[random]= " + sides[random]);
+                randomIdx = random;
+                if (randomIdx == 10) {
+                    randomIdx = 8;
+                } else if (randomIdx == 11) {
+                    randomIdx = 9;
+                }
+                rotateCube(sides[random]);
+                $("#facePosition").text((randomIdx + 1) + "-" + sides[random]);
+            }, 7000);
+        });
+    </script>
+
+</body>
+
+</html>

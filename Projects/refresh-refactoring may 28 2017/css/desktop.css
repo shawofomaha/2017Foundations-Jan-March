@@ -1,0 +1,24 @@
+/* .   Desktop   . */
+
+span#title {
+    position: relative;
+    font-family: 'Architects Daughter', cursive;
+    text-shadow: 0.75px 0.75px rgba(112, 127, 116, 1.0);
+    color: rgba(242, 232, 218, 0.9);
+    top: 1vmin !important;
+    left: 0vmin;
+    font-size: 6vmin;
+    line-height: 8.5vmin;
+    padding-left: 45.5vmin;
+    z-index: +15;
+}
+
+.paisleyBorderTop {
+    /*    display: none;*/
+    display: inline-block;
+}
+
+.hamburger {
+    top: -6rem;
+    left: -12rem;
+}

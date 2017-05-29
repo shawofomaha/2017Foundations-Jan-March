@@ -1,0 +1,140 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <!-- Housekeeping -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!--  JSON Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">
+
+    <!-- CSS Stylesheet href's -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link media="all and (min-width: 100px) and (max-width: 600px)" rel="stylesheet" href="css/handheld.css">
+    <link media="all and (min-width: 601px) and (max-width: 2401px) " rel="stylesheet" href="css/desktop.css">
+
+    <style>
+        #missionTitle {
+            position: absolute;
+            width: 100%;
+            display: block;
+            text-align: center;
+            font-size: 3.7rem;
+            text-shadow: 1rem 1rem 2rem rgba(242, 255, 221, 0.7), 0 0 25rem rgba(242, 255, 2215, 0.7), 0 0 2rem rgba(242, 255, 221, 0.7);
+            color: rgba(244, 210, 161, 0.9);
+            top: 7.5rem;
+            font-family: 'Architects Daughter', cursive;
+            z-index: +5555 !important;
+        }
+        
+        h2 {
+            top: 2.5vmin;
+        }
+        
+        body div {
+            position: relative;
+            top: 13vh;
+            left: 15.75%;
+        }
+        
+        img.logo {
+            position: absolute;
+            top: -34vmin !important;
+            left: 18.5%;
+            z-index: +15;
+        }
+        
+        .paisleyBorderTop {
+            display: none !important;
+        }
+        
+        nav button.w3-button {
+            position: absolute;
+            top: -5rem;
+            left: -10rem;
+        }
+        
+        @media all and (max-width: 600px) {
+            nav button {
+                position: absolute;
+                top: -46vmin;
+                left: -42vmin;
+            }
+        }
+        
+        img.logo {
+            position: absolute;
+            top: -8.0rem !important;
+            /*            left: 30rem !important;*/
+            transform: translate(calc(50% + 6vmin)) !important;
+        }
+        
+        iframe  {
+            top: 3rem;
+            position: relative;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header></header>
+    <h2 id="missionTitle">&gt; Mission &lt;</h2>
+    <div>
+        
+<iframe src='https://onedrive.live.com/embed?cid=CF7957564BA1B9B6&resid=CF7957564BA1B9B6%21224&authkey=AEdX1ZzT1MXLW34&em=2&wdAr=1.7777777777777777&wdEaa=1' width='962px' height='565px' frameborder='0'></iframe>
+
+<!--
+        <div class="w3-content w3-section" style="max-width:500px">
+            <p>The w3-animate-fading class animates an element in and out (takes about 10 seconds).</p>
+
+            <img class="mySlides w3-animate-fading" src="data1/images/refresh_estate_sales.jpg" style="width:100%">
+            <img class="mySlides w3-animate-fading" src="data1/images/refresh_what_we_offer.jpg" style="width:100%">
+            <img class="mySlides w3-animate-fading" src="data1/images/family_focused.jpg" style="width:100%">
+            <img class="mySlides w3-animate-fading" src="data1/images/experienced_and_knowledgeable.jpg" style="width:100%">
+            <img class="mySlides w3-animate-fading" src="img_rr_04.jpg" style="width:100%">
+            <img class="mySlides w3-animate-fading" src="data1/images/family_based.jpg" style="width:100%">
+            <img class="mySlides w3-animate-fading" src="data1/images/determination.jpg" style="width:100%">
+            <img class="mySlides w3-animate-fading" src="data1/images/refresh_estate_sales_0.jpg" style="width:100%">
+        </div>
+-->
+    </div>
+    <footer id="footer"></footer>
+    <script>
+        $("header").load("header.html");
+//        $("#footer").load("footer.html");
+    </script>
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 9000);
+        }
+    </script>
+
+
+</body>
+
+</html>

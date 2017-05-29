@@ -1,0 +1,183 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <!-- Housekeeping -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!--  JSON Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">
+
+    <!-- CSS Stylesheet href's -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link media="all and (min-width: 100px) and (max-width: 600px)" rel="stylesheet" href="css/handheld.css">
+    <link media="all and (min-width: 601px) and (max-width: 2401px) " rel="stylesheet" href="css/desktop.css">
+
+
+    <title>Refresh Estate Sales</title>
+    <style>
+        #title {
+            line-height: 0px;
+        }
+        
+        header {
+            text-align: center;
+            width: 100%;
+        }
+        
+        .hdr {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            /*
+            min-height: 9vmin;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-flow: row wrap;
+            justify-content: flex-end;
+            justify-content: center;
+*/
+        }
+        
+        .paisleyBorderTop {
+            position: fixed;
+            top: 8.5vmin;
+            min-height: 5vmin;
+            min-width: 100%;
+            left: -0.0vmin;
+            z-index: 0;
+        }
+        
+        .logo {
+            padding: 0;
+            display: inline-block;
+            margin: 0 auto;
+            border-radius: 50%;
+            z-index: +15;
+        }
+        
+        img.logo {
+            position: absolute;
+            top: -9.0vmin;
+            transform: translate(calc(50% - 24vmin));
+            width: 24vmin;
+            height: 24vmin;
+            z-index: -0;
+        }
+        
+        header,
+        html {
+            /*            background-color: white;*/
+        }
+        
+        .w3-button {
+            font-family: 'Architects Daughter', cursive;
+            color: rgba(242, 232, 218, 0.9);
+            font-size: 2.5rem;
+        }
+        
+        nav button {
+            position: absolute;
+            border-radius: 25%;
+            top: 1rem;
+            left: 1rem;
+        }
+        
+        #mySidebar button {
+            padding: .5rem;
+            border-radius: 0%;
+        }        
+        
+        .w3-white,
+        .w3-hover-white:hover {
+            color: #fff!important;
+            background-color: #000!important;
+        }
+        
+        #mySidebar,
+        .w3-sidebar {
+            width: 35%;
+            background-color: rgba(130, 190, 1, 1.0);
+            background-image: url("media/cherry-wood-panels-background-header.jpg");
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <nav>
+        <header>
+            <div class="logoWrapper w3-image">
+                <a href="index.html">
+                    <img class="logo" src="media/refresh-expanded.png"></a>
+            </div>
+
+            <div>
+                <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
+            </div>
+
+        </header>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-xxlarge" onclick="w3_close()">Close &times;</button>
+        <a href="index.html" class="w3-bar-item w3-button">Home</a>
+        <a href="mission.html" class="w3-bar-item w3-button">Mission</a>
+        <a href="sales.html" class="w3-bar-item w3-button">Sales</a>
+        <a href="about.html" class="w3-bar-item w3-button">About</a>
+        <a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/" class="w3-bar-item w3-button">Contact</a>
+    </div>
+
+    <!-- Page Content -->
+    <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script>
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+    </script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function (b, o, i, l, e, r) {
+            b.GoogleAnalyticsObject = l;
+            b[l] || (b[l] =
+                function () {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+            b[l].l = +new Date;
+            e = o.createElement(i);
+            r = o.getElementsByTagName(i)[0];
+            e.src = 'https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', 'UA-XXXXX-X', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
