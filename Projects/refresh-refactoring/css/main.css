@@ -130,8 +130,8 @@ input:hover {
     border: 0.21rem solid rgba(255, 255, 255, 1.0) !important;
     -webkit-transform: scale(0.9);
     transform: scale(0.9);
-    -webkit-transition: background-color all 1.5sec ease-in-out;
-    transition: background-color all 1.5sec ease-in-out;
+    -webkit-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
 }
 
 input,
