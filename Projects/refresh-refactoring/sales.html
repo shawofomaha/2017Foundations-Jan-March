@@ -274,9 +274,17 @@
             max-height: 60vmin;
             min-height: 60vmin;
             outline: 2px solid white;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
+            -ms-flex-pack: distribute;
             justify-content: space-around;
+            -webkit-box-align: top;
+            -ms-flex-align: top;
             align-items: top;
         }
         
