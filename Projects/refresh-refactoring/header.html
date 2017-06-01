@@ -98,11 +98,27 @@
         
         #mySidebar,
         .w3-sidebar {
-            width: 35%;
-            min-width: 240px;
+            position: absolute:
+            top: 7rem;
+            left: 0rem;
+            width: 36%;
+            min-width: 300px;
             background-color: rgba(130, 190, 1, 1.0);
             background-image: url("media/cherry-wood-panels-background-header.jpg");
+            border: 0.77rem solid rgba(244, 210, 161, 1.0);
+            border-style: ridge;            
         }
+        .disabled {
+            color: rgba(2,2,2,1.0);
+            font-size: 2.75rem;
+            pointer-events:none;
+        }
+        .close {
+            color: rgba(211,44,44,1.0) !important;
+            border-radius: 5rem !important;
+            border: 1px solid yellow !important;
+        }
+
     </style>
 
 </head>
@@ -127,17 +143,18 @@
 
     <!-- Sidebar -->
     <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
-        <button class="w3-bar-item w3-button w3-xxlarge" onclick="w3_close()">Close &times;</button>
-        <a href="index.html" class="w3-bar-item w3-button">Home</a>
-        <a href="mission.html" class="w3-bar-item w3-button">Mission</a>
-        <a href="sales.html" class="w3-bar-item w3-button">Sales</a>
-        <a href="about.html" class="w3-bar-item w3-button">About</a>
-        <a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/" class="w3-bar-item w3-button">Contact</a>
+        <button class="w3-bar-item w3-button w3-xxlarge close" onclick="w3_close()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Close &times;</button>
+        <a href="#" class="w3-bar-item w3-button disabled"> Refresh Estate Sales </a>
+        <a href="index.html" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home</a>
+        <a href="sales.html" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sales</a>
+        
+        <a href="mission.html" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mission</a>
+        <a href="about.html" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About</a>
+        <a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/" class="w3-bar-item w3-button">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact</a>
     </div>
 
     <!-- Page Content -->
     <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
-    </div>
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <script>
         function w3_open() {
