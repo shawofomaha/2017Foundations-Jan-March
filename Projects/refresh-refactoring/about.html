@@ -372,7 +372,7 @@
             transition: all 0.75s ease-in-out;
         }
         
-        button#spin:hover {
+        #spin:hover {
             border: 2px solid rgba(255, 255, 255, 1.0) !important;
             transition: all 0.45s ease-in-out;
             -webkit-transition: all 0.45s ease-in-out;
@@ -422,12 +422,12 @@
             z-index: +0;
         }
         
-        button#spin {
+        #spin {
             position: relative;
-            width: 4.5rem;
-            margin-left: 2.0rem;
-            font-size: 1.75rem !important;
-            z-index: +3;
+            width: 5.75em;
+/*            margin-left: 2.0em;*/
+            font-size: 1.75em !important;
+            z-index: +16;
         }
         
         select {
@@ -440,10 +440,12 @@
 </head>
 
 <body>
-
-    <div class="holdControls">
-        <div id="facePosition"></div>
+    <header></header>
+    
+    <container class="holdControls">
+        
         <button type="button" id="spin" value="Spin">Spin</button>
+        <div id="facePosition"></div>
         <select enable>
             <option value="Front">1-Front</option>
             <option value="Back">2-Back</option>
@@ -457,8 +459,8 @@
             <option value="Bottom">10-Bottom</option>
         </select>
 
-    </div>
-    <header></header>
+    </container>
+    
     <h1 id="aboutTitle">&gt; About &lt;</h1>
     <main>
 
@@ -541,7 +543,7 @@
                 $("#cube").addClass("show" + side);
             }
 
-            $("button").click(function () {
+            $("#spin").click(function () {
                 var side = $("select").val();
                 rotateCube(side);
                 $("#facePosition").text(side);
