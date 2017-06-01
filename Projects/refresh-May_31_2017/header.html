@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Housekeeping -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--  JSON Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">
+
+    <!-- CSS Stylesheet href's -->
+    <link rel="stylesheet" href="css/main.css">
+    <link media="all and (min-width: 100px) and (max-width: 449px)" rel="stylesheet" href="css/handheld.css">
+    <link media="all and (min-width: 459px) and (max-width: 2401px) " rel="stylesheet" href="css/desktop.css">
+
+
+    <title>Refresh Estate Sales</title>
+    <style>
+        #title {
+            line-height: 0px;
+        }
+        
+        header {
+            text-align: center;
+            width: 100%;
+        }
+        
+        .hdr {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            min-height: 9vmin;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-flow: row wrap;
+            justify-content: flex-end;
+            justify-content: center;
+        }
+        
+        .paisleyBorderTop {
+            position: fixed;
+            top: 8.5vmin;
+            min-height: 5vmin;
+            min-width: 100%;
+            left: -0.0vmin;
+            z-index: 0;
+        }
+        
+        .logo {
+            padding: 0;
+            display: inline-block;
+            margin: 0 auto;
+            border-radius: 50%;
+            z-index: +15;
+        }
+        
+        img.logo {
+            position: absolute;
+            top: -9.0vmin;
+            transform: translate(calc(50% - 24vmin));
+            width: 24vmin;
+            height: 24vmin;
+            z-index: -0;
+        }
+        
+        .menu2 {
+            
+        }
+        
+        .menu {
+            display: inline-block;
+            width: 320px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: -320px;
+            background-image: url("media/cherry-wood-panels-background-header.jpg");
+            border: 1.25px solid rgba(244, 210, 161, 1.0);
+            border-radius: 15px;
+            transition: left .4s ease-in-out;
+            z-index: 5555;
+            /*            background: rgba(147, 255, 166, 1.0);*/
+            /* For browsers that do not support gradients */
+            /*            background: -ms-linear-gradient(left, rgba(147, 255, 166, 1.0), rgba(81, 219, 76, 1.0));*/
+            /* For Microsoft */
+            /*            background: -webkit-linear-gradient(left, rgba(147, 255, 166, 1.0), rgba(81, 219, 76, 1.0));*/
+            /* For Safari 5.1 to 6.0 */
+            /*            background: -o-linear-gradient(right, rgba(147, 255, 166, 1.0), rgba(81, 219, 76, 1.0));*/
+            /* For Opera 11.1 to 12.0 */
+            /*            background: -moz-linear-gradient(right, rgba(147, 255, 166, 1.0), rgba(81, 219, 76, 1.0));*/
+            /* For Firefox 3.6 to 15 */
+            /*            background: linear-gradient(to right, rgba(147, 255, 166, 1.0), rgba(81, 219, 76, 0.01));*/
+            /* Standard syntax */
+        }
+        
+        .menu-item:first-child {
+            margin-top: 180px;
+        }
+        
+        .menu--open {
+            left: 0;
+        }
+        
+        .menu-item {
+            text-decoration: none !important;
+            width: 100%;
+            padding: 1rem 3rem;
+            box-sizing: border-box;
+            font-family: 'Architects Daughter', cursive !important;
+            line-height: 5.5vmin;
+            min-height: 4.25vmin;
+            font-size: 3.05rem;
+            float: left;
+            left: 0;
+            color: rgba(255, 255, 255, 0.9) !important;
+            padding: 14px 12px;
+            text-decoration: none;
+            border: 1.25px solid rgba(244, 210, 161, 1.0);
+            border-radius: 15px;
+            list-style-type: none;
+            z-index: +5555;
+        }
+        
+        .menu-item:hover {
+            cursor: pointer;
+            font-size: 3.50rem;
+            color: black !important;
+            border-radius: 15px;
+            width: 320px;
+            display: inline;
+            background: rgba(81, 219, 76, 1.0);
+            border: 1.75px solid rgba(244, 210, 161, 1.0);
+            z-index: +5555;
+        }
+        
+        .menu a:link,
+        .menu a:visited,
+        .menu a:hover,
+        .menu a:active {
+            text-decoration: none;
+            color: rgba(211, 211, 211, 1.0) !important;
+        }
+        
+        .menu a:hover {
+            color: black !important;
+        }
+        
+        #menuTitle {
+            font-family: 'Architects Daughter', cursive !important;
+            font-size: 1.7rem;
+            color: rgba(81, 219, 76, 1.0);
+        }
+        
+        .hamburgerContainer {
+            position: absolute;
+            top: 0.75rem;
+            left: 1.5rem;
+/*            border: 5px dotted white;*/
+            display: inline-block;
+            cursor: pointer;
+            z-index: +4;
+        }
+        
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 4vw;
+            height: 0.4vh;
+/*            background-color: #000;*/
+            background-color: rgba(242, 242, 242, 1.0);
+            color: rgba(242, 242, 242, 1.0);
+            margin: 0.4rem;
+            transition: 0.4s;
+            position: absolute;
+            top: 2.0vh;
+            left: 5vw;
+        }
+        
+        .bar2 {
+            top: 3.0vh;
+        }
+        
+        .bar3 {
+            top: 4.0vh;
+        }
+        
+        .change .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+            transition: left .4s ease-in-out;
+        }
+        
+        .change .bar2 {
+            opacity: 0;
+            transition: left .4s ease-in-out;
+        }
+        
+        .change .bar3 {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-2.7px, -3px);
+            transition: left .4s ease-in-out;
+        }
+        
+        .menuShow {
+            left: 0px;
+            top: +55px;
+            transition: left .4s ease-in-out;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <header>
+            <div class="hamburger menu2">
+                <div class="hamburgerContainer" onclick="toggleMenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <img class="paisleyBorderTop" src="media/borders-holly2.png">
+                <nav>
+                    <div class="menu menu2">
+                        <span id="menuTitle">Refresh Estate Sales</span>
+                        <div class="menu-item"><a href="index.html">Home</a></div>
+                        <div class="menu-item"><a href="sales.html">Sales</a></div>
+                        <div class="menu-item"><a href="mission.html">Mission</a></div>
+                        <div class="menu-item"><a href="about.html">About</a></div>
+                        <div class="menu-item"><a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/">Contact</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            
+            <div class="logoWrapper">
+                <a href="index.html">
+                    <img class="logo" src="media/refresh-expanded.png"></a>
+            </div>
+
+        </header>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script>
+        var menuOpen = false;
+        var menu = $(".menu");
+        var hamburger = $(".hamburgerContainer");
+
+        function toggleMenu(x) {
+            toggleMenuFunc();
+        }
+
+        function toggleMenuFunc() {
+            hamburger.toggleClass("change");
+            menu.toggleClass("menuShow");
+        }
+
+//        menu.on ({
+//            mouseleave: function () {
+//                toggleMenuFunc();
+//            }
+//        })
+    </script>
+</body>
+
+</html>

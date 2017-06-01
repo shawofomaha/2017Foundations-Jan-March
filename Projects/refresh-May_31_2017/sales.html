@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">
+
+    <!-- CSS Stylesheet href's -->
+    <link rel="stylesheet" href="css/main.css">
+    <link media="all and (min-width: 100px) and (max-width: 776px)" rel="stylesheet" href="css/handheld.css">
+    <link media="all and (min-width: 777px) and (max-width: 2401px) " rel="stylesheet" href="css/desktop.css">
+
+    <style>
+        #container {
+            top: 15.75vmin;
+        }
+        
+        img.logo {
+            top: -8.5vmin !important;
+        }
+        
+        #salesTitle {
+            z-index: +2;
+        }
+        
+        .price {
+            text-align: center;
+            color: rgb(242, 232, 218);
+            font-size: calc( 1.20rem + 1vw);
+        }
+        
+        #buttonNudge1 {
+            margin-left: 0% !important;
+        }
+        
+        .saleLocationInfoBox {
+/*            height: auto;*/
+            max-height: 90vmin;
+            font-size: calc( 1.00em + 1vw);
+            display: flex;
+            border: 1.37rem solid rgba(244, 210, 161, 1.0);
+            border-style: inset;
+            padding-top: 7.5vmin;
+/*            margin: 1.5rem;*/
+            white-space: normal;
+            overflow-x: auto;
+            background: rgba(112, 127, 116, 1.0);
+            /* Color Green 
+            rgba(112, 127, 116, 1.0);
+            rgba(16, 93, 0, 1.0);
+            rgba(130, 190, 1, 1.0);
+            rgba(118, 173, 0,1.0);
+*/
+            /* For browsers that do not support gradients */
+            background: -ms-linear-gradient(left, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0));
+            /* For Microsoft */
+            background: -webkit-linear-gradient(left, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0));
+            /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0));
+            /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0));
+            /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0));
+            /* Standard syntax */
+        }
+        
+        .itemPic {
+            display: inline-block;
+            width: 90% !important;
+            margin: auto;
+        }
+        
+        .picBox {
+            /* For browsers that do not support gradients */
+            background: -ms-linear-gradient(left, rgba(118, 173, 0, 1.0), rgba(16, 93, 0, 1.0));
+            /* For Microsoft */
+            background: -webkit-linear-gradient(left, rgba(118, 173, 0, 1.0), rgba(16, 93, 0, 1.0));
+            /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(right, rgba(118, 173, 0, 1.0), rgba(16, 93, 0, 1.0));
+            /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(right, rgba(118, 173, 0, 1.0), rgba(16, 93, 0, 1.0));
+            /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to right, rgba(118, 173, 0, 1.0), rgba(16, 93, 0, 1.0));
+            /* Standard syntax */
+            padding: 0.5em 2em;
+        }
+        
+        .mapDateAddr {
+/*            outline: 2px dotted white;*/
+            height: 60%;
+            
+        }
+        
+        #mapDiv {
+/*            left: -20em;*/
+        }
+        
+        #mapAll {
+            position: sticky;
+/*            outline: 2px solid yellow;*/
+            display: flex;
+    
+            left: 12em;
+            top: 13em;
+            /*            min-width: 4em;*/
+            height: 8em;
+            padding-bottom: 1.5em;
+        }
+        
+        #map {
+            display: inline-block;
+            position: relative;
+            width: 8em;
+            border: 0.55px solid rgba(244, 210, 161, 0.9);
+            border-radius: 15px;
+            top: 1em;
+            left: 6em;
+        }
+        
+        #map iframe {
+            position: sticky;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+        
+        #mapTxt > p {
+/*            outline: 2px solid yellow;*/
+            display: inline-block;
+            position: relative;
+            min-width: 20vmin;
+            padding-left: .4em;
+            text-align: right;
+            font-size: 0.75em;
+            top: -2.5em;
+        }
+        
+        #saleDescTxt > h3 {
+            position: relative;
+            width: 70vw;
+        }
+        #mapTxt > h3 {
+            position: relative;
+            top: -2.25em;
+        }
+        #addrTxt h3,
+        #mapTxt h3 {
+            display: inline-block;
+            text-align: right;
+            margin: 1em;
+/*            top: -3.5em;*/
+        }
+        
+        
+        .hdg {
+            position: relative;
+            width: 65%;
+/*            border: 2px solid yellow;*/
+        }
+        .addr {
+/*            outline: 2px solid yellow;*/
+            top: -8.75em !important;
+            left: -0.0em;
+            position: relative;
+        }
+        p.addr {
+            position: relative;
+            top: 0em;
+        }
+        
+        #addrTxt > p,
+        #mapTxt > p {
+            text-align: right;
+            font-size: 0.75em;
+            padding: .5em;
+        }
+        
+        #mapTxt > p {
+            top: -5.25em;
+            left: 0em;
+        }
+        
+        #addrTxt > h3 {
+            top: -4.5em;
+            position: relative;            
+        }
+        
+        #addrTxt {
+            position: relative;
+            
+        }
+        
+        #saleDescTxt {
+/*            outline: 2px dashed white;*/
+            height: 60%;
+            position: relative;
+            padding: 2em;
+            font-size: 1.3rem;
+            text-align: justify;
+            overflow: hidden;
+        }
+        
+        p.txt {
+            text-align: justify;
+            position: relative;
+            width: 95% !important;
+            width: 19vw;
+        }
+        
+        #saleDescTxt.txt {
+            text-align: justify;
+            overflow: auto;
+        }
+        
+        span.itemTxt {
+            text-align: center;
+            width: 95% !important;
+            /*            font-size: calc( 1.00em + 1vw );*/
+            font-size: 1.2em;
+            text-align: justify;
+            padding: 1em;
+        }
+        
+        .itemPic {
+            /*            padding: 2em;*/
+        }
+        #saleDescTxt > p > img {
+            
+        }
+        .salesPic {
+            border-radius: 5em;
+            float:right;
+            padding: 1em;
+        }
+        
+        p.txt img.pic {
+            padding: 1em;
+        }
+        
+        .horizLine {
+            transform: translate(115%);
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <h1 id="salesTitle">&gt; Sales &lt;</h1>
+    <div>
+        <audio id="sound1">
+            <source src="media/refresh_paul4.mp3" type="audio/mpeg" />
+        </audio>
+
+        <div id="container">
+
+            <div id="ball"></div>
+
+            <div class="saleLocationInfoBox">
+                <div class="mapDateAddr">
+                    <div>
+                        <span id="mapTxt">
+                            <h3>Sale Date</h3>
+                            <p>May 7, 2018 9AM-6PM</p>
+                        </span>
+                    </div>
+                    <div>
+                        <span id="addrTxt">
+                            <h3>Address</h3>
+                            <p class="addr">12424 C St Omaha, NE 68144</p>
+                        </span>
+                    </div>
+                    <div id="mapAll">
+                        <div id="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8358.951140745967!2d-96.09969875!3d41.22987285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1492737630750" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="saleDescTxt">
+                    <h3 class="hdg">Estate Sale  Description</h3>
+                    <p class="txt"><img  class="salesPic" src="http://lorempixel.com/80/80/" /> List of stuff includes: <span></span>Van Briggle Tv Lamp Roseville Pottery Cambridge Fostoria Depression Glass Vintage Fiesta LG Flat Panel Tv Elvis Albums Reba Lots of old school vintage country albums 45's Stereo Speakers Oil Paintings Buffet Sofa Bed loveseats X2 Nice like new Basset Sofa Victorian Furniture Art Deco Furniture Mid-Century Modern Furniture Bar Cart Cut glass Decanter Cedar chest Frig Washer / Dryer Outdoor Swing Redwood patio furniture Garden tools Tools Silverplate Flatware Microwave Dining Table & Chairs Vintage Wedding Dress </p>
+
+                </div>
+            </div>
+
+            <div class="picBox" id="first">
+                <img class="itemPic" alt="" src="media/Resized_20170308_155644.jpeg">
+
+                <span class="itemTxt"><h3>Picture 1</h3>Nulla domesticarum proident tamen incurreret. Dolore imitarentur incurreret malis nescius. Iis si nulla iudicem. Ab velit cernantur. Laboris ullamco ad appellat sint appellat mentitum, voluptate an quid eiusmod.</span>
+                <img class="horizLine" src="media/horizontal-line-clipart.gif" />
+                <br />
+                <div class="price">
+                    <span> $795.90</span>
+                    <br />
+                    <div class="centerMe">
+
+                        <input type="button" onclick="location.href='http://buy.refreshestatesales.biz/public_html/buy/index.php/product/coffee-grinder/';" value="Buy" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="picBox" id="second">
+                <img class="itemPic" alt="" src="media/Resized_20170307_133304.jpeg">
+                <span class="itemTxt"><h3>Picture 2</h3>Officia aliqua se pariatur exercitation. Consequat quo ipsum, singulis duis id 
+                eiusmod despicationes, occaecat culpa fabulas iudicem, ubi quid labore nisi cernantur. Multos ea fabulas quo ab iis illum 
+                noster velit.</span>
+                <img class="horizLine" src="media/horizontal-line-clipart.gif" />
+                <br />
+                <div class="price">
+                    <span> Priceless! </span>
+                    <br />
+
+                    <!--                <button type="button">Buy</button>-->
+                    <input type="button" onclick="location.href='http://buy.refreshestatesales.biz/public_html/buy/index.php/shop/';" value="Buy" />
+                </div>
+            </div>
+
+            <div class="picBox">
+                <figure>
+                    <figcaption>
+                        <h2> Dr.Harters liver pill</h2></figcaption>
+                    <img class="itemPic" alt="Dr Harters Liver Pill picture" src="media/Dr.Harters%20liver%20pill.png" title="Dr Harters Liver Pill">
+
+                </figure>
+                <figure>
+                    <figcaption>
+                        <h2> Dr.Harters liver pill, back</h2></figcaption>
+                    <img class="itemPic" alt="Dr Harters Liver Pill back picture" title="Dr Harters Liver Pill back" caption="This is a caption" src="media/Dr.Harters%20liver%20pill%20back.png">
+                </figure>
+                <span class="itemTxt"><h3>Picture 3</h3> Dr.Harters liver pill.</span>
+                <img class="horizLine" src="media/horizontal-line-clipart.gif" />
+                <br />
+                <div class="price">
+                    <span> $35.00</span>
+                    <br />
+                    <!--                <button type="button" id="button3" class="price">Buy</button>-->
+                    <input type="button" onclick="location.href='http://buy.refreshestatesales.biz/public_html/buy/index.php/shop/';" value="Buy" />
+                  
+                </div>
+            </div>
+
+            <div class="picBox">
+                <img class="itemPic" alt="" src="media/1487296374_p1110662.jpg">
+                <span class="itemTxt"><h3>Picture 4</h3></span>
+                <img class="horizLine" src="media/horizontal-line-clipart.gif" />
+                <br />
+                <div class="price">
+                    <span> $69.90 or obo</span>
+                    <br />
+                    <!--                <button type="button" id="button4" class="price">Buy</button>-->
+                    <input type="button" onclick="location.href='http://buy.refreshestatesales.biz/public_html/buy/index.php/shop/';" value="Buy" />
+                </div>
+            </div>
+
+            <div class="picBox">
+                <img class="itemPic" alt="" src="media/living_room_b4_sale.jpeg">
+                <span class="itemTxt"><h3 style="inline-block">Picture 5</h3> Tempor ea quem. Ex amet a esse quo culpa ingeniis offendit. Litteris dolor illum vidisse sint ubi consequat o elit non excepteur an quid quamquam,fugiat possumus quo nulla quem, te summis dolore si quibusdam ne fugiat singulis ab possumus quo nulla quem, graviterque, deserunt est amet nostrud, quis id possumus. Ea minim exercitation, fugiat possumus quo nulla quem, te summis dolore si quibusdam ne fugiat singulis ab possumus quo nulla quem, graviterque, deserunt est amet nostrud, quis id possumus. Ea minim exercitation
+            </span>
+                <img class="horizLine" src="media/horizontal-line-clipart.gif" />
+                <br />
+                <div class="price">
+                    <span> Make offer</span>
+                    <br />
+                    <!--                <button type="button" id="button5" class="price">Buy</button>-->
+                    <input type="button" onclick="location.href='http://buy.refreshestatesales.biz/public_html/buy/index.php/shop/';" value="Buy" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script>
+        $("header").load("header.html");
+        //        $("#footer").load("footer.html");
+
+        var movX = parseInt(Math.random() * 5) + 1;
+        var movY = parseInt(Math.random() * 5) + 1;
+
+        function randomColor() {
+            var r = parseInt(Math.random() * 256);
+            var b = parseInt(Math.random() * 256);
+            var g = parseInt(Math.random() * 256);
+            return "rgb(" + r + "," + g + "," + b + ")";
+        }
+
+        $("#ball" || "#container").click(function (e) {
+            var y = e.pageY;
+            var x = e.pageX;
+            $("#ball").css("top", y);
+            $("#ball").css("left", x);
+            $("#ball").css("background-color", randomColor());
+        });
+
+        function moveBall() {
+            var ballWidth = $("#ball").width();
+            var width = $("#container").width();
+            var height = $("#container").height();
+            height = height + (height * .07);
+            var x = parseInt($("#ball").css("left").split("px")[0]) + movX;
+            var y = parseInt($("#ball").css("top").split("px")[0]) + movY;
+            if (x > width - ballWidth / 2) {
+                movX = movX * -1;
+            }
+            if (y > height - ballWidth / 2) {
+                movY = movY * -1;
+            }
+            if (x < 0 + ballWidth / 2) {
+                movX = movX * -1;
+            }
+            if (y < 0 + ballWidth / 2) {
+                movY = movY * -1;
+            }
+            $("#ball").css("top", y);
+            $("#ball").css("left", x);
+        }
+
+        var myVar = setInterval(function () {
+            moveBall()
+        }, 69);
+
+        function myStopFunction() {
+            $("#ball").css({
+                "display": "none"
+            });
+        }
+
+        function mySpinFunction() {
+            $("#ball").toggleClass("spinBall");
+        }
+
+        var myTimeoutVar1;
+        var myTimeoutVar2;
+        $("#ball").click(function () {
+
+            $('#sound1').get(0).play();
+            clearInterval(myVar);
+            $("#ball").css({
+                "border": "5px dotted rgba(60, 104, 68, 1.0)"
+            });
+            $("#ball").css({
+                "background-color": "rgba(201, 129, 4, 1.0)"
+            });
+            $("#ball").css({
+                "transform": "translate(-50%, -50%)",
+                "transition": "all 2.69s ease-in"
+            });
+            myTimeoutVar1 = setTimeout(function () {
+                myStopFunction();
+            }, 12800);
+            myTimeoutVar2 = setTimeout(function () {
+                mySpinFunction();
+            }, 9000);
+        });
+
+        $(".price").click(function () {
+
+        });
+    </script>
+
+</body>
+
+</html>

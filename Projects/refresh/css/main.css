@@ -1,4 +1,149 @@
-/*     .   main     .   */
+/*  v1.01   .   main.css June 2017   . by Mark J Shaw  */
+
+
+/*  reset css start */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* reset css end */
 
 html {
     font-size: 1em;
@@ -8,7 +153,7 @@ html {
     box-sizing: border-box;
 }
 
-@media all and (max-width:445px) {
+@media all and (max-width:600px) {
     .paisleyBorderTop {
         display: none !important;
     }
@@ -40,7 +185,7 @@ html {
     }
 }
 
-@media all and (max-width:767px) {
+@media all and (max-width:1001px) {
     .paisleyBorderTop {
         display: none !important;
     }
@@ -63,9 +208,7 @@ html {
     }
 }
 
-@media all and (max-width:1070px) {}
-
-@media all and (max-width:1399px) {
+@media all and (max-width:1400px) {
     .hamburger {
         top: -0rem;
         left: -0rem;
@@ -119,7 +262,6 @@ h3 {
     text-shadow: 0.11rem 0.11rem rgba(112, 127, 116, 1.0);
     font-family: 'Architects Daughter', cursive;
     font-size: 2.0rem;
-    /*    font-size: calc( 2.0rem + 10px);*/
     z-index: +1;
 }
 
@@ -127,117 +269,25 @@ h3 {
     text-shadow: 0.11rem 0.11rem rgba(82, 97, 86, 1.0);
 }
 
-.paisleyBorderTop {
-    display: none;
-    display: inline-block;
-}
-
-
-/* ************* Start of item box ******* */
-
-.picBox {
-/*    border: 0.5rem solid rgba(244, 210, 161, 1.0);*/
-    border: 0.95rem solid rgba(244, 210, 161, 1.0); 
-    border-radius: 0rem !important;
-    border-style:   ridge;
-    background-color: rgba(112, 127, 116, 1.0);
-    -webkit-transition: background-color 3sec ease-in-out;
-    transition: background-color 3sec ease-in-out;
-    width: 140rem;
-    border-radius: 1rem;
-    margin: 3.0rem;
-    white-space: normal;
-    overflow: auto;
-    box-shadow: 1rem 2rem 4remx rgba(0, 0, 0, .8);
-    -moz-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.8);
-    -webkit-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .8);
-}
-
-.itemPic {
-    border: 0.67rem solid rgba(211, 211, 211, 1.0);
-    border-style: outset;
-    border-radius: 0rem;
-    display: inline;
-
-    box-shadow: 1rem 2rem 4remx rgba(0, 0, 0, .5);
-    -moz-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .5);
-    max-width: 53em;
-}
-
-.itemTxt {
-    font-family: sans-serif;
-    display: inline;
-    float: right;
-    width: 27rem;
-    margin: 0.5rem .5rem 1.5rem 0;
-}
-
-.horizLine {
-    display: inline-block;
-    width: 28%;
-    margin-left: 3%;
-}
-
-.centerMe {
-    text-align: center;
-}
-
 button:hover,
 input:hover {
     color: white !important;
     border: 0.21rem solid rgba(255, 255, 255, 1.0) !important;
-/*    font-size: 1.4rem !important;*/
-/*    font-size: calc( 2.2rem + 0.5px)!important;*/
-/*    width: 9.5rem;*/
     -webkit-transform: scale(0.9);
     transform: scale(0.9);
-    -transition: background-color all 1.5sec ease-in-out;
-    -webkit-transition: background-color 1.5sec ease-in-out;  
+    -webkit-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
 }
 
 input,
-button { 
+button {
     font-family: 'Architects Daughter', cursive !important;
     font-size: calc( 1.2rem + 1vw)!important;
     color: lightgray !important;
     border: 0.11rem solid black !important;
-    margin-top: 1.75rem!important;
-    margin-bottom: 1.75rem!important;
-    width: 7rem !important;
-    height: 3.5rem !important;
-    border-radius: 25% !important;
-    background-image: url("../media/cherry-wood-panels-background-header.jpg");
-    display: block;
-    margin: auto;
-    -transition: background-color all 1.5sec ease-in-out;
-    -webkit-transition: background-color 1.5sec ease-in-out;   
-}
-
-
-/* ************* end of item box ******* */
-
-#container {
-    position: relative;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    background-image: url("../media/cherry-wood-panels-background-header.jpg");
-    border: 0.4rem solid rgba(2, 255, 2, 0.3);
-    border-style: outset;
-    box-sizing: border-box;
-    overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-flow: wrap;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    -ms-flex-line-pack: distribute;
-    align-content: space-around;
-    width: 100%;
-    overflow: auto;
+    border-radius: 25%;
+    transition: all 1.5sec ease-in-out;
+    -webkit-transition: all 1.5sec ease-in-out;
 }
 
 img {
@@ -266,56 +316,6 @@ img {
     -webkit-animation: spin 0.35s ease infinite;
     animation: spin 0.435s ease infinite;
 }
-
-
-/*
-@-moz-keyframes spin {
-    100% {
-        -moz-transform: rotateY(180deg);
-    }
-}
-@-ms-keyframes spin {
-    100% {
-        -ms-transform: rotateY(180deg);
-    }
-}
-
-@-webkit-keyframes spin {
-    100% {
-        -webkit-transform: rotateY(180deg);
-    }
-}
-
-@keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotateY(180deg);
-    }
-}
-
-@-moz-keyframes spin {
-    100% {
-        -moz-transform: rotateX(180deg);
-    }
-}
-
-@-ms-keyframes spin {
-    100% {
-        -ms-transform: rotateX(180deg);
-    }
-}
-@-webkit-keyframes spin {
-    100% {
-        -webkit-transform: rotateX(180deg);
-    }
-}
-
-@keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotateX(180deg);
-    }
-*/
 
 #ball:hover {
     background-color: blue !important;

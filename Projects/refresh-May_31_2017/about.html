@@ -1,43 +1,36 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <!-- Housekeeping -->
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
-
-    <!--  JSON Manifest -->
-    <link rel="manifest" href="manifest.json">
-
+    <!-- CSS Stylesheet href's -->
+    <link rel="stylesheet" href="css/main.css">
+    <link media="all and (min-width: 100px) and (max-width: 776px)" rel="stylesheet" href="css/handheld.css">
+    <link media="all and (min-width: 777px) and (max-width: 2401px) " rel="stylesheet" href="css/desktop.css">
+    
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Carme|Indie+Flower|Montserrat:300,400,500,600,700,900|Reenie+Beanie|Roboto:100,100i,300,300i,400,400i,500,500i,700,900i|Shadows+Into+Light|Syncopate:400,700" rel="stylesheet">
 
-    <!-- CSS Stylesheet href's -->
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link media="all and (min-width: 100px) and (max-width: 600px)" rel="stylesheet" href="css/handheld.css">
-    <link media="all and (min-width: 601px) and (max-width: 2401px) " rel="stylesheet" href="css/desktop.css">
-
     <style>
+   
+        h2 {
 /*
-        rgba(35, 60, 39, 1.0);      <=Green
-        rgba(255, 175, 175, 1.0);   <==Pink
-        rgba(244, 210, 161, 1.0):   <==Tan
-*/        
+            position: fixed;
+            top: +2.5vmin;
+*/
+        }
+        
         #containerAbout {
+            /*            justify-content: space-around;*/
+/*            top: 5rem;*/
             position: inherit;
             width: 45vmin;
             height: 45vmin;
             perspective: 333vmin;
             perspective-origin: 100% 450px;
-            transform: translate(160%, 20rem);
-            -ms-transform: translate(160%, 20rem);
-            -webkit-transform: translate(160%, 20rem);
+            transform: translate(160%, 18rem);
+            -ms-transform: translate(160%, 18rem);
+            -webkit-transform: translate(160%, 18rem);
         }
         
         #cube {
@@ -80,15 +73,20 @@
             line-height: 2.3vmin;
             border-radius: 50%;
         }
+        /*
+        rgba(35, 60, 39, 1.0);<=Green
+        rgba(255, 175, 175, 1.0);<==Pink
+        rgba(244, 210, 161, 1.0):<==Tan
+*/
         
         .Bot {
             width: 140%;
-            height: 30%;
             border-radius: 0%;
             top: 33%;
             left: -25%;
             position: absolute;
             color: rgba(255, 255, 255, 0.8);
+            font-size: 2.3vmin;
             text-align: center;
             line-height: 2.3vmin;
             border: 15px solid transparent;
@@ -186,8 +184,7 @@
         
         #cube.showRight {
             transform: rotateY(-90deg);
-            -ms-transform: rotateY(-90deg);
-            -webkit-transform: rotateY(-90deg);
+            -ms-transform: rotateY(-90deg) -webkit-transform: rotateY(-90deg)
         }
         
         #left {
@@ -199,15 +196,15 @@
         }
         
         #cube.showLeft {
-            -webkit-transform: rotateY(90deg);
             transform: rotateY(90deg);
+            -ms- -webkit-
         }
         
         #rightFront {
             background-image: url("http://lorempixel.com/g/640/320");
             backface-visibility: hidden;
-            -webkit-transform: rotateY(45deg) translateZ(54vmin);
             transform: rotateY(45deg) translateZ(54vmin);
+            -ms- -webkit-
         }
         
         #cube.showRightFront {
@@ -268,21 +265,23 @@
             color: rgba(244, 210, 161, 0.9);
             top: 4.5rem;
             z-index: +5;
-            font-family: 'Architects Daughter', cursive;
+            font-family: 'Architects Daughter', cursive;            
+            
         }
         
         #aboutTitle {
+/*            position: relative;*/
             position: absolute;
             width: 100%;
             display: block;
-            text-align: center;
+            text-align: center;            
             font-size: 3.7rem;
-            top: 6.0rem;
+            top: 3.0rem;
             z-index: +1;
             font-family: 'Architects Daughter', cursive;
             color: rgba(244, 210, 161, 1.0);
             text-shadow: .22rem .33rem rgba(255, 255, 255, 0.55);
-            text-shadow: 1rem 1rem 2rem rgba(242, 255, 221, 0.7), 0 0 25rem rgba(242, 255, 2215, 0.7), 0 0 2rem rgba(242, 255, 221, 0.7);
+            text-shadow: 1rem 1rem 2rem rgba(242, 255, 221, 0.7), 0 0 25rem rgba(242, 255, 2215, 0.7), 0 0 2rem rgba(242, 255, 221, 0.7);            
         }
         
         .frontPicTxt,
@@ -341,8 +340,8 @@
         
         .bottomPicTxt {
             color: rgba(244, 210, 161, 1.0);
-            line-height: 1.5rem;
-            font-size: 1.5rem;
+            line-height: 5.0vmin;
+            font-size: 5.0vmin;
         }
         
         .rightBackPicTxt {
@@ -372,98 +371,71 @@
             transition: all 0.75s ease-in-out;
         }
         
-        #spin:hover {
-            border: 2px solid rgba(255, 255, 255, 1.0) !important;
-            transition: all 0.45s ease-in-out;
-            -webkit-transition: all 0.45s ease-in-out;
-            z-index: +3;
-        }
-        
-        .floatLeft {
-            float: left;
-            margin-left: 1.5rem;
-        }
-        
-        img.logo {
-            top: -9.0vmin;
-            -webkit-transform: translate(calc(50% - 24vmin)) !important;
-            transform: translate(calc(50% - 24vmin)) !important;
-        }
-        
-        .holdControls {
-            position: fixed;
-            top: 5rem;
-            left: 3rem;
-            width: 10rem;
-            height: 7rem;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
-            -webkit-box-align: top;
-            -ms-flex-align: top;
-            align-items: top;
-        }
-        
         #facePosition {
             position: relative;
             font-family: 'Architects Daughter', cursive;
+            width: 15rem;
+            top: 7rem;
             text-align: center;
             font-size: 1.75vw;
             color: rgba(244, 210, 161, 1.0);
+            border: 2px solid red;
             border: 2px solid rgba(244, 210, 161, 1.0);
             border-radius: 15px;
             z-index: +0;
         }
         
-        #spin {
+        button#spin {
             position: relative;
-            width: 5.75em;
-/*            margin-left: 2.0em;*/
-            font-size: 1.75em !important;
-            z-index: +16;
+            top:  7rem; !important;
+            font-size: 1.75rem !important;
+            left: -0.60rem !important;
+        }
+        
+        button#spin:hover {
+            border: 2px solid rgba(255, 255, 255, 1.0) !important;
+            transition: all 0.45s ease-in-out;
+            -webkit-transition: all 0.45s ease-in-out;
         }
         
         select {
             position: relative;
             display: inline-block;
             position: relative;
-            z-index: +3;
+            top:  7rem; !important;
+            left: 3.75rem !important;
         }
+
+        .floatLeft {
+            float: left;
+            margin-left: 1.5rem;
+        }
+        
     </style>
 </head>
 
 <body>
     <header></header>
-    
-    <container class="holdControls">
-        
-        <button type="button" id="spin" value="Spin">Spin</button>
-        <div id="facePosition"></div>
-        <select enable>
-            <option value="Front">1-Front</option>
-            <option value="Back">2-Back</option>
-            <option value="RightBack">3-RightBack</option>
-            <option value="RightFront">4-RightFront</option>
-            <option value="Right">5-Right</option>
-            <option value="Left">6-Left</option>
-            <option value="LeftFront">7-LeftFront</option>
-            <option value="LeftBack">8-LeftBack</option>
-            <option value="Top">9-Top</option>
-            <option value="Bottom">10-Bottom</option>
-        </select>
-
-    </container>
-    
-    <h1 id="aboutTitle">&gt; About &lt;</h1>
+    <h2 id="aboutTitle">&gt; About &lt;</h2>
     <main>
-
+        <div class="floatLeft">
+            <div id="facePosition"></div>
+            <button type="button" id="spin" value="Spin">Spin</button>
+            <select enable>
+                <option value="Front">1-Front</option>
+                <option value="Back">2-Back</option>
+                <option value="RightBack">3-RightBack</option>
+                <option value="RightFront">4-RightFront</option>
+                <option value="Right">5-Right</option>
+                <option value="Left">6-Left</option>
+                <option value="LeftFront">7-LeftFront</option>
+                <option value="LeftBack">8-LeftBack</option>
+                <option value="Top">9-Top</option>
+                <option value="Bottom">10-Bottom</option>
+            </select>
+            
+        </div>
+        
         <div id="containerAbout">
             <div id="cube">
 
@@ -486,7 +458,7 @@
                 <div class="side" id="back">
                     <p class="backPicTxt">We provide a personalized service
                         <br />meeting the needs <span class="underline">you</span> have identified. So&nbsp;
-                        <br/>
+                        <br/> 
                         <a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/"> contact us! </a></p>
                 </div>
 
@@ -516,7 +488,6 @@
                         <br /> and delegate one of your many responsibilies,
                         <br /> with peace of mind and with <span class="underline">our</span> satisfaction guarantee.</p>
                 </div>
-
                 <div class="side Bot" id="bottom">
                     <p class="bottomPicTxt">So .&nbsp;.&nbsp;.&nbsp;
                         <br /><a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/"> contact us </a>
@@ -526,49 +497,49 @@
 
             </div>
         </div>
+    </div>
 
-        <footer id="footer"></footer>
-    </main>
+    <footer id="footer"></footer>
+
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <script>
         $("header").load("header.html");
         //$("#footer").load("footer.html");
 
-        $(document).ready(function () {
+        //Front, Back, Right, Left, Top, Bottom,
+        //RightFront, LeftFront, RightBack, LeftBack
+        function rotateCube(side) {
+            $("#cube").attr("class", "");
+            $("#cube").addClass("show" + side);
+        }
 
-            //Front, Back, Right, Left, Top, Bottom,
-            //RightFront, LeftFront, RightBack, LeftBack
-            function rotateCube(side) {
-                $("#cube").attr("class", "");
-                $("#cube").addClass("show" + side);
-            }
-
-            $("#spin").click(function () {
-                var side = $("select").val();
-                rotateCube(side);
-                $("#facePosition").text(side);
-            });
-
-            var lastSide = 0;
-            var randomIdx = 0;
-            setInterval(function () {
-                var sides = ["Front", "Back", "RightBack", "RightFront", "Right", "Left", "LeftFront", "LeftBack", "Top", "Bottom", "Top", "Bottom"];
-                var random = parseInt(Math.random() * 12);
-                while (random == lastSide) {
-                    random = parseInt(Math.random() * 12);
-                }
-                lastSide = random;
-
-                randomIdx = random;
-                if (randomIdx == 10) {
-                    randomIdx = 8;
-                } else if (randomIdx == 11) {
-                    randomIdx = 9;
-                }
-                rotateCube(sides[random]);
-                $("#facePosition").text((randomIdx + 1) + "-" + sides[random]);
-            }, 7000);
+        $("button").click(function () {
+            var side = $("select").val();
+            rotateCube(side);
+            $("#facePosition").text(side);
+            //            console.log("*****side= " + side);
         });
+
+        var lastSide = 0;
+        var randomIdx = 0;
+        setInterval(function () {
+            var sides = ["Front", "Back", "RightBack", "RightFront", "Right", "Left", "LeftFront", "LeftBack", "Top", "Bottom", "Top", "Bottom"];
+            var random = parseInt(Math.random() * 12);
+            while (random == lastSide) {
+                random = parseInt(Math.random() * 12);
+            }
+            lastSide = random;
+
+            //            console.log("random= " + random + " sides[random]= " + sides[random]);
+            randomIdx = random;
+            if (randomIdx == 10) {
+                randomIdx = 8;
+            } else if (randomIdx == 11) {
+                randomIdx = 9;
+            }
+            rotateCube(sides[random]);
+            $("#facePosition").text((randomIdx + 1) + "-" + sides[random]);
+        }, 7000);
     </script>
 </body>
 
