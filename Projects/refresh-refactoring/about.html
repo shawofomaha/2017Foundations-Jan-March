@@ -382,41 +382,10 @@
             transition: all 0.75s ease-in-out;
         }
         
-        #facePosition {
-            position: relative;
-            font-family: 'Architects Daughter', cursive;
-            width: 15rem;
-            top: 7rem;
-            text-align: center;
-            font-size: 1.75vw;
-            color: rgba(244, 210, 161, 1.0);
-            border: 2px solid red;
-            border: 2px solid rgba(244, 210, 161, 1.0);
-            border-radius: 15px;
-            z-index: +0;
-        }
-        
-        button#spin {
-            position: relative;
-            top: 7rem;
-            font-size: 1.75rem !important;
-            left: -0.60rem !important;
-            z-index: +3;
-        }
-        
         button#spin:hover {
             border: 2px solid rgba(255, 255, 255, 1.0) !important;
             transition: all 0.45s ease-in-out;
             -webkit-transition: all 0.45s ease-in-out;
-            z-index: +3;
-        }
-        
-        select {
-            position: relative;
-            display: inline-block;
-            position: relative;
-            top: 7rem;
-            left: 3.75rem !important;
             z-index: +3;
         }
         
@@ -429,12 +398,57 @@
             top: -9.0vmin;
             transform: translate(calc(-50% - 24vmin)) !important;              
         }
+        .holdControls {
+            position: fixed;
+            top: 5rem;
+            left: 3rem;
+            width: 10rem;
+            height: 7rem;
+/*            outline: 2px solid yellow;*/
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: top;
+        }
+        #facePosition {
+            position: relative;
+            font-family: 'Architects Daughter', cursive;
+/*
+            width: 15rem;
+            top: 7rem;
+*/
+            text-align: center;
+            font-size: 1.75vw;
+            color: rgba(244, 210, 161, 1.0);
+            border: 2px solid red;
+            border: 2px solid rgba(244, 210, 161, 1.0);
+            border-radius: 15px;
+            z-index: +0;
+        }
+        
+        button#spin {
+            position: relative;
+            width: 4.5rem;
+            margin-left: 2.0rem;
+/*            top: 7rem;*/
+            font-size: 1.75rem !important;
+/*            left: -0.60rem !important;*/
+            z-index: +3;
+        }
+                select {
+            position: relative;
+            display: inline-block;
+            position: relative;
+/*            top: 7rem;*/
+/*            left: 3.75rem !important;*/
+            z-index: +3;
+        }
     </style>
 </head>
 
 <body>
-
-    <div class="floatLeft w3-container">
+<!--    <div class="floatLeft w3-container"-->
+    <div class="holdControls">
         <div id="facePosition"></div>
         <button type="button" id="spin" value="Spin">Spin</button>
         <select enable>
