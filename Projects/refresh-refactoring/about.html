@@ -24,16 +24,12 @@
     <link media="all and (min-width: 601px) and (max-width: 2401px) " rel="stylesheet" href="css/desktop.css">
 
     <style>
-        h2 {
-            /*
-            position: fixed;
-            top: +2.5vmin;
-*/
-        }
-        
+/*
+        rgba(35, 60, 39, 1.0);      <=Green
+        rgba(255, 175, 175, 1.0);   <==Pink
+        rgba(244, 210, 161, 1.0):   <==Tan
+*/        
         #containerAbout {
-            /*            justify-content: space-around;*/
-            /*            top: 5rem;*/
             position: inherit;
             width: 45vmin;
             height: 45vmin;
@@ -84,11 +80,6 @@
             line-height: 2.3vmin;
             border-radius: 50%;
         }
-        /*
-        rgba(35, 60, 39, 1.0);<=Green
-        rgba(255, 175, 175, 1.0);<==Pink
-        rgba(244, 210, 161, 1.0):<==Tan
-*/
         
         .Bot {
             width: 140%;
@@ -98,7 +89,6 @@
             left: -25%;
             position: absolute;
             color: rgba(255, 255, 255, 0.8);
-            
             text-align: center;
             line-height: 2.3vmin;
             border: 15px solid transparent;
@@ -196,7 +186,8 @@
         
         #cube.showRight {
             transform: rotateY(-90deg);
-            -ms-transform: rotateY(-90deg) -webkit-transform: rotateY(-90deg)
+            -ms-transform: rotateY(-90deg);
+            -webkit-transform: rotateY(-90deg);
         }
         
         #left {
@@ -208,15 +199,15 @@
         }
         
         #cube.showLeft {
+            -webkit-transform: rotateY(90deg);
             transform: rotateY(90deg);
-            -ms- -webkit-
         }
         
         #rightFront {
             background-image: url("http://lorempixel.com/g/640/320");
             backface-visibility: hidden;
+            -webkit-transform: rotateY(45deg) translateZ(54vmin);
             transform: rotateY(45deg) translateZ(54vmin);
-            -ms- -webkit-
         }
         
         #cube.showRightFront {
@@ -281,7 +272,6 @@
         }
         
         #aboutTitle {
-            /*            position: relative;*/
             position: absolute;
             width: 100%;
             display: block;
@@ -394,33 +384,38 @@
             margin-left: 1.5rem;
         }
         
-        img.logo  {
+        img.logo {
             top: -9.0vmin;
-            transform: translate(calc(-50% - 24vmin)) !important;              
+            transform: translate(calc(-50% - 24vmin)) !important;
         }
+        
         .holdControls {
             position: fixed;
             top: 5rem;
             left: 3rem;
             width: 10rem;
             height: 7rem;
-/*            outline: 2px solid yellow;*/
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
             justify-content: space-between;
+            -webkit-box-align: top;
+            -ms-flex-align: top;
             align-items: top;
         }
+        
         #facePosition {
             position: relative;
             font-family: 'Architects Daughter', cursive;
-/*
-            width: 15rem;
-            top: 7rem;
-*/
             text-align: center;
             font-size: 1.75vw;
             color: rgba(244, 210, 161, 1.0);
-            border: 2px solid red;
             border: 2px solid rgba(244, 210, 161, 1.0);
             border-radius: 15px;
             z-index: +0;
@@ -430,24 +425,21 @@
             position: relative;
             width: 4.5rem;
             margin-left: 2.0rem;
-/*            top: 7rem;*/
             font-size: 1.75rem !important;
-/*            left: -0.60rem !important;*/
             z-index: +3;
         }
-                select {
+        
+        select {
             position: relative;
             display: inline-block;
             position: relative;
-/*            top: 7rem;*/
-/*            left: 3.75rem !important;*/
             z-index: +3;
         }
     </style>
 </head>
 
 <body>
-<!--    <div class="floatLeft w3-container"-->
+
     <div class="holdControls">
         <div id="facePosition"></div>
         <button type="button" id="spin" value="Spin">Spin</button>
@@ -466,9 +458,8 @@
 
     </div>
     <header></header>
-    <h2 id="aboutTitle">&gt; About &lt;</h2>
+    <h1 id="aboutTitle">&gt; About &lt;</h1>
     <main>
-
 
         <div id="containerAbout">
             <div id="cube">
@@ -522,6 +513,7 @@
                         <br /> and delegate one of your many responsibilies,
                         <br /> with peace of mind and with <span class="underline">our</span> satisfaction guarantee.</p>
                 </div>
+
                 <div class="side Bot" id="bottom">
                     <p class="bottomPicTxt">So .&nbsp;.&nbsp;.&nbsp;
                         <br /><a href="http://buy.refreshestatesales.biz/public_html/buy/index.php/contact/"> contact us </a>
@@ -531,7 +523,6 @@
 
             </div>
         </div>
-
 
         <footer id="footer"></footer>
     </main>
@@ -553,7 +544,6 @@
                 var side = $("select").val();
                 rotateCube(side);
                 $("#facePosition").text(side);
-                //            console.log("*****side= " + side);
             });
 
             var lastSide = 0;
@@ -566,7 +556,6 @@
                 }
                 lastSide = random;
 
-                //            console.log("random= " + random + " sides[random]= " + sides[random]);
                 randomIdx = random;
                 if (randomIdx == 10) {
                     randomIdx = 8;
@@ -578,7 +567,6 @@
             }, 7000);
         });
     </script>
-
 </body>
 
 </html>
