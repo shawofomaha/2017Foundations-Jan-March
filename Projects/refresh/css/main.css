@@ -226,6 +226,7 @@ body {
     background-color: rgba(0, 0, 0, 1.0);
     -webkit-transition: background-color 3sec ease-in-out;
     transition: background-color 3sec ease-in-out;
+    background-color: rgba(2,2,2,1.0);
     margin: 0;
 }
 

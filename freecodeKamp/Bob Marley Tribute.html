@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <title>Bob Marley Tribute</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@font-family-sans-serif:</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+    html {
+        font-size: 2em;
+    }
+    
+    h1,
+    h2 {
+        text-shadow: -2px -2px 7px rgba(0, 255, 0, 1.0);
+    }
+    
+    h2 {
+        font-size: 2.75em;
+    }
+    
+    body {
+        height: 250vh;
+        background: rgba(112, 127, 116, 1.0) !important;
+        /* For browsers that do not support gradients */
+        background: -ms-linear-gradient(left, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0)) !important;
+        /* For Microsoft */
+        background: -webkit-linear-gradient(left, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0)) !important;
+        /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0)) !important;
+        /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0)) !important;
+        /* For Firefox 3.6 to 15 */
+        background: linear-gradient(to right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0)) !important;
+        /* Standard syntax */
+    }
+    
+    .row {
+        width: 80%;
+        transform: translate(10%);
+        box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .8);
+        -moz-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.8);
+        -webkit-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .8);
+        /*        border-radius: 3rem;*/
+        border: 1.5em solid rgba(222, 222, 11, 1.0);
+        border-style: ridge;
+        background: rgba(112, 127, 116, 1.0) !important;
+        /* For browsers that do not support gradients */
+        background: -ms-linear-gradient(left, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0)) !important;
+        /* For Microsoft */
+        background: -webkit-linear-gradient(left, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0)) !important;
+        /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0)) !important;
+        /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0)) !important;
+        /* For Firefox 3.6 to 15 */
+        background: linear-gradient(to right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 1.0)) !important;
+        /* Standard syntax */
+    }
+    /*     image*/
+    
+    .centerMe {
+        width: 40%;
+        height: 40%;
+        margin: auto;
+        margin-top: 3em;
+        box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .8);
+        -moz-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.8);
+        -webkit-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .8);
+        border: 1.5em solid rgba(222, 222, 11, 1.0);
+        border-style: ridge;
+    }
+    
+    .para:first-of-type {
+        margin-top: 1rem;
+    }
+    
+    .para {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+        font-size: 1.5em !important;
+        font-weight: 400 !important;
+    }
+    
+    .textContainer {
+        border: 2px solid rgba(222, 222, 222, 0.70);
+        background-color: rgba(211, 211, 211, 0.35);
+        border-radius: 1.5rem;
+        margin: 3em;
+        box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .8);
+        -moz-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.8);
+        -webkit-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .8);
+    }
+    
+    blockquote {
+        border-left: none !important;
+        font-size: 2.5em !important;
+        font-weight: 600 !important;
+    }
+    
+    blockquote em strong {
+        text-shadow: -2px -2px 7px rgba(0, 255, 0, 1.0);
+    }
+    
+    .quoteContainer {
+        display: block;
+        margin: auto;
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+        background-color: rgba(211, 211, 211, 0.35);
+        text-align: center;
+        width: 80%;
+        border: 2px solid rgba(222, 222, 222, 0.70);
+        border-radius: 5rem;
+        box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, .5);
+        -moz-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .5);
+    }
+    iframe {
+      width: 100%;
+      display: block;
+      margin: auto;
+      min-width: 182px;
+      height: auto;
+    }
+    .iframe { 
+        width: 38.5%;
+        min-width: 197px;
+        background-color: rgba(211, 211, 11, 1.0);
+        transform: translate(71.5%);
+        margin-top: 1rem;
+        margin-bottom: 1.0rem;
+        box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .6);
+        -moz-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.6);
+        -webkit-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .6);
+        border: 0.75rem solid rgba(222, 222, 11, 1.0);
+        border-style: ridge;
+    }
+    
+    .album {
+        display: block;
+        min-width: 182px;
+        width: 35.0%;
+        padding-top: 1em;
+        margin: auto;
+        margin-top: 2em;
+        margin-bottom: 2.5em;
+        position: relative;
+        box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, .3);
+        -moz-box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, .3);
+        border: 0.75rem solid rgba(222, 222, 11, 1.0);
+        border-style: ridge;
+    }
+    
+    .colrGreen {
+        color: rgba(0, 255, 0, 1.0);
+        text-shadow: -2px -2px 7px rgba(0, 255, 0, 1.0);
+    }
+    
+    a {
+        color: rgba(255, 255, 255, 1.0) !important;
+        text-shadow: -2px -2px 7px rgba(0, 255, 0, 1.0);
+        text-decoration: none;
+    }
+    a:hover {
+        background-color: rgba(255,255,255,0.25) !important;
+        border-radius: 5px;
+        font-size: 1.0em !important;
+        transition: all .75sec ease-in;
+    }    
+</style>
+
+<body>
+    <div class="containerfluid">
+        <div class="jumbotron">
+            <div class="row">
+                <h1 class="text-center page-header">Bob Marley Tribute</h1>
+                <div class="quoteContainer">
+                    <h3 class="text-center small"><blockquote>&#8220;Open your eyes and look within. Are you satisfied with the life you are living?&#8221; - <em><strong><a href="http://www.bobmarley.com/history/">Bob Marley</a></strong></em></blockquote></h3></div>
+                <div class="block-center">
+                    <img width="" alt="Bob Marley 1978" class="img-responsive centerMe" src="https://www.biography.com/.image/t_share/MTIwNjA4NjMzOTA3MTUyMzk2/bob-marley-9399524-1-402.jpg">
+                </div>
+
+                <div class="textContainer  text-justify">
+                    <h2 class="text-center">Rastaman Vibration</h2>
+                    <div class="text-justify album">
+                        <dl>
+                            <dt>&nbsp;&nbsp;&nbsp;&nbsp;Bob Marley</dt>
+                            <dt>&nbsp;&nbsp;&nbsp;&nbsp;Rastaman Vibration</dt>
+                            <dd>&nbsp;&nbsp; 1. Positive Vibration</dd>
+                            <dd>&nbsp;&nbsp; 2. Roots, Rock, Reggae</dd>
+                            <dd>&nbsp;&nbsp; 3. Johnny Was</dd>
+                            <dd>&nbsp;&nbsp; 4. Cry to Me</dd>
+                            <dd>&nbsp;&nbsp; 5. Want More</dd>
+                            <dd>&nbsp;&nbsp; 6. Crazy Baldhead</dd>
+                            <dd>&nbsp;&nbsp; 7. Who the Cap Fit</dd>
+                            <dd>&nbsp;&nbsp; 8. Night Shift</dd>
+                            <dd>&nbsp;&nbsp; 9. War</dd>
+                            <dd>&nbsp;10. Rat Race</dd>
+                        </dl>
+                    </div>
+
+                    <h2 class="text-center "><a href="http://www.bobmarley.com/history/">Bob Marley</a></h2>
+
+                    <p class="para">Marley, Bob |ˈmärlē| (1945–81), Jamaican reggae singer, guitarist, and songwriter; full name Robert Nesta Marley. Instrumental in popularizing reggae in the 1970s, his lyrics often reflected his commitment to <a href="https://en.wikipedia.org/wiki/Rastafari">Rastafarianism</a>.
+                    </p>
+
+                    <p class="para"><a href="http://www.bobmarley.com/history/">Bob Marley </a>catapulted to international stardom in 1976 with the release of “Rastaman Vibration”, his only album to reach the Billboard Top 200, peaking at no. 8. With the inclusion of “Crazy Baldhead”, which decries “brainwash education” and the stirring title cut, “Rastaman Vibration” presented a clearer understanding of Rastafari teachings to the mainstream audience that was now attentively listening to Bob.</p>
+
+                    <div class="iframe">
+                        <figure>
+                            <figcaption class="text-center">Crazy Baldheads</figcaption>
+                            <iframe width="auto" height="auto" src="https://www.youtube.com/embed/BR0fQ6wJb6A" frameborder="0" allowfullscreen></iframe>
+                        </figure>
+                    </div>
+                    <!--                <iframe width="560" height="315"-->
+                    <p class="para">Also included was “War”, its lyrics adapted from an impassioned speech to the United Nations General Assembly in 1963, delivered by Ethiopian Emperor Haile Selassie I whom Rastafarians consider a living God. Thirty-five years after its initial release “War” remains an unassailable anthem of equality, its empowering spirit embraced by dispossessed people everywhere.</p>
+
+
+                    <p class="para">Interesting that six years later the “brainwash education” theme was used to great effect on Pink Floyd's The Wall. Repeating the theme of social unrest caused by our educational system of indoctrination.
+                    </p>
+
+                    <p class="para text-center">From Wikipedia, the free encyclopedia:
+                        <a href="https://en.wikipedia.org/wiki/Bob_Marley"><strong>Bob Marley</strong></a>
+                    </p>
+                </div>
+
+                <div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

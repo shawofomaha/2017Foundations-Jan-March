@@ -33,14 +33,14 @@
             text-align: center;
             font-size: 3.7rem;
             color: rgba(244, 210, 161, 0.9);
-            text-shadow: 0rem 1rem 1rem rgba(66, 66, 66, 0.7), 0 0 6.5rem rgba(111, 111, 112, 0.7), 0.4rem 0.5rem 0.5rem;            
+            text-shadow: 0rem 1rem 1rem rgba(66, 66, 66, 0.7), 0 0 6.5rem rgba(111, 111, 112, 0.7), 0.4rem 0.5rem 0.5rem;
             top: 6.5rem;
             z-index: +5;
             font-family: 'Architects Daughter', cursive;
             -webkit-transition: all 0.7s ease-in-out;
             transition: all 0.7s ease-in-out;
         }
-       
+        
         #simpleToggle:hover {
             max-width: 11.75rem !important;
             background-color: rgba(121, 201, 1, 0.5) !important;
@@ -90,13 +90,6 @@
             /* For Firefox 3.6 to 15 */
             background: linear-gradient(to right, rgba(16, 93, 0, 1.0), rgba(118, 173, 0, 0.65));
             /* Standard syntax */
-            /*
-            box-shadow: 1rem 2rem 4remx rgba(0, 0, 0, .8);
-            -moz-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.8);
-            -webkit-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .8);            box-shadow: 1rem 2rem 4remx rgba(0, 0, 0, .8);
-            -moz-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.8);
-            -webkit-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .8);            
-*/
         }
         
         #indexInfoBox #para {
@@ -106,37 +99,58 @@
         
         #indexInfoBox h3 {
             position: relative;
+            top: -4em;
             text-shadow: 0rem 1rem 1rem rgba(165, 165, 166, 0.7), 0 0 6.5rem rgba(111, 111, 112, 0.7), 0.4rem 0.5rem 0.5rem;
         }
         
         #container {
-            background-image: url("media/cherry-wood-panels-background-header.jpg");             
+            /*            position: fixed;*/
+            position: relative;
+            width: 100%;
+            /*            height: 200%;*/
+            height: 79em;
+            top: 10em;
+            background-image: url("media/cherry-wood-panels-background-header.jpg");
         }
         
         #indexInfoBox {
             position: relative;
+            margin: auto;
+            /*
             overflow-x: hidden;
             overflow-y: auto;
-            top: 5.5rem;
-            padding: 3.5rem;
+*/
+            top: 1.5em;
+            padding: 3.5em;
+            height: 32em;
             background-color: rgba(232, 195, 150, 0.35);
-            /*            background-color: rgba(22, 22, 22, 0.55);*/
             color: rgba(2, 2, 2, 0.99);
-            /* Stan2 */
             text-shadow: 0.11rem 0.11rem rgba(198, 75, 13, 1.0);
             font-family: 'Aladin', cursive;
             font-weight: bolder;
-/*            background-image: url("media/cherry-wood-panels-background-header.jpg");            */
-            font-size: 1.85rem;
-            min-width: 80%;
-            border-top: 0.17rem solid rgba(255, 255, 255, 0.65);
-            border-bottom: 0.77rem solid rgba(255, 255, 255, 1.0);
-            border-left: 0.97rem groove rgba(255, 255, 255, 1.0);
-            border-right: 0.17rem solid rgba(255, 255, 255, 1.0);
-            border-radius: 1.5rem;
-            box-shadow: 1rem 2rem 4remx rgba(0, 0, 0, .8);
-            -moz-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.8);
-            -webkit-box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .8);
+            font-size: 2.15em;
+            width: 80%;
+            line-height: 1.27em;
+            /*            height: 90% !important;*/
+            border-top: 0.17em solid rgba(255, 255, 255, 0.65);
+            border-bottom: 0.27em solid rgba(255, 255, 255, 1.0);
+            border-left: 0.47em groove rgba(255, 255, 255, 1.0);
+            border-right: 0.27em solid rgba(255, 255, 255, 1.0);
+            border-radius: 1.5em;
+            box-shadow: 1rem 2em 4em rgba(0, 0, 0, .8);
+            -moz-box-shadow: 1em 2em 4em rgba(0, 0, 0, 0.8);
+            -webkit-box-shadow: 1em 2em 4em rgba(0, 0, 0, .8);
+        }
+        
+        h4 {
+            position: relative;
+            top: -2em;
+        }
+        
+        p {
+            position: relative;
+            top: -2.5em;
+            min-width: 24em;
         }
         
         p.ownerContact {
@@ -154,7 +168,6 @@
         p.ownerContact a:hover {
             color: rgba(155, 244, 66, 0.9);
         }
-
         /******* Modal start *******/
         /* The Modal (background) */
         
@@ -212,27 +225,27 @@
         
         #myBtn:hover {
             position: relative;
-            top: 0rem;
-            left: 0rem;
-            min-height: 3rem !important;
-            width: 19.5rem !important;
+            top: -2.5em;
+            min-height: 3em !important;
+            width: 19.5em !important;
             background-color: rgba(121, 201, 1, 0.5) !important;
             color: rgba(242, 242, 242, 1.0) !important;
             font-family: sans-serif !important;
-            font-size: 1.59rem !important;
-            border: 0.21rem dotted rgba(2, 255, 2, 1.0) !important;
+            font-size: 1.59em !important;
+            border: 0.21em dotted rgba(2, 255, 2, 1.0) !important;
             border-radius: 50% !important;
             transition: all 0.7s ease-in-out;
         }
         
         #myBtn {
             position: relative;
+            top: -2.5em;
+            left: 4em;
             margin-left: 8.5%;
             font-family: 'Architects Daughter', cursive;
-            background-color: rgba(255, 255, 255, 1.0);
             background-color: rgba(222, 222, 222, 0.85) !important;
-            font-size: 1.7rem !important;
-            border-radius: 1.5rem !important;
+            font-size: 1.7em !important;
+            border-radius: 1.5em !important;
             color: rgba(2, 2, 2, 1.0) !important;
             transition: all 0.7s ease-in-out;
             box-shadow: .25rem 0.27rem rgba(4, 4, 4, 0.85), 1rem 1rem 2rem rgba(211, 211, 211, 0.7);
@@ -252,14 +265,28 @@
         
         .txtShadow {
             font-family: sans-serif;
+            
             text-shadow: none !important;
-            font-size: 1.0rem;
             color: rgba(2, 2, 2, 1.0) !important;
             -moz-transition: all 2.7s ease-in-out;
             -ms-transition: all 2.7s ease-in-out;
             transition: all 2.7s ease-in-out;
         }
         
+        .paddingBox {
+            padding-right: 1.5em !important;
+            padding-left: 1.5em !important;
+        }
+        
+        .lightGrey {
+           background-color: rgba(2,2,2,0.175); 
+        }
+        
+        .txtShadow2 {
+            position: relative !important;
+            top: -4.0em;
+        }
+                   
         .colorRed {
             color: red;
         }
@@ -269,7 +296,7 @@
         }
         
         .boxBorder {
-            padding: 1.5rem; 
+            padding: 1.5rem;
             border-top: 0.17rem solid rgba(111, 111, 111, 1.0);
             border-bottom: 0.77rem solid rgba(111, 111, 111, 1.0);
             border-left: 0.97rem groove rgba(111, 111, 111, 1.0);
@@ -287,41 +314,69 @@
         
         @media screen and (max-width:1399px) {
             #simpleToggle {
-                top: -1.5rem !important;
-                left: +17rem !important;
+                top: 2.5rem !important;
+                left: +10rem !important;
             }
         }
         
         @media screen and (max-width:1075px) {
             #simpleToggle {
-                top: -1.5rem !important;
+                top: 2.5rem !important;
                 left: +10.5rem !important;
             }
         }
         
         @media screen and (max-width:767px) {
             #simpleToggle {
-                top: -1.5rem !important;
+                top: 2.5rem !important;
                 left: +5.80rem !important;
             }
         }
         
         @media screen and (max-width:600px) {
             #simpleToggle {
-                top: -1.5rem!important;
+                top: 2.5rem!important;
                 left: +5.80rem !important;
             }
         }
+        
+        .tooltip {
+            position: relative;
+            
+            display: inline-block;
+            border-bottom: 1px dotted black;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #fff;
+            color: black;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            left: 18em;
+        }
     </style>
-    
+
     <!-- Gravity Scan Site Verification -->
-    <meta name="gravityscan-site-verification" content="5c7497d02a69ee8d58405d2dfe9ab8bd0429609139809fe48214bab23df6afac"/>    
+    <meta name="gravityscan-site-verification" content="5c7497d02a69ee8d58405d2dfe9ab8bd0429609139809fe48214bab23df6afac" />
 </head>
 
 
 <body>
+    <div class="tooltip">
+        <button id="simpleToggle">Simplify</button>
+        <span class="tooltiptext">Press this button to get black text on a white background.</span>
+    </div>
 
-    <button id="simpleToggle">Simplify</button>
     <header>Head and nav in header.html</header>
 
     <h2 id="homeTitle">&gt; Home &lt;</h2>
@@ -345,10 +400,21 @@
                     <h3 id="ourStory">Our Story</h3>
 
                     <p>From antiques to ascots, we have the personal experience necessary to help you liquidate your estate assets. After inheriting a large quantity of possessions, we were inspired to help others in this daunting task.</p>
+                    <br>
 
                     <p>So, take advantage of our unique and personable approach to help manage your burden. We will walk you through the Estate Sale process from pricing and inventory, to costs and then finally sales! Let our specialists both inspect and model handling procedures to help you maximize preservation and your profit.</p>
+                    <br>
 
                     <p>We perform the difficult and tiring task of pictorially documenting your precious possessions, while helping you to advertise to a wider audience. This will help attract more buyers to your event.</p>
+                    <br>
+
+                    <!--
+                    <details>
+                        <summary>Copyright 1999-2014.</summary>
+                        <p> - by Refsnes Data. All Rights Reserved.</p>
+                        <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+                    </details>
+-->
 
                     <h4 class="ownerContact">Call for a free onsite consultation.<br/> Dave or Theresa <a href="tel:605-661-9891">(605) 661-9891</a></h4>
 
@@ -423,7 +489,6 @@
         });
 
         function moveBall() {
-            //            debugger;
             var ballWidth = $("#ball").width();
             var width = $("#container").width();
             var height = $("#container").height();
@@ -493,42 +558,65 @@
 
 
         $("#simpleToggle").click(function () {
+            
+            $("#para", "#indexInfoBox").css({
+                "font-size": "0.85em",
+                "background-color": "rgba(2, 2, 2, 0.001) !important",
+                "-webkit-transition": "all 3.7s ease-in-out",
+                "-moz-transition": "all 3.7s ease-in-out",
+                "-ms-transition": "all 3.7s ease-in-out",
+                "transition": "all 3.7s ease-in-out"
+            });            
 
-
-            $("#container,#indexInfoBox, #para ").css({
-                "background-image": "url('media/white.png')",
+            $("#container").css({
+                "background-image": "url('media/gradient-white-grey-linear-1280x768.png')",
+                "background-origin": "content-box",
+                "background-size": "cover",
                 "-webkit-transition": "all 3.7s ease-in-out",
                 "-moz-transition": "all 3.7s ease-in-out",
                 "-ms-transition": "all 3.7s ease-in-out",
                 "transition": "all 3.7s ease-in-out"
             });
-
+ 
             var myTimeoutVar1;
             myTimeoutVar1 = setTimeout(function () {
                 $("p").addClass("txtShadow");
                 $("h2").addClass("txtShadow");
                 $("h3").addClass("txtShadow");
                 $("h4").addClass("txtShadow");
-                $("#para").addClass("boxShadow");
-
             }, 4200);
 
             var myTimeoutVar3;
             myTimeoutVar3 = setTimeout(function () {
-                $("#homeTitle").addClass("simpH2");
-                $("#ourStory").addClass("simpH3");
+                $("#homeTitle").addClass("simpH2").css({
+                    "transition": "all 1.7s ease-in-out"
+                });
+                $("#ourStory").addClass("simpH3").css({
+                    "transition": "all 2.7s ease-in-out"
+                });
+                $("#container").addClass("lightGrey").css({
+                    "transition": "all 0.7s ease-in-out"
+                });
+                $("#indexInfoBox").addClass("lightGrey paddingBox").css({
+                    "transition": "all 3.7s ease-in-out"
+                });
             }, 6950);
 
+        
             var myTimeoutVar2;
-            myTimeoutVar2 = setTimeout(function () {
-                $("#para").addClass("boxBorder");
+            myTimeoutVar2 = setTimeout(function () {               
+                
+//                $("h4.ownerContact").css({
+//                    "position": "relative",
+//                    "top": "14em !important"
+//                });
+                //                $("#para").addClass("boxBorder");
                 myStopFunction();
 
             }, 4650);
 
             var myTimeoutVar4;
             myTimeoutVar4 = setTimeout(function () {
-                $("#indexInfoBox").addClass("boxBorder");
                 $("#simpleToggle").css({
                     "display": "none",
                     "transition": "all 3.7s ease-in-out"
